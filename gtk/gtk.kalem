@@ -1624,6 +1624,99 @@
     // ---
     // End of GtkFlowBox
 
+    // GtkStack
+
+    @stack_new GtkWidget*? {
+        @return gtk_stack_new()
+    }
+
+    @stack_add_named(GtkStack* stack, GtkWidget* child, const gchar* name) void {
+        @gtk_stack_add_named(stack,child, name)
+    }
+
+    @stack_add_titled(GtkStack* stack, GtkWidget* child, const gchar* name, const gchar* title) void {
+        @gtk_stack_add_titled(stack,child,name, title)
+    }
+
+    @stack_get_child_by_name(GtkStack* stack, const gchar* name) GtkWidget*? {
+        @return gtk_stack_get_child_by_name(stack, name)
+    }
+
+    @stack_set_visible_child(GtkStack* stack, GtkWidget* child) void {
+        @gtk_stack_set_visible_child(stack, child)
+    }
+
+    @stack_get_visible_child(GtkStack* stack) GtkWidget*? {
+        @return gtk_stack_get_visible_child(stack)
+    }
+
+    @stack_set_visible_child_name(GtkStack* stack, const gchar* name) void {
+        @gtk_stack_set_visible_child_name(stack, name)
+    }
+
+    #const gchar* stack_get_visible_child_name(GtkStack* stack) {
+        @return gtk_stack_get_visible_child_name(stack)
+    }
+
+    @stack_set_visible_child_full(GtkStack* stack, const gchar* name, GtkStackTransitionType transition) void {
+        @gtk_stack_set_visible_child_full(stack,name, transition)
+    }
+
+    @stack_set_homogeneous(GtkStack* stack, gboolean homogeneous) void {
+        @gtk_stack_set_homogeneous(stack, homogeneous)
+    }
+
+    @stack_get_homogeneous(GtkStack* stack) gboolean? {
+        @return gtk_stack_get_homogeneous(stack)
+    }
+
+    @stack_set_hhomogeneous(GtkStack* stack, gboolean hhomogeneous) void {
+        @gtk_stack_set_hhomogeneous(stack, hhomogeneous)
+    }
+
+    @stack_get_hhomogeneous(GtkStack* stack) gboolean? {
+        @return gtk_stack_get_hhomogeneous(stack)
+    }
+
+    @stack_set_vhomogeneous(GtkStack* stack, gboolean vhomogeneous) void {
+        @gtk_stack_set_vhomogeneous(stack, vhomogeneous)
+    }
+
+    @stack_get_vhomogeneous(GtkStack* stack) gboolean? {
+        @return gtk_stack_get_vhomogeneous(stack)
+    }
+
+    @stack_set_transition_duration(GtkStack* stack, guint duration) void {
+        @gtk_stack_set_transition_duration(stack, duration)
+    }
+
+    @stack_get_transition_duration(GtkStack* stack) guint? {
+        @return gtk_stack_get_transition_duration(stack)
+    }
+
+    @stack_set_transition_type(GtkStack* stack, GtkStackTransitionType transition) void {
+        @gtk_stack_set_transition_type(stack, transition)
+    }
+
+    @stack_get_transition_type(GtkStack* stack) GtkStackTransitionType? {
+        @return gtk_stack_get_transition_type(stack)
+    }
+
+    @stack_get_transition_running(GtkStack* stack) gboolean? {
+        @return gtk_stack_get_transition_running(stack)
+    }
+
+    @stack_get_interpolate_size(GtkStack* stack) gboolean? {
+        @return gtk_stack_get_interpolate_size(stack)
+    }
+
+    @stack_set_interpolate_size(GtkStack* stack, gboolean interpolate_size) void {
+        @gtk_stack_set_interpolate_size(stack, interpolate_size)
+    }
+
+    // ---
+    // End of GtkStack
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
