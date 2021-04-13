@@ -1776,6 +1776,71 @@
     // ---
     // End of GtkActionBar
 
+    // GtkHeaderBar
+
+    @header_bar_new GtkWidget*? {
+        @return gtk_header_bar_new()
+    }
+
+    @header_bar_set_title(GtkHeaderBar* bar, const gchar* title) void {
+        @gtk_header_bar_set_title(bar, title)
+    }
+
+    #const gchar* header_bar_get_title(GtkHeaderBar* bar) {
+        @return gtk_header_bar_get_title(bar)
+    }
+
+    @header_bar_set_subtitle(GtkHeaderBar* bar, const gchar* subtitle) void {
+        @gtk_header_bar_set_subtitle(bar, subtitle)
+    }
+
+    #const gchar* header_bar_get_subtitle(GtkHeaderBar* bar) {
+        @return gtk_header_bar_get_subtitle(bar)
+    }
+
+    @header_bar_set_has_subtitle(GtkHeaderBar* bar, gboolean setting) void {
+        @gtk_header_bar_set_has_subtitle(bar, setting)
+    }
+
+    @header_bar_get_has_subtitle(GtkHeaderBar* bar) gboolean? {
+        @return gtk_header_bar_get_has_subtitle(bar)
+    }
+
+    @header_bar_set_custom_title(GtkHeaderBar* bar, GtkWidget* title_widget) void {
+        @gtk_header_bar_set_custom_title(bar, title_widget)
+    }
+
+    @header_bar_get_custom_title(GtkHeaderBar* bar) GtkWidget*? {
+        @return gtk_header_bar_get_custom_title(bar)
+    }
+
+    @header_bar_pack_start(GtkHeaderBar* bar, GtkWidget* child) void {
+        @gtk_header_bar_pack_start(bar, child)
+    }
+
+    @header_bar_pack_end(GtkHeaderBar* bar, GtkWidget* child) void {
+        @gtk_header_bar_pack_end(bar, child)
+    }
+
+    @header_bar_set_show_close_button(GtkHeaderBar* bar, gboolean setting) void {
+        @gtk_header_bar_set_show_close_button(bar, setting)
+    }
+
+    @header_bar_get_show_close_button(GtkHeaderBar* bar) gboolean? {
+        @return gtk_header_bar_get_show_close_button(bar)
+    }
+
+    @header_bar_set_decoration_layout(GtkHeaderBar* bar, const gchar* layout) void {
+        @gtk_header_bar_set_decoration_layout(bar, layout)
+    }
+
+    #const gchar* header_bar_get_decoration_layout(GtkHeaderBar* bar) {
+        @return gtk_header_bar_get_decoration_layout(bar)
+    }
+
+    // ---
+    // End of GtkHeaderBar
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
