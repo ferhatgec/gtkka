@@ -1717,6 +1717,23 @@
     // ---
     // End of GtkStack
 
+    // GtkStackSwitcher
+
+    @stack_switcher_new GtkWidget*? {
+        @return gtk_stack_switcher_new()
+    }
+
+    @stack_switcher_set_stack(GtkStackSwitcher* switcher, GtkStack* stack) void {
+        @gtk_stack_switcher_set_stack(switcher, stack)
+    }
+
+    @stack_switcher_get_stack(GtkStackSwitcher* switcher) GtkStack*? {
+        @return gtk_stack_switcher_get_stack(switcher)
+    }
+
+    // ---
+    // GtkStackSwitcher
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
