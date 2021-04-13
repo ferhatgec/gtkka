@@ -1045,6 +1045,23 @@
     // ---
     // End of GtkInvisible
 
+    // GtkOffscreenWindow
+
+    @offscreen_window_new GtkWidget*? {
+        @return gtk_offscreen_window_new()
+    }
+
+    @offscreen_window_get_surface(GtkOffscreenWindow* offscreen) cairo_surface_t*? {
+        @return gtk_offscreen_window_get_surface(offscreen)
+    }
+
+    @offscreen_window_get_pixbuf(GtkOffscreenWindow* offscreen) GdkPixbuf*? {
+        @return gtk_offscreen_window_get_pixbuf(offscreen)
+    }
+
+    // ---
+    // End of GtkOffscreenWindow
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
