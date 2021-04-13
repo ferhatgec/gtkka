@@ -1461,6 +1461,169 @@
     // ---
     // End of GtkListBox
 
+    // GtkFlowBox
+
+    @flow_box_new GtkWidget*? {
+        @return gtk_flow_box_new()
+    }
+
+    @flow_box_insert(GtkFlowBox* box, GtkWidget* widget, gint position) void {
+        @gtk_flow_box_insert(box,widget, position)
+    }
+
+    @flow_box_get_child_at_index(GtkFlowBox* box, gint idx) GtkFlowBoxChild*? {
+        @return gtk_flow_box_get_child_at_index(box, idx)
+    }
+
+    @flow_box_get_child_at_pos(GtkFlowBox* box, gint x, gint y) GtkFlowBoxChild*? {
+        @return gtk_flow_box_get_child_at_pos(box,x, y)
+    }
+
+    @flow_box_set_hadjustment(GtkFlowBox* box, GtkAdjustment* adjustment) void {
+        @gtk_flow_box_set_hadjustment(box, adjustment)
+    }
+
+    @flow_box_set_vadjustment(GtkFlowBox* box, GtkAdjustment* adjustment) void {
+        @gtk_flow_box_set_vadjustment(box, adjustment)
+    }
+
+    @flow_box_set_homogeneous(GtkFlowBox* box, gboolean homogeneous) void {
+        @gtk_flow_box_set_homogeneous(box, homogeneous)
+    }
+
+    @flow_box_get_homogeneous(GtkFlowBox* box) gboolean? {
+        @return gtk_flow_box_get_homogeneous(box)
+    }
+
+    @flow_box_set_row_spacing(GtkFlowBox* box, guint spacing) void {
+        @gtk_flow_box_set_row_spacing(box, spacing)
+    }
+
+    @flow_box_get_row_spacing(GtkFlowBox* box) guint? {
+        @return gtk_flow_box_get_row_spacing(box)
+    }
+
+    @flow_box_set_column_spacing(GtkFlowBox* box, guint spacing) void {
+        @gtk_flow_box_set_column_spacing(box, spacing)
+    }
+
+    @flow_box_get_column_spacing(GtkFlowBox* box) guint? {
+        @return gtk_flow_box_get_column_spacing(box)
+    }
+
+    @flow_box_set_min_children_per_line(GtkFlowBox* box, guint n_children) void {
+        @gtk_flow_box_set_min_children_per_line(box, n_children)
+    }
+
+    @flow_box_get_min_children_per_line(GtkFlowBox* box) guint? {
+        @return gtk_flow_box_get_min_children_per_line(box)
+    }
+
+    @flow_box_set_max_children_per_line(GtkFlowBox* box, guint n_children) void {
+        @gtk_flow_box_set_max_children_per_line(box, n_children)
+    }
+
+    @flow_box_get_max_children_per_line(GtkFlowBox* box) guint? {
+        @return gtk_flow_box_get_max_children_per_line(box)
+    }
+
+    @flow_box_set_activate_on_single_click(GtkFlowBox* box, gboolean single) void {
+        @gtk_flow_box_set_activate_on_single_click(box, single)
+    }
+
+    @flow_box_get_activate_on_single_click(GtkFlowBox* box) gboolean? {
+        @return gtk_flow_box_get_activate_on_single_click(box)
+    }
+
+    // Unimplemented: void
+    //(*GtkFlowBoxForeachFunc) (GtkFlowBox *box,
+    //                          GtkFlowBoxChild *child,
+    //                          gpointer user_data);
+
+    @flow_box_selected_foreach(GtkFlowBox* box, GtkFlowBoxForeachFunc func, gpointer data) void {
+        @gtk_flow_box_selected_foreach(box,func, data)
+    }
+
+    @flow_box_get_selected_children(GtkFlowBox* box) GList*? {
+        @return gtk_flow_box_get_selected_children(box)
+    }
+
+    @flow_box_select_child(GtkFlowBox* box, GtkFlowBoxChild* child) void {
+        @gtk_flow_box_select_child(box, child)
+    }
+
+    @flow_box_unselect_child(GtkFlowBox* box, GtkFlowBoxChild* child) void {
+        @gtk_flow_box_unselect_child(box, child)
+    }
+
+    @flow_box_select_all(GtkFlowBox* box) void {
+        @gtk_flow_box_select_all(box)
+    }
+
+    @flow_box_unselect_all(GtkFlowBox* box) void {
+        @gtk_flow_box_unselect_all(box)
+    }
+
+    @flow_box_set_selection_mode(GtkFlowBox* box, GtkSelectionMode mode) void {
+        @gtk_flow_box_set_selection_mode(box, mode)
+    }
+
+    @flow_box_get_selection_mode(GtkFlowBox* box) GtkSelectionMode? {
+        @return gtk_flow_box_get_selection_mode(box)
+    }
+
+    // Unimplemented: gboolean
+    //(*GtkFlowBoxFilterFunc) (GtkFlowBoxChild *child,
+    //                         gpointer user_data);
+
+    @flow_box_set_filter_func(GtkFlowBox* box, GtkFlowBoxFilterFunc filter_func, gpointer user_data, GDestroyNotify destroy) void {
+        @gtk_flow_box_set_filter_func(box,filter_func,user_data, destroy)
+    }
+
+    @flow_box_invalidate_filter(GtkFlowBox* box) void {
+        @gtk_flow_box_invalidate_filter(box)
+    }
+
+    // Unimplemented: gint
+    //(*GtkFlowBoxSortFunc) (GtkFlowBoxChild *child1,
+    //                       GtkFlowBoxChild *child2,
+    //                       gpointer user_data);
+
+    @flow_box_set_sort_func(GtkFlowBox* box, GtkFlowBoxSortFunc sort_func, gpointer user_data, GDestroyNotify destroy) void {
+        @gtk_flow_box_set_sort_func(box,sort_func,user_data,destroy)
+    }
+
+    @flow_box_invalidate_sort(GtkFlowBox* box) void {
+        @gtk_flow_box_invalidate_sort(box)
+    }
+
+    // Unimplemented: GtkWidget *
+    //(*GtkFlowBoxCreateWidgetFunc) (gpointer item,
+    //                               gpointer user_data);
+
+    @flow_box_bind_model(GtkFlowBox* box, GListModel *model, GtkFlowBoxCreateWidgetFunc create_widget_func, gpointer user_data, GDestroyNotify user_data_free_func) void {
+        @gtk_flow_box_bind_model(box,model,create_widget_func,user_data, user_data_free_func)
+    }
+
+    @flow_box_child_new GtkWidget*? {
+        @return gtk_flow_box_child_new()
+    }
+
+    @flow_box_child_get_index(GtkFlowBoxChild* child) gint? {
+        @return gtk_flow_box_child_get_index(child)
+    }
+
+    @flow_box_child_is_selected(GtkFlowBoxChild* child) gboolean? {
+        @return gtk_flow_box_child_is_selected(child)
+    }
+
+    @flow_box_child_changed(GtkFlowBoxChild* child) void {
+        @gtk_flow_box_child_changed(child)
+    }
+
+    // ---
+    // End of GtkFlowBox
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
