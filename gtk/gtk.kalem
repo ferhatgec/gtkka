@@ -278,8 +278,253 @@
         @gtk_window_set_skip_pager_hint(GTK_WINDOW(window), setting)
     }
 
+    @window_set_urgency_hint(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_urgency_hint(GTK_WINDOW(window), setting)
+    }
 
-    // ...
+    @window_set_accept_focus(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_accept_focus(GTK_WINDOW(window), setting)
+    }
+
+    @window_set_focus_on_map(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_focus_on_map(GTK_WINDOW(window), setting)
+    }
+
+    @window_set_startup_id(GtkWidget* window, const gchar* startup_id) void {
+        @gtk_window_set_startup_id(GTK_WINDOW(window), startup_id)
+    }
+
+    @window_set_role(GtkWidget* window, const gchar* role) void {
+        @gtk_window_set_role(GTK_WINDOW(window), role)
+    }
+
+    @window_get_decorated(GtkWidget* window) gboolean? {
+        @return gtk_window_get_decorated(GTK_WINDOW(window))
+    }
+
+    @window_get_deletable(GtkWidget* window) gboolean? {
+        @return gtk_window_get_deletable(GTK_WINDOW(window))
+    }
+
+    @window_get_default_icon_list GList*? {
+        @return gtk_window_get_default_icon_list()
+    }
+
+    #const gchar* window_get_default_icon_name() {
+        @return gtk_window_get_default_icon_name()
+    }
+
+    @window_get_default_size(GtkWidget* window, gint* width, gint* height) void {
+        @gtk_window_get_default_size(GTK_WINDOW(window),width, height)
+    }
+
+    @window_get_destroy_with_parent(GtkWidget* window) gboolean? {
+        @return gtk_window_get_destroy_with_parent(GTK_WINDOW(window))
+    }
+
+    @window_get_hide_titlebar_when_maximized(GtkWidget* window) gboolean? {
+        @return gtk_window_get_hide_titlebar_when_maximized(GTK_WINDOW(window))
+    }
+
+    @window_get_icon(GtkWidget* window) GdkPixbuf*? {
+        @return gtk_window_get_icon(GTK_WINDOW(window))
+    }
+
+    @window_get_icon_list(GtkWidget* window) GList*? {
+        @return gtk_window_get_icon_list(GTK_WINDOW(window))
+    }
+
+    #const gchar* window_get_icon_name(GtkWidget* window) {
+        @return gtk_window_get_icon_name(GTK_WINDOW(window))
+    }
+
+    @window_get_mnemonic_modifier(GtkWidget* window) GdkModifierType? {
+        @return gtk_window_get_mnemonic_modifier(GTK_WINDOW(window))
+    }
+
+    @window_get_modal(GtkWidget* window) gboolean? {
+        @return gtk_window_get_modal(GTK_WINDOW(window))
+    }
+
+    @window_get_position(GtkWidget* window, gint* root_x, gint* root_y) void {
+        @gtk_window_get_position(GTK_WINDOW(window),root_x, root_y)
+    }
+
+    #const gchar* window_get_role(GtkWidget* window) {
+        @return gtk_window_get_role(GTK_WINDOW(window))
+    }
+
+    @window_get_size(GtkWidget* window, gint* width, gint* height) void {
+        @gtk_window_get_size(GTK_WINDOW(window),width, height)
+    }
+
+    #const gchar* window_get_title(GtkWidget* window) {
+        @return gtk_window_get_title(GTK_WINDOW(window))
+    }
+
+    @window_get_transient_for(GtkWidget* window) GtkWindow*? {
+        @return gtk_window_get_transient_for(GTK_WINDOW(window))
+    }
+
+    @window_get_attached_to(GtkWidget* window) GtkWidget*? {
+        @return gtk_window_get_attached_to(GTK_WINDOW(window))
+    }
+
+    @window_get_type_hint(GtkWidget* window) GdkWindowTypeHint? {
+        @return gtk_window_get_type_hint(GTK_WINDOW(window))
+    }
+
+    @window_get_skip_taskbar_hint(GtkWidget* window) gboolean? {
+        @return gtk_window_get_skip_taskbar_hint(GTK_WINDOW(window))
+    }
+
+    @window_get_skip_pager_hint(GtkWidget* window) gboolean? {
+        @return gtk_window_get_skip_pager_hint(GTK_WINDOW(window))
+    }
+
+    @window_get_urgency_hint(GtkWidget* window) gboolean? {
+        @return gtk_window_get_urgency_hint(GTK_WINDOW(window))
+    }
+
+    @window_get_accept_focus(GtkWidget* window) gboolean? {
+        @return gtk_window_get_accept_focus(GTK_WINDOW(window))
+    }
+
+    @window_get_focus_on_map(GtkWidget* window) gboolean? {
+        @return gtk_window_get_focus_on_map(GTK_WINDOW(window))
+    }
+
+    @window_get_group(GtkWidget* window) GtkWindowGroup*? {
+        @return gtk_window_get_group(GTK_WINDOW(window))
+    }
+
+    @window_has_group(GtkWidget* window) gboolean? {
+        @return gtk_window_has_group(GTK_WINDOW(window))
+    }
+
+    @window_get_window_type(GtkWidget* window) GtkWindowType? {
+        @return gtk_window_get_window_type(GTK_WINDOW(window))
+    }
+
+    @window_move(GtkWidget* window, gint x, gint y) void {
+        @gtk_window_move(GTK_WINDOW(window),x, y)
+    }
+
+    // Deprecated:  @gtk_window_parse_geometry(
+    //      GtkWindow* window,
+    //      const gchar *geometry)
+
+    // Deprecated:  @gtk_window_reshow_with_initial_size(
+    //      GtkWindow* window)
+
+    @window_resize(GtkWidget* window, gint width, gint height) void {
+        @gtk_window_resize(GTK_WINDOW(window),width, height)
+    }
+
+    // Deprecated:  @gtk_window_resize_to_geometry(
+    //      GtkWindow* window,
+    //      gint width,
+    //      gint height)
+
+    @window_set_default_icon_list(GList* list) void {
+        @gtk_window_set_default_icon_list(list)
+    }
+
+    @window_set_default_icon(GdkPixbuf* icon) void {
+        @gtk_window_set_default_icon(icon)
+    }
+
+    @window_set_default_icon_from_file(const gchar* filename, GError** err) gboolean? {
+        @return gtk_window_set_default_icon_from_file(filename, err)
+    }
+
+    @window_set_default_icon_name(const gchar* name) void {
+        @gtk_window_set_default_icon_name(name)
+    }
+
+    @window_set_icon(GtkWidget* window, GdkPixbuf* icon) void {
+        @gtk_window_set_icon(GTK_WINDOW(window), icon)
+    }
+
+    @window_set_icon_list(GtkWidget* window, GList* list) void {
+        @gtk_window_set_icon_list(GTK_WINDOW(window), list)
+    }
+
+    @window_set_icon_from_file(GtkWidget* window, const gchar* filename, GError** err) gboolean? {
+        @return gtk_window_set_icon_from_file(GTK_WINDOW(window),filename, err)
+    }
+
+    @window_set_icon_name(GtkWidget* window, const gchar* name) void {
+        @gtk_window_set_icon_name(GTK_WINDOW(window), name)
+    }
+
+    @window_set_auto_startup_notification(gboolean setting) void {
+        @gtk_window_set_auto_startup_notification(setting)
+    }
+
+    // Deprecated:  @gtk_window_get_opacity(
+    //      GtkWidget* window)
+
+    // Deprecated:  @gtk_window_set_opacity(
+    //      GtkWidget* window,
+    //      gdouble opacity)
+
+    @window_get_mnemonics_visible(GtkWidget* window) gboolean? {
+        @return gtk_window_get_mnemonics_visible(GTK_WINDOW(window))
+    }
+
+    @window_set_mnemonics_visible(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_mnemonics_visible(GTK_WINDOW(window), setting)
+    }
+
+    @window_get_focus_visible(GtkWidget* window) gboolean? {
+        @return gtk_window_get_focus_visible(GTK_WINDOW(window))
+    }
+
+    @window_set_focus_visible(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_focus_visible(GTK_WINDOW(window), setting)
+    }
+
+    // Deprecated:  @gtk_window_set_has_resize_grip(
+    //      GtkWidget* window,
+    //      gboolean value)
+
+    // Deprecated:  @gtk_window_get_has_resize_grip(
+    //      GtkWidget* window)
+
+    // Deprecated:  @gtk_window_resize_grip_is_visible(
+    //      GtkWidget* window)
+
+    // Deprecated:  @gtk_window_get_resize_grip_area(
+    //      GtkWidget* window,
+    //      GdkRectangle* rect)
+
+    @window_get_application(GtkWidget* window) GtkApplication*? {
+        @return gtk_window_get_application(GTK_WINDOW(window))
+    }
+
+    @window_set_application(GtkWidget* window, GtkApplication* application) void {
+        @gtk_window_set_application(GTK_WINDOW(window), application)
+    }
+
+    @window_set_has_user_ref_count(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_has_user_ref_count(GTK_WINDOW(window), setting)
+    }
+
+    @window_set_titlebar(GtkWidget* window, GtkWidget* titlebar) void {
+        @gtk_window_set_titlebar(GTK_WINDOW(window), titlebar)
+    }
+
+    @window_get_titlebar(GtkWidget* window) GtkWidget*? {
+        @gtk_window_get_titlebar(GTK_WINDOW(window))
+    }
+
+    @window_set_interactive_debugging(gboolean enable) void {
+        @gtk_window_set_interactive_debugging(enable)
+    }
+
+    // ---
+    // End of GtkWindow
 
     // GtkApplicationWindow
     @application_window_new(GtkApplication* application) GtkWidget*? {
