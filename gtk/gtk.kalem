@@ -723,6 +723,45 @@
     // ---
     // End of GtkDialog
 
+    // GtkMessageDialog
+
+    #template <typename... Arguments>
+    @message_dialog_new(GtkWidget* window, GtkDialogFlags flags, GtkMessageType type, GtkButtonsType buttons, const gchar* message_format, Arguments... args) GtkWidget*? {
+        @return (gtk_message_dialog_new(GTK_WINDOW(window),flags,type,buttons,message_format,args), ...)
+    }
+
+    #template <typename... Arguments>
+    @message_dialog_new_with_markup(GtkWidget* parent, GtkDialogFlags flags, GtkMessageType type, GtkButtonsType buttons, const gchar* message_format, Arguments... args) GtkWidget*? {
+        @return (gtk_message_dialog_new_with_markup(GTK_WINDOW(parent),flags,type,buttons,message_format,args), ...)
+    }
+
+    @message_dialog_set_markup(GtkMessageDialog* message_dialog, const gchar* str) void {
+        @gtk_message_dialog_set_markup(message_dialog, str)
+    }
+
+    // Deprecated:  @gtk_message_dialog_set_image(
+    //      GtkMessageDialog* dialog,
+    //      GtkWidget* image)
+
+    // Deprecated:  @gtk_message_dialog_get_image(
+    //      GtkMessageDialog* dialog)
+
+    #template <typename... Arguments>
+    @message_dialog_format_secondary_text(GtkMessageDialog* message_dialog, const gchar* message_format, Arguments... args) void {
+        @(gtk_message_dialog_format_secondary_text(message_dialog,message_format,args), ...)
+    }
+
+    #template <typename... Arguments>
+    @message_dialog_format_secondary_markup(GtkMessageDialog* message_dialog, const gchar* message_format, Arguments... args) void {
+        @(gtk_message_dialog_format_secondary_markup(message_dialog,message_format,args), ...)
+    }
+
+    @message_dialog_get_message_area(GtkMessageDialog* message_dialog) GtkWidget*? {
+        @return gtk_message_dialog_get_message_area(message_dialog)
+    }
+
+    // ---
+    // End of GtkMessageDialog
 
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
