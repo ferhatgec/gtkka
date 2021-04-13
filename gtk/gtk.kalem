@@ -1094,6 +1094,67 @@
     // ---
     // End of GtkWindowGroup
 
+    // GtkBox
+
+    @box_new(GtkOrientation orientation, gint spacing) GtkWidget*? {
+        @return gtk_box_new(orientation, spacing)
+    }
+
+    @box_pack_start(GtkBox* box, GtkWidget* child, gboolean expand, gboolean fill, guint padding) void {
+        @gtk_box_pack_start(box,child,expand,fill, padding)
+    }
+
+    @box_pack_end(GtkBox* box, GtkWidget* child, gboolean expand, gboolean fill, guint padding) void {
+        @gtk_box_pack_end(box,child,expand,fill, padding)
+    }
+
+    @box_get_homogeneous(GtkBox* box) gboolean? {
+        @return gtk_box_get_homogeneous(box)
+    }
+
+    @box_set_homogeneous(GtkBox* box, gboolean homogeneous) void {
+        @gtk_box_set_homogeneous(box, homogeneous)
+    }
+
+    @box_get_spacing(GtkBox* box) gint? {
+        @return gtk_box_get_spacing(box)
+    }
+
+    @box_set_spacing(GtkBox* box, gint spacing) void {
+        @gtk_box_set_spacing(box, spacing)
+    }
+
+    @box_reorder_child(GtkBox* box, GtkWidget* child, gint position) void {
+        @gtk_box_reorder_child(box,child, position)
+    }
+
+    @box_query_child_packing(GtkBox* box, GtkWidget* child, gboolean* expand, gboolean* fill, guint* padding, GtkPackType* pack_type) void {
+        @gtk_box_query_child_packing(box,child,expand,fill,padding, pack_type)
+    }
+
+    @box_set_child_packing(GtkBox* box, GtkWidget* child, gboolean expand, gboolean fill, guint padding, GtkPackType pack_type) void {
+        @gtk_box_set_child_packing(box,child,expand,fill,padding, pack_type)
+    }
+
+    @box_get_baseline_position(GtkBox* box) GtkBaselinePosition? {
+        @return gtk_box_get_baseline_position(box)
+    }
+
+    @box_set_baseline_position(GtkBox* box, GtkBaselinePosition position) void {
+        @gtk_box_set_baseline_position(box, position)
+    }
+
+    @box_get_center_widget(GtkBox* box) GtkWidget*? {
+        @return gtk_box_get_center_widget(box)
+    }
+
+    @box_set_center_widget(GtkBox* box, GtkWidget* widget) void {
+        @gtk_box_set_center_widget(box, widget)
+    }
+
+    // ---
+    // End of GtkBox
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
