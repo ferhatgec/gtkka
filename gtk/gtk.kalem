@@ -1952,6 +1952,43 @@
     // ---
     // End of GtkPaned
 
+    // GtkLayout
+
+    @layout_new(GtkAdjustment *hadjustment, GtkAdjustment *vadjustment) GtkWidget*? {
+        @return gtk_layout_new(hadjustment, vadjustment)
+    }
+
+    @layout_put(GtkLayout* layout, GtkWidget* child_widget, gint x, gint y) void {
+        @gtk_layout_put(layout,child_widget,x, y)
+    }
+
+    @layout_move(GtkLayout* layout, GtkWidget* child_widget, gint x, gint y) void {
+        @gtk_layout_move(layout,child_widget,x, y)
+    }
+
+    @layout_set_size(GtkLayout* layout, guint width, guint height) void {
+        @gtk_layout_set_size(layout,width, height)
+    }
+
+    @layout_get_size(GtkLayout* layout, guint* width, guint* height) void {
+        @gtk_layout_get_size(layout,width, height)
+    }
+
+    // Deprecated: @gtk_layout_get_hadjustment(GtkLayout *layout)
+
+    // Deprecated: @gtk_layout_get_vadjustment(GtkLayout *layout)
+
+    // Deprecated: @gtk_layout_set_hadjustment(GtkLayout *layout, GtkAdjustment *adjustment)
+
+    // Deprecated: @gtk_layout_set_vadjustment(GtkLayout *layout, GtkAdjustment *adjustment)
+
+    @layout_get_bin_window(GtkLayout* layout) GdkWindow*? {
+        @return gtk_layout_get_bin_window(layout)
+    }
+
+    // ---
+    // End of GtkLayout
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
