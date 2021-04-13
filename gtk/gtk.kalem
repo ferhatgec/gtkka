@@ -1,0 +1,107 @@
+// MIT License
+//
+// Copyright (c) 2021 Ferhat Geçdoğan All Rights Reserved.
+// Distributed under the terms of the MIT License.
+//
+//
+//
+// GtkKa - Kalem wrapper around GTK3
+// ---
+// It's at early-stage, unstable, unusable,
+// Many functions are not implemented yet.
+//
+// Some wrapper principles:
+//  Using GtkWidget* with GTK_WINDOW macro instead of directly GtkWindow*
+//
+
+
+!required_flag("library")
+
+
+#include {
+    "gtk_import"
+}
+
+@gtk namespace {
+    @application_new(const gchar* application_id, GApplicationFlags flags) GtkApplication*? {
+        @return gtk_application_new(application_id, flags)
+    }
+
+    @application_add_window(GtkApplication* application, GtkWindow* window) void {
+        @gtk_application_add_window(application, window)
+    }
+
+    @application_remove_window(GtkApplication* application, GtkWindow* window) void {
+        @gtk_application_remove_window(application, window)
+    }
+
+    @application_get_windows(GtkApplication* application) GList*? {
+        @return gtk_application_get_windows(application)
+    }
+
+    @application_get_window_by_id(GtkApplication* application, guint id) GtkWindow*? {
+        @return gtk_application_get_window_by_id(application, id)
+    }
+
+    @application_get_active_window(GtkApplication* application) GtkWindow*? {
+        @return gtk_application_get_active_window(application)
+    }
+
+    // GtkWindow
+    @window_new(GtkWindowType type) GtkWidget*? {
+        @return gtk_window_new(type)
+    }
+
+    @window_set_title(GtkWidget* window, const gchar* title) void {
+        #gtk_window_set_title(GTK_WINDOW(window), title);
+    }
+
+    // Deprecated:  @gtk_window_set_wmclass(
+    //      GtkWindow* window,
+    //      const gchar* wmclass_name,
+    //      const gchar* wmclass_class)
+
+    @window_set_resizable(GtkWidget* window, gboolean resizable) void {
+        @gtk_window_set_resizable(GTK_WINDOW(window), resizable)
+    }
+
+    @window_get_resizable(GtkWidget* window) gboolean? {
+        @return gtk_window_get_resizable(GTK_WINDOW(window))
+    }
+
+    @window_add_accel_group(GtkWidget* window, GtkAccelGroup* accel_group) void {
+        @gtk_window_add_accel_group(GTK_WINDOW(window), accel_group)
+    }
+
+    @window_remove_accel_group(GtkWidget* window, GtkAccelGroup* accel_group) void {
+        @gtk_window_remove_accel_group(GTK_WINDOW(window), accel_group)
+    }
+
+    @window_activate_focus(GtkWidget* window) gboolean? {
+        @return gtk_window_activate_focus(GTK_WINDOW(window))
+    }
+
+    @window_activate_default(GtkWidget* window) gboolean? {
+        @return gtk_window_activate_default(GTK_WINDOW(window))
+    }
+
+    @window_set_modal(GtkWidget* window, gboolean modal) void {
+        @gtk_window_set_modal(GTK_WINDOW(window), modal)
+    }
+
+    @window_set_default_size(GtkWidget* window, gint width, gint height) void {
+        @gtk_window_set_default_size(GTK_WINDOW(window),width, height)
+    }
+
+    // ...
+
+    // GtkApplicationWindow
+    @application_window_new(GtkApplication* application) GtkWidget*? {
+        @return gtk_application_window_new(application)
+    }
+
+    // GtkWidget
+    @widget_show_all(GtkWidget* widget) void {
+        @gtk_widget_show_all(widget)
+    }
+}

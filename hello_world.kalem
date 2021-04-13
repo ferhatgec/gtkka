@@ -1,0 +1,72 @@
+// GTKKa Window example.
+//
+!add_source("gtk/gtk")
+!add_source("gtk/gtk_import")
+
+// Yep, I know here we have pkg-config,
+// Kalem.rs has not support any stdout output getter yet.
+//
+!include_dir("/usr/include/gtk-3.0")
+!include_dir("/usr/include/pango-1.0")
+!include_dir("/usr/include/glib-2.0")
+!include_dir("/usr/lib64/glib-2.0/include")
+!include_dir("/usr/include/sysprof-4")
+!include_dir("/usr/include/harfbuzz")
+!include_dir("/usr/include/freetype2")
+!include_dir("/usr/include/libpng16")
+!include_dir("/usr/include/libmount")
+!include_dir("/usr/include/blkid")
+!include_dir("/usr/include/fribidi")
+!include_dir("/usr/include/libxml2")
+!include_dir("/usr/include/cairo")
+!include_dir("/usr/include/pixman-1")
+!include_dir("/usr/include/gdk-pixbuf-2.0")
+!include_dir("/usr/include/gio-unix-2.0")
+!include_dir("/usr/include/atk-1.0")
+!include_dir("/usr/include/at-spi2-atk/2.0")
+!include_dir("/usr/include/dbus-1.0")
+!include_dir("/usr/lib64/dbus-1.0/include")
+!include_dir("/usr/include/at-spi-2.0 -pthread -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0")
+
+!flag {
+    "output=hello_world"
+    "cpp-standard=c++17"
+    "cpp-output=true"
+    "cpp-sysroot=false"
+    "hash-cache=false"
+
+    // default=clang
+    "cpp-compiler=default"
+
+    // Its type is not boolean.
+    "cpp-flags=false"
+
+    // Ignore case warnings (snake_case, PascalCase etc.)
+    "ignore-case-warnings=true"
+}
+
+#include "gtk"
+#include "gtk_import"
+
+@activate(GtkApplication* app, gpointer userdata) void {
+    #GtkWidget *window;
+
+    @window=gtk::application_window_new(app)
+    @gtk::window_set_title(window, "Window")
+    @gtk::window_set_default_size(window, 400,300)
+    @gtk::widget_show_all(window)
+}
+
+
+@main int {
+    #GtkApplication *app;
+    int status 0
+    @app=gtk::application_new("org.gtkka.example",G_APPLICATION_FLAGS_NONE)
+
+    // Unimplemented yet.
+    #g_signal_connect(app, "activate", G_CALLBACK (activate), NULL);
+    #status = g_application_run (G_APPLICATION (app), argc, argv);
+    #g_object_unref (app);
+
+    @return status
+}
