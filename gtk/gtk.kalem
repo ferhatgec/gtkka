@@ -1244,6 +1244,43 @@
     // ---
     // End of GtkGrid
 
+    // GtkRevealer
+
+    @revealer_new GtkWidget*? {
+        @return gtk_revealer_new()
+    }
+
+    @revealer_get_reveal_child(GtkRevealer* revealer) gboolean? {
+        @return gtk_revealer_get_reveal_child(revealer)
+    }
+
+    @revealer_set_reveal_child(GtkRevealer* revealer, gboolean reveal_child) void {
+        @gtk_revealer_set_reveal_child(revealer, reveal_child)
+    }
+
+    @revealer_get_child_revealed(GtkRevealer* revealer) gboolean? {
+        @return gtk_revealer_get_child_revealed(revealer)
+    }
+
+    @revealer_get_transition_duration(GtkRevealer* revealer) guint? {
+        @return gtk_revealer_get_transition_duration(revealer)
+    }
+
+    @revealer_set_transition_duration(GtkRevealer* revealer, guint duration) void {
+        @gtk_revealer_set_transition_duration(revealer, duration)
+    }
+
+    @revealer_get_transition_type(GtkRevealer* revealer) GtkRevealerTransitionType? {
+        @return gtk_revealer_get_transition_type(revealer)
+    }
+
+    @revealer_set_transition_type(GtkRevealer* revealer, GtkRevealerTransitionType transition) void {
+        @gtk_revealer_set_transition_type(revealer, transition)
+    }
+
+    // ---
+    // End of GtkRevealer
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
