@@ -901,6 +901,129 @@
     // ---
     // End of GtkAboutDialog
 
+    // GtkAssistant
+
+    @assistant_new GtkWidget*? {
+        @return gtk_assistant_new()
+    }
+
+    @assistant_get_current_page(GtkAssistant* assistant) gint? {
+        @return gtk_assistant_get_current_page(assistant)
+    }
+
+    @assistant_set_current_page(GtkAssistant* assistant, gint page_num) void {
+        @gtk_assistant_set_current_page(assistant, page_num)
+    }
+
+    @assistant_get_n_pages(GtkAssistant* assistant) gint? {
+        @return gtk_assistant_get_n_pages(assistant)
+    }
+
+    @assistant_get_nth_page(GtkAssistant* assistant, gint page_num) GtkWidget*? {
+        @return gtk_assistant_get_nth_page(assistant, page_num)
+    }
+
+    @assistant_prepend_page(GtkAssistant* assistant, GtkWidget* page) gint? {
+        @return gtk_assistant_prepend_page(assistant, page)
+    }
+
+    @assistant_append_page(GtkAssistant* assistant, GtkWidget* page) gint? {
+        @return gtk_assistant_append_page(assistant, page)
+    }
+
+    @assistant_insert_page(GtkAssistant* assistant, GtkWidget* page, gint position) gint? {
+        @return gtk_assistant_insert_page(assistant,page, position)
+    }
+
+    @assistant_remove_page(GtkAssistant* assistant, gint page_num) void {
+        @gtk_assistant_remove_page(assistant, page_num)
+    }
+
+    // Unimplemented: gint
+    //(*GtkAssistantPageFunc) (gint current_page,
+    //                         gpointer data);
+
+    @assistant_set_forward_page_func(GtkAssistant* assistant, GtkAssistantPageFunc page_func, gpointer data, GDestroyNotify destroy) void {
+        @gtk_assistant_set_forward_page_func(assistant,page_func,data, destroy)
+    }
+
+    @assistant_set_page_type(GtkAssistant* assistant, GtkWidget* page, GtkAssistantPageType type) void {
+        @gtk_assistant_set_page_type(assistant,page, type)
+    }
+
+    @assistant_get_page_type(GtkAssistant* assistant, GtkWidget* page) GtkAssistantPageType? {
+        @return gtk_assistant_get_page_type(assistant, page)
+    }
+
+    @assistant_set_page_title(GtkAssistant* assistant, GtkWidget* page, const gchar* title) void {
+        @gtk_assistant_set_page_title(assistant,page, title)
+    }
+
+    #const gchar* assistant_get_page_title(GtkAssistant* assistant, GtkWidget* page) {
+        @return gtk_assistant_get_page_title(assistant, page)
+    }
+
+    // Deprecated:  @gtk_assistant_set_page_header_image(
+    //      GtkAssistant* assistant,
+    //      GtkWidget* page,
+    //      GdkPixbuf* pixbuf)
+
+    // Deprecated:  @gtk_assistant_get_page_header_image(
+    //      GtkAssistant* assistant,
+    //      GtkWidget* page)
+
+    // Deprecated:  @gtk_assistant_set_page_side_image(
+    //      GtkAssistant* assistant,
+    //      GtkWidget* page,
+    //      GdkPixbuf* pixbuf)
+
+    // Deprecated:  @gtk_assistant_get_page_side_image(
+    //      GtkAssistant* assistant,
+    //      GtkWidget* page)
+
+    @assistant_set_page_complete(GtkAssistant* assistant, GtkWidget* page, gboolean complete) void {
+        @gtk_assistant_set_page_complete(assistant,page, complete)
+    }
+
+    @assistant_get_page_complete(GtkAssistant* assistant, GtkWidget* page) gboolean? {
+        @return gtk_assistant_get_page_complete(assistant, page)
+    }
+
+    @assistant_set_page_has_padding(GtkAssistant* assistant, GtkWidget* page, gboolean has_padding) void {
+        @gtk_assistant_set_page_has_padding(assistant,page, has_padding)
+    }
+
+    @assistant_get_page_has_padding(GtkAssistant* assistant, GtkWidget* page) gboolean? {
+        @return gtk_assistant_get_page_has_padding(assistant, page)
+    }
+
+    @assistant_add_action_widget(GtkAssistant* assistant, GtkWidget* child) void {
+        @gtk_assistant_add_action_widget(assistant, child)
+    }
+
+    @assistant_remove_action_widget(GtkAssistant* assistant, GtkWidget* child) void {
+        @gtk_assistant_remove_action_widget(assistant, child)
+    }
+
+    @assistant_update_buttons_state(GtkAssistant* assistant) void {
+        @gtk_assistant_update_buttons_state(assistant)
+    }
+
+    @assistant_commit(GtkAssistant* assistant) void {
+        @gtk_assistant_commit(assistant)
+    }
+
+    @assistant_next_page(GtkAssistant* assistant) void {
+        @gtk_assistant_next_page(assistant)
+    }
+
+    @assistant_previous_page(GtkAssistant* assistant) void {
+        @gtk_assistant_previous_page(assistant)
+    }
+
+    // ---
+    // End of GtkAssistant
+
 
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
