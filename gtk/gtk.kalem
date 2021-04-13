@@ -139,6 +139,35 @@
     // ---
     // End of GtkApplicationWindow
 
+    // GtkActionable
+
+    #const gchar* actionable_get_action_name(GtkActionable* actionable) {
+        @return gtk_actionable_get_action_name(actionable)
+    }
+
+    @actionable_set_action_name(GtkActionable* actionable, const gchar* action_name) void {
+        @return gtk_actionable_set_action_name(actionable, action_name)
+    }
+
+    @actionable_get_action_target_value(GtkActionable* actionable) GVariant*? {
+        @return gtk_actionable_get_action_target_value(actionable)
+    }
+
+    @actionable_set_action_target_value(GtkActionable* actionable, GVariant* target_value) void {
+        @gtk_actionable_set_action_target_value(actionable, target_value)
+    }
+
+    @actionable_set_action_target(GtkActionable* actionable, const gchar* format_str) void {
+        @gtk_actionable_set_action_target(actionable, format_str)
+    }
+
+    @actionable_set_detailed_action_name(GtkActionable* actionable, const gchar* detailed_action_name) void {
+        @gtk_actionable_set_detailed_action_name(actionable, detailed_action_name)
+    }
+
+    // ---
+    // End of GtkActionable
+
     // GtkWindow
     @window_new(GtkWindowType type) GtkWidget*? {
         @return gtk_window_new(type)
