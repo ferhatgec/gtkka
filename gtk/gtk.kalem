@@ -1062,6 +1062,35 @@
     // ---
     // End of GtkOffscreenWindow
 
+    // GtkWindowGroup
+
+    @window_group_new GtkWindowGroup*? {
+        @return gtk_window_group_new()
+    }
+
+    @window_group_add_window(GtkWindowGroup* window_group, GtkWidget* window) void {
+        @gtk_window_group_add_window(window_group, GTK_WINDOW(window))
+    }
+
+    @window_group_remove_window(GtkWindowGroup* window_group, GtkWidget* window) void {
+        @gtk_window_group_remove_window(window_group, GTK_WINDOW(window))
+    }
+
+    @window_group_list_windows(GtkWindowGroup* window_group) GList*? {
+        @return gtk_window_group_list_windows(window_group)
+    }
+
+    @window_group_get_current_grab(GtkWindowGroup* window_group) GtkWidget*? {
+        @return gtk_window_group_get_current_grab(window_group)
+    }
+
+    @window_group_get_current_device_grab(GtkWindowGroup* window_group, GdkDevice* device) GtkWidget*? {
+        @return gtk_window_group_get_current_device_grab(window_group, device)
+    }
+
+    // ---
+    // End of GtkWindowGroup
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
