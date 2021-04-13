@@ -93,6 +93,47 @@
         @gtk_window_set_default_size(GTK_WINDOW(window),width, height)
     }
 
+    // Deprecated:  @gtk_window_set_default_geometry(
+    //      GtkWindow* window,
+    //      gint width,
+    //      gint height)
+
+    @window_set_geometry_hints(GtkWidget* window, GtkWidget* geometry_widget, GdkGeometry* geometry, GdkWindowHints geom_mask) void {
+        @gtk_window_set_geometry_hints(GTK_WINDOW(window), geometry_widget,geometry,geom_mask)
+    }
+
+    @window_set_gravity(GtkWidget* window, GdkGravity gravity) void {
+        @gtk_window_set_gravity(GTK_WINDOW(window), gravity)
+    }
+
+    @window_get_gravity(GtkWidget* window) GdkGravity {
+        @return gtk_window_get_gravity(GTK_WINDOW(window))
+    }
+
+    @window_set_position(GtkWidget* window, GtkWindowPosition position) void {
+        @gtk_window_set_position(GTK_WINDOW(window), position)
+    }
+
+    @window_set_transient_for(GtkWidget* window, GtkWidget* parent) void {
+        @gtk_window_set_transient_for(GTK_WINDOW(window), GTK_WINDOW(parent))
+    }
+
+    @window_set_attached_to(GtkWidget* window, GtkWidget* attach_widget) void {
+        @gtk_window_set_attached_to(GTK_WINDOW(window), attach_widget)
+    }
+
+    @window_set_destroy_with_parent(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_destroy_with_parent(GTK_WINDOW(window), setting)
+    }
+
+    @window_set_hide_titlebar_when_maximized(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_hide_titlebar_when_maximized(GTK_WINDOW(window), setting)
+    }
+
+    @window_set_screen(GtkWidget* window, GdkScreen* screen) void {
+        @gtk_window_set_screen(GTK_WINDOW(window), screen)
+    }
+
     // ...
 
     // GtkApplicationWindow
