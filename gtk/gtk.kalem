@@ -134,6 +134,151 @@
         @gtk_window_set_screen(GTK_WINDOW(window), screen)
     }
 
+    @window_get_screen(GtkWidget* window) GdkScreen*? {
+        @return gtk_window_get_screen(GTK_WINDOW(window))
+    }
+
+    @window_is_active(GtkWidget* window) gboolean? {
+        @return gtk_window_is_active(GTK_WINDOW(window))
+    }
+
+    @window_is_maximized(GtkWidget* window) gboolean? {
+        @return gtk_window_is_maximized(GTK_WINDOW(window))
+    }
+
+    @window_has_toplevel_focus(GtkWidget* window) gboolean? {
+        @return gtk_window_has_toplevel_focus(GTK_WINDOW(window))
+    }
+
+    @window_list_toplevels GList*? {
+        @return gtk_window_list_toplevels()
+    }
+
+    @window_add_mnemonic(GtkWidget* window, guint keyval, GtkWidget* target) void {
+        @gtk_window_add_mnemonic(GTK_WINDOW(window),keyval, target)
+    }
+
+    @window_remove_mnemonic(GtkWidget* window, guint keyval, GtkWidget* target) void {
+        @gtk_window_remove_mnemonic(GTK_WINDOW(window),keyval, target)
+    }
+
+    @window_mnemonic_activate(GtkWidget* window, guint keyval, GdkModifierType modifier) gboolean? {
+        @return gtk_window_mnemonic_activate(GTK_WINDOW(window),keyval, modifier)
+    }
+
+    @window_activate_key(GtkWidget* window, GdkEventKey* event) gboolean? {
+        @return gtk_window_activate_key(GTK_WINDOW(window), event)
+    }
+
+    @window_propagate_key_event(GtkWidget* window, GdkEventKey* event) gboolean? {
+        @return gtk_window_propagate_key_event(GTK_WINDOW(window), event)
+    }
+
+    @window_get_focus(GtkWidget* window) GtkWidget*? {
+        @return gtk_window_get_focus(GTK_WINDOW(window))
+    }
+
+    @window_set_focus(GtkWidget* window, GtkWidget* focus) void {
+        @gtk_window_set_focus(GTK_WINDOW(window), focus)
+    }
+
+    @window_get_default_widget(GtkWidget* window) GtkWidget*? {
+        @return gtk_window_get_default_widget(GTK_WINDOW(window))
+    }
+
+    @window_set_default(GtkWidget* window, GtkWidget* default_widget) void {
+        @gtk_window_set_default(GTK_WINDOW(window), default_widget)
+    }
+
+    @window_present(GtkWidget* window) void {
+        @gtk_window_present(GTK_WINDOW(window))
+    }
+
+    @window_present_with_time(GtkWidget* window, guint32 timestamp) void {
+        @gtk_window_present_with_time(GTK_WINDOW(window), timestamp)
+    }
+
+    @window_close(GtkWidget* window) void {
+        @gtk_window_close(GTK_WINDOW(window))
+    }
+
+    @window_iconify(GtkWidget* window) void {
+        @gtk_window_iconify(GTK_WINDOW(window))
+    }
+
+    @window_deiconify(GtkWidget* window) void {
+        @gtk_window_deiconify(GTK_WINDOW(window))
+    }
+
+    @window_stick(GtkWidget* window) void {
+        @gtk_window_stick(GTK_WINDOW(window))
+    }
+
+    @window_unstick(GtkWidget* window) void {
+        @gtk_window_unstick(GTK_WINDOW(window))
+    }
+
+    @window_maximize(GtkWidget* window) void {
+        @gtk_window_maximize(GTK_WINDOW(window))
+    }
+
+    @window_unmaximize(GtkWidget* window) void {
+        @gtk_window_unmaximize(GTK_WINDOW(window))
+    }
+
+    @window_fullscreen(GtkWidget* window) void {
+        @gtk_window_fullscreen(GTK_WINDOW(window))
+    }
+
+    @window_fullscreen_on_monitor(GtkWidget* window, GdkScreen* screen, gint monitor) void {
+        @gtk_window_fullscreen_on_monitor(GTK_WINDOW(window),screen, monitor)
+    }
+
+    @window_unfullscreen(GtkWidget* window) void {
+        @gtk_window_unfullscreen(GTK_WINDOW(window))
+    }
+
+    @window_set_keep_above(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_keep_above(GTK_WINDOW(window), setting)
+    }
+
+    @window_set_keep_below(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_keep_below(GTK_WINDOW(window), setting)
+    }
+
+    @window_begin_resize_drag(GtkWidget* window, GdkWindowEdge edge, gint button, gint root_x, gint root_y, guint32 timestamp) void {
+        @gtk_window_begin_resize_drag(GTK_WINDOW(window),edge,button,root_x,root_y, timestamp)
+    }
+
+    @window_begin_move_drag(GtkWidget* window, gint button, gint root_x, gint root_y, guint32 timestamp) void {
+        @gtk_window_begin_move_drag(GTK_WINDOW(window),button,root_x,root_y, timestamp)
+    }
+
+    @window_set_decorated(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_decorated(GTK_WINDOW(window), setting)
+    }
+
+    @window_set_deletable(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_deletable(GTK_WINDOW(window), setting)
+    }
+
+    @window_set_mnemonic_modifier(GtkWidget* window, GdkModifierType modifier) void {
+        @gtk_window_set_mnemonic_modifier(GTK_WINDOW(window), modifier)
+    }
+
+    @window_set_type_hint(GtkWidget* window, GdkWindowTypeHint hint) void {
+        @gtk_window_set_type_hint(GTK_WINDOW(window), hint)
+    }
+
+    @window_set_skip_taskbar_hint(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_skip_taskbar_hint(GTK_WINDOW(window), setting)
+    }
+
+    @window_set_skip_pager_hint(GtkWidget* window, gboolean setting) void {
+        @gtk_window_set_skip_pager_hint(GTK_WINDOW(window), setting)
+    }
+
+
     // ...
 
     // GtkApplicationWindow
