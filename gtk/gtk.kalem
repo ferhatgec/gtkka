@@ -1281,6 +1281,186 @@
     // ---
     // End of GtkRevealer
 
+    // GtkListBox
+
+    // Unimplemented: gboolean
+    //(*GtkListBoxFilterFunc) (GtkListBoxRow *row,
+    //                         gpointer user_data);
+
+    // Unimplemented: gint
+    //(*GtkListBoxSortFunc) (GtkListBoxRow *row1,
+    //                       GtkListBoxRow *row2,
+    //                       gpointer user_data);
+
+    // Unimplemented: void
+    //(*GtkListBoxUpdateHeaderFunc) (GtkListBoxRow *row,
+    //                               GtkListBoxRow *before,
+    //                               gpointer user_data);
+
+    @list_box_new GtkWidget*? {
+        @return gtk_list_box_new()
+    }
+
+    @list_box_prepend(GtkListBox* box, GtkWidget* child) void {
+        @gtk_list_box_prepend(box, child)
+    }
+
+    @list_box_insert(GtkListBox* box, GtkWidget* child, gint position) void {
+        @gtk_list_box_insert(box,child, position)
+    }
+
+    @list_box_select_row(GtkListBox* box, GtkListBoxRow* row) void {
+        @gtk_list_box_select_row(box, row)
+    }
+
+    @list_box_unselect_row(GtkListBox* box, GtkListBoxRow* row) void {
+        @gtk_list_box_unselect_row(box, row)
+    }
+
+    @list_box_select_all(GtkListBox* box) void {
+        @gtk_list_box_select_all(box)
+    }
+
+    @list_box_unselect_all(GtkListBox* box) void {
+        @gtk_list_box_unselect_all(box)
+    }
+
+    @list_box_get_selected_row(GtkListBox* box) GtkListBoxRow*? {
+        @return gtk_list_box_get_selected_row(box)
+    }
+
+    // Unimplemented: void
+    //(*GtkListBoxForeachFunc) (GtkListBox *box,
+    //                          GtkListBoxRow *row,
+    //                          gpointer user_data);
+
+    @list_box_selected_foreach(GtkListBox* box, GtkListBoxForeachFunc func, gpointer data) void {
+        @gtk_list_box_selected_foreach(box,func, data)
+    }
+
+    @list_box_get_selected_rows(GtkListBox* box) GList*? {
+        @return gtk_list_box_get_selected_rows(box)
+    }
+
+    @list_box_set_selection_mode(GtkListBox* box, GtkSelectionMode mode) void {
+        @gtk_list_box_set_selection_mode(box, mode)
+    }
+
+    @list_box_get_selection_mode(GtkListBox* box) GtkSelectionMode? {
+        @return gtk_list_box_get_selection_mode(box)
+    }
+
+    @list_box_set_activate_on_single_click(GtkListBox* box, gboolean single) void {
+        @gtk_list_box_set_activate_on_single_click(box, single)
+    }
+
+    @list_box_get_activate_on_single_click(GtkListBox* box) gboolean? {
+        @return gtk_list_box_get_activate_on_single_click(box)
+    }
+
+    @list_box_get_adjustment(GtkListBox* box) GtkAdjustment*? {
+        @return gtk_list_box_get_adjustment(box)
+    }
+
+    @list_box_set_adjustment(GtkListBox* box, GtkAdjustment* adjustment) void {
+        @gtk_list_box_set_adjustment(box, adjustment)
+    }
+
+    @list_box_set_placeholder(GtkListBox* box, GtkWidget* placeholder) void {
+        @gtk_list_box_set_placeholder(box, placeholder)
+    }
+
+    @list_box_get_row_at_index(GtkListBox* box, gint index_) GtkListBoxRow*? {
+        @return gtk_list_box_get_row_at_index(box, index_)
+    }
+
+    @list_box_get_row_at_y(GtkListBox* box, gint y) GtkListBoxRow*? {
+        @return gtk_list_box_get_row_at_y(box, y)
+    }
+
+    @list_box_invalidate_filter(GtkListBox* box) void {
+        @gtk_list_box_invalidate_filter(box)
+    }
+
+    @list_box_invalidate_headers(GtkListBox* box) void {
+        @gtk_list_box_invalidate_headers(box)
+    }
+
+    @list_box_invalidate_sort(GtkListBox* box) void {
+        @gtk_list_box_invalidate_sort(box)
+    }
+
+    @list_box_set_filter_func(GtkListBox* box, GtkListBoxFilterFunc filter_func, gpointer user_data, GDestroyNotify destroy) void {
+        @gtk_list_box_set_filter_func(box,filter_func,user_data, destroy)
+    }
+
+    @list_box_set_header_func(GtkListBox* box, GtkListBoxUpdateHeaderFunc update_header, gpointer user_data, GDestroyNotify destroy) void {
+        @gtk_list_box_set_header_func(box,update_header,user_data, destroy)
+    }
+
+    @list_box_set_sort_func(GtkListBox* box, GtkListBoxSortFunc sort_func, gpointer user_data, GDestroyNotify destroy) void {
+        @gtk_list_box_set_sort_func(box,sort_func,user_data, destroy)
+    }
+
+    @list_box_drag_highlight_row(GtkListBox* box, GtkListBoxRow* row) void {
+        @gtk_list_box_drag_highlight_row(box, row)
+    }
+
+    @list_box_drag_unhighlight_row(GtkListBox* box) void {
+        @gtk_list_box_drag_unhighlight_row(box)
+    }
+
+    // Unimplemented: GtkWidget *
+    //(*GtkListBoxCreateWidgetFunc) (gpointer item,
+    //                               gpointer user_data);
+
+    @list_box_bind_model(GtkListBox* box, GListModel* model, GtkListBoxCreateWidgetFunc create_widget_func, gpointer user_data, GDestroyNotify user_data_free_func) void {
+        @gtk_list_box_bind_model(box,model,create_widget_func,user_data, user_data_free_func)
+    }
+
+    @list_box_row_new GtkWidget*? {
+        @return gtk_list_box_row_new()
+    }
+
+    @list_box_row_changed(GtkListBoxRow* row) void {
+        @gtk_list_box_row_changed(row)
+    }
+
+    @list_box_row_is_selected(GtkListBoxRow* row) gboolean? {
+        @return gtk_list_box_row_is_selected(row)
+    }
+
+    @list_box_row_get_header(GtkListBoxRow* row) GtkWidget*? {
+        @return gtk_list_box_row_get_header(row)
+    }
+
+    @list_box_row_set_header(GtkListBoxRow* row, GtkWidget* header) void {
+        @gtk_list_box_row_set_header(row, header)
+    }
+
+    @list_box_row_get_index(GtkListBoxRow* row) gint? {
+        @return gtk_list_box_row_get_index(row)
+    }
+
+    @list_box_row_set_activatable(GtkListBoxRow* row, gboolean activatable) void {
+        @gtk_list_box_row_set_activatable(row, activatable)
+    }
+
+    @list_box_row_get_activatable(GtkListBoxRow* row) gboolean {
+        @return gtk_list_box_row_get_activatable(row)
+    }
+
+    @list_box_row_set_selectable(GtkListBoxRow* row, gboolean selectable) void {
+        @gtk_list_box_row_set_selectable(row, selectable)
+    }
+
+    @list_box_row_get_selectable(GtkListBoxRow* row) gboolean? {
+        @return gtk_list_box_row_get_selectable(row)
+    }
+
+    // ---
+    // End of GtkListBox
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
