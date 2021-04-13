@@ -111,6 +111,34 @@
     // ---
     // End of GtkApplication
 
+    // GtkApplicationWindow
+    @application_window_new(GtkApplication* application) GtkWidget*? {
+        @return gtk_application_window_new(application)
+    }
+
+    @application_window_set_show_menubar(GtkApplicationWindow* window, gboolean show_menubar) void {
+        @gtk_application_window_set_show_menubar(window, show_menubar)
+    }
+
+    @application_window_get_show_menubar(GtkApplicationWindow* window) gboolean? {
+        @return gtk_application_window_get_show_menubar(window)
+    }
+
+    @application_window_get_id(GtkApplicationWindow* window) guint? {
+        @return gtk_application_window_get_id(window)
+    }
+
+    @application_window_set_help_overlay(GtkApplicationWindow* window, GtkShortcutsWindow* help_overlay) void {
+        @gtk_application_window_set_help_overlay(window, help_overlay)
+    }
+
+    @application_window_get_help_overlay(GtkApplicationWindow* window) GtkShortcutsWindow*? {
+        @return gtk_application_window_get_help_overlay(window)
+    }
+
+    // ---
+    // End of GtkApplicationWindow
+
     // GtkWindow
     @window_new(GtkWindowType type) GtkWidget*? {
         @return gtk_window_new(type)
@@ -589,11 +617,6 @@
 
     // ---
     // End of GtkWindow
-
-    // GtkApplicationWindow
-    @application_window_new(GtkApplication* application) GtkWidget*? {
-        @return gtk_application_window_new(application)
-    }
 
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
