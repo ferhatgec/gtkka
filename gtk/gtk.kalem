@@ -1155,6 +1155,95 @@
     // ---
     // End of GtkBox
 
+    // GtkGrid
+
+    @grid_new GtkWidget*? {
+        @return gtk_grid_new()
+    }
+
+    @grid_attach(GtkGrid* grid, GtkWidget* child, gint left, gint top, gint width, gint height) void {
+        @gtk_grid_attach(grid,child,left,top,width, height)
+    }
+
+    @grid_attach_next_to(GtkGrid* grid, GtkWidget* child, GtkWidget* sibling, GtkPositionType side, gint width, gint height) void {
+        @gtk_grid_attach_next_to(grid,child,sibling,side,width, height)
+    }
+
+    @grid_get_child_at(GtkGrid* grid, gint left, gint top) GtkWidget*? {
+        @return gtk_grid_get_child_at(grid,left, top)
+    }
+
+    @grid_insert_row(GtkGrid* grid, gint position) void {
+        @gtk_grid_insert_row(grid, position)
+    }
+
+    @grid_insert_column(GtkGrid* grid, gint position) void {
+        @gtk_grid_insert_column(grid, position)
+    }
+
+    @grid_remove_row(GtkGrid* grid, gint position) void {
+        @gtk_grid_remove_row(grid, position)
+    }
+
+    @grid_remove_column(GtkGrid* grid, gint position) void {
+        @gtk_grid_remove_column(grid, position)
+    }
+
+    @grid_insert_next_to(GtkGrid* grid, GtkWidget* sibling, GtkPositionType side) void {
+        @gtk_grid_insert_next_to(grid,sibling, side)
+    }
+
+    @grid_set_row_homogeneous(GtkGrid* grid, gboolean homogeneous) void {
+        @gtk_grid_set_row_homogeneous(grid, homogeneous)
+    }
+
+    @grid_get_row_homogeneous(GtkGrid* grid) gboolean? {
+        @return gtk_grid_get_row_homogeneous(grid)
+    }
+
+    @grid_set_row_spacing(GtkGrid* grid, guint spacing) void {
+        @gtk_grid_set_row_spacing(grid, spacing)
+    }
+
+    @grid_get_row_spacing(GtkGrid* grid) guint? {
+        @return gtk_grid_get_row_spacing(grid)
+    }
+
+    @grid_set_column_homogeneous(GtkGrid* grid, gboolean homogeneous) void {
+        @gtk_grid_set_column_homogeneous(grid, homogeneous)
+    }
+
+    @grid_get_column_homogeneous(GtkGrid* grid) gboolean? {
+        @return gtk_grid_get_column_homogeneous(grid)
+    }
+
+    @grid_set_column_spacing(GtkGrid* grid, guint spacing) void {
+        @gtk_grid_set_column_spacing(grid, spacing)
+    }
+
+    @grid_get_column_spacing(GtkGrid* grid) guint? {
+        @return gtk_grid_get_column_spacing(grid)
+    }
+
+    @grid_get_baseline_row(GtkGrid* grid) guint? {
+        @return gtk_grid_get_baseline_row(grid)
+    }
+
+    @grid_set_baseline_row(GtkGrid* grid, gint row) void {
+        @gtk_grid_set_baseline_row(grid, row)
+    }
+
+    @grid_get_row_baseline_position(GtkGrid* grid, gint row) GtkBaselinePosition? {
+        @return gtk_grid_get_row_baseline_position(grid, row)
+    }
+
+    @grid_set_row_baseline_position(GtkGrid* grid, gint row, GtkBaselinePosition pos) void {
+        @gtk_grid_set_row_baseline_position(grid,row, pos)
+    }
+
+    // ---
+    // End of GtkGrid
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
