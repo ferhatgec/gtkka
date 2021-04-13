@@ -1024,6 +1024,26 @@
     // ---
     // End of GtkAssistant
 
+    // GtkInvisible
+
+    @invisible_new GtkWidget*? {
+        @return gtk_invisible_new()
+    }
+
+    @invisible_new_for_screen(GdkScreen* screen) GtkWidget*? {
+        @return gtk_invisible_new_for_screen(screen)
+    }
+
+    @invisible_set_screen(GtkInvisible* invisible, GdkScreen* screen) void {
+        @gtk_invisible_set_screen(invisible, screen)
+    }
+
+    @invisible_get_screen(GtkInvisible* invisible) GdkScreen*? {
+        @return gtk_invisible_get_screen(invisible)
+    }
+
+    // ---
+    // End of GtkInvisible
 
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
