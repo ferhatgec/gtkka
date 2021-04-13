@@ -11,8 +11,11 @@
 // Many functions are not implemented yet.
 //
 // Some wrapper principles:
-//  Using GtkWidget* with GTK_WINDOW macro instead of directly GtkWindow*
+//   Using GtkWidget* with GTK_WINDOW macro instead of directly GtkWindow*
 //
+//
+// Extracted C++ library can be used as single-header C++* wrapper around GTK3.
+//   * : Kalem generates readable C++ code.
 
 
 !required_flag("library")
