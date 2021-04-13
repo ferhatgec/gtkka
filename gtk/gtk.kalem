@@ -1751,6 +1751,31 @@
     // ---
     // End of GtkStackSidebar
 
+    // GtkActionBar
+
+    @action_bar_new GtkWidget*? {
+        @return gtk_action_bar_new()
+    }
+
+    @action_bar_pack_start(GtkActionBar* action_bar, GtkWidget* child) void {
+        @gtk_action_bar_pack_start(action_bar, child)
+    }
+
+    @action_bar_pack_end(GtkActionBar* action_bar, GtkWidget* child) void {
+        @gtk_action_bar_pack_end(action_bar, child)
+    }
+
+    @action_bar_get_center_widget(GtkActionBar* action_bar) GtkWidget*? {
+        @return gtk_action_bar_get_center_widget(action_bar)
+    }
+
+    @action_bar_set_center_widget(GtkActionBar* action_bar, GtkWidget* center_widget) void {
+        @gtk_action_bar_set_center_widget(action_bar, center_widget)
+    }
+
+    // ---
+    // End of GtkActionBar
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
