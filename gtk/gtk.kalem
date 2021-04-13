@@ -17,12 +17,12 @@
 
 !required_flag("library")
 
-
 #include {
     "gtk_import"
 }
 
 @gtk namespace {
+    // GtkApplication
     @application_new(const gchar* application_id, GApplicationFlags flags) GtkApplication*? {
         @return gtk_application_new(application_id, flags)
     }
@@ -46,6 +46,70 @@
     @application_get_active_window(GtkApplication* application) GtkWindow*? {
         @return gtk_application_get_active_window(application)
     }
+
+    @application_inhibit(GtkApplication* application, GtkWidget* window, GtkApplicationInhibitFlags flags, const gchar* reason) guint? {
+        @return gtk_application_inhibit(application,GTK_WINDOW(window),flags, reason)
+    }
+
+    @application_uninhibit(GtkApplication* application, guint cookie) void {
+        @gtk_application_uninhibit(application, cookie)
+    }
+
+    @application_is_inhibited(GtkApplication* application, GtkApplicationInhibitFlags flags) gboolean? {
+        @return gtk_application_is_inhibited(application, flags)
+    }
+
+    @application_prefers_app_menu(GtkApplication* application) gboolean? {
+        @return gtk_application_prefers_app_menu(application)
+    }
+
+    @application_get_app_menu(GtkApplication* application) GMenuModel*? {
+        @return gtk_application_get_app_menu(application)
+    }
+
+    @application_set_app_menu(GtkApplication* application, GMenuModel* app_menu) void {
+        @gtk_application_set_app_menu(application, app_menu)
+    }
+
+    @application_get_menubar(GtkApplication* application) GMenuModel*? {
+        @return gtk_application_get_menubar(application)
+    }
+
+    @application_set_menubar(GtkApplication* application, GMenuModel* menubar) void {
+        @gtk_application_set_menubar(application, menubar)
+    }
+
+    @application_get_menu_by_id(GtkApplication* application, const gchar* id) GMenu*? {
+        @return gtk_application_get_menu_by_id(application, id)
+    }
+
+    // Deprecated:  @gtk_application_add_accelerator(GtkApplication *application,
+    //      const gchar *accelerator,
+    //      const gchar *action_name,
+    //      GVariant *parameter);
+
+    // Deprecated:  @gtk_application_remove_accelerator(GtkApplication *application,
+    //      const gchar *action_name,
+    //      GVariant *parameter);
+
+    @application_list_action_descriptions(GtkApplication* application) gchar**? {
+        @return gtk_application_list_action_descriptions(application)
+    }
+
+    @application_get_accels_for_action(GtkApplication* application, const gchar* detailed_action_name) gchar**? {
+        @return gtk_application_get_accels_for_action(application, detailed_action_name)
+    }
+
+    @application_set_accels_for_action(GtkApplication* application, const gchar* detailed_action_name, const gchar* const* accels) void {
+        @gtk_application_set_accels_for_action(application,detailed_action_name, accels)
+    }
+
+    @application_get_actions_for_accel(GtkApplication* application, const gchar* accel) gchar**? {
+        @return gtk_application_get_actions_for_accel(application, accel)
+    }
+
+    // ---
+    // End of GtkApplication
 
     // GtkWindow
     @window_new(GtkWindowType type) GtkWidget*? {

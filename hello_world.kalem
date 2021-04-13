@@ -45,8 +45,10 @@
     "ignore-case-warnings=true"
 }
 
-#include "gtk"
-#include "gtk_import"
+#include {
+    "gtk"
+    "gtk_import"
+}
 
 @activate(GtkApplication* app, gpointer userdata) void {
     #GtkWidget *window;
