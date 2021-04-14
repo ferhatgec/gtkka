@@ -2256,6 +2256,19 @@
     // ---
     // End of GtkOrientable
 
+    // GtkAspectFrame
+
+    @aspect_frame_new(const gchar* label, gfloat xalign, gfloat yalign, gfloat ratio, gboolean obey_child) GtkWidget*? {
+        @return gtk_aspect_frame_new(label,xalign,yalign,ratio, obey_child)
+    }
+
+    @aspect_frame_set(GtkAspectFrame* aspect_frame, gfloat xalign, gfloat yalign, gfloat ratio, gboolean obey_child) void {
+        @gtk_aspect_frame_set(aspect_frame,xalign,yalign,ratio, obey_child)
+    }
+
+    // ---
+    // End of GtkAspectFrame
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
