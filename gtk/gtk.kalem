@@ -2269,6 +2269,23 @@
     // ---
     // End of GtkAspectFrame
 
+    // GtkFixed
+
+    @fixed_new GtkWidget*? {
+        @return gtk_fixed_new()
+    }
+
+    @fixed_put(GtkFixed* fixed, GtkWidget* widget, gint x, gint y) void {
+        @gtk_fixed_put(fixed,widget,x, y)
+    }
+
+    @fixed_move(GtkFixed* fixed, GtkWidget* widget, gint x, gint y) void {
+        @gtk_fixed_move(fixed,widget,x, y)
+    }
+
+    // ---
+    // End of GtkFixed
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
