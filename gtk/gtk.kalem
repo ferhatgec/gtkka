@@ -2830,6 +2830,39 @@
     // ---
     // End of GtkLevelBar
 
+    // GtkStatusbar
+
+    @statusbar_new GtkWidget*? {
+        @return gtk_statusbar_new()
+    }
+
+    @statusbar_get_context_id(GtkStatusbar* statusbar, const gchar* context_description) guint? {
+        @return gtk_statusbar_get_context_id(statusbar, context_description)
+    }
+
+    @statusbar_push(GtkStatusbar* statusbar, guint context_id, const gchar* text) guint? {
+        @return gtk_statusbar_push(statusbar,context_id, text)
+    }
+
+    @statusbar_pop(GtkStatusbar* statusbar, guint context_id) void {
+        @gtk_statusbar_pop(statusbar, context_id)
+    }
+
+    @statusbar_remove(GtkStatusbar* statusbar, guint context_id, guint message_id) void {
+        @gtk_statusbar_remove(statusbar,context_id, message_id)
+    }
+
+    @statusbar_remove_all(GtkStatusbar* statusbar, guint context_id) void {
+        @gtk_statusbar_remove_all(statusbar, context_id)
+    }
+
+    @statusbar_get_message_area(GtkStatusbar* statusbar) GtkWidget*? {
+        @return gtk_statusbar_get_message_area(statusbar)
+    }
+
+    // ---
+    // End of GtkStatusbar
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
