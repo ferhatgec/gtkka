@@ -2610,6 +2610,23 @@
     // ---
     // End of GtkImage
 
+    // GtkSpinner
+
+    @spinner_new GtkWidget*? {
+        @return gtk_spinner_new()
+    }
+
+    @spinner_start(GtkSpinner* spinner) void {
+        @gtk_spinner_start(spinner)
+    }
+
+    @spinner_stop(GtkSpinner* spinner) void {
+        @gtk_spinner_stop(spinner)
+    }
+
+    // ---
+    // End of GtkSpinner
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
