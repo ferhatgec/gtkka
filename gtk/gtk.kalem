@@ -3022,6 +3022,47 @@
     // ---
     // End of GtkCheckButton
 
+    // GtkRadioButton
+
+    @radio_button_new(GSList* group) GtkWidget*? {
+        @return gtk_radio_button_new(group)
+    }
+
+    @radio_button_new_from_widget(GtkRadioButton* radio_group_member) GtkWidget*? {
+        @return gtk_radio_button_new_from_widget(radio_group_member)
+    }
+
+    @radio_button_new_with_label(GSList* group, const gchar* label) GtkWidget*? {
+        @return gtk_radio_button_new_with_label(group, label)
+    }
+
+    @radio_button_new_with_label_from_widget(GtkRadioButton* radio_group_member, const gchar* label) GtkWidget*? {
+        @return gtk_radio_button_new_with_label_from_widget(radio_group_member, label)
+    }
+
+    @radio_button_new_with_mnemonic(GSList* group, const gchar* label) GtkWidget*? {
+        @return gtk_radio_button_new_with_mnemonic(group, label)
+    }
+
+    @radio_button_new_with_mnemonic_from_widget(GtkRadioButton* radio_group_member, const gchar* label) GtkWidget*? {
+        @return gtk_radio_button_new_with_mnemonic_from_widget(radio_group_member, label)
+    }
+
+    @radio_button_set_group(GtkRadioButton* radio_button, GSList* group) void {
+        @gtk_radio_button_set_group(radio_button, group)
+    }
+
+    @radio_button_get_group(GtkRadioButton* radio_button) GSList*? {
+        @return gtk_radio_button_get_group(radio_button)
+    }
+
+    @radio_button_join_group(GtkRadioButton* radio_button, GtkRadioButton* group_source) void {
+        @gtk_radio_button_join_group(radio_button, group_source)
+    }
+
+    // ---
+    // End of GtkRadioButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
