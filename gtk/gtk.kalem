@@ -3260,6 +3260,15 @@
     // ---
     // End of GtkScaleButton
 
+    // GtkVolumeButton
+
+    @volume_button_new GtkWidget*? {
+        @return gtk_volume_button_new()
+    }
+
+    // ---
+    // End of GtkVolumeButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
