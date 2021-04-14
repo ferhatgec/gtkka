@@ -3005,6 +3005,23 @@
     // ---
     // End of GtkButton
 
+    // GtkCheckButton
+
+    @check_button_new GtkWidget*? {
+        @return gtk_check_button_new()
+    }
+
+    @check_button_new_with_label(const gchar* label) GtkWidget*? {
+        @return gtk_check_button_new_with_label(label)
+    }
+
+    @check_button_new_with_mnemonic(const gchar* label) GtkWidget*? {
+        @return gtk_check_button_new_with_mnemonic(label)
+    }
+
+    // ---
+    // End of GtkCheckButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
