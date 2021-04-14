@@ -2286,6 +2286,211 @@
     // ---
     // End of GtkFixed
 
+    // GtkLabel
+
+    @label_new(const gchar* str) GtkWidget*? {
+        @return gtk_label_new(str)
+    }
+
+    @label_set_text(GtkLabel* label, const gchar* str) void {
+        @gtk_label_set_text(label, str)
+    }
+
+    @label_set_attributes(GtkLabel* label, PangoAttrList* attrs) void {
+        @gtk_label_set_attributes(label, attrs)
+    }
+
+    @label_set_markup(GtkLabel* label, const gchar* str) void {
+        @gtk_label_set_markup(label, str)
+    }
+
+    @label_set_markup_with_mnemonic(GtkLabel* label, const gchar* str) void {
+        @gtk_label_set_markup_with_mnemonic(label, str)
+    }
+
+    @label_set_pattern(GtkLabel* label, const gchar* pattern) void {
+        @gtk_label_set_pattern(label, pattern)
+    }
+
+    @label_set_justify(GtkLabel* label, GtkJustification jtype) void {
+        @gtk_label_set_justify(label, jtype)
+    }
+
+    @label_set_xalign(GtkLabel* label, gfloat xalign) void {
+        @gtk_label_set_xalign(label, xalign)
+    }
+
+    @label_set_yalign(GtkLabel* label, gfloat yalign) void {
+        @gtk_label_set_yalign(label, yalign)
+    }
+
+    @label_set_ellipsize(GtkLabel* label, PangoEllipsizeMode mode) void {
+        @gtk_label_set_ellipsize(label, mode)
+    }
+
+    @label_set_width_chars(GtkLabel* label, gint n_chars) void {
+        @gtk_label_set_width_chars(label, n_chars)
+    }
+
+    @label_set_max_width_chars(GtkLabel* label, gint n_chars) void {
+        @gtk_label_set_max_width_chars(label, n_chars)
+    }
+
+    @label_set_line_wrap(GtkLabel* label, gboolean wrap) void {
+        @gtk_label_set_line_wrap(label, wrap)
+    }
+
+    @label_set_line_wrap_mode(GtkLabel* label, PangoWrapMode wrap_mode) void {
+        @gtk_label_set_line_wrap_mode(label, wrap_mode)
+    }
+
+    @label_set_lines(GtkLabel* label, gint lines) void {
+        @gtk_label_set_lines(label, lines)
+    }
+
+    @label_get_layout_offsets(GtkLabel* label, gint* x, gint* y) void {
+        @gtk_label_get_layout_offsets(label,x, y)
+    }
+
+    @label_get_mnemonic_keyval(GtkLabel* label) guint? {
+        @return gtk_label_get_mnemonic_keyval(label)
+    }
+
+    @label_get_selectable(GtkLabel* label) gboolean? {
+        @return gtk_label_get_selectable(label)
+    }
+
+    #const gchar* label_get_text(GtkLabel* label) {
+        @return gtk_label_get_text(label)
+    }
+
+    @label_new_with_mnemonic(const gchar* str) GtkWidget*? {
+        @return gtk_label_new_with_mnemonic(str)
+    }
+
+    @label_select_region(GtkLabel* label, gint start_offset, gint end_offset) void {
+        @gtk_label_select_region(label,start_offset, end_offset)
+    }
+
+    @label_set_mnemonic_widget(GtkLabel* label, GtkWidget* widget) void {
+        @gtk_label_set_mnemonic_widget(label, widget)
+    }
+
+    @label_set_selectable(GtkLabel* label, gboolean setting) void {
+        @gtk_label_set_selectable(label, setting)
+    }
+
+    @label_set_text_with_mnemonic(GtkLabel* label, const gchar* str) void {
+        @gtk_label_set_text_with_mnemonic(label, str)
+    }
+
+    @label_get_attributes(GtkLabel* label) PangoAttrList*? {
+        @return gtk_label_get_attributes(label)
+    }
+
+    @label_get_justify(GtkLabel* label) GtkJustification? {
+        @return gtk_label_get_justify(label)
+    }
+
+    @label_get_xalign(GtkLabel* label) gfloat? {
+        @return gtk_label_get_xalign(label)
+    }
+
+    @label_get_yalign(GtkLabel* label) gfloat? {
+        @return gtk_label_get_yalign(label)
+    }
+
+    @label_get_ellipsize(GtkLabel* label) PangoEllipsizeMode? {
+        @return gtk_label_get_ellipsize(label)
+    }
+
+    @label_get_width_chars(GtkLabel* label) gint? {
+        @return gtk_label_get_width_chars(label)
+    }
+
+    @label_get_max_width_chars(GtkLabel* label) gint? {
+        @return gtk_label_get_max_width_chars(label)
+    }
+
+    #const gchar* label_get_label(GtkLabel* label) {
+        @return gtk_label_get_label(label)
+    }
+
+    @label_get_layout(GtkLabel* label) PangoLayout*? {
+        @return gtk_label_get_layout(label)
+    }
+
+    @label_get_line_wrap(GtkLabel* label) gboolean? {
+        @return gtk_label_get_line_wrap(label)
+    }
+
+    @label_get_line_wrap_mode(GtkLabel* label) PangoWrapMode? {
+        @return gtk_label_get_line_wrap_mode(label)
+    }
+
+    @label_get_lines(GtkLabel* label) gint? {
+        @return gtk_label_get_lines(label)
+    }
+
+    @label_get_mnemonic_widget(GtkLabel* label) GtkWidget*? {
+        @return gtk_label_get_mnemonic_widget(label)
+    }
+
+    @label_get_selection_bounds(GtkLabel* label, gint* start, gint* end) gboolean? {
+        @return gtk_label_get_selection_bounds(label,start, end)
+    }
+
+    @label_get_use_markup(GtkLabel* label) gboolean? {
+        @return gtk_label_get_use_markup(label)
+    }
+
+    @label_get_use_underline(GtkLabel* label) gboolean? {
+        @return gtk_label_get_use_underline(label)
+    }
+
+    @label_get_single_line_mode(GtkLabel* label) gboolean? {
+        @return gtk_label_get_single_line_mode(label)
+    }
+
+    @label_get_angle(GtkLabel* label) gdouble? {
+        @return gtk_label_get_angle(label)
+    }
+
+    @label_set_label(GtkLabel* label, const gchar* str) void {
+        @gtk_label_set_label(label, str)
+    }
+
+    @label_set_use_markup(GtkLabel* label, gboolean setting) void {
+        @gtk_label_set_use_markup(label, setting)
+    }
+
+    @label_set_use_underline(GtkLabel* label, gboolean setting) void {
+        @gtk_label_set_use_underline(label, setting)
+    }
+
+    @label_set_single_line_mode(GtkLabel* label, gboolean single_line_mode) void {
+        @gtk_label_set_single_line_mode(label, single_line_mode)
+    }
+
+    @label_set_angle(GtkLabel* label, gdouble angle) void {
+        @gtk_label_set_angle(label, angle)
+    }
+
+    #const gchar* label_get_current_uri(GtkLabel* label) {
+        @return gtk_label_get_current_uri(label)
+    }
+
+    @label_set_track_visited_links(GtkLabel* label, gboolean track_links) void {
+        @gtk_label_set_track_visited_links(label, track_links)
+    }
+
+    @label_get_track_visited_links(GtkLabel* label) gboolean? {
+        @return gtk_label_get_track_visited_links(label)
+    }
+
+    // ---
+    // End of GtkLabel
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
