@@ -2900,6 +2900,111 @@
     // ---
     // End of GtkAccelLabel
 
+    // GtkButton
+
+    @button_new GtkWidget*? {
+        @return gtk_button_new()
+    }
+
+    @button_new_with_label(const gchar* label) GtkWidget*? {
+        @return gtk_button_new_with_label(label)
+    }
+
+    @button_new_with_mnemonic(const gchar* label) GtkWidget*? {
+        @return gtk_button_new_with_mnemonic(label)
+    }
+
+    @button_new_from_icon_name(const gchar* icon_name, GtkIconSize size) GtkWidget*? {
+        @return gtk_button_new_from_icon_name(icon_name, size)
+    }
+
+    // Deprecated: @button_new_from_stock(const gchar *stock_id)
+
+    // Deprecated: @button_pressed(GtkButton *button)
+
+    // Deprecated: @button_released(GtkButton *button)
+
+    @button_clicked(GtkButton* button) void {
+        @gtk_button_clicked(button)
+    }
+
+    // Deprecated: @button_enter(GtkButton *button)
+
+    // Deprecated: @button_leave(GtkButton *button)
+
+    @button_set_relief(GtkButton* button, GtkReliefStyle relief) void {
+        @gtk_button_set_relief(button, relief)
+    }
+
+    @button_get_relief(GtkButton* button) GtkReliefStyle? {
+        @return gtk_button_get_relief(button)
+    }
+
+    #const gchar* button_get_label(GtkButton* button) {
+        @return gtk_button_get_label(button)
+    }
+
+    @button_set_label(GtkButton* button, const gchar* label) void {
+        @gtk_button_set_label(button, label)
+    }
+
+    // Deprecated: @button_get_use_stock(GtkButton *button)
+
+    // Deprecated: @button_set_use_stock(GtkButton *button,
+    //                          gboolean use_stock)
+
+    @button_get_use_underline(GtkButton* button) gboolean? {
+        @return gtk_button_get_use_underline(button)
+    }
+
+    @button_set_use_underline(GtkButton* button, gboolean use_underline) void {
+        @gtk_button_set_use_underline(button, use_underline)
+    }
+
+    // Deprecated: @button_set_focus_on_click(GtkButton *button,
+    //                               gboolean focus_on_click)
+
+    // Deprecated: @button_get_focus_on_click(GtkButton *button)
+
+    // Deprecated: @button_set_alignment(GtkButton *button,
+    //                          gfloat xalign,
+    //                          gfloat yalign)
+
+    // Deprecated: @button_get_alignment(GtkButton *button,
+    //                          gfloat *xalign,
+    //                          gfloat *yalign)
+
+    @button_set_image(GtkButton* button, GtkWidget* image) void {
+        @gtk_button_set_image(button, image)
+    }
+
+    @button_get_image(GtkButton* button) GtkWidget*? {
+        @return gtk_button_get_image(button)
+    }
+
+    @button_set_image_position(GtkButton* button, GtkPositionType position) void {
+        @gtk_button_set_image_position(button, position)
+    }
+
+    @button_get_image_position(GtkButton* button) GtkPositionType? {
+        @return gtk_button_get_image_position(button)
+    }
+
+    @button_set_always_show_image(GtkButton* button, gboolean always_show) void {
+        @gtk_button_set_always_show_image(button, always_show)
+    }
+
+    @button_get_always_show_image(GtkButton* button) gboolean? {
+        @return gtk_button_get_always_show_image(button)
+    }
+
+    @button_get_event_window(GtkButton* button) GdkWindow*? {
+        @return gtk_button_get_event_window(button)
+    }
+
+    // ---
+    // End of GtkButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
