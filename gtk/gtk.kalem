@@ -2698,6 +2698,67 @@
     // ---
     // End of GtkInfoBar
 
+    // GtkProgressBar
+
+    @progress_bar_new GtkWidget*? {
+        @return gtk_progress_bar_new()
+    }
+
+    @progress_bar_pulse(GtkProgressBar* pbar) void {
+        @gtk_progress_bar_pulse(pbar)
+    }
+
+    @progress_bar_set_fraction(GtkProgressBar* pbar, gdouble fraction) void {
+        @gtk_progress_bar_set_fraction(pbar, fraction)
+    }
+
+    @progress_bar_get_fraction(GtkProgressBar* pbar) gdouble? {
+        @return gtk_progress_bar_get_fraction(pbar)
+    }
+
+    @progress_bar_set_inverted(GtkProgressBar* pbar, gboolean inverted) void {
+        @gtk_progress_bar_set_inverted(pbar, inverted)
+    }
+
+    @progress_bar_get_inverted(GtkProgressBar* pbar) gboolean? {
+        @return gtk_progress_bar_get_inverted(pbar)
+    }
+
+    @progress_bar_set_show_text(GtkProgressBar* pbar, gboolean show_text) void {
+        @gtk_progress_bar_set_show_text(pbar, show_text)
+    }
+
+    @progress_bar_get_show_text(GtkProgressBar* pbar) gboolean? {
+        @return gtk_progress_bar_get_show_text(pbar)
+    }
+
+    @progress_bar_set_text(GtkProgressBar* pbar, const gchar* text) void {
+        @gtk_progress_bar_set_text(pbar, text)
+    }
+
+    #const gchar* progress_bar_get_text(GtkProgressBar* pbar) {
+        @return gtk_progress_bar_get_text(pbar)
+    }
+
+    @progress_bar_set_ellipsize(GtkProgressBar* pbar, PangoEllipsizeMode mode) void {
+        @gtk_progress_bar_set_ellipsize(pbar, mode)
+    }
+
+    @progress_bar_get_ellipsize(GtkProgressBar* pbar) PangoEllipsizeMode? {
+        @return gtk_progress_bar_get_ellipsize(pbar)
+    }
+
+    @progress_bar_set_pulse_step(GtkProgressBar* pbar, gdouble fraction) void {
+        @gtk_progress_bar_set_pulse_step(pbar, fraction)
+    }
+
+    @progress_bar_get_pulse_step(GtkProgressBar* pbar) gdouble? {
+        @return gtk_progress_bar_get_pulse_step(pbar)
+    }
+
+    // ---
+    // End of GtkProgressBar
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
