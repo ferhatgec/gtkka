@@ -3295,6 +3295,311 @@
     // ---
     // End of GtkModelButton
 
+    // GtkEntry
+
+    @entry_new GtkWidget*? {
+        @return gtk_entry_new()
+    }
+
+    @entry_new_with_buffer(GtkEntryBuffer* buffer) GtkWidget*? {
+        @return gtk_entry_new_with_buffer(buffer)
+    }
+
+    @entry_get_buffer(GtkEntry* entry) GtkEntryBuffer*? {
+        @return gtk_entry_get_buffer(entry)
+    }
+
+    @entry_set_buffer(GtkEntry* entry, GtkEntryBuffer* buffer) void {
+        @gtk_entry_set_buffer(entry, buffer)
+    }
+
+    @entry_set_text(GtkEntry* entry, const gchar* text) void {
+        @gtk_entry_set_text(entry, text)
+    }
+
+    #const gchar * entry_get_text(GtkEntry* entry) {
+        @return gtk_entry_get_text(entry)
+    }
+
+    @entry_get_text_length(GtkEntry* entry) guint16? {
+        @return gtk_entry_get_text_length(entry)
+    }
+
+    @entry_get_text_area(GtkEntry* entry, GdkRectangle* text_area) void {
+        @gtk_entry_get_text_area(entry, text_area)
+    }
+
+    @entry_set_visibility(GtkEntry* entry, gboolean visible) void {
+        @gtk_entry_set_visibility(entry, visible)
+    }
+
+    @entry_set_invisible_char(GtkEntry* entry, gunichar ch) void {
+        @gtk_entry_set_invisible_char(entry, ch)
+    }
+
+    @entry_unset_invisible_char(GtkEntry* entry) void {
+        @gtk_entry_unset_invisible_char(entry)
+    }
+
+    @entry_set_max_length(GtkEntry* entry, gint max) void {
+        @gtk_entry_set_max_length(entry, max)
+    }
+
+    @entry_get_activates_default(GtkEntry* entry) gboolean? {
+        @return gtk_entry_get_activates_default(entry)
+    }
+
+    @entry_get_has_frame(GtkEntry* entry) gboolean? {
+        @return gtk_entry_get_has_frame(entry)
+    }
+
+    // Deprecated: @entry_get_inner_border(GtkEntry* entry)
+
+    @entry_get_width_chars(GtkEntry* entry) gint? {
+        @return gtk_entry_get_width_chars(entry)
+    }
+
+    @entry_get_max_width_chars(GtkEntry* entry) gint? {
+        @return gtk_entry_get_max_width_chars(entry)
+    }
+
+    @entry_set_activates_default(GtkEntry* entry, gboolean setting) void {
+        @gtk_entry_set_activates_default(entry, setting)
+    }
+
+    @entry_set_has_frame(GtkEntry* entry, gboolean setting) void {
+        @gtk_entry_set_has_frame(entry, setting)
+    }
+
+    // Deprecated: @entry_set_inner_border(GtkEntry* entry,
+    //                            const GtkBorder* border)
+
+    @entry_set_width_chars(GtkEntry* entry, gint n_chars) void {
+        @gtk_entry_set_width_chars(entry, n_chars)
+    }
+
+    @entry_set_max_width_chars(GtkEntry* entry, gint n_chars) void {
+        @gtk_entry_set_max_width_chars(entry, n_chars)
+    }
+
+    @entry_get_invisible_char(GtkEntry* entry) gunichar? {
+        @return gtk_entry_get_invisible_char(entry)
+    }
+
+    @entry_set_alignment(GtkEntry* entry, gfloat xalign) void {
+        @gtk_entry_set_alignment(entry, xalign)
+    }
+
+    @entry_get_alignment(GtkEntry* entry) gfloat? {
+        @return gtk_entry_get_alignment(entry)
+    }
+
+    @entry_set_placeholder_text(GtkEntry* entry, const gchar* text) void {
+        @gtk_entry_set_placeholder_text(entry, text)
+    }
+
+    #const gchar* entry_get_placeholder_text(GtkEntry* entry) {
+        @return gtk_entry_get_placeholder_text(entry)
+    }
+
+    @entry_set_overwrite_mode(GtkEntry* entry, gboolean overwrite) void {
+        @gtk_entry_set_overwrite_mode(entry, overwrite)
+    }
+
+    @entry_get_overwrite_mode(GtkEntry* entry) gboolean? {
+        @return gtk_entry_get_overwrite_mode(entry)
+    }
+
+    @entry_get_layout(GtkEntry* entry) PangoLayout*? {
+        @return gtk_entry_get_layout(entry)
+    }
+
+    @entry_get_layout_offsets(GtkEntry* entry, gint* x, gint* y) void {
+        @gtk_entry_get_layout_offsets(entry,x, y)
+    }
+
+    @entry_layout_index_to_text_index(GtkEntry* entry, gint layout_index) gint? {
+        @return gtk_entry_layout_index_to_text_index(entry, layout_index)
+    }
+
+    @entry_text_index_to_layout_index(GtkEntry* entry, gint text_index) gint? {
+        @return gtk_entry_text_index_to_layout_index(entry, text_index)
+    }
+
+    @entry_set_attributes(GtkEntry* entry, PangoAttrList* attrs) void {
+        @gtk_entry_set_attributes(entry, attrs)
+    }
+
+    @entry_get_attributes(GtkEntry* entry) PangoAttrList*? {
+        @return gtk_entry_get_attributes(entry)
+    }
+
+    @entry_get_max_length(GtkEntry* entry) gint? {
+        @return gtk_entry_get_max_length(entry)
+    }
+
+    @entry_get_visibility(GtkEntry* entry) gboolean? {
+        @return gtk_entry_get_visibility(entry)
+    }
+
+    @entry_set_completion(GtkEntry* entry, GtkEntryCompletion* completion) void {
+        @gtk_entry_set_completion(entry, completion)
+    }
+
+    @entry_get_completion(GtkEntry* entry) GtkEntryCompletion*? {
+        @return gtk_entry_get_completion(entry)
+    }
+
+    @entry_set_cursor_hadjustment(GtkEntry* entry, GtkAdjustment* adjustment) void {
+        @gtk_entry_set_cursor_hadjustment(entry, adjustment)
+    }
+
+    @entry_get_cursor_hadjustment(GtkEntry* entry) GtkAdjustment*? {
+        @return gtk_entry_get_cursor_hadjustment(entry)
+    }
+
+    @entry_set_progress_fraction(GtkEntry* entry, gdouble fraction) void {
+        @gtk_entry_set_progress_fraction(entry, fraction)
+    }
+
+    @entry_get_progress_fraction(GtkEntry* entry) gdouble? {
+        @return gtk_entry_get_progress_fraction(entry)
+    }
+
+    @entry_set_progress_pulse_step(GtkEntry* entry, gdouble fraction) void {
+        @gtk_entry_set_progress_pulse_step(entry, fraction)
+    }
+
+    @entry_get_progress_pulse_step(GtkEntry* entry) gdouble? {
+        @return gtk_entry_get_progress_pulse_step(entry)
+    }
+
+    @entry_progress_pulse(GtkEntry* entry) void {
+        @gtk_entry_progress_pulse(entry)
+    }
+
+    @entry_im_context_filter_keypress(GtkEntry* entry, GdkEventKey* event) gboolean? {
+        @return gtk_entry_im_context_filter_keypress(entry, event)
+    }
+
+    @entry_reset_im_context(GtkEntry* entry) void {
+        @gtk_entry_reset_im_context(entry)
+    }
+
+    @entry_get_tabs(GtkEntry* entry) PangoTabArray*? {
+        @return gtk_entry_get_tabs(entry)
+    }
+
+    @entry_set_tabs(GtkEntry* entry, PangoTabArray* tabs) void {
+        @gtk_entry_set_tabs(entry, tabs)
+    }
+
+    @entry_set_icon_from_pixbuf(GtkEntry* entry, GtkEntryIconPosition icon_pos, GdkPixbuf* pixbuf) void {
+        @gtk_entry_set_icon_from_pixbuf(entry,icon_pos, pixbuf)
+    }
+
+    // Deprecated: @entry_set_icon_from_stock(GtkEntry* entry,
+    //                               GtkEntryIconPosition icon_pos,
+    //                               const gchar* stock_id)
+
+    @entry_set_icon_from_icon_name(GtkEntry* entry, GtkEntryIconPosition icon_pos, const gchar* icon_name) void {
+        @gtk_entry_set_icon_from_icon_name(entry,icon_pos, icon_name)
+    }
+
+    @entry_set_icon_from_gicon(GtkEntry* entry, GtkEntryIconPosition icon_pos, GIcon* icon) void {
+        @gtk_entry_set_icon_from_gicon(entry,icon_pos, icon)
+    }
+
+    @entry_get_icon_storage_type(GtkEntry* entry, GtkEntryIconPosition icon_pos) GtkImageType? {
+        @return gtk_entry_get_icon_storage_type(entry,icon_pos)
+    }
+
+    @entry_get_icon_pixbuf(GtkEntry* entry, GtkEntryIconPosition icon_pos) GdkPixbuf*? {
+        @return gtk_entry_get_icon_pixbuf(entry, icon_pos)
+    }
+
+    // Deprecated: @entry_get_icon_stock(GtkEntry* entry,
+    //                          GtkEntryIconPosition icon_pos)
+
+    #const gchar* entry_get_icon_name(GtkEntry* entry, GtkEntryIconPosition icon_pos) {
+        @return gtk_entry_get_icon_name(entry, icon_pos)
+    }
+
+    @entry_get_icon_gicon(GtkEntry* entry, GtkEntryIconPosition icon_pos) GIcon*? {
+        @return gtk_entry_get_icon_gicon(entry, icon_pos)
+    }
+
+    @entry_set_icon_activatable(GtkEntry* entry, GtkEntryIconPosition icon_pos, gboolean activatable) void {
+        @gtk_entry_set_icon_activatable(entry,icon_pos, activatable)
+    }
+
+    @entry_get_icon_activatable(GtkEntry* entry, GtkEntryIconPosition icon_pos) gboolean? {
+        @return gtk_entry_get_icon_activatable(entry, icon_pos)
+    }
+
+    @entry_set_icon_sensitive(GtkEntry* entry, GtkEntryIconPosition icon_pos, gboolean sensitive) void {
+        @gtk_entry_set_icon_sensitive(entry,icon_pos, sensitive)
+    }
+
+    @entry_get_icon_sensitive(GtkEntry* entry, GtkEntryIconPosition icon_pos) gboolean? {
+        @return gtk_entry_get_icon_sensitive(entry, icon_pos)
+    }
+
+    @entry_get_icon_at_pos(GtkEntry* entry, gint x, gint y) gint? {
+        @return gtk_entry_get_icon_at_pos(entry,x, y)
+    }
+
+    @entry_set_icon_tooltip_text(GtkEntry* entry, GtkEntryIconPosition icon_pos, const gchar* tooltip) void {
+        @gtk_entry_set_icon_tooltip_text(entry,icon_pos, tooltip)
+    }
+
+    @entry_get_icon_tooltip_text(GtkEntry* entry, GtkEntryIconPosition icon_pos) gchar*? {
+        @return gtk_entry_get_icon_tooltip_text(entry, icon_pos)
+    }
+
+    @entry_set_icon_tooltip_markup(GtkEntry* entry, GtkEntryIconPosition icon_pos, const gchar* tooltip) void {
+        @gtk_entry_set_icon_tooltip_markup(entry,icon_pos, tooltip)
+    }
+
+    @entry_get_icon_tooltip_markup(GtkEntry* entry, GtkEntryIconPosition icon_pos) gchar*? {
+        @return gtk_entry_get_icon_tooltip_markup(entry, icon_pos)
+    }
+
+    @entry_set_icon_drag_source(GtkEntry* entry, GtkEntryIconPosition icon_pos, GtkTargetList* target_list, GdkDragAction actions) void {
+        @gtk_entry_set_icon_drag_source(entry,icon_pos,target_list, actions)
+    }
+
+    @entry_get_current_icon_drag_source(GtkEntry* entry) gint? {
+        @return gtk_entry_get_current_icon_drag_source(entry)
+    }
+
+    @entry_get_icon_area(GtkEntry* entry, GtkEntryIconPosition icon_pos, GdkRectangle* icon_area) void {
+        @gtk_entry_get_icon_area(entry,icon_pos, icon_area)
+    }
+
+    @entry_set_input_purpose(GtkEntry* entry, GtkInputPurpose purpose) void {
+        @gtk_entry_set_input_purpose(entry, purpose)
+    }
+
+    @entry_get_input_purpose(GtkEntry* entry) GtkInputPurpose? {
+        @return gtk_entry_get_input_purpose(entry)
+    }
+
+    @entry_set_input_hints(GtkEntry* entry, GtkInputHints hints) void {
+        @gtk_entry_set_input_hints(entry, hints)
+    }
+
+    @entry_get_input_hints(GtkEntry* entry) GtkInputHints? {
+        @return gtk_entry_get_input_hints(entry)
+    }
+
+    @entry_grab_focus_without_selecting(GtkEntry* entry) void {
+        @gtk_entry_grab_focus_without_selecting(entry)
+    }
+
+    // ---
+    // End of GtkEntry
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
