@@ -3286,6 +3286,15 @@
     // ---
     // End of GtkLockButton
 
+    // GtkModelButton
+
+    @model_button_new GtkWidget*? {
+        @return gtk_model_button_new()
+    }
+
+    // ---
+    // End of GtkModelButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
