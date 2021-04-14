@@ -3219,6 +3219,47 @@
     // ---
     // End of GtkSwitch
 
+    // GtkScaleButton
+
+    @scale_button_new(GtkIconSize size, gdouble min, gdouble max, gdouble step, const gchar** icons) GtkWidget*? {
+        @return gtk_scale_button_new(size,min,max,step, icons)
+    }
+
+    @scale_button_set_adjustment(GtkScaleButton* button, GtkAdjustment* adjustment) void {
+        @gtk_scale_button_set_adjustment(button, adjustment)
+    }
+
+    @scale_button_set_icons(GtkScaleButton* button, const gchar** icons) void {
+        @gtk_scale_button_set_icons(button, icons)
+    }
+
+    @scale_button_set_value(GtkScaleButton* button, gdouble value) void {
+        @gtk_scale_button_set_value(button, value)
+    }
+
+    @scale_button_get_adjustment(GtkScaleButton* button) GtkAdjustment*? {
+        @return gtk_scale_button_get_adjustment(button)
+    }
+
+    @scale_button_get_value(GtkScaleButton* button) gdouble? {
+        @return gtk_scale_button_get_value(button)
+    }
+
+    @scale_button_get_popup(GtkScaleButton* button) GtkWidget*? {
+        @return gtk_scale_button_get_popup(button)
+    }
+
+    @scale_button_get_plus_button(GtkScaleButton* button) GtkWidget*? {
+        @return gtk_scale_button_get_plus_button(button)
+    }
+
+    @scale_button_get_minus_button(GtkScaleButton* button) GtkWidget*? {
+        @return gtk_scale_button_get_minus_button(button)
+    }
+
+    // ---
+    // End of GtkScaleButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
