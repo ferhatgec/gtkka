@@ -1989,6 +1989,186 @@
     // ---
     // End of GtkLayout
 
+    // GtkNotebook
+
+    @notebook_new GtkWidget*? {
+        @return gtk_notebook_new()
+    }
+
+    @notebook_append_page(GtkNotebook* notebook, GtkWidget* child, GtkWidget* tab_label) gint? {
+        @return gtk_notebook_append_page(notebook,child, tab_label)
+    }
+
+    @notebook_append_page_menu(GtkNotebook* notebook, GtkWidget* child, GtkWidget* tab_label, GtkWidget* menu_label) gint? {
+        @return gtk_notebook_append_page_menu(notebook,child,tab_label, menu_label)
+    }
+
+    @notebook_prepend_page(GtkNotebook* notebook, GtkWidget* child, GtkWidget* tab_label) gint? {
+        @return gtk_notebook_prepend_page(notebook,child, tab_label)
+    }
+
+    @notebook_prepend_page_menu(GtkNotebook* notebook, GtkWidget* child, GtkWidget* tab_label, GtkWidget* menu_label) gint? {
+        @return gtk_notebook_prepend_page_menu(notebook,child,tab_label, menu_label)
+    }
+
+    @notebook_insert_page(GtkNotebook* notebook, GtkWidget* child, GtkWidget* tab_label, gint position) gint? {
+        @return gtk_notebook_insert_page(notebook,child,tab_label, position)
+    }
+
+    @notebook_insert_page_menu(GtkNotebook* notebook, GtkWidget* child, GtkWidget* tab_label, GtkWidget* menu_label, gint position) gint? {
+        @return gtk_notebook_insert_page_menu(notebook,child,tab_label,menu_label, position)
+    }
+
+    @notebook_remove_page(GtkNotebook* notebook, gint page_num) void {
+        @gtk_notebook_remove_page(notebook, page_num)
+    }
+
+    @notebook_detach_tab(GtkNotebook* notebook, GtkWidget* child) void {
+        @gtk_notebook_detach_tab(notebook, child)
+    }
+
+    @notebook_page_num(GtkNotebook* notebook, GtkWidget* child) gint? {
+        @return gtk_notebook_page_num(notebook, child)
+    }
+
+    @notebook_next_page(GtkNotebook* notebook) void {
+        @gtk_notebook_next_page(notebook)
+    }
+
+    @notebook_prev_page(GtkNotebook* notebook) void {
+        @gtk_notebook_prev_page(notebook)
+    }
+
+    @notebook_reorder_child(GtkNotebook* notebook, GtkWidget* child, gint position) void {
+        @gtk_notebook_reorder_child(notebook,child, position)
+    }
+
+    @notebook_set_tab_pos(GtkNotebook* notebook, GtkPositionType pos) void {
+        @gtk_notebook_set_tab_pos(notebook, pos)
+    }
+
+    @notebook_set_show_tabs(GtkNotebook* notebook, gboolean show_tabs) void {
+        @gtk_notebook_set_show_tabs(notebook, show_tabs)
+    }
+
+    @notebook_set_show_border(GtkNotebook* notebook, gboolean show_border) void {
+        @gtk_notebook_set_show_border(notebook, show_border)
+    }
+
+    @notebook_set_scrollable(GtkNotebook* notebook, gboolean scrollable) void {
+        @gtk_notebook_set_scrollable(notebook, scrollable)
+    }
+
+    @notebook_popup_enable(GtkNotebook* notebook) void {
+        @gtk_notebook_popup_enable(notebook)
+    }
+
+    @notebook_popup_disable(GtkNotebook* notebook) void {
+        @gtk_notebook_popup_disable(notebook)
+    }
+
+    @notebook_get_current_page(GtkNotebook* notebook) gint? {
+        @return gtk_notebook_get_current_page(notebook)
+    }
+
+    @notebook_get_menu_label(GtkNotebook* notebook, GtkWidget* child) GtkWidget*? {
+        @return gtk_notebook_get_menu_label(notebook, child)
+    }
+
+    @notebook_get_nth_page(GtkNotebook* notebook, gint page_num) GtkWidget*? {
+        @return gtk_notebook_get_nth_page(notebook, page_num)
+    }
+
+    @notebook_get_n_pages(GtkNotebook* notebook) gint? {
+        @return gtk_notebook_get_n_pages(notebook)
+    }
+
+    @notebook_get_tab_label(GtkNotebook* notebook, GtkWidget* child) GtkWidget*? {
+        @return gtk_notebook_get_tab_label(notebook, child)
+    }
+
+    @notebook_set_menu_label(GtkNotebook* notebook, GtkWidget* child, GtkWidget* menu_label) void {
+        @gtk_notebook_set_menu_label(notebook,child, menu_label)
+    }
+
+    @notebook_set_menu_label_text(GtkNotebook* notebook, GtkWidget* child, const gchar* menu_text) void {
+        @gtk_notebook_set_menu_label_text(notebook,child, menu_text)
+    }
+
+    @notebook_set_tab_label(GtkNotebook* notebook, GtkWidget* child, GtkWidget* tab_label) void {
+        @gtk_notebook_set_tab_label(notebook,child, tab_label)
+    }
+
+    @notebook_set_tab_label_text(GtkNotebook* notebook, GtkWidget* child, const gchar* tab_text) void {
+        @gtk_notebook_set_tab_label_text(notebook,child, tab_text)
+    }
+
+    @notebook_set_tab_reorderable(GtkNotebook* notebook, GtkWidget* child, gboolean reorderable) void {
+        @gtk_notebook_set_tab_reorderable(notebook,child, reorderable)
+    }
+
+    @notebook_set_tab_detachable(GtkNotebook* notebook, GtkWidget* child, gboolean detachable) void {
+        @gtk_notebook_set_tab_detachable(notebook,child, detachable)
+    }
+
+    #const gchar* notebook_get_menu_label_text(GtkNotebook* notebook, GtkWidget* child) {
+        @return gtk_notebook_get_menu_label_text(notebook, child)
+    }
+
+    @notebook_get_scrollable(GtkNotebook* notebook) gboolean? {
+        @return gtk_notebook_get_scrollable(notebook)
+    }
+
+    @notebook_get_show_border(GtkNotebook* notebook) gboolean? {
+        @return gtk_notebook_get_show_border(notebook)
+    }
+
+    @notebook_get_show_tabs(GtkNotebook* notebook) gboolean? {
+        @return gtk_notebook_get_show_tabs(notebook)
+    }
+
+    #const gchar* notebook_get_tab_label_text(GtkNotebook* notebook, GtkWidget* child) {
+        @return gtk_notebook_get_tab_label_text(notebook, child)
+    }
+
+    @notebook_get_tab_pos(GtkNotebook* notebook) GtkPositionType? {
+        @return gtk_notebook_get_tab_pos(notebook)
+    }
+
+    @notebook_get_tab_reorderable(GtkNotebook* notebook, GtkWidget* child) gboolean? {
+        @return gtk_notebook_get_tab_reorderable(notebook, child)
+    }
+
+    @notebook_get_tab_detachable(GtkNotebook* notebook, GtkWidget* child) gboolean? {
+        @return gtk_notebook_get_tab_detachable(notebook, child)
+    }
+
+    // Deprecated: @notebook_get_tab_hborder(GtkNotebook *notebook)
+    // Deprecated: @notebook_get_tab_vborder(GtkNotebook *notebook)
+
+    @notebook_set_current_page(GtkNotebook* notebook, gint page_num) void {
+        @gtk_notebook_set_current_page(notebook, page_num)
+    }
+
+    @notebook_set_group_name(GtkNotebook* notebook, const gchar* group_name) void {
+        @gtk_notebook_set_group_name(notebook, group_name)
+    }
+
+    #const gchar* notebook_get_group_name(GtkNotebook* notebook) {
+        @return gtk_notebook_get_group_name(notebook)
+    }
+
+    @notebook_set_action_widget(GtkNotebook* notebook, GtkWidget* widget, GtkPackType pack_type) void {
+        @gtk_notebook_set_action_widget(notebook,widget, pack_type)
+    }
+
+    @notebook_get_action_widget(GtkNotebook* notebook, GtkPackType pack_type) GtkWidget*? {
+        @return gtk_notebook_get_action_widget(notebook, pack_type)
+    }
+
+    // ---
+    // End of GtkNotebook
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
