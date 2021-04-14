@@ -3063,6 +3063,51 @@
     // ---
     // End of GtkRadioButton
 
+    // GtkToggleButton
+
+    @toggle_button_new GtkWidget*? {
+        @return gtk_toggle_button_new()
+    }
+
+    @toggle_button_new_with_label(const gchar* label) GtkWidget*? {
+        @return gtk_toggle_button_new_with_label(label)
+    }
+
+    @toggle_button_new_with_mnemonic(const gchar* label) GtkWidget*? {
+        @return gtk_toggle_button_new_with_mnemonic(label)
+    }
+
+    @toggle_button_set_mode(GtkToggleButton* toggle_button, gboolean draw_indicator) void {
+        @gtk_toggle_button_set_mode(toggle_button, draw_indicator)
+    }
+
+    @toggle_button_get_mode(GtkToggleButton* toggle_button) gboolean? {
+        @return gtk_toggle_button_get_mode(toggle_button)
+    }
+
+    @toggle_button_toggled(GtkToggleButton* toggle_button) void {
+        @gtk_toggle_button_toggled(toggle_button)
+    }
+
+    @toggle_button_get_active(GtkToggleButton* toggle_button) gboolean? {
+        @return gtk_toggle_button_get_active(toggle_button)
+    }
+
+    @toggle_button_set_active(GtkToggleButton* toggle_button, gboolean is_active) void {
+        @gtk_toggle_button_set_active(toggle_button, is_active)
+    }
+
+    @toggle_button_get_inconsistent(GtkToggleButton* toggle_button) gboolean? {
+        @return gtk_toggle_button_get_inconsistent(toggle_button)
+    }
+
+    @toggle_button_set_inconsistent(GtkToggleButton* toggle_button, gboolean setting) void {
+        @gtk_toggle_button_set_inconsistent(toggle_button, setting)
+    }
+
+    // ---
+    // End of GtkToggleButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
