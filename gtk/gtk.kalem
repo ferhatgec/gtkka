@@ -24,6 +24,12 @@
     "gtk_import"
 }
 
+#defn {
+    LEVEL_BAR_OFFSET_LOW "low"
+    LEVEL_BAR_OFFSET_HIGH "high"
+    LEVEL_BAR_OFFSET_FULL "full"
+}
+
 @gtk namespace {
     // GtkApplication
     @application_new(const gchar* application_id, GApplicationFlags flags) GtkApplication*? {
@@ -2758,6 +2764,71 @@
 
     // ---
     // End of GtkProgressBar
+
+    // GtkLevelBar
+
+    @level_bar_new GtkWidget*? {
+        @return gtk_level_bar_new()
+    }
+
+    @level_bar_new_for_interval(gdouble min_value, gdouble max_value) GtkWidget*? {
+        @return gtk_level_bar_new_for_interval(min_value, max_value)
+    }
+
+    @level_bar_set_mode(GtkLevelBar* self, GtkLevelBarMode mode) void {
+        @gtk_level_bar_set_mode(self, mode)
+    }
+
+    @level_bar_get_mode(GtkLevelBar* self) GtkLevelBarMode? {
+        @return gtk_level_bar_get_mode(self)
+    }
+
+    @level_bar_set_value(GtkLevelBar* self, gdouble value) void {
+        @gtk_level_bar_set_value(self, value)
+    }
+
+    @level_bar_get_value(GtkLevelBar* self) gdouble? {
+        @return gtk_level_bar_get_value(self)
+    }
+
+    @level_bar_set_min_value(GtkLevelBar* self, gdouble value) void {
+        @gtk_level_bar_set_min_value(self, value)
+    }
+
+    @level_bar_get_min_value(GtkLevelBar* self) gdouble? {
+        @return gtk_level_bar_get_min_value(self)
+    }
+
+    @level_bar_set_max_value(GtkLevelBar* self, gdouble value) void {
+        @gtk_level_bar_set_max_value(self, value)
+    }
+
+    @level_bar_get_max_value(GtkLevelBar* self) gdouble? {
+        @return gtk_level_bar_get_max_value(self)
+    }
+
+    @level_bar_set_inverted(GtkLevelBar* self, gdouble inverted) void {
+        @gtk_level_bar_set_inverted(self, inverted)
+    }
+
+    @level_bar_get_inverted(GtkLevelBar* self) gboolean? {
+        @return gtk_level_bar_get_inverted(self)
+    }
+
+    @level_bar_add_offset_value(GtkLevelBar* self, const gchar* name, gdouble value) void {
+        @gtk_level_bar_add_offset_value(self,name, value)
+    }
+
+    @level_bar_remove_offset_value(GtkLevelBar* self, const gchar* name) void {
+        @gtk_level_bar_remove_offset_value(self, name)
+    }
+
+    @level_bar_get_offset_value(GtkLevelBar* self, const gchar* name, gdouble* value) gboolean? {
+        @return gtk_level_bar_get_offset_value(self,name, value)
+    }
+
+    // ---
+    // End of GtkLevelBar
 
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
