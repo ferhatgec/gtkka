@@ -2243,6 +2243,19 @@
     // ---
     // End of GtkExpander
 
+    // GtkOrientable
+
+    @orientable_get_orientation(GtkOrientable* orientable) GtkOrientation? {
+        @return gtk_orientable_get_orientation(orientable)
+    }
+
+    @orientable_set_orientation(GtkOrientable* orientable, GtkOrientation orientation) void {
+        @gtk_orientable_set_orientation(orientable, orientation)
+    }
+
+    // ---
+    // End of GtkOrientable
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
