@@ -3269,6 +3269,23 @@
     // ---
     // End of GtkVolumeButton
 
+    // GtkLockButton
+
+    @lock_button_new(GPermission* permission) GtkWidget*? {
+        @return gtk_lock_button_new(permission)
+    }
+
+    @lock_button_get_permission(GtkLockButton* button) GPermission*? {
+        @return gtk_lock_button_get_permission(button)
+    }
+
+    @lock_button_set_permission(GtkLockButton* button, GPermission* permission) void {
+        @gtk_lock_button_set_permission(button, permission)
+    }
+
+    // ---
+    // End of GtkLockButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
