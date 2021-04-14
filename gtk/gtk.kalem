@@ -2863,6 +2863,43 @@
     // ---
     // End of GtkStatusbar
 
+    // GtkAccelLabel
+
+    @accel_label_new(const gchar* str) GtkWidget*? {
+        @return gtk_accel_label_new(str)
+    }
+
+    @accel_label_set_accel_closure(GtkAccelLabel* accel_label, GClosure* accel_closure) void {
+        @gtk_accel_label_set_accel_closure(accel_label, accel_closure)
+    }
+
+    @accel_label_get_accel_widget(GtkAccelLabel* accel_label) GtkWidget*? {
+        @return gtk_accel_label_get_accel_widget(accel_label)
+    }
+
+    @accel_label_set_accel_widget(GtkAccelLabel* accel_label, GtkWidget* accel_widget) void {
+        @gtk_accel_label_set_accel_widget(accel_label, accel_widget)
+    }
+
+    @accel_label_get_accel_width(GtkAccelLabel* accel_label) guint? {
+        @return gtk_accel_label_get_accel_width(accel_label)
+    }
+
+    @accel_label_set_accel(GtkAccelLabel* accel_label, guint accelerator_key, GdkModifierType accelerator_mods) void {
+        @gtk_accel_label_set_accel(accel_label,accelerator_key, accelerator_mods)
+    }
+
+    @accel_label_get_accel(GtkAccelLabel* accel_label, guint* accelerator_key, GdkModifierType* accelerator_mods) void {
+        @gtk_accel_label_get_accel(accel_label,accelerator_key, accelerator_mods)
+    }
+
+    @accel_label_refetch(GtkAccelLabel* accel_label) gboolean? {
+        @return gtk_accel_label_refetch(accel_label)
+    }
+
+    // ---
+    // End of GtkAccelLabel
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
