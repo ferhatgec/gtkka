@@ -3194,6 +3194,31 @@
     // ---
     // End of GtkMenuButton
 
+    // GtkSwitch
+
+    @switch_new GtkWidget*? {
+        @return gtk_switch_new()
+    }
+
+    @switch_set_active(GtkSwitch* sw, gboolean is_active) void {
+        @gtk_switch_set_active(sw, is_active)
+    }
+
+    @switch_get_active(GtkSwitch* sw) gboolean? {
+        @return gtk_switch_get_active(sw)
+    }
+
+    @switch_set_state(GtkSwitch* sw, gboolean state) void {
+        @gtk_switch_set_state(sw, state)
+    }
+
+    @switch_get_state(GtkSwitch* sw) gboolean? {
+        @return gtk_switch_get_state(sw)
+    }
+
+    // ---
+    // End of GtkSwitch
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
