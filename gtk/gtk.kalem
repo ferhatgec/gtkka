@@ -2491,6 +2491,125 @@
     // ---
     // End of GtkLabel
 
+    // GtkImage
+
+    // Deprecated: @image_get_icon_set(GtkImage *image,
+    //                        GtkIconSet **icon_set,
+    //                        GtkIconSize *size)
+
+    @image_get_pixbuf(GtkImage* image) GdkPixbuf*? {
+        @return gtk_image_get_pixbuf(image)
+    }
+
+    // Deprecated: @image_get_stock(GtkImage *image,
+    //                     gchar **stock_id,
+    //                     GtkIconSize *size)
+
+    @image_get_animation(GtkImage* image) GdkPixbufAnimation*? {
+        @return gtk_image_get_animation(image)
+    }
+
+    @image_get_icon_name(GtkImage* image, const gchar** icon_name, GtkIconSize* size) void {
+        @gtk_image_get_icon_name(image,icon_name, size)
+    }
+
+    @image_get_gicon(GtkImage* image, GIcon** gicon, GtkIconSize* size) void {
+        @gtk_image_get_gicon(image,gicon, size)
+    }
+
+    @image_get_storage_type(GtkImage* image) GtkImageType? {
+        @return gtk_image_get_storage_type(image)
+    }
+
+    @image_new_from_file(const gchar* filename) GtkWidget*? {
+        @return gtk_image_new_from_file(filename)
+    }
+
+    // Deprecated: @image_new_from_icon_set(GtkIconSet *icon_set,
+    //                             GtkIconSize size)
+
+    @image_new_from_pixbuf(GdkPixbuf* pixbuf) GtkWidget*? {
+        @return gtk_image_new_from_pixbuf(pixbuf)
+    }
+
+    // Deprecated: @gtk_image_new_from_stock(const gchar *stock_id,
+    //                          GtkIconSize size)
+
+    @image_new_from_animation(GdkPixbufAnimation* animation) GtkWidget*? {
+        @return gtk_image_new_from_animation(animation)
+    }
+
+    @image_new_from_icon_name(const gchar* icon_name, GtkIconSize size) GtkWidget*? {
+        @return gtk_image_new_from_icon_name(icon_name, size)
+    }
+
+    @image_new_from_gicon(GIcon* icon, GtkIconSize size) GtkWidget*? {
+        @return gtk_image_new_from_gicon(icon, size)
+    }
+
+    @image_new_from_resource(const gchar* resource_path) GtkWidget*? {
+        @return gtk_image_new_from_resource(resource_path)
+    }
+
+    @image_new_from_surface(cairo_surface_t* surface) GtkWidget*? {
+        @return gtk_image_new_from_surface(surface)
+    }
+
+    @image_set_from_file(GtkImage* image, const gchar* filename) void {
+        @gtk_image_set_from_file(image, filename)
+    }
+
+    // Deprecated: @image_set_from_icon_set(GtkImage *image,
+    //                             GtkIconSet *icon_set,
+    //                             GtkIconSize size)
+
+    @image_set_from_pixbuf(GtkImage* image, GdkPixbuf* pixbuf) void {
+        @gtk_image_set_from_pixbuf(image, pixbuf)
+    }
+
+    // Deprecated: @gtk_image_set_from_stock(GtkImage *image,
+    //                          const gchar *stock_id,
+    //                          GtkIconSize size)
+
+    @image_set_from_animation(GtkImage* image, GdkPixbufAnimation* animation) void {
+        @gtk_image_set_from_animation(image, animation)
+    }
+
+    @image_set_from_icon_name(GtkImage* image, const gchar* icon_name, GtkIconSize size) void {
+        @gtk_image_set_from_icon_name(image,icon_name, size)
+    }
+
+    @image_set_from_gicon(GtkImage* image, GIcon* icon, GtkIconSize size) void {
+        @gtk_image_set_from_gicon(image,icon, size)
+    }
+
+    @image_set_from_resource(GtkImage* image, const gchar* resource_path) void {
+        @gtk_image_set_from_resource(image, resource_path)
+    }
+
+    @image_set_from_surface(GtkImage* image, cairo_surface_t* surface) void {
+        @gtk_image_set_from_surface(image, surface)
+    }
+
+    @image_clear(GtkImage* image) void {
+        @gtk_image_clear(image)
+    }
+
+    @image_new GtkWidget*? {
+        @return gtk_image_new()
+    }
+
+    @image_set_pixel_size(GtkImage* image, gint pixel_size) void {
+        @gtk_image_set_pixel_size(image, pixel_size)
+    }
+
+    @image_get_pixel_size(GtkImage* image) gint? {
+        @return gtk_image_get_pixel_size(image)
+    }
+
+    // ---
+    // End of GtkImage
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
