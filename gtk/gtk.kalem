@@ -3137,6 +3137,63 @@
     // ---
     // End of GtkLinkButton
 
+    // GtkMenuButton
+
+    @menu_button_new GtkWidget*? {
+        @return gtk_menu_button_new()
+    }
+
+    @menu_button_set_popup(GtkMenuButton* menu_button, GtkWidget* menu) void {
+        @gtk_menu_button_set_popup(menu_button, menu)
+    }
+
+    @menu_button_get_popup(GtkMenuButton* menu_button) GtkMenu*? {
+        @return gtk_menu_button_get_popup(menu_button)
+    }
+
+    @menu_button_set_popover(GtkMenuButton* menu_button, GtkWidget* popover) void {
+        @gtk_menu_button_set_popover(menu_button, popover)
+    }
+
+    @menu_button_get_popover(GtkMenuButton* menu_button) GtkPopover*? {
+        @return gtk_menu_button_get_popover(menu_button)
+    }
+
+    @menu_button_set_menu_model(GtkMenuButton* menu_button, GMenuModel* menu_model) void {
+        @gtk_menu_button_set_menu_model(menu_button, menu_model)
+    }
+
+    @menu_button_get_menu_model(GtkMenuButton* menu_button) GMenuModel*? {
+        @return gtk_menu_button_get_menu_model(menu_button)
+    }
+
+    @menu_button_set_use_popover(GtkMenuButton* menu_button, gboolean use_popover) void {
+        @gtk_menu_button_set_use_popover(menu_button, use_popover)
+    }
+
+    @menu_button_get_use_popover(GtkMenuButton* menu_button) gboolean? {
+        @return gtk_menu_button_get_use_popover(menu_button)
+    }
+
+    @menu_button_set_direction(GtkMenuButton* menu_button, GtkArrowType direction) void {
+        @gtk_menu_button_set_direction(menu_button, direction)
+    }
+
+    @menu_button_get_direction(GtkMenuButton* menu_button) GtkArrowType? {
+        @return gtk_menu_button_get_direction(menu_button)
+    }
+
+    @menu_button_set_align_widget(GtkMenuButton* menu_button, GtkWidget* align_widget) void {
+        @gtk_menu_button_set_align_widget(menu_button, align_widget)
+    }
+
+    @menu_button_get_align_widget(GtkMenuButton* menu_button) GtkWidget*? {
+        @return gtk_menu_button_get_align_widget(menu_button)
+    }
+
+    // ---
+    // End of GtkMenuButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
