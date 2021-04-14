@@ -3108,6 +3108,35 @@
     // ---
     // End of GtkToggleButton
 
+    // GtkLinkButton
+
+    @link_button_new(const gchar* uri) GtkWidget*? {
+        @return gtk_link_button_new(uri)
+    }
+
+    @link_button_new_with_label(const gchar* uri, const gchar* label) GtkWidget*? {
+        @return gtk_link_button_new_with_label(uri, label)
+    }
+
+    #const gchar* link_button_get_uri(GtkLinkButton* link_button) {
+        @return gtk_link_button_get_uri(link_button)
+    }
+
+    @link_button_set_uri(GtkLinkButton* link_button, const gchar* uri) void {
+        @gtk_link_button_set_uri(link_button, uri)
+    }
+
+    @link_button_get_visited(GtkLinkButton* link_button) gboolean? {
+        @return gtk_link_button_get_visited(link_button)
+    }
+
+    @link_button_set_visited(GtkLinkButton* link_button, gboolean visited) void {
+        @gtk_link_button_set_visited(link_button, visited)
+    }
+
+    // ---
+    // End of GtkLinkButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
