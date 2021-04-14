@@ -2627,6 +2627,77 @@
     // ---
     // End of GtkSpinner
 
+    // GtkInfoBar
+
+    @info_bar_new GtkWidget*? {
+        @return gtk_info_bar_new()
+    }
+
+    #template <typename... ID>
+    @info_bar_new_with_buttons(const gchar* first_button_text, ID... ids) GtkWidget*? {
+        @return (gtk_info_bar_new_with_buttons(first_button_text,ids), ...)
+    }
+
+    @info_bar_add_action_widget(GtkInfoBar* info_bar, GtkWidget* child, gint response_id) void {
+        @gtk_info_bar_add_action_widget(info_bar,child, response_id)
+    }
+
+    @info_bar_add_button(GtkInfoBar* info_bar, const gchar* button_text, gint response_id) GtkWidget*? {
+        @return gtk_info_bar_add_button(info_bar,button_text, response_id)
+    }
+
+    #template <typename... ID>
+    @info_bar_add_buttons(GtkInfoBar* info_bar, const gchar* first_button_text, ID... ids) void {
+        @(gtk_info_bar_add_buttons(info_bar,first_button_text,ids), ...)
+    }
+
+    @info_bar_set_response_sensitive(GtkInfoBar* info_bar, gint response_id, gboolean setting) void {
+        @gtk_info_bar_set_response_sensitive(info_bar,response_id, setting)
+    }
+
+    @info_bar_set_default_response(GtkInfoBar* info_bar, gint response_id) void {
+        @gtk_info_bar_set_default_response(info_bar, response_id)
+    }
+
+    @info_bar_response(GtkInfoBar* info_bar, gint response_id) void {
+        @gtk_info_bar_response(info_bar, response_id)
+    }
+
+    @info_bar_set_message_type(GtkInfoBar* info_bar, GtkMessageType message_type) void {
+        @gtk_info_bar_set_message_type(info_bar, message_type)
+    }
+
+    @info_bar_get_message_type(GtkInfoBar* info_bar) GtkMessageType? {
+        @return gtk_info_bar_get_message_type(info_bar)
+    }
+
+    @info_bar_get_action_area(GtkInfoBar* info_bar) GtkWidget*? {
+        @return gtk_info_bar_get_action_area(info_bar)
+    }
+
+    @info_bar_get_content_area(GtkInfoBar* info_bar) GtkWidget*? {
+        @return gtk_info_bar_get_content_area(info_bar)
+    }
+
+    @info_bar_get_show_close_button(GtkInfoBar* info_bar) gboolean? {
+        @return gtk_info_bar_get_show_close_button(info_bar)
+    }
+
+    @info_bar_set_show_close_button(GtkInfoBar* info_bar, gboolean setting) void {
+        @gtk_info_bar_set_show_close_button(info_bar, setting)
+    }
+
+    @info_bar_get_revealed(GtkInfoBar* info_bar) gboolean? {
+        @return gtk_info_bar_get_revealed(info_bar)
+    }
+
+    @info_bar_set_revealed(GtkInfoBar* info_bar, gboolean revealed) void {
+        @gtk_info_bar_set_revealed(info_bar, revealed)
+    }
+
+    // ---
+    // End of GtkInfoBar
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
