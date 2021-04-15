@@ -3600,6 +3600,56 @@
     // ---
     // End of GtkEntry
 
+    // GtkEntryBuffer
+
+    @entry_buffer_new(const gchar* initial_chars, gint n_initial_chars) GtkEntryBuffer*? {
+        @return gtk_entry_buffer_new(initial_chars, n_initial_chars)
+    }
+
+    #const gchar* entry_buffer_get_text(GtkEntryBuffer* buffer) {
+        @return gtk_entry_buffer_get_text(buffer)
+    }
+
+
+    @entry_buffer_set_text(GtkEntryBuffer* buffer, const gchar* chars, gint n_chars) void {
+        @gtk_entry_buffer_set_text(buffer,chars, n_chars)
+    }
+
+    @entry_buffer_get_bytes(GtkEntryBuffer* buffer) gsize? {
+        @return gtk_entry_buffer_get_bytes(buffer)
+    }
+
+    @entry_buffer_get_length(GtkEntryBuffer* buffer) guint? {
+        @return gtk_entry_buffer_get_length(buffer)
+    }
+
+    @entry_buffer_get_max_length(GtkEntryBuffer* buffer) gint? {
+        @return gtk_entry_buffer_get_max_length(buffer)
+    }
+
+    @entry_buffer_set_max_length(GtkEntryBuffer* buffer, gint max_length) void {
+        @gtk_entry_buffer_set_max_length(buffer, max_length)
+    }
+
+    @entry_buffer_insert_text(GtkEntryBuffer* buffer, guint position, const gchar* chars, gint n_chars) guint? {
+        @return gtk_entry_buffer_insert_text(buffer,position,chars, n_chars)
+    }
+
+    @entry_buffer_delete_text(GtkEntryBuffer* buffer, guint position, gint n_chars) guint? {
+        @return gtk_entry_buffer_delete_text(buffer,position, n_chars)
+    }
+
+    @entry_buffer_emit_deleted_text(GtkEntryBuffer* buffer, guint position, guint n_chars) void {
+        @gtk_entry_buffer_emit_deleted_text(buffer,position, n_chars)
+    }
+
+    @entry_buffer_emit_inserted_text(GtkEntryBuffer* buffer, guint position, const gchar* chars, guint n_chars) void {
+        @gtk_entry_buffer_emit_inserted_text(buffer,position,chars, n_chars)
+    }
+
+    // ---
+    // End of GtkEntryBuffer
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
