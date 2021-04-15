@@ -4287,6 +4287,104 @@
     // ---
     // End of GtkTreeModel
 
+    // GtkTreeSelection
+
+    // Unimplemented: gboolean
+    //(*GtkTreeSelectionFunc) (GtkTreeSelection* selection,
+    //                         GtkTreeModel* model,
+    //                         GtkTreePath* path,
+    //                         gboolean path_currently_selected,
+    //                         gpointer data)
+
+    // Unimplemented: void
+    //(*GtkTreeSelectionForeachFunc) (GtkTreeModel* model,
+    //                                GtkTreePath* path,
+    //                                GtkTreeIter* iter,
+    //                                gpointer data);
+
+    @tree_selection_set_mode(GtkTreeSelection* selection, GtkSelectionMode type) void {
+        @gtk_tree_selection_set_mode(selection, type)
+    }
+
+    @tree_selection_get_mode(GtkTreeSelection* selection) GtkSelectionMode? {
+        @return gtk_tree_selection_get_mode(selection)
+    }
+
+    @tree_selection_set_select_function(GtkTreeSelection* selection, GtkTreeSelectionFunc func, gpointer data, GDestroyNotify destroy) void {
+        @gtk_tree_selection_set_select_function(selection,func,data, destroy)
+    }
+
+    @tree_selection_get_select_function(GtkTreeSelection* selection) GtkTreeSelectionFunc? {
+        @return gtk_tree_selection_get_select_function(selection)
+    }
+
+    @tree_selection_get_user_data(GtkTreeSelection* selection) gpointer? {
+        @return gtk_tree_selection_get_user_data(selection)
+    }
+
+    @tree_selection_get_tree_view(GtkTreeSelection* selection) GtkTreeView*? {
+        @return gtk_tree_selection_get_tree_view(selection)
+    }
+
+    @tree_selection_get_selected(GtkTreeSelection* selection, GtkTreeModel** model, GtkTreeIter* iter) gboolean? {
+        @return gtk_tree_selection_get_selected(selection,model, iter)
+    }
+
+    @tree_selection_selected_foreach(GtkTreeSelection* selection, GtkTreeSelectionForeachFunc func, gpointer data) void {
+        @gtk_tree_selection_selected_foreach(selection,func, data)
+    }
+
+    @tree_selection_get_selected_rows(GtkTreeSelection* selection, GtkTreeModel** model) GList*? {
+        @return gtk_tree_selection_get_selected_rows(selection, model)
+    }
+
+    @tree_selection_count_selected_rows(GtkTreeSelection* selection) gint? {
+        @return gtk_tree_selection_count_selected_rows(selection)
+    }
+
+    @tree_selection_select_path(GtkTreeSelection* selection, GtkTreePath* path) void {
+        @gtk_tree_selection_select_path(selection, path)
+    }
+
+    @tree_selection_unselect_path(GtkTreeSelection* selection, GtkTreePath* path) void {
+        @gtk_tree_selection_unselect_path(selection, path)
+    }
+
+    @tree_selection_path_is_selected(GtkTreeSelection* selection, GtkTreePath* path) gboolean? {
+        @return gtk_tree_selection_path_is_selected(selection, path)
+    }
+
+    @tree_selection_select_iter(GtkTreeSelection* selection, GtkTreeIter* iter) void {
+        @gtk_tree_selection_select_iter(selection, iter)
+    }
+
+    @tree_selection_unselect_iter(GtkTreeSelection* selection, GtkTreeIter* iter) void {
+        @gtk_tree_selection_unselect_iter(selection, iter)
+    }
+
+    @tree_selection_iter_is_selected(GtkTreeSelection* selection, GtkTreeIter* iter) gboolean? {
+        @return gtk_tree_selection_iter_is_selected(selection, iter)
+    }
+
+    @tree_selection_select_all(GtkTreeSelection* selection) void {
+        @gtk_tree_selection_select_all(selection)
+    }
+
+    @tree_selection_unselect_all(GtkTreeSelection* selection) void {
+        @gtk_tree_selection_unselect_all(selection)
+    }
+
+    @tree_selection_select_range(GtkTreeSelection* selection, GtkTreePath* start_path, GtkTreePath* end_path) void {
+        @return gtk_tree_selection_select_range(selection,start_path, end_path)
+    }
+
+    @tree_selection_unselect_range(GtkTreeSelection* selection, GtkTreePath* start_path, GtkTreePath* end_path) void {
+        @gtk_tree_selection_unselect_range(selection,start_path, end_path)
+    }
+
+    // ---
+    // End of GtkTreeSelection
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
