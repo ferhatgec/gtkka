@@ -3769,6 +3769,67 @@
     // ---
     // End of GtkEntryCompletion
 
+    // GtkScale
+
+    @scale_new(GtkOrientation orientation, GtkAdjustment* adjustment) GtkWidget*? {
+        @return gtk_scale_new(orientation, adjustment)
+    }
+
+    @scale_new_with_range(GtkOrientation orientation, gdouble min, gdouble max, gdouble step) GtkWidget*? {
+        @return gtk_scale_new_with_range(orientation,min,max, step)
+    }
+
+    @scale_set_digits(GtkScale* scale, gint digits) void {
+        @gtk_scale_set_digits(scale, digits)
+    }
+
+    @scale_set_draw_value(GtkScale* scale, gboolean draw_value) void {
+        @gtk_scale_set_draw_value(scale, draw_value)
+    }
+
+    @scale_set_has_origin(GtkScale* scale, gboolean has_origin) void {
+        @gtk_scale_set_has_origin(scale, has_origin)
+    }
+
+    @scale_set_value_pos(GtkScale* scale, GtkPositionType pos) void {
+        @gtk_scale_set_value_pos(scale, pos)
+    }
+
+    @scale_get_digits(GtkScale* scale) gint? {
+        @return gtk_scale_get_digits(scale)
+    }
+
+    @scale_get_draw_value(GtkScale* scale) gboolean? {
+        @return gtk_scale_get_draw_value(scale)
+    }
+
+    @scale_get_has_origin(GtkScale* scale) gboolean? {
+        @return gtk_scale_get_has_origin(scale)
+    }
+
+    @scale_get_value_pos(GtkScale* scale) GtkPositionType? {
+        @return gtk_scale_get_value_pos(scale)
+    }
+
+    @scale_get_layout(GtkScale* scale) PangoLayout*? {
+        @return gtk_scale_get_layout(scale)
+    }
+
+    @scale_get_layout_offsets(GtkScale* scale, gint* x, gint* y) void {
+        @gtk_scale_get_layout_offsets(scale,x, y)
+    }
+
+    @scale_add_mark(GtkScale* scale, gdouble value, GtkPositionType position, const gchar* markup) void {
+        @gtk_scale_add_mark(scale,value,position, markup)
+    }
+
+    @scale_clear_marks(GtkScale* scale) void {
+        @gtk_scale_clear_marks(scale)
+    }
+
+    // ---
+    // End of GtkScale
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
