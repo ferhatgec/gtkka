@@ -3931,6 +3931,19 @@
     // ---
     // End of GtkSpinButton
 
+    // GtkSearchEntry
+
+    @search_entry_new GtkWidget*? {
+        @return gtk_search_entry_new()
+    }
+
+    @search_entry_handle_event(GtkSearchEntry* entry, GdkEvent* event) gboolean? {
+        @return gtk_search_entry_handle_event(entry, event)
+    }
+
+    // ---
+    // End of GtkSearchEntry
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
