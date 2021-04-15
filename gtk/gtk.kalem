@@ -3830,6 +3830,107 @@
     // ---
     // End of GtkScale
 
+    // GtkSpinButton
+
+    @spin_button_configure(GtkSpinButton* spin_button, GtkAdjustment* adjustment, gdouble climb_rate, guint digits) void {
+        @gtk_spin_button_configure(spin_button,adjustment,climb_rate, digits)
+    }
+
+    @spin_button_new(GtkAdjustment* adjustment, gdouble climb_rate, guint digits) GtkWidget*? {
+        @return gtk_spin_button_new(adjustment,climb_rate, digits)
+    }
+
+    @spin_button_new_with_range(gdouble min, gdouble max, gdouble step) GtkWidget*? {
+        @return gtk_spin_button_new_with_range(min,max, step)
+    }
+
+    @spin_button_set_adjustment(GtkSpinButton* spin_button, GtkAdjustment* adjustment) void {
+        @gtk_spin_button_set_adjustment(spin_button, adjustment)
+    }
+
+    @spin_button_get_adjustment(GtkSpinButton* spin_button) GtkAdjustment*? {
+        @return gtk_spin_button_get_adjustment(spin_button)
+    }
+
+    @spin_button_set_digits(GtkSpinButton* spin_button, guint digits) void {
+        @gtk_spin_button_set_digits(spin_button, digits)
+    }
+
+    @spin_button_set_increments(GtkSpinButton* spin_button, gdouble sep, gdouble page) void {
+        @gtk_spin_button_set_increments(spin_button,sep, page)
+    }
+
+    @spin_button_set_range(GtkSpinButton* spin_button, gdouble min, gdouble max) void {
+        @gtk_spin_button_set_range(spin_button,min, max)
+    }
+
+    @spin_button_get_value_as_int(GtkSpinButton* spin_button) gint? {
+        @return gtk_spin_button_get_value_as_int(spin_button)
+    }
+
+    @spin_button_set_value(GtkSpinButton* spin_button, gdouble value) void {
+        @gtk_spin_button_set_value(spin_button, value)
+    }
+
+    @spin_button_set_update_policy(GtkSpinButton* spin_button, GtkSpinButtonUpdatePolicy policy) void {
+        @gtk_spin_button_set_update_policy(spin_button, policy)
+    }
+
+    @spin_button_set_numeric(GtkSpinButton* spin_button, gboolean numeric) void {
+        @gtk_spin_button_set_numeric(spin_button, numeric)
+    }
+
+    @spin_button_spin(GtkSpinButton* spin_button, GtkSpinType direction, gdouble increment) void {
+        @gtk_spin_button_spin(spin_button,direction, increment)
+    }
+
+    @spin_button_set_wrap(GtkSpinButton* spin_button, gdouble wrap) void {
+        @gtk_spin_button_set_wrap(spin_button, wrap)
+    }
+
+    @spin_button_set_snap_to_ticks(GtkSpinButton* spin_button, gboolean snap_to_ticks) void {
+        @gtk_spin_button_set_snap_to_ticks(spin_button, snap_to_ticks)
+    }
+
+    @spin_button_update(GtkSpinButton* spin_button) void {
+        @gtk_spin_button_update(spin_button)
+    }
+
+    @spin_button_get_digits(GtkSpinButton* spin_button) guint? {
+        @return gtk_spin_button_get_digits(spin_button)
+    }
+
+    @spin_button_get_increments(GtkSpinButton* spin_button, gdouble* step, gdouble* page) void {
+        @gtk_spin_button_get_increments(spin_button,step, page)
+    }
+
+    @spin_button_get_numeric(GtkSpinButton* spin_button) gdouble? {
+        @return gtk_spin_button_get_numeric(spin_button)
+    }
+
+    @spin_button_get_range(GtkSpinButton* spin_button, gdouble* min, gdouble* max) void {
+        @gtk_spin_button_get_range(spin_button,min, max)
+    }
+
+    @spin_button_get_snap_to_ticks(GtkSpinButton* spin_button) gboolean? {
+        @return gtk_spin_button_get_snap_to_ticks(spin_button)
+    }
+
+    @spin_button_get_update_policy(GtkSpinButton* spin_button) GtkSpinButtonUpdatePolicy? {
+        @return gtk_spin_button_get_update_policy(spin_button)
+    }
+
+    @spin_button_get_value(GtkSpinButton* spin_button) gdouble? {
+        @return gtk_spin_button_get_value(spin_button)
+    }
+
+    @spin_button_get_wrap(GtkSpinButton* spin_button) gboolean? {
+        @return gtk_spin_button_get_wrap(spin_button)
+    }
+
+    // ---
+    // End of GtkSpinButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
