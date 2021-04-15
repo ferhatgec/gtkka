@@ -3650,6 +3650,125 @@
     // ---
     // End of GtkEntryBuffer
 
+    // GtkEntryCompletion
+
+    // Unimplemented: gboolean
+    //(*GtkEntryCompletionMatchFunc) (GtkEntryCompletion *completion,
+    //                                const gchar *key,
+    //                                GtkTreeIter *iter,
+    //                                gpointer user_data)
+
+    @entry_completion_new GtkEntryCompletion*? {
+        @return gtk_entry_completion_new()
+    }
+
+    @entry_completion_new_with_area(GtkCellArea* area) GtkEntryCompletion*? {
+        @return gtk_entry_completion_new_with_area(area)
+    }
+
+    @entry_completion_get_entry(GtkEntryCompletion* completion) GtkWidget*? {
+        @return gtk_entry_completion_get_entry(completion)
+    }
+
+    @entry_completion_set_model(GtkEntryCompletion* completion, GtkTreeModel* model) void {
+        @gtk_entry_completion_set_model(completion, model)
+    }
+
+    @entry_completion_get_model(GtkEntryCompletion* completion) GtkTreeModel*? {
+        @return gtk_entry_completion_get_model(completion)
+    }
+
+    @entry_completion_set_match_func(GtkEntryCompletion* completion, GtkEntryCompletionMatchFunc func, gpointer func_data, GDestroyNotify func_notify) void {
+        @gtk_entry_completion_set_match_func(completion,func,func_data, func_notify)
+    }
+
+    @entry_completion_set_minimum_key_length(GtkEntryCompletion* completion, gint length) void {
+        @gtk_entry_completion_set_minimum_key_length(completion, length)
+    }
+
+    @entry_completion_get_minimum_key_length(GtkEntryCompletion* completion) gint? {
+        @return gtk_entry_completion_get_minimum_key_length(completion)
+    }
+
+    @entry_completion_compute_prefix(GtkEntryCompletion* completion, const char* key) gchar*? {
+        @return gtk_entry_completion_compute_prefix(completion, key)
+    }
+
+    @entry_completion_complete(GtkEntryCompletion* completion) void {
+        @gtk_entry_completion_complete(completion)
+    }
+
+    #const gchar* entry_completion_get_completion_prefix(GtkEntryCompletion* completion) {
+        @return gtk_entry_completion_get_completion_prefix(completion)
+    }
+
+    @entry_completion_insert_prefix(GtkEntryCompletion* completion) void {
+        @gtk_entry_completion_insert_prefix(completion)
+    }
+
+    @entry_completion_insert_action_text(GtkEntryCompletion* completion, gint index_, const gchar* text) void {
+        @gtk_entry_completion_insert_action_text(completion,index_, text)
+    }
+
+    @entry_completion_insert_action_markup(GtkEntryCompletion* completion, gint index_, const gchar* markup) void {
+        @gtk_entry_completion_insert_action_markup(completion,index_, markup)
+    }
+
+    @entry_completion_delete_action(GtkEntryCompletion* completion, gint index_) void {
+        @gtk_entry_completion_delete_action(completion, index_)
+    }
+
+    @entry_completion_set_text_column(GtkEntryCompletion* completion, gint column) void {
+        @gtk_entry_completion_set_text_column(completion, column)
+    }
+
+    @entry_completion_get_text_column(GtkEntryCompletion* completion) gint? {
+        @return gtk_entry_completion_get_text_column(completion)
+    }
+
+    @entry_completion_set_inline_completion(GtkEntryCompletion* completion, gboolean inline_completion) void {
+        @gtk_entry_completion_set_inline_completion(completion, inline_completion)
+    }
+
+    @entry_completion_get_inline_completion(GtkEntryCompletion* completion) gboolean? {
+        @return gtk_entry_completion_get_inline_completion(completion)
+    }
+
+    @entry_completion_set_inline_selection(GtkEntryCompletion* completion, gboolean inline_selection) void {
+        @gtk_entry_completion_set_inline_selection(completion, inline_selection)
+    }
+
+    @entry_completion_get_inline_selection(GtkEntryCompletion* completion) gboolean? {
+        @return gtk_entry_completion_get_inline_selection(completion)
+    }
+
+    @entry_completion_set_popup_completion(GtkEntryCompletion* completion, gboolean popup_completion) void {
+        @gtk_entry_completion_set_popup_completion(completion, popup_completion)
+    }
+
+    @entry_completion_get_popup_completion(GtkEntryCompletion* completion) gboolean? {
+        @return gtk_entry_completion_get_popup_completion(completion)
+    }
+
+    @entry_completion_set_popup_set_width(GtkEntryCompletion* completion, gboolean popup_set_width) void {
+        @gtk_entry_completion_set_popup_set_width(completion, popup_set_width)
+    }
+
+    @entry_completion_get_popup_set_width(GtkEntryCompletion* completion) gboolean? {
+        @return gtk_entry_completion_get_popup_set_width(completion)
+    }
+
+    @entry_completion_set_popup_single_match(GtkEntryCompletion* completion, gboolean popup_single_match) void {
+        @gtk_entry_completion_set_popup_single_match(completion, popup_single_match)
+    }
+
+    @entry_completion_get_popup_single_match(GtkEntryCompletion* completion) gboolean? {
+        @return gtk_entry_completion_get_popup_single_match(completion)
+    }
+
+    // ---
+    // End of GtkEntryCompletion
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
