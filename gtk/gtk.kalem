@@ -3944,6 +3944,92 @@
     // ---
     // End of GtkSearchEntry
 
+    // GtkSearchBar
+
+    @search_bar_new GtkWidget*? {
+        @return gtk_search_bar_new()
+    }
+
+    @search_bar_connect_entry(GtkSearchBar* bar, GtkEntry* entry) void {
+        @gtk_search_bar_connect_entry(bar, entry)
+    }
+
+    @search_bar_get_search_mode(GtkSearchBar* bar) gboolean? {
+        @return gtk_search_bar_get_search_mode(bar)
+    }
+
+    @search_bar_set_search_mode(GtkSearchBar* bar, gboolean search_mode) void {
+        @gtk_search_bar_set_search_mode(bar, search_mode)
+    }
+
+    @search_bar_get_show_close_button(GtkSearchBar* bar) gboolean? {
+        @return gtk_search_bar_get_show_close_button(bar)
+    }
+
+    @search_bar_set_show_close_button(GtkSearchBar* bar, gboolean visible) void {
+        @gtk_search_bar_set_show_close_button(bar, visible)
+    }
+
+    @search_bar_handle_event(GtkSearchBar* bar, GdkEvent* event) gboolean? {
+        @return gtk_search_bar_handle_event(bar, event)
+    }
+
+    // ---
+    // End of GtkSearchBar
+
+    // GtkEditable
+
+    @editable_select_region(GtkEditable* editable, gint start_pos, gint end_pos) void {
+        @gtk_editable_select_region(editable,start_pos, end_pos)
+    }
+
+    @editable_get_selection_bounds(GtkEditable* editable, gint* start_pos, gint* end_pos) gboolean? {
+        @return gtk_editable_get_selection_bounds(editable,start_pos, end_pos)
+    }
+
+    @editable_insert_text(GtkEditable* editable, const gchar* new_text, gint new_text_length, gint* position) void {
+        @gtk_editable_insert_text(editable,new_text,new_text_length, position)
+    }
+
+    @editable_delete_text(GtkEditable* editable, gint start_pos, gint end_pos) void {
+        @gtk_editable_delete_text(editable,start_pos, end_pos)
+    }
+
+    @editable_get_chars(GtkEditable* editable, gint start_pos, gint end_pos) gchar*? {
+        @return gtk_editable_get_chars(editable,start_pos, end_pos)
+    }
+
+    @editable_cut_clipboard(GtkEditable* editable) void {
+        @return gtk_editable_cut_clipboard(editable)
+    }
+
+    @editable_copy_clipboard(GtkEditable* editable) void {
+        @return gtk_editable_copy_clipboard(editable)
+    }
+
+    @editable_delete_selection(GtkEditable* editable) void {
+        @gtk_editable_delete_selection(editable)
+    }
+
+    @editable_set_position(GtkEditable* editable, gint position) void {
+        @gtk_editable_set_position(editable, position)
+    }
+
+    @editable_get_position(GtkEditable* editable) gint? {
+        @return gtk_editable_get_position(editable)
+    }
+
+    @editable_set_editable(GtkEditable* editable, gboolean is_editable) void {
+        @gtk_editable_set_editable(editable, is_editable)
+    }
+
+    @editable_get_editable(GtkEditable* editable) gboolean? {
+        @return gtk_editable_get_editable(editable)
+    }
+
+    // ---
+    // End of GtkEditable
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
