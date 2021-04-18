@@ -4612,6 +4612,441 @@
     // ---
     // End of GtkTreeViewColumn
 
+    // GtkTreeView
+
+    // Unimplemented: void
+    //(*GtkTreeViewMappingFunc) (GtkTreeView *tree_view,
+    //                           GtkTreePath *path,
+    //                           gpointer user_data);
+
+    // Unimplemented: void
+    //(*GtkTreeViewMappingFunc) (GtkTreeView *tree_view,
+    //                           GtkTreePath *path,
+    //                           gpointer user_data);
+
+    // Unimplemented: gboolean
+    //(*GtkTreeViewSearchEqualFunc) (GtkTreeModel *model,
+    //                               gint column,
+    //                               const gchar *key,
+    //                               GtkTreeIter *iter,
+    //                               gpointer search_data);
+
+    @tree_view_new GtkWidget*? {
+        @return gtk_tree_view_new()
+    }
+
+    @tree_view_get_level_indentation(GtkTreeView* tree_view) gint? {
+        @return gtk_tree_view_get_level_indentation(tree_view)
+    }
+
+    @tree_view_get_show_expanders(GtkTreeView* tree_view) gboolean? {
+        @return gtk_tree_view_get_show_expanders(tree_view)
+    }
+
+    @tree_view_set_level_indentation(GtkTreeView* tree_view, gint indentation) void {
+        @gtk_tree_view_set_level_indentation(tree_view, indentation)
+    }
+
+    @tree_view_set_show_expanders(GtkTreeView* tree_view, gboolean enabled) void {
+        @gtk_tree_view_set_show_expanders(tree_view, enabled)
+    }
+
+    @tree_view_new_with_model(GtkTreeModel* model) GtkWidget*? {
+        @return gtk_tree_view_new_with_model(model)
+    }
+
+    @tree_view_get_model(GtkTreeView* tree_view) GtkTreeModel*? {
+        @return gtk_tree_view_get_model(tree_view)
+    }
+
+    @tree_view_set_model(GtkTreeView* tree_view, GtkTreeModel* model) void {
+        @gtk_tree_view_set_model(tree_view, model)
+    }
+
+    @tree_view_get_selection(GtkTreeView* tree_view) GtkTreeSelection*? {
+        @return gtk_tree_view_get_selection(tree_view)
+    }
+
+    // Deprecated: @tree_view_get_hadjustment(GtkTreeView* tree_view)
+
+    // Deprecated: @tree_view_set_hadjustment(GtkTreeView* tree_view,
+    //                               GtkAdjustment* adjustment)
+
+    // Deprecated: @tree_view_get_vadjustment(GtkTreeView* tree_view)
+
+    // Deprecated: @tree_view_set_vadjustment(GtkTreeView* tree_view,
+    //                               GtkAdjustment* adjustment)
+
+    @tree_view_get_headers_visible(GtkTreeView* tree_view) gboolean? {
+        @return gtk_tree_view_get_headers_visible(tree_view)
+    }
+
+    @tree_view_set_headers_visible(GtkTreeView* tree_view, gboolean headers_visible) void {
+        @gtk_tree_view_set_headers_visible(tree_view, headers_visible)
+    }
+
+    @tree_view_columns_autosize(GtkTreeView* tree_view) void {
+        @gtk_tree_view_columns_autosize(tree_view)
+    }
+
+    @tree_view_get_headers_clickable(GtkTreeView* tree_view) gboolean? {
+        @return gtk_tree_view_get_headers_clickable(tree_view)
+    }
+
+    @tree_view_set_headers_clickable(GtkTreeView* tree_view, gboolean setting) void {
+        @gtk_tree_view_set_headers_clickable(tree_view, setting)
+    }
+
+    // Deprecated: @tree_view_set_rules_hint(GtkTreeView* tree_view,
+    //                              gboolean setting)
+
+    // Deprecated: @tree_view_get_rules_hint(GtkTreeView* tree_view)
+
+    @tree_view_set_activate_on_single_click(GtkTreeView* tree_view, gboolean single) void {
+        @gtk_tree_view_set_activate_on_single_click(tree_view, single)
+    }
+
+    @tree_view_get_activate_on_single_click(GtkTreeView* tree_view) gboolean? {
+        @return gtk_tree_view_get_activate_on_single_click(tree_view)
+    }
+
+    @tree_view_append_column(GtkTreeView* tree_view, GtkTreeViewColumn* column) gint? {
+        @return gtk_tree_view_append_column(tree_view, column)
+    }
+
+    @tree_view_remove_column(GtkTreeView* tree_view, GtkTreeViewColumn* column) gint? {
+        @return gtk_tree_view_remove_column(tree_view, column)
+    }
+
+    @tree_view_insert_column(GtkTreeView* tree_view, GtkTreeViewColumn* column, gint position) gint? {
+        @return gtk_tree_view_insert_column(tree_view,column, position)
+    }
+
+    #template <typename... Attrs>
+    @tree_view_insert_column_with_attributes(GtkTreeView* tree_view, gint position, const gchar* title, GtkCellRenderer* cell, Attrs... list) gint? {
+        @return (gtk_tree_view_insert_column_with_attributes(tree_view,position,title,cell,list), ...)
+    }
+
+    @tree_view_insert_column_with_data_func(GtkTreeView* tree_view, gint position, const gchar* title, GtkCellRenderer* cell, GtkTreeCellDataFunc func, gpointer data, GDestroyNotify dnotify) gint? {
+        @return gtk_tree_view_insert_column_with_data_func(tree_view,position,title,cell,func,data, dnotify)
+    }
+
+    @tree_view_get_n_columns(GtkTreeView* tree_view) guint? {
+        @return gtk_tree_view_get_n_columns(tree_view)
+    }
+
+    @tree_view_get_column(GtkTreeView* tree_view, gint n) GtkTreeViewColumn*? {
+        @return gtk_tree_view_get_column(tree_view, n)
+    }
+
+    @tree_view_get_columns(GtkTreeView* tree_view) GList*? {
+        @return gtk_tree_view_get_columns(tree_view)
+    }
+
+    @tree_view_move_column_after(GtkTreeView* tree_view, GtkTreeViewColumn* column, GtkTreeViewColumn* base_column) void {
+        @gtk_tree_view_move_column_after(tree_view,column, base_column)
+    }
+
+    @tree_view_set_expander_column(GtkTreeView* tree_view, GtkTreeViewColumn* column) void {
+        @gtk_tree_view_set_expander_column(tree_view, column)
+    }
+
+    @tree_view_get_expander_column(GtkTreeView* tree_view) GtkTreeViewColumn*? {
+        @return gtk_tree_view_get_expander_column(tree_view)
+    }
+
+    @tree_view_set_column_drag_function(GtkTreeView* tree_view, GtkTreeViewColumnDropFunc func, gpointer user_data, GDestroyNotify destroy) void {
+        @gtk_tree_view_set_column_drag_function(tree_view,func,user_data, destroy)
+    }
+
+    @tree_view_scroll_to_point(GtkTreeView* tree_view, gint tree_x, gint tree_y) void {
+        @gtk_tree_view_scroll_to_point(tree_view,tree_x, tree_y)
+    }
+
+    @tree_view_scroll_to_cell(GtkTreeView* tree_view, GtkTreePath* path, GtkTreeViewColumn* column, gboolean use_align, gfloat row_align, gfloat col_align) void {
+        @gtk_tree_view_scroll_to_cell(tree_view,path,column,use_align,row_align, col_align)
+    }
+
+    @tree_view_set_cursor(GtkTreeView* tree_view, GtkTreePath* path, GtkTreeViewColumn* focus_column, gboolean start_editing) void {
+        @gtk_tree_view_set_cursor(tree_view,path,focus_column, start_editing)
+    }
+
+    @tree_view_set_cursor_on_cell(GtkTreeView* tree_view, GtkTreePath* path, GtkTreeViewColumn* focus_column, GtkCellRenderer* focus_cell, gboolean start_editing) void {
+        @gtk_tree_view_set_cursor_on_cell(tree_view,path,focus_column,focus_cell, start_editing)
+    }
+
+    @tree_view_get_cursor(GtkTreeView* tree_view, GtkTreePath** path, GtkTreeViewColumn** focus_column) void {
+        @gtk_tree_view_get_cursor(tree_view,path, focus_column)
+    }
+
+    @tree_view_row_activated(GtkTreeView* tree_view, GtkTreePath* path, GtkTreeViewColumn* column) void {
+        @gtk_tree_view_row_activated(tree_view,path, column)
+    }
+
+    @tree_view_expand_all(GtkTreeView* tree_view) void {
+        @gtk_tree_view_expand_all(tree_view)
+    }
+
+    @tree_view_collapse_all(GtkTreeView* tree_view) void {
+        @gtk_tree_view_collapse_all(tree_view)
+    }
+
+    @tree_view_expand_to_path(GtkTreeView* tree_view, GtkTreePath* path) void {
+        @gtk_tree_view_expand_to_path(tree_view, path)
+    }
+
+    @tree_view_expand_row(GtkTreeView* tree_view, GtkTreePath* path, gboolean open_all) gboolean? {
+        @gtk_tree_view_expand_row(tree_view,path, open_all)
+    }
+
+    @tree_view_collapse_row(GtkTreeView* tree_view, GtkTreePath* path) gboolean? {
+        @return gtk_tree_view_collapse_row(tree_view, path)
+    }
+
+    @tree_view_map_expanded_rows(GtkTreeView* tree_view, GtkTreeViewMappingFunc func, gpointer data) void {
+        @gtk_tree_view_map_expanded_rows(tree_view,func, data)
+    }
+
+    @tree_view_row_expanded(GtkTreeView* tree_view, GtkTreePath* path) gboolean? {
+        @return gtk_tree_view_row_expanded(tree_view, path)
+    }
+
+    @tree_view_set_reorderable(GtkTreeView* tree_view, gboolean reorderable) void {
+        @gtk_tree_view_set_reorderable(tree_view, reorderable)
+    }
+
+    @tree_view_get_reorderable(GtkTreeView* tree_view) gboolean? {
+        @return gtk_tree_view_get_reorderable(tree_view)
+    }
+
+    @tree_view_get_path_at_pos(GtkTreeView* tree_view, gint x, gint y, GtkTreePath** path, GtkTreeViewColumn** column, gint* cell_x, gint* cell_y) gboolean? {
+        @return gtk_tree_view_get_path_at_pos(tree_view,x,y,path,column,cell_x, cell_y)
+    }
+
+    @tree_view_is_blank_at_pos(GtkTreeView* tree_view, gint x, gint y, GtkTreePath** path, GtkTreeViewColumn** column, gint* cell_x, gint* cell_y) gboolean? {
+        @return gtk_tree_view_is_blank_at_pos(tree_view,x,y,path,column,cell_x, cell_y)
+    }
+
+    @tree_view_get_cell_area(GtkTreeView* tree_view, GtkTreePath* path, GtkTreeViewColumn* column, GdkRectangle* rect) void {
+        @gtk_tree_view_get_cell_area(tree_view,path,column, rect)
+    }
+
+    @tree_view_get_background_area(GtkTreeView* tree_view, GtkTreePath* path, GtkTreeViewColumn* column, GdkRectangle* rect) void {
+        @gtk_tree_view_get_background_area(tree_view,path,column, rect)
+    }
+
+    @tree_view_get_visible_rect(GtkTreeView* tree_view, GdkRectangle* visible_rect) void {
+        @gtk_tree_view_get_visible_rect(tree_view, visible_rect)
+    }
+
+    @tree_view_get_visible_range(GtkTreeView* tree_view, GtkTreePath** start_path, GtkTreePath** end_path) gboolean? {
+        @return gtk_tree_view_get_visible_range(tree_view,start_path, end_path)
+    }
+
+    @tree_view_get_bin_window(GtkTreeView* tree_view) GdkWindow*? {
+        @gtk_tree_view_get_bin_window(tree_view)
+    }
+
+    @tree_view_convert_bin_window_to_tree_coords(GtkTreeView* tree_view, gint bx, gint by, gint* tx, gint* ty) void {
+        @gtk_tree_view_convert_bin_window_to_tree_coords(tree_view,bx,by,tx, ty)
+    }
+
+    @tree_view_convert_bin_window_to_widget_coords(GtkTreeView* tree_view, gint bx, gint by, gint* wx, gint* wy) void {
+        @gtk_tree_view_convert_bin_window_to_widget_coords(tree_view,bx,by,wx, wy)
+    }
+
+    @tree_view_convert_tree_to_bin_window_coords(GtkTreeView* tree_view, gint tx, gint ty, gint* bx, gint* by) void {
+        @gtk_tree_view_convert_tree_to_bin_window_coords(tree_view,tx,ty,bx, by)
+    }
+
+    @tree_view_convert_tree_to_widget_coords(GtkTreeView* tree_view, gint tx, gint ty, gint* wx, gint* wy) void {
+        @gtk_tree_view_convert_tree_to_widget_coords(tree_view,tx,ty,wx, wy)
+    }
+
+    @tree_view_convert_widget_to_bin_window_coords(GtkTreeView* tree_view, gint wx, gint wy, gint* bx, gint* by) void {
+        @gtk_tree_view_convert_widget_to_bin_window_coords(tree_view,wx,wy,bx, by)
+    }
+
+    @tree_view_convert_widget_to_tree_coords(GtkTreeView* tree_view, gint wx, gint wy, gint* tx, gint* ty) void {
+        @gtk_tree_view_convert_widget_to_tree_coords(tree_view,wx,wy,tx, ty)
+    }
+
+    @tree_view_enable_model_drag_dest(GtkTreeView* tree_view, const GtkTargetEntry* targets, gint n_targets, GdkDragAction actions) void {
+        @gtk_tree_view_enable_model_drag_dest(tree_view,targets,n_targets, actions)
+    }
+
+    @tree_view_enable_model_drag_source(GtkTreeView* tree_view, GdkModifierType start_button_mask, const GtkTargetEntry* targets, gint n_targets, GdkDragAction actions) void {
+        @gtk_tree_view_enable_model_drag_source(tree_view,start_button_mask,targets,n_targets,actions)
+    }
+
+    @tree_view_unset_rows_drag_source(GtkTreeView* tree_view) void {
+        @gtk_tree_view_unset_rows_drag_source(tree_view)
+    }
+
+    @tree_view_unset_rows_drag_dest(GtkTreeView* tree_view) void {
+        @gtk_tree_view_unset_rows_drag_dest(tree_view)
+    }
+
+    @tree_view_set_drag_dest_row(GtkTreeView* tree_view, GtkTreePath* path, GtkTreeViewDropPosition pos) void {
+        @gtk_tree_view_set_drag_dest_row(tree_view,path, pos)
+    }
+
+    @tree_view_get_drag_dest_row(GtkTreeView* tree_view, GtkTreePath** path, GtkTreeViewDropPosition* pos) void {
+        @gtk_tree_view_get_drag_dest_row(tree_view,path, pos)
+    }
+
+    @tree_view_get_dest_row_at_pos(GtkTreeView* tree_view, gint drag_x, gint drag_y, GtkTreePath** path, GtkTreeViewDropPosition* pos) gboolean? {
+        @return gtk_tree_view_get_dest_row_at_pos(tree_view,drag_x,drag_y,path, pos)
+    }
+
+    @tree_view_create_row_drag_icon(GtkTreeView* tree_view, GtkTreePath* path) cairo_surface_t*? {
+        @return gtk_tree_view_create_row_drag_icon(tree_view, path)
+    }
+
+    @tree_view_set_enable_search(GtkTreeView* tree_view, gboolean enable_search) void {
+        @gtk_tree_view_set_enable_search(tree_view, enable_search)
+    }
+
+    @tree_view_get_enable_search(GtkTreeView* tree_view) gboolean? {
+        @return gtk_tree_view_get_enable_search(tree_view)
+    }
+
+    @tree_view_get_search_column(GtkTreeView* tree_view) gint? {
+        @return gtk_tree_view_get_search_column(tree_view)
+    }
+
+    @tree_view_set_search_column(GtkTreeView* tree_view, gint column) void {
+        @gtk_tree_view_set_search_column(tree_view, column)
+    }
+
+    @tree_view_get_search_equal_func(GtkTreeView* tree_view) GtkTreeViewSearchEqualFunc? {
+        @return gtk_tree_view_get_search_equal_func(tree_view)
+    }
+
+    @tree_view_set_search_equal_func(GtkTreeView* tree_view, GtkTreeViewSearchEqualFunc search_equal_func, gpointer search_user_data, GDestroyNotify search_destroy) void {
+        @gtk_tree_view_set_search_equal_func(tree_view,search_equal_func,search_user_data, search_destroy)
+    }
+
+    @tree_view_get_search_entry(GtkTreeView* tree_view) GtkEntry*? {
+        @return gtk_tree_view_get_search_entry(tree_view)
+    }
+
+    @tree_view_set_search_entry(GtkTreeView* tree_view, GtkEntry* entry) void {
+        @gtk_tree_view_set_search_entry(tree_view, entry)
+    }
+
+    // Unimplemented: void
+    //(*GtkTreeViewSearchPositionFunc) (GtkTreeView *tree_view,
+    //                                  GtkWidget *search_dialog,
+    //                                  gpointer user_data);
+
+    @tree_view_get_search_position_func(GtkTreeView* tree_view) GtkTreeViewSearchPositionFunc? {
+        @return gtk_tree_view_get_search_position_func(tree_view)
+    }
+
+    @tree_view_set_search_position_func(GtkTreeView* tree_view, GtkTreeViewSearchPositionFunc func, gpointer data, GDestroyNotify destroy) void {
+        @gtk_tree_view_set_search_position_func(tree_view,func,data, destroy)
+    }
+
+    @tree_view_get_fixed_height_mode(GtkTreeView* tree_view) gboolean? {
+        @return gtk_tree_view_get_fixed_height_mode(tree_view)
+    }
+
+    @tree_view_set_fixed_height_mode(GtkTreeView* tree_view, gboolean enable) void {
+        @gtk_tree_view_set_fixed_height_mode(tree_view, enable)
+    }
+
+    @tree_view_get_hover_selection(GtkTreeView* tree_view) gboolean? {
+        @return gtk_tree_view_get_hover_selection(tree_view)
+    }
+
+    @tree_view_set_hover_selection(GtkTreeView* tree_view, gboolean hover) void {
+        @gtk_tree_view_set_hover_selection(tree_view, hover)
+    }
+
+    @tree_view_get_hover_expand(GtkTreeView* tree_view) gboolean? {
+        @return gtk_tree_view_get_hover_expand(tree_view)
+    }
+
+    @tree_view_set_hover_expand(GtkTreeView* tree_view, gboolean expand) void {
+        @gtk_tree_view_set_hover_expand(tree_view, expand)
+    }
+
+    // Unimplemented: void
+    //(*GtkTreeDestroyCountFunc) (GtkTreeView *tree_view,
+    //                            GtkTreePath *path,
+    //                            gint children,
+    //                            gpointer user_data);
+
+    // Deprecated: @tree_view_set_destroy_count_func(GtkTreeView* tree_view,
+    //                                      GtkTreeDestroyCountFunc func,
+    //                                      gpointer data,
+    //                                      GDestroyNotify destroy)
+
+    // Unimplemented: gboolean
+    //(*GtkTreeViewRowSeparatorFunc) (GtkTreeModel *model,
+    //                                GtkTreeIter *iter,
+    //                                gpointer data);
+
+    @tree_view_get_row_separator_func(GtkTreeView* tree_view) GtkTreeViewRowSeparatorFunc? {
+        @return gtk_tree_view_get_row_separator_func(tree_view)
+    }
+
+    @tree_view_set_row_separator_func(GtkTreeView* tree_view, GtkTreeViewRowSeparatorFunc func, gpointer data, GDestroyNotify destroy) void {
+        @gtk_tree_view_set_row_separator_func(tree_view,func,data, destroy)
+    }
+
+    @tree_view_get_rubber_banding(GtkTreeView* tree_view) gboolean? {
+        @return gtk_tree_view_get_rubber_banding(tree_view)
+    }
+
+    @tree_view_set_rubber_banding(GtkTreeView* tree_view, gboolean enable) void {
+        @gtk_tree_view_set_rubber_banding(tree_view, enable)
+    }
+
+    @tree_view_is_rubber_banding_active(GtkTreeView* tree_view) gboolean? {
+        @return gtk_tree_view_is_rubber_banding_active(tree_view)
+    }
+
+    @tree_view_get_enable_tree_lines(GtkTreeView* tree_view) gboolean? {
+        @return gtk_tree_view_get_enable_tree_lines(tree_view)
+    }
+
+    @tree_view_set_enable_tree_lines(GtkTreeView* tree_view, gboolean enabled) void {
+        @gtk_tree_view_set_enable_tree_lines(tree_view, enabled)
+    }
+
+    @tree_view_get_grid_lines(GtkTreeView* tree_view) GtkTreeViewGridLines? {
+        @return gtk_tree_view_get_grid_lines(tree_view)
+    }
+
+    @tree_view_set_grid_lines(GtkTreeView* tree_view, GtkTreeViewGridLines grid_lines) void {
+        @gtk_tree_view_set_grid_lines(tree_view, grid_lines)
+    }
+
+    @tree_view_set_tooltip_row(GtkTreeView* tree_view, GtkTooltip* tooltip, GtkTreePath* path) void {
+        @gtk_tree_view_set_tooltip_row(tree_view,tooltip, path)
+    }
+
+    @tree_view_set_tooltip_cell(GtkTreeView* tree_view, GtkTooltip* tooltip, GtkTreePath* path, GtkTreeViewColumn* column, GtkCellRenderer* cell) void {
+        @gtk_tree_view_set_tooltip_cell(tree_view,tooltip,path,column, cell)
+    }
+
+    @tree_view_get_tooltip_context(GtkTreeView* tree_view, gint* x, gint* y, gboolean keyboard_tip, GtkTreeModel** model, GtkTreePath** path, GtkTreeIter* iter) gboolean? {
+        @return gtk_tree_view_get_tooltip_context(tree_view,x,y,keyboard_tip,model,path, iter)
+    }
+
+    @tree_view_get_tooltip_column(GtkTreeView* tree_view) gint? {
+        @return gtk_tree_view_get_tooltip_column(tree_view)
+    }
+
+    @tree_view_set_tooltip_column(GtkTreeView* tree_view, gint column) void {
+        @gtk_tree_view_set_tooltip_column(tree_view, column)
+    }
+
+    // ---
+    // End of GtkTreeView
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
