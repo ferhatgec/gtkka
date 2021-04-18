@@ -5080,6 +5080,74 @@
     // ---
     // End of GtkTreeDragSource (GtkTreeView drag-and-drop)
 
+    // GtkCellView
+
+    @cell_view_new GtkWidget*? {
+        @return gtk_cell_view_new()
+    }
+
+    @cell_view_new_with_context(GtkCellArea* area, GtkCellAreaContext* context) GtkWidget*? {
+        @return gtk_cell_view_new_with_context(area, context)
+    }
+
+    @cell_view_new_with_text(const gchar* text) GtkWidget*? {
+        @return gtk_cell_view_new_with_text(text)
+    }
+
+    @cell_view_new_with_markup(const gchar* markup) GtkWidget*? {
+        @return gtk_cell_view_new_with_markup(markup)
+    }
+
+    @cell_view_new_with_pixbuf(GdkPixbuf* pixbuf) GtkWidget*? {
+        @return gtk_cell_view_new_with_pixbuf(pixbuf)
+    }
+
+    @cell_view_set_model(GtkCellView* cell_view, GtkTreeModel* model) void {
+        @gtk_cell_view_set_model(cell_view, model)
+    }
+
+    @cell_view_get_model(GtkCellView* cell_view) GtkTreeModel*? {
+        @return gtk_cell_view_get_model(cell_view)
+    }
+
+    @cell_view_set_displayed_row(GtkCellView* cell_view, GtkTreePath* path) void {
+        @gtk_cell_view_set_displayed_row(cell_view, path)
+    }
+
+    @cell_view_get_displayed_row(GtkCellView* cell_view) GtkTreePath*? {
+        @return gtk_cell_view_get_displayed_row(cell_view)
+    }
+
+    // Deprecated: @cell_view_get_size_of_row(GtkCellView* cell_view,
+    //                               GtkTreePath* path,
+    //                               GtkRequisition* requisition)
+
+    // Deprecated: @cell_view_set_background_color(GtkCellView* cell_view,
+    //                                    const GdkColor* color);
+
+    @cell_view_set_background_rgba(GtkCellView* cell_view, const GdkRGBA* rgba) void {
+        @gtk_cell_view_set_background_rgba(cell_view, rgba)
+    }
+
+    @cell_view_set_draw_sensitive(GtkCellView* cell_view, gboolean draw_sensitive) void {
+        @gtk_cell_view_set_draw_sensitive(cell_view, draw_sensitive)
+    }
+
+    @cell_view_get_draw_sensitive(GtkCellView* cell_view) gboolean? {
+        @return gtk_cell_view_get_draw_sensitive(cell_view)
+    }
+
+    @cell_view_set_fit_model(GtkCellView* cell_view, gboolean fit_model) void {
+        @gtk_cell_view_set_fit_model(cell_view, fit_model)
+    }
+
+    @cell_view_get_fit_model(GtkCellView* cell_view) gboolean? {
+        @return gtk_cell_view_get_fit_model(cell_view)
+    }
+
+    // ---
+    // End of GtkCellView
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
