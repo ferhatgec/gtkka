@@ -5047,6 +5047,39 @@
     // ---
     // End of GtkTreeView
 
+    // GtkTreeDragSource (GtkTreeView drag-and-drop)
+
+    @tree_drag_source_drag_data_delete(GtkTreeDragSource* drag_source, GtkTreePath* path) gboolean? {
+        @return gtk_tree_drag_source_drag_data_delete(drag_source, path)
+    }
+
+    @tree_drag_source_drag_data_get(GtkTreeDragSource* drag_source, GtkTreePath* path, GtkSelectionData* selection_data) gboolean? {
+        @return gtk_tree_drag_source_drag_data_get(drag_source,path, selection_data)
+    }
+
+    @tree_drag_source_row_draggable(GtkTreeDragSource* drag_source, GtkTreePath* path) gboolean? {
+        @return gtk_tree_drag_source_row_draggable(drag_source, path)
+    }
+
+    @tree_drag_dest_drag_data_received(GtkTreeDragDest* drag_dest, GtkTreePath* dest, GtkSelectionData* selection_data) gboolean? {
+        @return gtk_tree_drag_dest_drag_data_received(drag_dest,dest, selection_data)
+    }
+
+    @tree_drag_dest_row_drop_possible(GtkTreeDragDest* drag_dest, GtkTreePath* dest_path, GtkSelectionData* selection_data) gboolean? {
+        @return gtk_tree_drag_dest_row_drop_possible(drag_dest,dest_path, selection_data)
+    }
+
+    @tree_set_row_drag_data(GtkSelectionData* selection_data, GtkTreeModel* tree_model, GtkTreePath* path) gboolean? {
+        @return gtk_tree_set_row_drag_data(selection_data,tree_model, path)
+    }
+
+    @tree_get_row_drag_data(GtkSelectionData* selection_data, GtkTreeModel** tree_model, GtkTreePath** path) gboolean? {
+        @return gtk_tree_get_row_drag_data(selection_data,tree_model, path)
+    }
+
+    // ---
+    // End of GtkTreeDragSource (GtkTreeView drag-and-drop)
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
