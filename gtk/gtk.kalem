@@ -5490,6 +5490,67 @@
     // ---
     // End of GtkTreeModelSort
 
+    // GtkTreeModelFilter
+
+    // Unimplemented: gboolean
+    //(*GtkTreeModelFilterVisibleFunc) (GtkTreeModel *model,
+    //                                  GtkTreeIter *iter,
+    //                                  gpointer data);
+
+    // Unimplemented: void
+    //(*GtkTreeModelFilterModifyFunc) (GtkTreeModel *model,
+    //                                 GtkTreeIter *iter,
+    //                                 GValue *value,
+    //                                 gint column,
+    //                                 gpointer data);
+
+    @tree_model_filter_new(GtkTreeModel* child_model, GtkTreePath* root) GtkTreeModel*? {
+        @return gtk_tree_model_filter_new(child_model, root)
+    }
+
+    @tree_model_filter_set_visible_func(GtkTreeModelFilter* filter, GtkTreeModelFilterVisibleFunc func, gpointer data, GDestroyNotify destroy) void {
+        @gtk_tree_model_filter_set_visible_func(filter,func,data, destroy)
+    }
+
+    @tree_model_filter_set_modify_func(GtkTreeModelFilter* filter, gint n_columns, GType* types, GtkTreeModelFilterModifyFunc func, gpointer data, GDestroyNotify destroy) void {
+        @gtk_tree_model_filter_set_modify_func(filter,n_columns,types,func,data, destroy)
+    }
+
+    @tree_model_filter_set_visible_column(GtkTreeModelFilter* filter, gint column) void {
+        @gtk_tree_model_filter_set_visible_column(filter, column)
+    }
+
+    @tree_model_filter_get_model(GtkTreeModelFilter* filter) GtkTreeModel*? {
+        @return gtk_tree_model_filter_get_model(filter)
+    }
+
+    @tree_model_filter_convert_child_iter_to_iter(GtkTreeModelFilter* filter, GtkTreeIter* filter_iter, GtkTreeIter* child_iter) gboolean? {
+        @return gtk_tree_model_filter_convert_child_iter_to_iter(filter,filter_iter, child_iter)
+    }
+
+    @tree_model_filter_convert_iter_to_child_iter(GtkTreeModelFilter* filter, GtkTreeIter* child_iter, GtkTreeIter* filter_iter) void {
+        @gtk_tree_model_filter_convert_iter_to_child_iter(filter,child_iter, filter_iter)
+    }
+
+    @tree_model_filter_convert_child_path_to_path(GtkTreeModelFilter* filter, GtkTreePath* child_path) GtkTreePath*? {
+        @return gtk_tree_model_filter_convert_child_path_to_path(filter, child_path)
+    }
+
+    @tree_model_filter_convert_path_to_child_path(GtkTreeModelFilter* filter, GtkTreePath* filter_path) GtkTreePath*? {
+        @return gtk_tree_model_filter_convert_path_to_child_path(filter, filter_path)
+    }
+
+    @tree_model_filter_refilter(GtkTreeModelFilter* filter) void {
+        @gtk_tree_model_filter_refilter(filter)
+    }
+
+    @tree_model_filter_clear_cache(GtkTreeModelFilter* filter) void {
+        @gtk_tree_model_filter_clear_cache(filter)
+    }
+
+    // ---
+    // End of GtkTreeModelFilter
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
