@@ -5551,6 +5551,59 @@
     // ---
     // End of GtkTreeModelFilter
 
+    // GtkCellLayout
+
+    // Unimplemented: void
+    //(*GtkCellLayoutDataFunc) (GtkCellLayout *cell_layout,
+    //                          GtkCellRenderer *cell,
+    //                          GtkTreeModel *tree_model,
+    //                          GtkTreeIter *iter,
+    //                          gpointer data);
+
+    @cell_layout_pack_start(GtkCellLayout* cell_layout, GtkCellRenderer* cell, gboolean expand) void {
+        @gtk_cell_layout_pack_start(cell_layout,cell, expand)
+    }
+
+    @cell_layout_pack_end(GtkCellLayout* cell_layout, GtkCellRenderer* cell, gboolean expand) void {
+        @gtk_cell_layout_pack_end(cell_layout,cell, expand)
+    }
+
+    @cell_layout_get_area(GtkCellLayout* cell_layout) GtkCellArea*? {
+        @return gtk_cell_layout_get_area(cell_layout)
+    }
+
+    @cell_layout_get_cells(GtkCellLayout* cell_layout) GList*? {
+        @return gtk_cell_layout_get_cells(cell_layout)
+    }
+
+    @cell_layout_reorder(GtkCellLayout* cell_layout, GtkCellRenderer* cell, gint position) void {
+        @gtk_cell_layout_reorder(cell_layout,cell, position)
+    }
+
+    @cell_layout_clear(GtkCellLayout* cell_layout) void {
+        @gtk_cell_layout_clear(cell_layout)
+    }
+
+    #template <typename... Attrs>
+    @cell_layout_set_attributes(GtkCellLayout* cell_layout, GtkCellRenderer* cell, Attrs... list) void {
+        @(gtk_cell_layout_set_attributes(cell_layout,cell,list), ...)
+    }
+
+    @cell_layout_add_attribute(GtkCellLayout* cell_layout, GtkCellRenderer* cell, const gchar* attribute, gint column) void {
+        @gtk_cell_layout_add_attribute(cell_layout,cell,attribute, column)
+    }
+
+    @cell_layout_set_cell_data_func(GtkCellLayout* cell_layout, GtkCellRenderer* cell, GtkCellLayoutDataFunc func, gpointer func_data, GDestroyNotify destroy) void {
+        @gtk_cell_layout_set_cell_data_func(cell_layout,cell,func,func_data, destroy)
+    }
+
+    @cell_layout_clear_attributes(GtkCellLayout* cell_layout, GtkCellRenderer* cell) void {
+        @gtk_cell_layout_clear_attributes(cell_layout, cell)
+    }
+
+    // ---
+    // End of GtkCellLayout
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
