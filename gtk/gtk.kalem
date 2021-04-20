@@ -6066,6 +6066,39 @@
     // ---
     // End of GtkCellRendererText
 
+    // GtkCellRendererToggle
+
+    @cell_renderer_toggle_new GtkCellRenderer*? {
+        @return gtk_cell_renderer_toggle_new()
+    }
+
+    @cell_renderer_toggle_get_radio(GtkCellRendererToggle* toggle) gboolean? {
+        @return gtk_cell_renderer_toggle_get_radio(toggle)
+    }
+
+    @cell_renderer_toggle_set_radio(GtkCellRendererToggle* toggle, gboolean radio) void {
+        @gtk_cell_renderer_toggle_set_radio(toggle, radio)
+    }
+
+    @cell_renderer_toggle_get_active(GtkCellRendererToggle* toggle) gboolean? {
+        @return gtk_cell_renderer_toggle_get_active(toggle)
+    }
+
+    @cell_renderer_toggle_set_active(GtkCellRendererToggle* toggle, gboolean setting) void {
+        @gtk_cell_renderer_toggle_set_active(toggle, setting)
+    }
+
+    @cell_renderer_toggle_get_activatable(GtkCellRendererToggle* toggle) gboolean? {
+        @return gtk_cell_renderer_toggle_get_activatable(toggle)
+    }
+
+    @cell_renderer_toggle_set_activatable(GtkCellRendererToggle* toggle, gboolean setting) void {
+        @gtk_cell_renderer_toggle_set_activatable(toggle, setting)
+    }
+
+    // ---
+    // End of GtkCellRendererToggle
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
