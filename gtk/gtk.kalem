@@ -6017,6 +6017,15 @@
     // ---
     // End of GtkCellRendererAccel
 
+    // GtkCellRendererCombo
+
+    @cell_renderer_combo_new GtkCellRenderer*? {
+        @return gtk_cell_renderer_combo_new()
+    }
+
+    // ---
+    // End of GtkCellRendererCombo
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
