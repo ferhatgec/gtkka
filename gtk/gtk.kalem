@@ -5991,6 +5991,23 @@
     // ---
     // End of GtkCellRenderer
 
+    // GtkCellEditable
+
+    @cell_editable_start_editing(GtkCellEditable* cell_editable, GdkEvent* event) void {
+        @gtk_cell_editable_start_editing(cell_editable, event)
+    }
+
+    @cell_editable_editing_done(GtkCellEditable* cell_editable) void {
+        @gtk_cell_editable_editing_done(cell_editable)
+    }
+
+    @cell_editable_remove_widget(GtkCellEditable* cell_editable) void {
+        @gtk_cell_editable_remove_widget(cell_editable)
+    }
+
+    // ---
+    // End of GtkCellEditable
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
