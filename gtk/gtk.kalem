@@ -6035,6 +6035,15 @@
     // ---
     // End of GtkCellRendererPixbuf
 
+    // GtkCellRendererProgress
+
+    @cell_renderer_progress_new GtkCellRenderer*? {
+        @return gtk_cell_renderer_progress_new()
+    }
+
+    // ---
+    // End of GtkCellRendererProgress
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
