@@ -6008,6 +6008,15 @@
     // ---
     // End of GtkCellEditable
 
+    // GtkCellRendererAccel
+
+    @cell_renderer_accel_new GtkCellRenderer*? {
+        @return gtk_cell_renderer_accel_new()
+    }
+
+    // ---
+    // End of GtkCellRendererAccel
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
