@@ -6053,6 +6053,19 @@
     // ---
     // End of GtkCellRendererSpin
 
+    // GtkCellRendererText
+
+    @cell_renderer_text_new GtkCellRenderer*? {
+        @return gtk_cell_renderer_text_new()
+    }
+
+    @cell_renderer_text_set_fixed_height_from_font(GtkCellRendererText* renderer, gint number_of_rows) void {
+        @gtk_cell_renderer_text_set_fixed_height_from_font(renderer, number_of_rows)
+    }
+
+    // ---
+    // End of GtkCellRendererText
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
