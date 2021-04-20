@@ -6200,6 +6200,106 @@
     // ---
     // End of GtkListStore
 
+    // GtkTreeStore
+
+    #template <typename... Columns>
+    @tree_store_new(gint n_columns, Columns... types) GtkTreeStore*? {
+        @return (gtk_tree_store_new(n_columns,types), ...)
+    }
+
+    @tree_store_newv(gint n_columns, GType* types) GtkTreeStore*? {
+        @return gtk_tree_store_newv(n_columns, types)
+    }
+
+    @tree_store_set_column_types(GtkTreeStore* tree_store, gint n_columns, GType* types) void {
+        @gtk_tree_store_set_column_types(tree_store,n_columns, types)
+    }
+
+    @tree_store_set_value(GtkTreeStore* tree_store, GtkTreeIter* iter, gint column, GValue* value) void {
+        @gtk_tree_store_set_value(tree_store,iter,column, value)
+    }
+
+    #template <typename... Columns>
+    @tree_store_set(GtkTreeStore* tree_store, GtkTreeIter* iter, Columns... pairs) void {
+        @(gtk_tree_store_set(tree_store,iter,pairs), ...)
+    }
+
+    @tree_store_set_valist(GtkTreeStore* tree_store, GtkTreeIter* iter, va_list var_args) void {
+        @gtk_tree_store_set_valist(tree_store,iter, var_args)
+    }
+
+    @tree_store_set_valuesv(GtkTreeStore* tree_store, GtkTreeIter* iter, gint* columns, GValue* values, gint n_values) void {
+        @gtk_tree_store_set_valuesv(tree_store,iter,columns,values, n_values)
+    }
+
+    @tree_store_remove(GtkTreeStore* tree_store, GtkTreeIter* iter) gboolean? {
+        @return gtk_tree_store_remove(tree_store, iter)
+    }
+
+    @tree_store_insert(GtkTreeStore* tree_store, GtkTreeIter* iter, GtkTreeIter* parent, gint position) void {
+        @gtk_tree_store_insert(tree_store,iter,parent, position)
+    }
+
+    @tree_store_insert_before(GtkTreeStore* tree_store, GtkTreeIter* iter, GtkTreeIter* parent, GtkTreeIter* sibling) void {
+        @gtk_tree_store_insert_before(tree_store,iter,parent, sibling)
+    }
+
+    @tree_store_insert_after(GtkTreeStore* tree_store, GtkTreeIter* iter, GtkTreeIter* parent, GtkTreeIter* sibling) void {
+        @gtk_tree_store_insert_after(tree_store,iter,parent, sibling)
+    }
+
+    #template <typename... Columns>
+    @tree_store_insert_with_values(GtkTreeStore* tree_store, GtkTreeIter* iter, GtkTreeIter* parent, gint position, Columns... pairs) void {
+        @(gtk_tree_store_insert_with_values(tree_store,iter,parent,position,pairs), ...)
+    }
+
+    @tree_store_insert_with_valuesv(GtkTreeStore* tree_store, GtkTreeIter* iter, GtkTreeIter* parent, gint position, gint* columns, GValue* values, gint n_values) void {
+        @gtk_tree_store_insert_with_valuesv(tree_store,iter,parent,position,columns,values, n_values)
+    }
+
+    @tree_store_prepend(GtkTreeStore* tree_store, GtkTreeIter* iter, GtkTreeIter* parent) void {
+        @gtk_tree_store_prepend(tree_store,iter, parent)
+    }
+
+    @tree_store_append(GtkTreeStore* tree_store, GtkTreeIter* iter, GtkTreeIter* parent) void {
+        @gtk_tree_store_append(tree_store,iter, parent)
+    }
+
+    @tree_store_is_ancestor(GtkTreeStore* tree_store, GtkTreeIter* iter, GtkTreeIter* descendant) gboolean? {
+        @return gtk_tree_store_is_ancestor(tree_store,iter, descendant)
+    }
+
+    @tree_store_iter_depth(GtkTreeStore* tree_store, GtkTreeIter* iter) gint? {
+        @return gtk_tree_store_iter_depth(tree_store, iter)
+    }
+
+    @tree_store_clear(GtkTreeStore* tree_store) void {
+        @gtk_tree_store_clear(tree_store)
+    }
+
+    @tree_store_iter_is_valid(GtkTreeStore* tree_store, GtkTreeIter* iter) gboolean? {
+        @return gtk_tree_store_iter_is_valid(tree_store, iter)
+    }
+
+    @tree_store_reorder(GtkTreeStore* tree_store, GtkTreeIter* parent, gint* new_order) void {
+        @gtk_tree_store_reorder(tree_store,parent, new_order)
+    }
+
+    @tree_store_swap(GtkTreeStore* tree_store, GtkTreeIter* a, GtkTreeIter* b) void {
+        @gtk_tree_store_swap(tree_store,a, b)
+    }
+
+    @tree_store_move_before(GtkTreeStore* tree_store, GtkTreeIter* iter, GtkTreeIter* position) void {
+        @gtk_tree_store_move_before(tree_store,iter, position)
+    }
+
+    @tree_store_move_after(GtkTreeStore* tree_store, GtkTreeIter* iter, GtkTreeIter* position) void {
+        @gtk_tree_store_move_after(tree_store,iter, position)
+    }
+
+    // ---
+    // End of GtkTreeStore
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
