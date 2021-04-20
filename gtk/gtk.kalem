@@ -6509,6 +6509,150 @@
     // ---
     // End of GtkComboBoxText
 
+    // GtkMenu
+
+    @menu_new GtkWidget*? {
+        @return gtk_menu_new()
+    }
+
+    @menu_new_from_model(GMenuModel* model) GtkWidget*? {
+        @return gtk_menu_new_from_model(model)
+    }
+
+    @menu_set_screen(GtkMenu* menu, GdkScreen* screen) void {
+        @gtk_menu_set_screen(menu, screen)
+    }
+
+    @menu_reorder_child(GtkMenu* menu, GtkWidget* child, gint position) void {
+        @gtk_menu_reorder_child(menu,child, position)
+    }
+
+    @menu_attach(GtkMenu* menu, GtkWidget* child, guint left_attach, guint right_attach, guint top_attach, guint bottom_attach) void {
+        @gtk_menu_attach(menu,child,left_attach,right_attach,top_attach, bottom_attach)
+    }
+
+    @menu_popup_at_rect(GtkMenu* menu, GdkWindow* rect_window, const GdkRectangle* rect, GdkGravity rect_anchor, GdkGravity menu_anchor, const GdkEvent* trigger_event) void {
+        @gtk_menu_popup_at_rect(menu,rect_window,rect,rect_anchor,menu_anchor, trigger_event)
+    }
+
+    @menu_popup_at_widget(GtkMenu* menu, GtkWidget* widget, GdkGravity widget_anchor, GdkGravity menu_anchor, const GdkEvent* trigger_event) void {
+        @gtk_menu_popup_at_widget(menu,widget,widget_anchor,menu_anchor, trigger_event)
+    }
+
+    @menu_popup_at_pointer(GtkMenu* menu, const GdkEvent* trigger_event) void {
+        @gtk_menu_popup_at_pointer(menu, trigger_event)
+    }
+
+    // Deprecated: @menu_popup_for_device(GtkMenu* menu,
+    //                           GdkDevice* device,
+    //                           GtkWidget* parent_menu_shell,
+    //                           GtkWidget* parent_menu_item,
+    //                           GtkMenuPositionFunc func,
+    //                           gpointer data,
+    //                           GDestroyNotify destroy,
+    //                           guint button,
+    //                           guint32 activate_time)
+
+    // Deprecated: @menu_popup(GtkMenu* menu,
+    //                GtkWidget* parent_menu_shell,
+    //                GtkWidget* parent_menu_item,
+    //                GtkMenuPositionFunc func,
+    //                gpointer data,
+    //                guint button,
+    //                guint32 activate_time)
+
+    @menu_set_accel_group(GtkMenu* menu, GtkAccelGroup* accel_group) void {
+        @gtk_menu_set_accel_group(menu, accel_group)
+    }
+
+    @menu_get_accel_group(GtkMenu* menu) GtkAccelGroup*? {
+        @return gtk_menu_get_accel_group(menu)
+    }
+
+    @menu_set_accel_path(GtkMenu* menu, const gchar* accel_path) void {
+        @gtk_menu_set_accel_path(menu, accel_path)
+    }
+
+    #const gchar* menu_get_accel_path(GtkMenu* menu) {
+        @return gtk_menu_get_accel_path(menu)
+    }
+
+    // Deprecated: @menu_set_title(GtkMenu* menu,
+    //                    const gchar* title)
+
+    // Deprecated: @menu_get_title(GtkMenu* menu)
+
+    @menu_set_monitor(GtkMenu* menu, gint monitor_num) void {
+        @gtk_menu_set_monitor(menu, monitor_num)
+    }
+
+    @menu_get_monitor(GtkMenu* menu) gint? {
+        @return gtk_menu_get_monitor(menu)
+    }
+
+    @menu_place_on_monitor(GtkMenu* menu, GdkMonitor* monitor) void {
+        @gtk_menu_place_on_monitor(menu, monitor)
+    }
+
+    // Deprecated: @menu_get_tearoff_state(GtkMenu* menu)
+
+    @menu_set_reserve_toggle_size(GtkMenu* menu, gboolean reserve_toggle_size) void {
+        @gtk_menu_set_reserve_toggle_size(menu, reserve_toggle_size)
+    }
+
+    @menu_get_reserve_toggle_size(GtkMenu* menu) gboolean? {
+        @return gtk_menu_get_reserve_toggle_size(menu)
+    }
+
+    @menu_popdown(GtkMenu* menu) void {
+        @gtk_menu_popdown(menu)
+    }
+
+    @menu_reposition(GtkMenu* menu) void {
+        @gtk_menu_reposition(menu)
+    }
+
+    @menu_get_active(GtkMenu* menu) GtkWidget*? {
+        @return gtk_menu_get_active(menu)
+    }
+
+    @menu_set_active(GtkMenu* menu, guint index) void {
+        @gtk_menu_set_active(menu, index)
+    }
+
+    // Deprecated: @menu_set_tearoff_state(GtkMenu* menu,
+    //                            gboolean torn_off)
+
+    @menu_attach_to_widget(GtkMenu* menu, GtkWidget* attach_widget, GtkMenuDetachFunc detacher) void {
+        @gtk_menu_attach_to_widget(menu,attach_widget, detacher)
+    }
+
+    @menu_detach(GtkMenu* menu) void {
+        @gtk_menu_detach(menu)
+    }
+
+    @menu_get_attach_widget(GtkMenu* menu) GtkWidget*? {
+        @return gtk_menu_get_attach_widget(menu)
+    }
+
+    @menu_get_for_attach_widget(GtkWidget* widget) GList*? {
+        @return gtk_menu_get_for_attach_widget(widget)
+    }
+
+    // Unimplemented: void
+    //(*GtkMenuPositionFunc) (GtkMenu *menu,
+    //                        gint *x,
+    //                        gint *y,
+    //                        gboolean *push_in,
+    //                        gpointer user_data);
+
+    // Unimplemented: void
+    //(*GtkMenuDetachFunc) (GtkWidget *attach_widget,
+    //                      GtkMenu *menu);
+
+    // ---
+    // End of GtkMenu
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
