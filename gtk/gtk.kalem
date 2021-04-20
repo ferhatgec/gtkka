@@ -6099,6 +6099,15 @@
     // ---
     // End of GtkCellRendererToggle
 
+    // GtkCellRendererSpinner
+
+    @cell_renderer_spinner_new GtkCellRenderer*? {
+        @return gtk_cell_renderer_spinner_new()
+    }
+
+    // ---
+    // End of GtkCellRendererSpinner
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
