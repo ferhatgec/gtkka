@@ -28,6 +28,8 @@
     LEVEL_BAR_OFFSET_LOW "low"
     LEVEL_BAR_OFFSET_HIGH "high"
     LEVEL_BAR_OFFSET_FULL "full"
+
+    CELL_AREA_WARN_INVALID_CELL_PROPERTY_ID(object,property_id,pspec) GTK_CELL_AREA_WARN_INVALID_CELL_PROPERTY_ID(object,property_id,pspec)
 }
 
 @gtk namespace {
@@ -5603,6 +5605,212 @@
 
     // ---
     // End of GtkCellLayout
+
+    // GtkCellArea
+
+    // Unimplemented: gboolean
+    //(*GtkCellCallback) (GtkCellRenderer *renderer,
+    //                    gpointer data);
+
+    // Unimplemented: gboolean
+    //(*GtkCellAllocCallback) (GtkCellRenderer *renderer,
+    //                         const GdkRectangle *cell_area,
+    //                         const GdkRectangle *cell_background,
+    //                         gpointer data);
+
+    @cell_area_add(GtkCellArea* area, GtkCellRenderer* renderer) void {
+        @gtk_cell_area_add(area, renderer)
+    }
+
+    @cell_area_remove(GtkCellArea* area, GtkCellRenderer* renderer) void {
+        @gtk_cell_area_remove(area, renderer)
+    }
+
+    @cell_area_has_renderer(GtkCellArea* area, GtkCellRenderer* renderer) gboolean? {
+        @return gtk_cell_area_has_renderer(area, renderer)
+    }
+
+    @cell_area_foreach(GtkCellArea* area, GtkCellCallback callback, gpointer callback_data) void {
+        @gtk_cell_area_foreach(area,callback, callback_data)
+    }
+
+    @cell_area_foreach_alloc(GtkCellArea* area, GtkCellAreaContext* context, GtkWidget* widget, const GdkRectangle* cell_area, const GdkRectangle* background_area, GtkCellAllocCallback callback, gpointer callback_data) void {
+        @gtk_cell_area_foreach_alloc(area,context,widget,cell_area,background_area,callback, callback_data)
+    }
+
+    @cell_area_event(GtkCellArea* area, GtkCellAreaContext* context, GtkWidget* widget, GdkEvent* event, const GdkRectangle* cell_area, GtkCellRendererState flags) gint? {
+        @return gtk_cell_area_event(area,context,widget,event,cell_area, flags)
+    }
+
+    @cell_area_render(GtkCellArea* area, GtkCellAreaContext* context, GtkWidget* widget, cairo_t* cr, const GdkRectangle* background_area, const GdkRectangle* cell_area, GtkCellRendererState flags, gboolean paint_focus) void {
+        @gtk_cell_area_render(area,context,widget,cr,background_area,cell_area,flags, paint_focus)
+    }
+
+    @cell_area_get_cell_allocation(GtkCellArea* area, GtkCellAreaContext* context, GtkWidget* widget, GtkCellRenderer* renderer, const GdkRectangle* cell_area, GdkRectangle* allocation) void {
+        @gtk_cell_area_get_cell_allocation(area,context,widget,renderer,cell_area, allocation)
+    }
+
+    @cell_area_get_cell_at_position(GtkCellArea* area, GtkCellAreaContext* context, GtkWidget* widget, const GdkRectangle* cell_area, gint x, gint y, GdkRectangle* alloc_area) GtkCellRenderer*? {
+        @return gtk_cell_area_get_cell_at_position(area,context,widget,cell_area,x,y, alloc_area)
+    }
+
+    @cell_area_create_context(GtkCellArea* area) GtkCellAreaContext*? {
+        @return gtk_cell_area_create_context(area)
+    }
+
+    @cell_area_copy_context(GtkCellArea* area, GtkCellAreaContext* context) GtkCellAreaContext*? {
+        @return gtk_cell_area_copy_context(area, context)
+    }
+
+    @cell_area_get_request_mode(GtkCellArea* area) GtkSizeRequestMode? {
+        @return gtk_cell_area_get_request_mode(area)
+    }
+
+    @cell_area_get_preferred_width(GtkCellArea* area, GtkCellAreaContext* context, GtkWidget* widget, gint* minimum_width, gint* natural_width) void {
+        @gtk_cell_area_get_preferred_width(area,context,widget,minimum_width, natural_width)
+    }
+
+    @cell_area_get_preferred_height_for_width(GtkCellArea* area, GtkCellAreaContext* context, GtkWidget* widget, gint width, gint* minimum_height, gint* natural_height) void {
+        @gtk_cell_area_get_preferred_height_for_width(area,context,widget,width,minimum_height, natural_height)
+    }
+
+    @cell_area_get_preferred_height(GtkCellArea* area, GtkCellAreaContext* context, GtkWidget* widget, gint* minimum_height, gint* natural_height) void {
+        @gtk_cell_area_get_preferred_height(area,context,widget,minimum_height, natural_height)
+    }
+
+    @cell_area_get_preferred_width_for_height(GtkCellArea* area, GtkCellAreaContext* context, GtkWidget* widget, gint height, gint* minimum_width, gint* natural_width) void {
+        @gtk_cell_area_get_preferred_width_for_height(area,context,widget,height,minimum_width, natural_width)
+    }
+
+    #const gchar* cell_area_get_current_path_string(GtkCellArea* area) {
+        @return gtk_cell_area_get_current_path_string(area)
+    }
+
+    @cell_area_apply_attributes(GtkCellArea* area, GtkTreeModel* tree_model, GtkTreeIter* iter, gboolean is_expander, gboolean is_expanded) void {
+        @gtk_cell_area_apply_attributes(area,tree_model,iter,is_expander, is_expanded)
+    }
+
+    @cell_area_attribute_connect(GtkCellArea* area, GtkCellRenderer* renderer, const gchar* attribute, gint column) void {
+        @gtk_cell_area_attribute_connect(area,renderer,attribute, column)
+    }
+
+    @cell_area_attribute_disconnect(GtkCellArea* area, GtkCellRenderer* renderer, const gchar* attribute) void {
+        @gtk_cell_area_attribute_disconnect(area,renderer, attribute)
+    }
+
+    @cell_area_attribute_get_column(GtkCellArea* area, GtkCellRenderer* renderer, const gchar* attribute) gint? {
+        @return gtk_cell_area_attribute_get_column(area,renderer, attribute)
+    }
+
+    @cell_area_class_install_cell_property(GtkCellAreaClass* aclass, guint property_id, GParamSpec* pspec) void {
+        @gtk_cell_area_class_install_cell_property(aclass,property_id, pspec)
+    }
+
+    @cell_area_class_find_cell_property(GtkCellAreaClass* aclass, const gchar* property_name) GParamSpec*? {
+        @return gtk_cell_area_class_find_cell_property(aclass, property_name)
+    }
+
+    @cell_area_class_list_cell_properties(GtkCellAreaClass* aclass, guint* n_properties) GParamSpec**? {
+        @return gtk_cell_area_class_list_cell_properties(aclass, n_properties)
+    }
+
+    #template <typename... Property>
+    @cell_area_add_with_properties(GtkCellArea* area, GtkCellRenderer* renderer, const gchar* first_prop_name, Property... list) void {
+        @(gtk_cell_area_add_with_properties(area,renderer,first_prop_name,list), ...)
+    }
+
+    #template <typename... Property>
+    @cell_area_cell_set(GtkCellArea* area, GtkCellRenderer* renderer, const gchar* first_prop_name, Property... list) void {
+        @(gtk_cell_area_cell_set(area,renderer,first_prop_name,list), ...)
+    }
+
+    #template <typename... Property>
+    @cell_area_cell_get(GtkCellArea* area, GtkCellRenderer* renderer, const gchar* first_prop_name, Property... list) void {
+        @(gtk_cell_area_cell_get(area,renderer,first_prop_name,list), ...)
+    }
+
+    @cell_area_cell_set_valist(GtkCellArea* area, GtkCellRenderer* renderer, const gchar* first_property_name, va_list var_args) void {
+        @gtk_cell_area_cell_set_valist(area,renderer,first_property_name, var_args)
+    }
+
+    @cell_area_cell_get_valist(GtkCellArea* area, GtkCellRenderer* renderer, const gchar* first_property_name, va_list var_args) void {
+        @gtk_cell_area_cell_get_valist(area,renderer,first_property_name, var_args)
+    }
+
+    @cell_area_cell_set_property(GtkCellArea* area, GtkCellRenderer* renderer, const gchar* property_name, const GValue* value) void {
+        @gtk_cell_area_cell_set_property(area,renderer,property_name, value)
+    }
+
+    @cell_area_cell_get_property(GtkCellArea* area, GtkCellRenderer* renderer, const gchar* property_name, GValue* value) void {
+        @gtk_cell_area_cell_get_property(area,renderer,property_name, value)
+    }
+
+    @cell_area_is_activatable(GtkCellArea* area) gboolean? {
+        @return gtk_cell_area_is_activatable(area)
+    }
+
+    @cell_area_activate(GtkCellArea* area, GtkCellAreaContext* context, GtkWidget* widget, const GdkRectangle* cell_area, GtkCellRendererState flags, gboolean edit_only) gboolean? {
+        @return gtk_cell_area_activate(area,context,widget,cell_area,flags, edit_only)
+    }
+
+    @cell_area_focus(GtkCellArea* area, GtkDirectionType direction) gboolean? {
+        @return gtk_cell_area_focus(area, direction)
+    }
+
+    @cell_area_set_focus_cell(GtkCellArea* area, GtkCellRenderer* renderer) void {
+        @gtk_cell_area_set_focus_cell(area, renderer)
+    }
+
+    @cell_area_get_focus_cell(GtkCellArea* area) GtkCellRenderer*? {
+        @return gtk_cell_area_get_focus_cell(area)
+    }
+
+    @cell_area_add_focus_sibling(GtkCellArea* area, GtkCellRenderer* renderer, GtkCellRenderer* sibling) void {
+        @gtk_cell_area_add_focus_sibling(area,renderer, sibling)
+    }
+
+    @cell_area_remove_focus_sibling(GtkCellArea* area, GtkCellRenderer* renderer, GtkCellRenderer* sibling) void {
+        @gtk_cell_area_remove_focus_sibling(area,renderer, sibling)
+    }
+
+    @cell_area_is_focus_sibling(GtkCellArea* area, GtkCellRenderer* renderer, GtkCellRenderer* sibling) gboolean? {
+        @return gtk_cell_area_is_focus_sibling(area,renderer, sibling)
+    }
+
+    #const GList* cell_area_get_focus_siblings(GtkCellArea* area, GtkCellRenderer* renderer) {
+        @return gtk_cell_area_get_focus_siblings(area, renderer)
+    }
+
+    @cell_area_get_focus_from_sibling(GtkCellArea* area, GtkCellRenderer* renderer) GtkCellRenderer*? {
+        @return gtk_cell_area_get_focus_from_sibling(area, renderer)
+    }
+
+    @cell_area_get_edited_cell(GtkCellArea* area) GtkCellRenderer*? {
+        @return gtk_cell_area_get_edited_cell(area)
+    }
+
+    @cell_area_get_edit_widget(GtkCellArea* area) GtkCellEditable*? {
+        @return gtk_cell_area_get_edit_widget(area)
+    }
+
+    @cell_area_activate_cell(GtkCellArea* area, GtkWidget* widget, GtkCellRenderer* renderer, GdkEvent* event, const GdkRectangle* cell_area, GtkCellRendererState flags) gboolean? {
+        @return gtk_cell_area_activate_cell(area,widget,renderer,event,cell_area, flags)
+    }
+
+    @cell_area_stop_editing(GtkCellArea* area, gboolean canceled) void {
+        @gtk_cell_area_stop_editing(area, canceled)
+    }
+
+    @cell_area_inner_cell_area(GtkCellArea* area, GtkWidget* widget, const GdkRectangle* cell_area, GdkRectangle* inner_area) void {
+        @gtk_cell_area_inner_cell_area(area,widget,cell_area, inner_area)
+    }
+
+    @cell_area_request_renderer(GtkCellArea* area, GtkCellRenderer* renderer, GtkOrientation orientation, GtkWidget* widget, gint for_size, gint* minimum_size, gint* natural_size) void {
+        @gtk_cell_area_request_renderer(area,renderer,orientation,widget,for_size,minimum_size, natural_size)
+    }
+
+    // ---
+    // End of GtkCellArea
 
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
