@@ -5837,6 +5837,51 @@
     // ---
     // End of GtkCellAreaBox
 
+    // GtkCellAreaContext
+
+    @cell_area_context_get_area(GtkCellAreaContext* context) GtkCellArea*? {
+        @return gtk_cell_area_context_get_area(context)
+    }
+
+    @cell_area_context_allocate(GtkCellAreaContext* context, gint width, gint height) void {
+        @gtk_cell_area_context_allocate(context,width, height)
+    }
+
+    @cell_area_context_reset(GtkCellAreaContext* context) void {
+        @gtk_cell_area_context_reset(context)
+    }
+
+    @cell_area_context_get_preferred_width(GtkCellAreaContext* context, gint* minimum_width, gint* natural_width) void {
+        @gtk_cell_area_context_get_preferred_width(context,minimum_width, natural_width)
+    }
+
+    @cell_area_context_get_preferred_height(GtkCellAreaContext* context, gint* minimum_height, gint* natural_height) void {
+        @gtk_cell_area_context_get_preferred_height(context,minimum_height, natural_height)
+    }
+
+    @cell_area_context_get_preferred_height_for_width(GtkCellAreaContext* context, gint width, gint* minimum_height, gint* natural_height) void {
+        @gtk_cell_area_context_get_preferred_height_for_width(context,width,minimum_height, natural_height)
+    }
+
+    @cell_area_context_get_preferred_width_for_height(GtkCellAreaContext* context, gint height, gint* minimum_width, gint* natural_width) void {
+        @gtk_cell_area_context_get_preferred_width_for_height(context,height,minimum_width, natural_width)
+    }
+
+    @cell_area_context_get_allocation(GtkCellAreaContext* context, gint* width, gint* height) void {
+        @gtk_cell_area_context_get_allocation(context,width, height)
+    }
+
+    @cell_area_context_push_preferred_width(GtkCellAreaContext* context, gint minimum_width, gint natural_width) void {
+        @gtk_cell_area_context_push_preferred_width(context,minimum_width, natural_width)
+    }
+
+    @cell_area_context_push_preferred_height(GtkCellAreaContext* context, gint minimum_height, gint natural_height) void {
+        @gtk_cell_area_context_push_preferred_height(context,minimum_height, natural_height)
+    }
+
+    // ---
+    // End of GtkCellAreaContext
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
