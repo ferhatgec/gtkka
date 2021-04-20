@@ -6653,6 +6653,35 @@
     // ---
     // End of GtkMenu
 
+    // GtkMenuBar
+
+    @menu_bar_new GtkWidget*? {
+        @return gtk_menu_bar_new()
+    }
+
+    @menu_bar_new_from_model(GMenuModel* model) GtkWidget*? {
+        @return gtk_menu_bar_new_from_model(model)
+    }
+
+    @menu_bar_set_pack_direction(GtkMenuBar* menubar, GtkPackDirection pack_dir) void {
+        @gtk_menu_bar_set_pack_direction(menubar, pack_dir)
+    }
+
+    @menu_bar_get_pack_direction(GtkMenuBar* menubar) GtkPackDirection? {
+        @return gtk_menu_bar_get_pack_direction(menubar)
+    }
+
+    @menu_bar_set_child_pack_direction(GtkMenuBar* menubar, GtkPackDirection child_pack_dir) void {
+        @gtk_menu_bar_set_child_pack_direction(menubar, child_pack_dir)
+    }
+
+    @menu_bar_get_child_pack_direction(GtkMenuBar* menubar) GtkPackDirection? {
+        @return gtk_menu_bar_get_child_pack_direction(menubar)
+    }
+
+    // ---
+    // End of GtkMenuBar
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
