@@ -6108,6 +6108,98 @@
     // ---
     // End of GtkCellRendererSpinner
 
+    // GtkListStore
+
+    #template <typename... Columns>
+    @list_store_new(gint n_columns, Columns... types) GtkListStore*? {
+        @return (gtk_list_store_new(n_columns,types), ...)
+    }
+
+    @list_store_newv(gint n_columns, GType* types) GtkListStore*? {
+        @return gtk_list_store_newv(n_columns, types)
+    }
+
+    @list_store_set_column_types(GtkListStore* list_store, gint n_columns, GType* types) void {
+        @gtk_list_store_set_column_types(list_store,n_columns, types)
+    }
+
+    #template <typename... Columns>
+    @list_store_set(GtkListStore* list_store, GtkTreeIter* iter, Columns... pairs) void {
+        @(gtk_list_store_set(list_store,iter,pairs), ...)
+    }
+
+    @list_store_set_valist(GtkListStore* list_store, GtkTreeIter* iter, va_list var_args) void {
+        @gtk_list_store_set_valist(list_store,iter, var_args)
+    }
+
+    @list_store_set_value(GtkListStore* list_store, GtkTreeIter* iter, gint column, GValue* value) void {
+        @gtk_list_store_set_value(list_store,iter,column, value)
+    }
+
+    @list_store_set_valuesv(GtkListStore* list_store, GtkTreeIter* iter, gint* columns, GValue* values, gint n_values) void {
+        @gtk_list_store_set_valuesv(list_store,iter,columns,values, n_values)
+    }
+
+    @list_store_remove(GtkListStore* list_store, GtkTreeIter* iter) gboolean? {
+        @return gtk_list_store_remove(list_store, iter)
+    }
+
+    @list_store_insert(GtkListStore* list_store, GtkTreeIter* iter, gint position) void {
+        @gtk_list_store_insert(list_store,iter, position)
+    }
+
+    @list_store_insert_before(GtkListStore* list_store, GtkTreeIter* iter, GtkTreeIter* sibling) void {
+        @gtk_list_store_insert_before(list_store,iter, sibling)
+    }
+
+    @list_store_insert_after(GtkListStore* list_store, GtkTreeIter* iter, GtkTreeIter* sibling) void {
+        @gtk_list_store_insert_after(list_store,iter, sibling)
+    }
+
+    #template <typename... Columns>
+    @list_store_insert_with_values(GtkListStore* list_store, GtkTreeIter* iter, gint position, Columns... pairs) void {
+        @(gtk_list_store_insert_with_values(list_store,iter,position,pairs), ...)
+    }
+
+    @list_store_insert_with_valuesv(GtkListStore* list_store, GtkTreeIter* iter, gint position, gint* columns, GValue* values, gint n_values) void {
+        @gtk_list_store_insert_with_valuesv(list_store,iter,position,columns,values, n_values)
+    }
+
+    @list_store_prepend(GtkListStore* list_store, GtkTreeIter* iter) void {
+        @gtk_list_store_prepend(list_store, iter)
+    }
+
+    @list_store_append(GtkListStore* list_store, GtkTreeIter* iter) void {
+        @gtk_list_store_append(list_store, iter)
+    }
+
+    @list_store_clear(GtkListStore* list_store) void {
+        @gtk_list_store_clear(list_store)
+    }
+
+    @list_store_iter_is_valid(GtkListStore* list_store, GtkTreeIter* iter) gboolean? {
+        @return gtk_list_store_iter_is_valid(list_store, iter)
+    }
+
+    @list_store_reorder(GtkListStore* store, gint* new_order) void {
+        @gtk_list_store_reorder(store, new_order)
+    }
+
+    @list_store_swap(GtkListStore* store, GtkTreeIter* a, GtkTreeIter* b) void {
+        @gtk_list_store_swap(store,a, b)
+    }
+
+    @list_store_move_before(GtkListStore* store, GtkTreeIter* iter, GtkTreeIter* position) void {
+        @gtk_list_store_move_before(store,iter, position)
+    }
+
+    @list_store_move_after(GtkListStore* store, GtkTreeIter* iter, GtkTreeIter* position) void {
+        @gtk_list_store_move_after(store,iter, position)
+    }
+
+    // ---
+    // End of GtkListStore
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
