@@ -6764,6 +6764,47 @@
     // ---
     // End of GtkMenuItem
 
+    // GtkRadioMenuItem
+
+    @radio_menu_item_new(GSList* group) GtkWidget*? {
+        @return gtk_radio_menu_item_new(group)
+    }
+
+    @radio_menu_item_new_with_label(GSList* group, const gchar* label) GtkWidget*? {
+        @return gtk_radio_menu_item_new_with_label(group, label)
+    }
+
+    @radio_menu_item_new_with_mnemonic(GSList* group, const gchar* label) GtkWidget*? {
+        @return gtk_radio_menu_item_new_with_mnemonic(group, label)
+    }
+
+    @radio_menu_item_new_from_widget(GtkRadioMenuItem* group) GtkWidget*? {
+        @return gtk_radio_menu_item_new_from_widget(group)
+    }
+
+    @radio_menu_item_new_with_label_from_widget(GtkRadioMenuItem* group, const gchar* label) GtkWidget*? {
+        @return gtk_radio_menu_item_new_with_label_from_widget(group, label)
+    }
+
+    @radio_menu_item_new_with_mnemonic_from_widget(GtkRadioMenuItem* group, const gchar* label) GtkWidget*? {
+        @return gtk_radio_menu_item_new_with_mnemonic_from_widget(group, label)
+    }
+
+    @radio_menu_item_set_group(GtkRadioMenuItem* radio_menu_item, GSList* group) void {
+        @gtk_radio_menu_item_set_group(radio_menu_item, group)
+    }
+
+    @radio_menu_item_get_group(GtkRadioMenuItem* radio_menu_item) GSList*? {
+        @return gtk_radio_menu_item_get_group(radio_menu_item)
+    }
+
+    @radio_menu_item_join_group(GtkRadioMenuItem* radio_menu_item, GtkRadioMenuItem* group_source) void {
+        @gtk_radio_menu_item_join_group(radio_menu_item, group_source)
+    }
+
+    // ---
+    // End of GtkRadioMenuItem
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
