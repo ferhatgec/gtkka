@@ -6850,6 +6850,15 @@
     // ---
     // End of GtkCheckMenuItem
 
+    // GtkSeparatorMenuItem
+
+    @separator_menu_item_new GtkWidget*? {
+        @return gtk_separator_menu_item_new()
+    }
+
+    // ---
+    // End of GtkSeparatorMenuItem
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
