@@ -6900,6 +6900,75 @@
     // ---
     // End of GtkToolShell
 
+    // GtkToolbar
+
+    @toolbar_new GtkWidget*? {
+        @return gtk_toolbar_new()
+    }
+
+    @toolbar_insert(GtkToolbar* toolbar, GtkToolItem* item, gint pos) void {
+        @gtk_toolbar_insert(toolbar,item, pos)
+    }
+
+    @toolbar_get_item_index(GtkToolbar* toolbar, GtkToolItem* item) gint? {
+        @return gtk_toolbar_get_item_index(toolbar, item)
+    }
+
+    @toolbar_get_n_items(GtkToolbar* toolbar) gint? {
+        @return gtk_toolbar_get_n_items(toolbar)
+    }
+
+    @toolbar_get_nth_item(GtkToolbar* toolbar, gint n) GtkToolItem*? {
+        @return gtk_toolbar_get_nth_item(toolbar, n)
+    }
+
+    @toolbar_get_drop_index(GtkToolbar* toolbar, gint x, gint y) gint? {
+        @return gtk_toolbar_get_drop_index(toolbar,x, y)
+    }
+
+    @toolbar_set_drop_highlight_item(GtkToolbar* toolbar, GtkToolItem* tool_item, gint index_) void {
+        @gtk_toolbar_set_drop_highlight_item(toolbar,tool_item, index_)
+    }
+
+    @toolbar_set_show_arrow(GtkToolbar* toolbar, gboolean show_arrow) void {
+        @gtk_toolbar_set_show_arrow(toolbar, show_arrow)
+    }
+
+    @toolbar_unset_icon_size(GtkToolbar* toolbar) void {
+        @gtk_toolbar_unset_icon_size(toolbar)
+    }
+
+    @toolbar_get_show_arrow(GtkToolbar* toolbar) gboolean? {
+        @return gtk_toolbar_get_show_arrow(toolbar)
+    }
+
+    @toolbar_get_style(GtkToolbar* toolbar) GtkToolbarStyle? {
+        @return gtk_toolbar_get_style(toolbar)
+    }
+
+    @toolbar_get_icon_size(GtkToolbar* toolbar) GtkIconSize? {
+        @return gtk_toolbar_get_icon_size(toolbar)
+    }
+
+    @toolbar_get_relief_style(GtkToolbar* toolbar) GtkReliefStyle? {
+        @return gtk_toolbar_get_relief_style(toolbar)
+    }
+
+    @toolbar_set_style(GtkToolbar* toolbar, GtkToolbarStyle style) void {
+        @gtk_toolbar_set_style(toolbar, style)
+    }
+
+    @toolbar_set_icon_size(GtkToolbar* toolbar, GtkIconSize icon_size) void {
+        @gtk_toolbar_set_icon_size(toolbar, icon_size)
+    }
+
+    @toolbar_unset_style(GtkToolbar* toolbar) void {
+        @gtk_toolbar_unset_style(toolbar)
+    }
+
+    // ---
+    // End of GtkToolbar
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
