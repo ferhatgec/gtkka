@@ -6805,6 +6805,51 @@
     // ---
     // End of GtkRadioMenuItem
 
+    // GtkCheckMenuItem
+
+    @check_menu_item_new GtkWidget*? {
+        @return gtk_check_menu_item_new()
+    }
+
+    @check_menu_item_new_with_label(const gchar* label) GtkWidget*? {
+        @return gtk_check_menu_item_new_with_label(label)
+    }
+
+    @check_menu_item_new_with_mnemonic(const gchar* label) GtkWidget*? {
+        @return gtk_check_menu_item_new_with_mnemonic(label)
+    }
+
+    @check_menu_item_get_active(GtkCheckMenuItem* check_menu_item) gboolean? {
+        @return gtk_check_menu_item_get_active(check_menu_item)
+    }
+
+    @check_menu_item_set_active(GtkCheckMenuItem* check_menu_item, gboolean is_active) void {
+        @gtk_check_menu_item_set_active(check_menu_item, is_active)
+    }
+
+    @check_menu_item_toggled(GtkCheckMenuItem* check_menu_item) void {
+        @gtk_check_menu_item_toggled(check_menu_item)
+    }
+
+    @check_menu_item_get_inconsistent(GtkCheckMenuItem* check_menu_item) gboolean? {
+        @return gtk_check_menu_item_get_inconsistent(check_menu_item)
+    }
+
+    @check_menu_item_set_inconsistent(GtkCheckMenuItem* check_menu_item, gboolean setting) void {
+        @gtk_check_menu_item_set_inconsistent(check_menu_item, setting)
+    }
+
+    @check_menu_item_set_draw_as_radio(GtkCheckMenuItem* check_menu_item, gboolean draw_as_radio) void {
+        @gtk_check_menu_item_set_draw_as_radio(check_menu_item, draw_as_radio)
+    }
+
+    @check_menu_item_get_draw_as_radio(GtkCheckMenuItem* check_menu_item) gboolean? {
+        @return gtk_check_menu_item_get_draw_as_radio(check_menu_item)
+    }
+
+    // ---
+    // End of GtkCheckMenuItem
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
