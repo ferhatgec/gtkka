@@ -7248,6 +7248,79 @@
     // ---
     // End of GtkToolItemGroup
 
+    // GtkSeparatorToolItem
+
+    @separator_tool_item_new GtkToolItem*? {
+        @return gtk_separator_tool_item_new()
+    }
+
+    @separator_tool_item_set_draw(GtkSeparatorToolItem* item, gboolean draw) void {
+        @gtk_separator_tool_item_set_draw(item, draw)
+    }
+
+    @separator_tool_item_get_draw(GtkSeparatorToolItem* item) gboolean? {
+        @return gtk_separator_tool_item_get_draw(item)
+    }
+
+    // ---
+    // End of GtkSeparatorToolItem
+
+    // GtkToolButton
+
+    @tool_button_new(GtkWidget* icon_widget, const gchar* label) GtkToolItem*? {
+        @return gtk_tool_button_new(icon_widget, label)
+    }
+
+    // Deprecated: @tool_button_new_from_stock(const gchar* stock_id)
+
+    @tool_button_set_label(GtkToolButton* button, const gchar* label) void {
+        @gtk_tool_button_set_label(button, label)
+    }
+
+    #const gchar* tool_button_get_label(GtkToolButton* button) {
+        @return gtk_tool_button_get_label(button)
+    }
+
+    @tool_button_set_use_underline(GtkToolButton* button, gboolean use_underline) void {
+        @gtk_tool_button_set_use_underline(button, use_underline)
+    }
+
+    @tool_button_get_use_underline(GtkToolButton* button) gboolean? {
+        @return gtk_tool_button_get_use_underline(button)
+    }
+
+    // Deprecated: @tool_button_set_stock_id(GtkToolButton* button,
+    //                              const gchar* stock_id)
+
+    // Deprecated: @tool_button_get_stock_id(GtkToolButton* button)
+
+    @tool_button_set_icon_name(GtkToolButton* button, const gchar* icon_name) void {
+        @gtk_tool_button_set_icon_name(button, icon_name)
+    }
+
+    #const gchar* tool_button_get_icon_name(GtkToolButton* button) {
+        @return gtk_tool_button_get_icon_name(button)
+    }
+
+    @tool_button_set_icon_widget(GtkToolButton* button, GtkWidget* icon_widget) void {
+        @gtk_tool_button_set_icon_widget(button, icon_widget)
+    }
+
+    @tool_button_get_icon_widget(GtkToolButton* button) GtkWidget*? {
+        @return gtk_tool_button_get_icon_widget(button)
+    }
+
+    @tool_button_set_label_widget(GtkToolButton* button, GtkWidget* label_widget) void {
+        @gtk_tool_button_set_label_widget(button, label_widget)
+    }
+
+    @tool_button_get_label_widget(GtkToolButton* button) GtkWidget*? {
+        @return gtk_tool_button_get_label_widget(button)
+    }
+
+    // ---
+    // End of GtkToolButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
