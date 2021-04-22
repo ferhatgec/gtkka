@@ -6969,6 +6969,123 @@
     // ---
     // End of GtkToolbar
 
+    // GtkToolItem
+
+    @tool_item_new GtkToolItem*? {
+        @return gtk_tool_item_new()
+    }
+
+    @tool_item_set_homogeneous(GtkToolItem* tool_item, gboolean homogeneous) void {
+        @gtk_tool_item_set_homogeneous(tool_item, homogeneous)
+    }
+
+    @tool_item_get_homogeneous(GtkToolItem* tool_item) gboolean? {
+        @return gtk_tool_item_get_homogeneous(tool_item)
+    }
+
+    @tool_item_set_expand(GtkToolItem* tool_item, gboolean expand) void {
+        @gtk_tool_item_set_expand(tool_item, expand)
+    }
+
+    @tool_item_get_expand(GtkToolItem* tool_item) gboolean? {
+        @return gtk_tool_item_get_expand(tool_item)
+    }
+
+    @tool_item_set_tooltip_text(GtkToolItem* tool_item, const gchar* text) void {
+        @gtk_tool_item_set_tooltip_text(tool_item, text)
+    }
+
+    @tool_item_set_tooltip_markup(GtkToolItem* tool_item, const gchar* markup) void {
+        @gtk_tool_item_set_tooltip_markup(tool_item, markup)
+    }
+
+    @tool_item_set_use_drag_window(GtkToolItem* tool_item, gboolean use_drag_window) void {
+        @gtk_tool_item_set_use_drag_window(tool_item, use_drag_window)
+    }
+
+    @tool_item_get_use_drag_window(GtkToolItem* tool_item) gboolean? {
+        @return gtk_tool_item_get_use_drag_window(tool_item)
+    }
+
+    @tool_item_set_visible_horizontal(GtkToolItem* tool_item, gboolean visible_horizontal) void {
+        @gtk_tool_item_set_visible_horizontal(tool_item, visible_horizontal)
+    }
+
+    @tool_item_get_visible_horizontal(GtkToolItem* tool_item) gboolean? {
+        @return gtk_tool_item_get_visible_horizontal(tool_item)
+    }
+
+    @tool_item_set_visible_vertical(GtkToolItem* tool_item, gboolean visible_vertical) void {
+        @gtk_tool_item_set_visible_vertical(tool_item, visible_vertical)
+    }
+
+    @tool_item_get_visible_vertical(GtkToolItem* tool_item) gboolean? {
+        @return gtk_tool_item_get_visible_vertical(tool_item)
+    }
+
+    @tool_item_set_is_important(GtkToolItem* tool_item, gboolean is_important) void {
+        @gtk_tool_item_set_is_important(tool_item, is_important)
+    }
+
+    @tool_item_get_is_important(GtkToolItem* tool_item) gboolean? {
+        @return gtk_tool_item_get_is_important(tool_item)
+    }
+
+    @tool_item_get_ellipsize_mode(GtkToolItem* tool_item) PangoEllipsizeMode? {
+        @return gtk_tool_item_get_ellipsize_mode(tool_item)
+    }
+
+    @tool_item_get_icon_size(GtkToolItem* tool_item) GtkIconSize? {
+        @return gtk_tool_item_get_icon_size(tool_item)
+    }
+
+    @tool_item_get_orientation(GtkToolItem* tool_item) GtkOrientation? {
+        @return gtk_tool_item_get_orientation(tool_item)
+    }
+
+    @tool_item_get_toolbar_style(GtkToolItem* tool_item) GtkToolbarStyle? {
+        @return gtk_tool_item_get_toolbar_style(tool_item)
+    }
+
+    @tool_item_get_relief_style(GtkToolItem* tool_item) GtkReliefStyle? {
+        @return gtk_tool_item_get_relief_style(tool_item)
+    }
+
+    @tool_item_get_text_alignment(GtkToolItem* tool_item) gfloat? {
+        @return gtk_tool_item_get_text_alignment(tool_item)
+    }
+
+    @tool_item_get_text_orientation(GtkToolItem* tool_item) GtkOrientation? {
+        @return gtk_tool_item_get_text_orientation(tool_item)
+    }
+
+    @tool_item_retrieve_proxy_menu_item(GtkToolItem* tool_item) GtkWidget*? {
+        @return gtk_tool_item_retrieve_proxy_menu_item(tool_item)
+    }
+
+    @tool_item_get_proxy_menu_item(GtkToolItem* tool_item, const gchar* menu_item_id) GtkWidget*? {
+        @return gtk_tool_item_get_proxy_menu_item(tool_item, menu_item_id)
+    }
+
+    @tool_item_set_proxy_menu_item(GtkToolItem* tool_item, const gchar* menu_item_id, GtkWidget* menu_item) void {
+        @gtk_tool_item_set_proxy_menu_item(tool_item,menu_item_id, menu_item)
+    }
+
+    @tool_item_rebuild_menu(GtkToolItem* tool_item) void {
+        @gtk_tool_item_rebuild_menu(tool_item)
+    }
+
+    @tool_item_toolbar_reconfigured(GtkToolItem* tool_item) void {
+        @gtk_tool_item_toolbar_reconfigured(tool_item)
+    }
+
+    @tool_item_get_text_size_group(GtkToolItem* tool_item) GtkSizeGroup*? {
+        @return gtk_tool_item_get_text_size_group(tool_item)
+    }
+
+    // ---
+    // End of GtkToolItem
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
