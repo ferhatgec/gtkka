@@ -7472,6 +7472,19 @@
     // ---
     // End of GtkPopover
 
+    // GtkPopoverMenu
+
+    @popover_menu_new GtkWidget*? {
+        @return gtk_popover_menu_new()
+    }
+
+    @popover_menu_open_submenu(GtkPopoverMenu* popover, const gchar* name) void {
+        @gtk_popover_menu_open_submenu(popover, name)
+    }
+
+    // ---
+    // End of GtkPopoverMenu
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
