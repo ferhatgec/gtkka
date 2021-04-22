@@ -7321,6 +7321,33 @@
     // ---
     // End of GtkToolButton
 
+    // GtkMenuToolButton
+
+    @menu_tool_button_new(GtkWidget* icon_widget, const gchar* label) GtkToolItem*? {
+        @return gtk_menu_tool_button_new(icon_widget, label)
+    }
+
+    // Deprecated: @menu_tool_button_new_from_stock(const gchar* stock_id)
+
+    @menu_tool_button_set_menu(GtkMenuToolButton* button, GtkWidget* menu) void {
+        @gtk_menu_tool_button_set_menu(button, menu)
+    }
+
+    @menu_tool_button_get_menu(GtkMenuToolButton* button) GtkWidget*? {
+        @return gtk_menu_tool_button_get_menu(button)
+    }
+
+    @menu_tool_button_set_arrow_tooltip_text(GtkMenuToolButton* button, const gchar* text) void {
+        @gtk_menu_tool_button_set_arrow_tooltip_text(button, text)
+    }
+
+    @menu_tool_button_set_arrow_tooltip_markup(GtkMenuToolButton* button, const gchar* markup) void {
+        @gtk_menu_tool_button_set_arrow_tooltip_markup(button, markup)
+    }
+
+    // ---
+    // End of GtkMenuToolButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
