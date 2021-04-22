@@ -7394,6 +7394,84 @@
     // ---
     // End of GtkRadioToolButton
 
+    // GtkPopover
+
+    @popover_new(GtkWidget* relative_to) GtkWidget*? {
+        @return gtk_popover_new(relative_to)
+    }
+
+    @popover_new_from_model(GtkWidget* relative_to, GMenuModel* model) GtkWidget*? {
+        @return gtk_popover_new_from_model(relative_to, model)
+    }
+
+    @popover_bind_model(GtkPopover* popover, GMenuModel* model, const gchar* action_namespace) void {
+        @gtk_popover_bind_model(popover,model, action_namespace)
+    }
+
+    @popover_popup(GtkPopover* popover) void {
+        @gtk_popover_popup(popover)
+    }
+
+    @popover_popdown(GtkPopover* popover) void {
+        @gtk_popover_popdown(popover)
+    }
+
+    @popover_set_relative_to(GtkPopover* popover, GtkWidget* relative_to) void {
+        @gtk_popover_set_relative_to(popover, relative_to)
+    }
+
+    @popover_get_relative_to(GtkPopover* popover) GtkWidget*? {
+        @return gtk_popover_get_relative_to(popover)
+    }
+
+    @popover_set_pointing_to(GtkPopover* popover, const GdkRectangle* rect) void {
+        @gtk_popover_set_pointing_to(popover, rect)
+    }
+
+    @popover_get_pointing_to(GtkPopover* popover, GdkRectangle* rect) gboolean? {
+        @return gtk_popover_get_pointing_to(popover, rect)
+    }
+
+    @popover_set_position(GtkPopover* popover, GtkPositionType position) void {
+        @gtk_popover_set_position(popover, position)
+    }
+
+    @popover_get_position(GtkPopover* popover) GtkPositionType? {
+        @return gtk_popover_get_position(popover)
+    }
+
+    @popover_set_constrain_to(GtkPopover* popover, GtkPopoverConstraint constraint) void {
+        @gtk_popover_set_constrain_to(popover, constraint)
+    }
+
+    @popover_get_constrain_to(GtkPopover* popover) GtkPopoverConstraint? {
+        @return gtk_popover_get_constrain_to(popover)
+    }
+
+    @popover_set_modal(GtkPopover* popover, gboolean modal) void {
+        @gtk_popover_set_modal(popover, modal)
+    }
+
+    @popover_get_modal(GtkPopover* popover) gboolean? {
+        @return gtk_popover_get_modal(popover)
+    }
+
+    // Deprecated: @popover_set_transitions_enabled(GtkPopover* popover,
+    //                                     gboolean transitions_enabled)
+
+    // Deprecated: @popover_get_transitions_enabled(GtkPopover* popover)
+
+    @popover_set_default_widget(GtkPopover* popover, GtkWidget* widget) void {
+        @gtk_popover_set_default_widget(popover, widget)
+    }
+
+    @popover_get_default_widget(GtkPopover* popover) GtkWidget*? {
+        @return gtk_popover_get_default_widget(popover)
+    }
+
+    // ---
+    // End of GtkPopover
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
