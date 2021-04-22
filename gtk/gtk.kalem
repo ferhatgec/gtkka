@@ -7555,6 +7555,15 @@
     // ---
     // End of GtkColorButton
 
+    // GtkColorChooserWidget
+
+    @color_chooser_widget_new GtkWidget*? {
+        @return gtk_color_chooser_widget_new()
+    }
+
+    // ---
+    // End of GtkColorChooserWidget
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
