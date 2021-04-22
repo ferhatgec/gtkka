@@ -7348,6 +7348,25 @@
     // ---
     // End of GtkMenuToolButton
 
+    // GtkToggleToolButton
+
+    @toggle_tool_button_new GtkToolItem*? {
+        @return gtk_toggle_tool_button_new()
+    }
+
+    // Deprecated: @toggle_tool_button_new_from_stock(const gchar* stock_id)
+
+    @toggle_tool_button_set_active(GtkToggleToolButton* button, gboolean is_active) void {
+        @gtk_toggle_tool_button_set_active(button, is_active)
+    }
+
+    @toggle_tool_button_get_active(GtkToggleToolButton* button) gboolean? {
+        @return gtk_toggle_tool_button_get_active(button)
+    }
+
+    // ---
+    // End of GtkToggleToolButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
