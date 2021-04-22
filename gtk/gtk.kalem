@@ -7175,6 +7175,79 @@
     // ---
     // End of GtkToolPalette
 
+    // GtkToolItemGroup
+
+    @tool_item_group_get_collapsed(GtkToolItemGroup* group) gboolean? {
+        @return gtk_tool_item_group_get_collapsed(group)
+    }
+
+    @tool_item_group_get_drop_item(GtkToolItemGroup* group, gint x, gint y) GtkToolItem*? {
+        @return gtk_tool_item_group_get_drop_item(group,x, y)
+    }
+
+    @tool_item_group_get_ellipsize(GtkToolItemGroup* group) PangoEllipsizeMode? {
+        @return gtk_tool_item_group_get_ellipsize(group)
+    }
+
+    @tool_item_group_get_item_position(GtkToolItemGroup* group, GtkToolItem* item) gint? {
+        @return gtk_tool_item_group_get_item_position(group, item)
+    }
+
+    @tool_item_group_get_n_items(GtkToolItemGroup* group) guint? {
+        @return gtk_tool_item_group_get_n_items(group)
+    }
+
+    #const gchar* tool_item_group_get_label(GtkToolItemGroup* group) {
+        @return gtk_tool_item_group_get_label(group)
+    }
+
+    @tool_item_group_get_label_widget(GtkToolItemGroup* group) GtkWidget*? {
+        @return gtk_tool_item_group_get_label_widget(group)
+    }
+
+    @tool_item_group_get_nth_item(GtkToolItemGroup* group, guint index) GtkToolItem*? {
+        @return gtk_tool_item_group_get_nth_item(group, index)
+    }
+
+    @tool_item_group_get_header_relief(GtkToolItemGroup* group) GtkReliefStyle? {
+        @return gtk_tool_item_group_get_header_relief(group)
+    }
+
+    @tool_item_group_insert(GtkToolItemGroup* group, GtkToolItem* item, gint position) void {
+        @gtk_tool_item_group_insert(group,item, position)
+    }
+
+    @tool_item_group_new(const gchar* label) GtkWidget*? {
+        @return gtk_tool_item_group_new(label)
+    }
+
+    @tool_item_group_set_collapsed(GtkToolItemGroup* group, gboolean collapsed) void {
+        @gtk_tool_item_group_set_collapsed(group, collapsed)
+    }
+
+    @tool_item_group_set_ellipsize(GtkToolItemGroup* group, PangoEllipsizeMode ellipsize) void {
+        @gtk_tool_item_group_set_ellipsize(group, ellipsize)
+    }
+
+    @tool_item_group_set_item_position(GtkToolItemGroup* group, GtkToolItem* item, gint position) void {
+        @gtk_tool_item_group_set_item_position(group,item, position)
+    }
+
+    @tool_item_group_set_label(GtkToolItemGroup* group, const gchar* label) void {
+        @gtk_tool_item_group_set_label(group, label)
+    }
+
+    @tool_item_group_set_label_widget(GtkToolItemGroup* group, GtkWidget* label_widget) void {
+        @gtk_tool_item_group_set_label_widget(group, label_widget)
+    }
+
+    @tool_item_group_set_header_relief(GtkToolItemGroup* group, GtkReliefStyle style) void {
+        @gtk_tool_item_group_set_header_relief(group, style)
+    }
+
+    // ---
+    // End of GtkToolItemGroup
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
