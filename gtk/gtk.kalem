@@ -7367,6 +7367,33 @@
     // ---
     // End of GtkToggleToolButton
 
+    // GtkRadioToolButton
+
+    @radio_tool_button_new(GSList* group) GtkToolItem*? {
+        @return gtk_radio_tool_button_new(group)
+    }
+
+    // Deprecated: @radio_tool_button_new_from_stock(GSList* group,
+    //                                      const gchar* stock_id)
+
+    @radio_tool_button_new_from_widget(GtkRadioToolButton* group) GtkToolItem*? {
+        @return gtk_radio_tool_button_new_from_widget(group)
+    }
+
+    // Deprecated: @radio_tool_button_new_with_stock_from_widget(GtkRadioToolButton* group,
+    //                                const gchar* stock_id)
+
+    @radio_tool_button_get_group(GtkRadioToolButton* button) GSList*? {
+        @return gtk_radio_tool_button_get_group(button)
+    }
+
+    @radio_tool_button_set_group(GtkRadioToolButton* button, GSList* group) void {
+        @gtk_radio_tool_button_set_group(button, group)
+    }
+
+    // ---
+    // End of GtkRadioToolButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
