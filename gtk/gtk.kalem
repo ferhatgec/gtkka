@@ -7485,6 +7485,31 @@
     // ---
     // End of GtkPopoverMenu
 
+    // GtkColorChooser
+
+    @color_chooser_get_rgba(GtkColorChooser* chooser, GdkRGBA* color) void {
+        @gtk_color_chooser_get_rgba(chooser, color)
+    }
+
+    @color_chooser_set_rgba(GtkColorChooser* chooser, const GdkRGBA* color) void {
+        @gtk_color_chooser_set_rgba(chooser, color)
+    }
+
+    @color_chooser_get_use_alpha(GtkColorChooser* chooser) gboolean? {
+        @return gtk_color_chooser_get_use_alpha(chooser)
+    }
+
+    @color_chooser_set_use_alpha(GtkColorChooser* chooser, gboolean use_alpha) void {
+        @gtk_color_chooser_set_use_alpha(chooser, use_alpha)
+    }
+
+    @color_chooser_add_palette(GtkColorChooser* chooser, GtkOrientation orientation, gint colors_per_line, gint n_colors, GdkRGBA* colors) void {
+        @gtk_color_chooser_add_palette(chooser,orientation,colors_per_line,n_colors, colors)
+    }
+
+    // ---
+    // End of GtkColorChooser
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
