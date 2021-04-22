@@ -7510,6 +7510,51 @@
     // ---
     // End of GtkColorChooser
 
+    // GtkColorButton
+
+    @color_button_new GtkWidget*? {
+        @return gtk_color_button_new()
+    }
+
+    // Deprecated: @color_button_new_with_color(const GdkColor* color)
+
+    @color_button_new_with_rgba(const GdkRGBA* rgba) GtkWidget*? {
+        @return gtk_color_button_new_with_rgba(rgba)
+    }
+
+    // Deprecated: @color_button_set_color(GtkColorButton* button,
+    //                            const GdkColor* color)
+
+    // Deprecated: @color_button_get_color(GtkColorButton* button,
+    //                            GdkColor* color)
+
+    // Deprecated: @color_button_set_alpha(GtkColorButton* button,
+    //                            guint16 alpha)
+
+    // Deprecated: @color_button_get_alpha(GtkColorButton* button)
+
+    // Deprecated: @color_button_set_rgba(GtkColorButton* button,
+    //                           const GdkRGBA* rgba)
+
+    // Deprecated: @color_button_get_rgba(GtkColorButton* button,
+    //                           GdkRGBA* rgba)
+
+    // Deprecated: @color_button_set_use_alpha(GtkColorButton* button,
+    //                                gboolean use_alpha)
+
+    // Deprecated: @color_button_get_use_alpha(GtkColorButton* button)
+
+    @color_button_set_title(GtkColorButton* button, const gchar* title) void {
+        @gtk_color_button_set_title(button, title)
+    }
+
+    #const gchar* color_button_get_title(GtkColorButton* button) {
+        @return gtk_color_button_get_title(button)
+    }
+
+    // ---
+    // End of GtkColorButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
