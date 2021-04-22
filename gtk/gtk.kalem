@@ -7564,6 +7564,15 @@
     // ---
     // End of GtkColorChooserWidget
 
+    // GtkColorChooserDialog
+
+    @color_chooser_dialog_new(const gchar* title, GtkWindow* parent) GtkWidget*? {
+        @return gtk_color_chooser_dialog_new(title, parent)
+    }
+
+    // ---
+    // End of GtkColorChooserDialog
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
