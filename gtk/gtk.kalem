@@ -8047,6 +8047,64 @@
     // ---
     // End of GtkFontChooser
 
+    // GtkFontButton
+
+    @font_button_new GtkWidget*? {
+        @return gtk_font_button_new()
+    }
+
+    @font_button_new_with_font(const gchar* fontname) GtkWidget*? {
+        @return gtk_font_button_new_with_font(fontname)
+    }
+
+    // Deprecated: @font_button_set_font_name(GtkFontButton* font_button,
+    //                               const gchar* fontname)
+
+    // Deprecated: @font_button_get_font_name(GtkFontButton* font_button)
+
+    @font_button_set_show_style(GtkFontButton* font_button, gboolean show_style) void {
+        @gtk_font_button_set_show_style(font_button, show_style)
+    }
+
+    @font_button_get_show_style(GtkFontButton* font_button) gboolean? {
+        @return gtk_font_button_get_show_style(font_button)
+    }
+
+    @font_button_set_show_size(GtkFontButton* font_button, gboolean show_size) void {
+        @gtk_font_button_set_show_size(font_button, show_size)
+    }
+
+    @font_button_get_show_size(GtkFontButton* font_button) gboolean? {
+        @return gtk_font_button_get_show_size(font_button)
+    }
+
+    @font_button_set_use_font(GtkFontButton* font_button, gboolean use_font) void {
+        @gtk_font_button_set_use_font(font_button, use_font)
+    }
+
+    @font_button_get_use_font(GtkFontButton* font_button) gboolean? {
+        @return gtk_font_button_get_use_font(font_button)
+    }
+
+    @font_button_set_use_size(GtkFontButton* font_button, gboolean use_size) void {
+        @gtk_font_button_set_use_size(font_button, use_size)
+    }
+
+    @font_button_get_use_size(GtkFontButton* font_button) gboolean? {
+        @return gtk_font_button_get_use_size(font_button)
+    }
+
+    @font_button_set_title(GtkFontButton* font_button, const gchar* title) void {
+        @gtk_font_button_set_title(font_button, title)
+    }
+
+    #const gchar* font_button_get_title(GtkFontButton* font_button) {
+        @return gtk_font_button_get_title(font_button)
+    }
+
+    // ---
+    // End of GtkFontButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
