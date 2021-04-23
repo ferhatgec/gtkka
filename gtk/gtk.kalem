@@ -8221,6 +8221,47 @@
     // ---
     // End of GtkPlacesSidebar
 
+    // GtkFrame
+
+    @frame_new(const gchar* label) GtkWidget*? {
+        @return gtk_frame_new(label)
+    }
+
+    @frame_set_label(GtkFrame* frame, const gchar* label) void {
+        @gtk_frame_set_label(frame, label)
+    }
+
+    @frame_set_label_widget(GtkFrame* frame, GtkWidget* label_widget) void {
+        @gtk_frame_set_label_widget(frame, label_widget)
+    }
+
+    @frame_set_label_align(GtkFrame* frame, gfloat xalign, gfloat yalign) void {
+        @gtk_frame_set_label_align(frame,xalign, yalign)
+    }
+
+    @frame_set_shadow_type(GtkFrame* frame, GtkShadowType type) void {
+        @gtk_frame_set_shadow_type(frame, type)
+    }
+
+    #const gchar* frame_get_label(GtkFrame* frame) {
+        @return gtk_frame_get_label(frame)
+    }
+
+    @frame_get_label_align(GtkFrame* frame, gfloat* xalign, gfloat* yalign) void {
+        @gtk_frame_get_label_align(frame,xalign, yalign)
+    }
+
+    @frame_get_label_widget(GtkFrame* frame) GtkWidget*? {
+        @return gtk_frame_get_label_widget(frame)
+    }
+
+    @frame_get_shadow_type(GtkFrame* frame) GtkShadowType? {
+        @return gtk_frame_get_shadow_type(frame)
+    }
+
+    // ---
+    // End of GtkFrame
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
