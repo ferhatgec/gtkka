@@ -7573,6 +7573,263 @@
     // ---
     // End of GtkColorChooserDialog
 
+    // GtkFileChooser
+
+    @file_chooser_set_action(GtkFileChooser* chooser, GtkFileChooserAction action) void {
+        @gtk_file_chooser_set_action(chooser, action)
+    }
+
+    @file_chooser_get_action(GtkFileChooser* chooser) GtkFileChooserAction? {
+        @return gtk_file_chooser_get_action(chooser)
+    }
+
+    @file_chooser_set_local_only(GtkFileChooser* chooser, gboolean local_only) void {
+        @gtk_file_chooser_set_local_only(chooser, local_only)
+    }
+
+    @file_chooser_get_local_only(GtkFileChooser* chooser) gboolean? {
+        @return gtk_file_chooser_get_local_only(chooser)
+    }
+
+    @file_chooser_set_select_multiple(GtkFileChooser* chooser, gboolean select_multiple) void {
+        @gtk_file_chooser_set_select_multiple(chooser, select_multiple)
+    }
+
+    @file_chooser_get_select_multiple(GtkFileChooser* chooser) gboolean? {
+        @return gtk_file_chooser_get_select_multiple(chooser)
+    }
+
+    @file_chooser_set_show_hidden(GtkFileChooser* chooser, gboolean show_hidden) void {
+        @gtk_file_chooser_set_show_hidden(chooser, show_hidden)
+    }
+
+    @file_chooser_get_show_hidden(GtkFileChooser* chooser) gboolean? {
+        @return gtk_file_chooser_get_show_hidden(chooser)
+    }
+
+    @file_chooser_set_do_overwrite_confirmation(GtkFileChooser* chooser, gboolean do_overwrite_confirmation) void {
+        @gtk_file_chooser_set_do_overwrite_confirmation(chooser, do_overwrite_confirmation)
+    }
+
+    @file_chooser_get_do_overwrite_confirmation(GtkFileChooser* chooser) gboolean? {
+        @return gtk_file_chooser_get_do_overwrite_confirmation(chooser)
+    }
+
+    @file_chooser_set_create_folders(GtkFileChooser* chooser, gboolean create_folders) void {
+        @gtk_file_chooser_set_create_folders(chooser, create_folders)
+    }
+
+    @file_chooser_get_create_folders(GtkFileChooser* chooser) gboolean? {
+        @return gtk_file_chooser_get_create_folders(chooser)
+    }
+
+    @file_chooser_set_current_name(GtkFileChooser* chooser, const gchar* name) void {
+        @gtk_file_chooser_set_current_name(chooser, name)
+    }
+
+    @file_chooser_get_current_name(GtkFileChooser* chooser) gchar*? {
+        @return gtk_file_chooser_get_current_name(chooser)
+    }
+
+    @file_chooser_get_filename(GtkFileChooser* chooser) gchar*? {
+        @return gtk_file_chooser_get_filename(chooser)
+    }
+
+    @file_chooser_set_filename(GtkFileChooser* chooser, const char* filename) gboolean? {
+        @return gtk_file_chooser_set_filename(chooser, filename)
+    }
+
+    @file_chooser_select_filename(GtkFileChooser* chooser, const char* filename) gboolean? {
+        @return gtk_file_chooser_select_filename(chooser, filename)
+    }
+
+    @file_chooser_unselect_filename(GtkFileChooser* chooser, const char* filename) void {
+        @gtk_file_chooser_unselect_filename(chooser, filename)
+    }
+
+    @file_chooser_select_all(GtkFileChooser* chooser) void {
+        @gtk_file_chooser_select_all(chooser)
+    }
+
+    @file_chooser_unselect_all(GtkFileChooser* chooser) void {
+        @gtk_file_chooser_unselect_all(chooser)
+    }
+
+    @file_chooser_get_filenames(GtkFileChooser* chooser) GSList*? {
+        @return gtk_file_chooser_get_filenames(chooser)
+    }
+
+    @file_chooser_set_current_folder(GtkFileChooser* chooser, const gchar* filename) gboolean? {
+        @return gtk_file_chooser_set_current_folder(chooser, filename)
+    }
+
+    @file_chooser_get_current_folder(GtkFileChooser* chooser) gchar*? {
+        @return gtk_file_chooser_get_current_folder(chooser)
+    }
+
+    @file_chooser_get_uri(GtkFileChooser* chooser) gchar*? {
+        @return gtk_file_chooser_get_uri(chooser)
+    }
+
+    @file_chooser_set_uri(GtkFileChooser* chooser, const char* uri) gboolean? {
+        @return gtk_file_chooser_set_uri(chooser, uri)
+    }
+
+    @file_chooser_select_uri(GtkFileChooser* chooser, const char* uri) gboolean? {
+        @return gtk_file_chooser_select_uri(chooser, uri)
+    }
+
+    @file_chooser_unselect_uri(GtkFileChooser* chooser, const char* uri) void {
+        @gtk_file_chooser_unselect_uri(chooser, uri)
+    }
+
+    @file_chooser_get_uris(GtkFileChooser* chooser) GSList*? {
+        @return gtk_file_chooser_get_uris(chooser)
+    }
+
+    @file_chooser_set_current_folder_uri(GtkFileChooser* chooser, const gchar* uri) gboolean? {
+        @return gtk_file_chooser_set_current_folder_uri(chooser, uri)
+    }
+
+    @file_chooser_get_current_folder_uri(GtkFileChooser* chooser) gchar*? {
+        @return gtk_file_chooser_get_current_folder_uri(chooser)
+    }
+
+    @file_chooser_set_preview_widget(GtkFileChooser* chooser, GtkWidget* preview_widget) void {
+        @gtk_file_chooser_set_preview_widget(chooser, preview_widget)
+    }
+
+    @file_chooser_get_preview_widget(GtkFileChooser* chooser) GtkWidget*? {
+        @return gtk_file_chooser_get_preview_widget(chooser)
+    }
+
+    @file_chooser_set_preview_widget_active(GtkFileChooser* chooser, gboolean active) void {
+        @gtk_file_chooser_set_preview_widget_active(chooser, active)
+    }
+
+    @file_chooser_get_preview_widget_active(GtkFileChooser* chooser) gboolean? {
+        @return gtk_file_chooser_get_preview_widget_active(chooser)
+    }
+
+    @file_chooser_set_use_preview_label(GtkFileChooser* chooser, gboolean use_label) void {
+        @gtk_file_chooser_set_use_preview_label(chooser, use_label)
+    }
+
+    @file_chooser_get_use_preview_label(GtkFileChooser* chooser) gboolean? {
+        @return gtk_file_chooser_get_use_preview_label(chooser)
+    }
+
+    @file_chooser_get_preview_filename(GtkFileChooser* chooser) char*? {
+        @return gtk_file_chooser_get_preview_filename(chooser)
+    }
+
+    @file_chooser_get_preview_uri(GtkFileChooser* chooser) char*? {
+        @return gtk_file_chooser_get_preview_uri(chooser)
+    }
+
+    @file_chooser_set_extra_widget(GtkFileChooser* chooser, GtkWidget* extra_widget) void {
+        @gtk_file_chooser_set_extra_widget(chooser, extra_widget)
+    }
+
+    @file_chooser_get_extra_widget(GtkFileChooser* chooser) GtkWidget*? {
+        @return gtk_file_chooser_get_extra_widget(chooser)
+    }
+
+    @file_chooser_add_choice(GtkFileChooser* chooser, const char* id, const char* label, const char** options, const char** option_labels) void {
+        @gtk_file_chooser_add_choice(chooser,id,label,options, option_labels)
+    }
+
+    @file_chooser_remove_choice(GtkFileChooser* chooser, const char* id) void {
+        @gtk_file_chooser_remove_choice(chooser, id)
+    }
+
+    @file_chooser_set_choice(GtkFileChooser* chooser, const char* id, const char* option) void {
+        @gtk_file_chooser_set_choice(chooser,id, option)
+    }
+
+    #const char* file_chooser_get_choice(GtkFileChooser* chooser, const char* id) {
+        @return gtk_file_chooser_get_choice(chooser, id)
+    }
+
+    @file_chooser_add_filter(GtkFileChooser* chooser, GtkFileFilter* filter) void {
+        @gtk_file_chooser_add_filter(chooser, filter)
+    }
+
+    @file_chooser_remove_filter(GtkFileChooser* chooser, GtkFileFilter* filter) void {
+        @gtk_file_chooser_remove_filter(chooser, filter)
+    }
+
+    @file_chooser_list_filters(GtkFileChooser* chooser) GSList*? {
+        @return gtk_file_chooser_list_filters(chooser)
+    }
+
+    @file_chooser_set_filter(GtkFileChooser* chooser, GtkFileFilter* filter) void {
+        @gtk_file_chooser_set_filter(chooser, filter)
+    }
+
+    @file_chooser_get_filter(GtkFileChooser* chooser) GtkFileFilter*? {
+        @return gtk_file_chooser_get_filter(chooser)
+    }
+
+    @file_chooser_add_shortcut_folder(GtkFileChooser* chooser, const char* folder, GError** error) gboolean? {
+        @return gtk_file_chooser_add_shortcut_folder(chooser,folder, error)
+    }
+
+    @file_chooser_remove_shortcut_folder(GtkFileChooser* chooser, const char* folder, GError** error) gboolean? {
+        @return gtk_file_chooser_remove_shortcut_folder(chooser,folder, error)
+    }
+
+    @file_chooser_list_shortcut_folders(GtkFileChooser* chooser) GSList*? {
+        @return gtk_file_chooser_list_shortcut_folders(chooser)
+    }
+
+    @file_chooser_add_shortcut_folder_uri(GtkFileChooser* chooser, const char* uri, GError** error) gboolean? {
+        @return gtk_file_chooser_add_shortcut_folder_uri(chooser,uri, error)
+    }
+
+    @file_chooser_remove_shortcut_folder_uri(GtkFileChooser* chooser, const char* uri, GError** error) gboolean? {
+        @return gtk_file_chooser_remove_shortcut_folder_uri(chooser,uri, error)
+    }
+
+    @file_chooser_list_shortcut_folder_uris(GtkFileChooser* chooser) GSList*? {
+        @return gtk_file_chooser_list_shortcut_folder_uris(chooser)
+    }
+
+    @file_chooser_get_current_folder_file(GtkFileChooser* chooser) GFile*? {
+        @return gtk_file_chooser_get_current_folder_file(chooser)
+    }
+
+    @file_chooser_get_file(GtkFileChooser* chooser) GFile*? {
+        @return gtk_file_chooser_get_file(chooser)
+    }
+
+    @file_chooser_get_files(GtkFileChooser* chooser) GSList*? {
+        @return gtk_file_chooser_get_files(chooser)
+    }
+
+    @file_chooser_get_preview_file(GtkFileChooser* chooser) GFile*? {
+        @return gtk_file_chooser_get_preview_file(chooser)
+    }
+
+    @file_chooser_select_file(GtkFileChooser* chooser, GFile* file, GError** error) gboolean? {
+        @return gtk_file_chooser_select_file(chooser,file, error)
+    }
+
+    @file_chooser_set_current_folder_file(GtkFileChooser* chooser, GFile* file, GError** error) gboolean? {
+        @return gtk_file_chooser_set_current_folder_file(chooser,file, error)
+    }
+
+    @file_chooser_set_file(GtkFileChooser* chooser, GFile* file, GError** error) gboolean? {
+        @return gtk_file_chooser_set_file(chooser,file, error)
+    }
+
+    @file_chooser_unselect_file(GtkFileChooser* chooser, GFile* file) void {
+        @gtk_file_chooser_unselect_file(chooser, file)
+    }
+
+    // ---
+    // End of GtkFileChooser
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
