@@ -7830,6 +7830,40 @@
     // ---
     // End of GtkFileChooser
 
+    // GtkFileChooserButton
+
+    @file_chooser_button_new(const gchar* title, GtkFileChooserAction action) GtkWidget*? {
+        @return gtk_file_chooser_button_new(title, action)
+    }
+
+    @file_chooser_button_new_with_dialog(GtkWidget* dialog) GtkWidget*? {
+        @return gtk_file_chooser_button_new_with_dialog(dialog)
+    }
+
+    #const gchar* file_chooser_button_get_title(GtkFileChooserButton* button) {
+        @return gtk_file_chooser_button_get_title(button)
+    }
+
+    @file_chooser_button_set_title(GtkFileChooserButton* button, const gchar* title) void {
+        @gtk_file_chooser_button_set_title(button, title)
+    }
+
+    @file_chooser_button_get_width_chars(GtkFileChooserButton* button) gint? {
+        @return gtk_file_chooser_button_get_width_chars(button)
+    }
+
+    @file_chooser_button_set_width_chars(GtkFileChooserButton* button, gint n_chars) void {
+        @gtk_file_chooser_button_set_width_chars(button, n_chars)
+    }
+
+    // Deprecated: @file_chooser_button_get_focus_on_click(GtkFileChooserButton* button)
+
+    // Deprecated: @file_chooser_button_set_focus_on_click(GtkFileChooserButton* button,
+    //                                gboolean focus_on_click)
+
+    // ---
+    // End of GtkFileChooserButton
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
