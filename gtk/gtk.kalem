@@ -8262,6 +8262,15 @@
     // ---
     // End of GtkFrame
 
+    // GtkSeparator
+
+    @separator_new(GtkOrientation orientation) GtkWidget*? {
+        @return gtk_separator_new(orientation)
+    }
+
+    // ---
+    // End of GtkSeparator
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
