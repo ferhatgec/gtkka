@@ -7961,6 +7961,92 @@
     // ---
     // End of GtkFileFilter
 
+    // GtkFontChooser
+
+    @font_chooser_get_font_family(GtkFontChooser* fontchooser) PangoFontFamily*? {
+        @return gtk_font_chooser_get_font_family(fontchooser)
+    }
+
+    @font_chooser_get_font_face(GtkFontChooser* fontchooser) PangoFontFace*? {
+        @return gtk_font_chooser_get_font_face(fontchooser)
+    }
+
+    @font_chooser_get_font_size(GtkFontChooser* fontchooser) gint? {
+        @return gtk_font_chooser_get_font_size(fontchooser)
+    }
+
+    @font_chooser_get_font(GtkFontChooser* fontchooser) gchar*? {
+        @return gtk_font_chooser_get_font(fontchooser)
+    }
+
+    @font_chooser_set_font(GtkFontChooser* fontchooser, const gchar* fontname) void {
+        @gtk_font_chooser_set_font(fontchooser, fontname)
+    }
+
+    @font_chooser_get_font_desc(GtkFontChooser* fontchooser) PangoFontDescription*? {
+        @return gtk_font_chooser_get_font_desc(fontchooser)
+    }
+
+    @font_chooser_set_font_desc(GtkFontChooser* fontchooser, const PangoFontDescription* font_desc) void {
+        @gtk_font_chooser_set_font_desc(fontchooser, font_desc)
+    }
+
+    @font_chooser_get_preview_text(GtkFontChooser* fontchooser) gchar*? {
+        @return gtk_font_chooser_get_preview_text(fontchooser)
+    }
+
+    @font_chooser_set_preview_text(GtkFontChooser* fontchooser, const gchar* text) void {
+        @gtk_font_chooser_set_preview_text(fontchooser, text)
+    }
+
+    @font_chooser_get_show_preview_entry(GtkFontChooser* fontchooser) gboolean? {
+        @return gtk_font_chooser_get_show_preview_entry(fontchooser)
+    }
+
+    @font_chooser_set_show_preview_entry(GtkFontChooser* fontchooser, gboolean show_preview_entry) void {
+        @gtk_font_chooser_set_show_preview_entry(fontchooser, show_preview_entry)
+    }
+
+    // Unimplemented: gboolean
+    //(*GtkFontFilterFunc) (const PangoFontFamily* family,
+    //                      const PangoFontFace* face,
+    //                      gpointer data)
+
+    @font_chooser_set_filter_func(GtkFontChooser* fontchooser, GtkFontFilterFunc filter, gpointer user_data, GDestroyNotify destroy) void {
+        @gtk_font_chooser_set_filter_func(fontchooser,filter,user_data, destroy)
+    }
+
+    @font_chooser_set_font_map(GtkFontChooser* fontchooser, PangoFontMap* fontmap) void {
+        @gtk_font_chooser_set_font_map(fontchooser, fontmap)
+    }
+
+    @font_chooser_get_font_map(GtkFontChooser* fontchooser) PangoFontMap*? {
+        @return gtk_font_chooser_get_font_map(fontchooser)
+    }
+
+    @font_chooser_set_level(GtkFontChooser* fontchooser, GtkFontChooserLevel level) void {
+        @gtk_font_chooser_set_level(fontchooser, level)
+    }
+
+    @font_chooser_get_level(GtkFontChooser* fontchooser) GtkFontChooserLevel? {
+        @return gtk_font_chooser_get_level(fontchooser)
+    }
+
+    @font_chooser_get_font_features(GtkFontChooser* fontchooser) char*? {
+        @return gtk_font_chooser_get_font_features(fontchooser)
+    }
+
+    @font_chooser_set_language(GtkFontChooser* fontchooser, const char* language) void {
+        @gtk_font_chooser_set_language(fontchooser, language)
+    }
+
+    @font_chooser_get_language(GtkFontChooser* fontchooser) char*? {
+        @return gtk_font_chooser_get_language(fontchooser)
+    }
+
+    // ---
+    // End of GtkFontChooser
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
