@@ -8280,6 +8280,142 @@
     // ---
     // End of GtkScrollbar
 
+    // GtkScrolledWindow
+
+    @scrolled_window_new(GtkAdjustment* hadjustment, GtkAdjustment* vadjustment) GtkWidget*? {
+        @return gtk_scrolled_window_new(hadjustment, vadjustment)
+    }
+
+    @scrolled_window_get_hadjustment(GtkScrolledWindow* scrolled_window) GtkAdjustment*? {
+        @return gtk_scrolled_window_get_hadjustment(scrolled_window)
+    }
+
+    @scrolled_window_set_hadjustment(GtkScrolledWindow* scrolled_window, GtkAdjustment* hadjustment) void {
+        @gtk_scrolled_window_set_hadjustment(scrolled_window, hadjustment)
+    }
+
+    @scrolled_window_get_vadjustment(GtkScrolledWindow* scrolled_window) GtkAdjustment*? {
+        @return gtk_scrolled_window_get_vadjustment(scrolled_window)
+    }
+
+    @scrolled_window_set_vadjustment(GtkScrolledWindow* scrolled_window, GtkAdjustment* vadjustment) void {
+        @gtk_scrolled_window_set_vadjustment(scrolled_window, vadjustment)
+    }
+
+    @scrolled_window_get_hscrollbar(GtkScrolledWindow* scrolled_window) GtkWidget*? {
+        @return gtk_scrolled_window_get_hscrollbar(scrolled_window)
+    }
+
+    @scrolled_window_get_vscrollbar(GtkScrolledWindow* scrolled_window) GtkWidget*? {
+        @return gtk_scrolled_window_get_vscrollbar(scrolled_window)
+    }
+
+    @scrolled_window_get_policy(GtkScrolledWindow* scrolled_window, GtkPolicyType* hscrollbar_policy, GtkPolicyType* vscrollbar_policy) void {
+        @gtk_scrolled_window_get_policy(scrolled_window,hscrollbar_policy, vscrollbar_policy)
+    }
+
+    @scrolled_window_set_policy(GtkScrolledWindow* scrolled_window, GtkPolicyType hscrollbar_policy, GtkPolicyType vscrollbar_policy) void {
+        @gtk_scrolled_window_set_policy(scrolled_window,hscrollbar_policy, vscrollbar_policy)
+    }
+
+    // Deprecated: @scrolled_window_add_with_viewport(GtkScrolledWindow* scrolled_window,
+    //                                       GtkWidget* child)
+
+    @scrolled_window_get_placement(GtkScrolledWindow* scrolled_window) GtkCornerType? {
+        @return gtk_scrolled_window_get_placement(scrolled_window)
+    }
+
+    @scrolled_window_set_placement(GtkScrolledWindow* scrolled_window, GtkCornerType window_placement) void {
+        @gtk_scrolled_window_set_placement(scrolled_window, window_placement)
+    }
+
+    @scrolled_window_unset_placement(GtkScrolledWindow* scrolled_window) void {
+        @gtk_scrolled_window_unset_placement(scrolled_window)
+    }
+
+    @scrolled_window_get_shadow_type(GtkScrolledWindow* scrolled_window) GtkShadowType? {
+        @return gtk_scrolled_window_get_shadow_type(scrolled_window)
+    }
+
+    @scrolled_window_set_shadow_type(GtkScrolledWindow* scrolled_window, GtkShadowType type) void {
+        @gtk_scrolled_window_set_shadow_type(scrolled_window, type)
+    }
+
+    @scrolled_window_get_kinetic_scrolling(GtkScrolledWindow* scrolled_window) gboolean? {
+        @return gtk_scrolled_window_get_kinetic_scrolling(scrolled_window)
+    }
+
+    @scrolled_window_set_kinetic_scrolling(GtkScrolledWindow* scrolled_window, gboolean kinetic_scrolling) void {
+        @gtk_scrolled_window_set_kinetic_scrolling(scrolled_window, kinetic_scrolling)
+    }
+
+    @scrolled_window_get_capture_button_press(GtkScrolledWindow* scrolled_window) gboolean? {
+        @return gtk_scrolled_window_get_capture_button_press(scrolled_window)
+    }
+
+    @scrolled_window_set_capture_button_press(GtkScrolledWindow* scrolled_window, gboolean capture_button_press) void {
+        @gtk_scrolled_window_set_capture_button_press(scrolled_window, capture_button_press)
+    }
+
+    @scrolled_window_get_overlay_scrolling(GtkScrolledWindow* scrolled_window) gboolean? {
+        @return gtk_scrolled_window_get_overlay_scrolling(scrolled_window)
+    }
+
+    @scrolled_window_set_overlay_scrolling(GtkScrolledWindow* scrolled_window, gboolean overlay_scrolling) void {
+        @gtk_scrolled_window_set_overlay_scrolling(scrolled_window, overlay_scrolling)
+    }
+
+    @scrolled_window_get_min_content_width(GtkScrolledWindow* scrolled_window) gint? {
+        @return gtk_scrolled_window_get_min_content_width(scrolled_window)
+    }
+
+    @scrolled_window_set_min_content_width(GtkScrolledWindow* scrolled_window, gint width) void {
+        @gtk_scrolled_window_set_min_content_width(scrolled_window, width)
+    }
+
+    @scrolled_window_get_min_content_height(GtkScrolledWindow* scrolled_window) gint? {
+        @return gtk_scrolled_window_get_min_content_height(scrolled_window)
+    }
+
+    @scrolled_window_set_min_content_height(GtkScrolledWindow* scrolled_window, gint height) void {
+        @gtk_scrolled_window_set_min_content_height(scrolled_window, height)
+    }
+
+    @scrolled_window_get_max_content_width(GtkScrolledWindow* scrolled_window) gint? {
+        @return gtk_scrolled_window_get_max_content_width(scrolled_window)
+    }
+
+    @scrolled_window_set_max_content_width(GtkScrolledWindow* scrolled_window, gint width) void {
+        @gtk_scrolled_window_set_max_content_width(scrolled_window, width)
+    }
+
+    @scrolled_window_get_max_content_height(GtkScrolledWindow* scrolled_window) gint? {
+        @return gtk_scrolled_window_get_max_content_height(scrolled_window)
+    }
+
+    @scrolled_window_set_max_content_height(GtkScrolledWindow* scrolled_window, gint height) void {
+        @gtk_scrolled_window_set_max_content_height(scrolled_window, height)
+    }
+
+    @scrolled_window_get_propagate_natural_width(GtkScrolledWindow* scrolled_window) gboolean? {
+        @return gtk_scrolled_window_get_propagate_natural_width(scrolled_window)
+    }
+
+    @scrolled_window_set_propagate_natural_width(GtkScrolledWindow* scrolled_window, gboolean propagate) void {
+        @gtk_scrolled_window_set_propagate_natural_width(scrolled_window, propagate)
+    }
+
+    @scrolled_window_get_propagate_natural_height(GtkScrolledWindow* scrolled_window) gboolean? {
+        @return gtk_scrolled_window_get_propagate_natural_height(scrolled_window)
+    }
+
+    @scrolled_window_set_propagate_natural_height(GtkScrolledWindow* scrolled_window, gboolean propagate) void {
+        @gtk_scrolled_window_set_propagate_natural_height(scrolled_window, propagate)
+    }
+
+    // ---
+    // End of GtkScrolledWindow
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
