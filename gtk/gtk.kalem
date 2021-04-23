@@ -8271,6 +8271,15 @@
     // ---
     // End of GtkSeparator
 
+    // GtkScrollbar
+
+    @scrollbar_new(GtkOrientation orientation, GtkAdjustment* adjustment) GtkWidget*? {
+        @return gtk_scrollbar_new(orientation, adjustment)
+    }
+
+    // ---
+    // End of GtkScrollbar
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
