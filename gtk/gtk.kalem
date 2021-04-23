@@ -7899,6 +7899,15 @@
     // ---
     // End of GtkFileChooserDialog
 
+    // GtkFileChooserWidget
+
+    @file_chooser_widget_new(GtkFileChooserAction action) GtkWidget*? {
+        @return gtk_file_chooser_widget_new(action)
+    }
+
+    // ---
+    // End of GtkFileChooserWidget
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
