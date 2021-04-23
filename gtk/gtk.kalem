@@ -8416,6 +8416,47 @@
     // ---
     // End of GtkScrolledWindow
 
+    // GtkScrollable
+
+    @scrollable_get_hadjustment(GtkScrollable* scrollable) GtkAdjustment*? {
+        @return gtk_scrollable_get_hadjustment(scrollable)
+    }
+
+    @scrollable_set_hadjustment(GtkScrollable* scrollable, GtkAdjustment* hadjustment) void {
+        @gtk_scrollable_set_hadjustment(scrollable, hadjustment)
+    }
+
+    @scrollable_get_vadjustment(GtkScrollable* scrollable) GtkAdjustment*? {
+        @return gtk_scrollable_get_vadjustment(scrollable)
+    }
+
+    @scrollable_set_vadjustment(GtkScrollable* scrollable, GtkAdjustment* vadjustment) void {
+        @gtk_scrollable_set_vadjustment(scrollable, vadjustment)
+    }
+
+    @scrollable_get_hscroll_policy(GtkScrollable* scrollable) GtkScrollablePolicy? {
+        @return gtk_scrollable_get_hscroll_policy(scrollable)
+    }
+
+    @scrollable_set_hscroll_policy(GtkScrollable* scrollable, GtkScrollablePolicy policy) void {
+        @gtk_scrollable_set_hscroll_policy(scrollable, policy)
+    }
+
+    @scrollable_get_vscroll_policy(GtkScrollable* scrollable) GtkScrollablePolicy? {
+        @return gtk_scrollable_get_vscroll_policy(scrollable)
+    }
+
+    @scrollable_set_vscroll_policy(GtkScrollable* scrollable, GtkScrollablePolicy policy) void {
+        @gtk_scrollable_set_vscroll_policy(scrollable, policy)
+    }
+
+    @scrollable_get_border(GtkScrollable* scrollable, GtkBorder* border) gboolean? {
+        @return gtk_scrollable_get_border(scrollable, border)
+    }
+
+    // ---
+    // End of GtkScrollable
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
