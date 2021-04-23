@@ -7864,6 +7864,31 @@
     // ---
     // End of GtkFileChooserButton
 
+    // GtkFileChooserNative
+
+    @file_chooser_native_new(const gchar* title, GtkWindow* parent, GtkFileChooserAction action, const gchar* accept_label, const gchar* cancel_label) GtkFileChooserNative*? {
+        @return gtk_file_chooser_native_new(title,parent,action,accept_label, cancel_label)
+    }
+
+    #const char* file_chooser_native_get_accept_label(GtkFileChooserNative* self) {
+        @return gtk_file_chooser_native_get_accept_label(self)
+    }
+
+    @file_chooser_native_set_accept_label(GtkFileChooserNative* self, const char* accept_label) void {
+        @gtk_file_chooser_native_set_accept_label(self, accept_label)
+    }
+
+    #const char* file_chooser_native_get_cancel_label(GtkFileChooserNative* self) {
+        @return gtk_file_chooser_native_get_cancel_label(self)
+    }
+
+    @file_chooser_native_set_cancel_label(GtkFileChooserNative* self, const char* cancel_label) void {
+        @gtk_file_chooser_native_set_cancel_label(self, cancel_label)
+    }
+
+    // ---
+    // End of GtkFileChooserNative
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
