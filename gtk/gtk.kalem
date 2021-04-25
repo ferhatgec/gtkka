@@ -9003,6 +9003,119 @@
     // ---
     // End of GtkPrintSettings
 
+    // GtkPageSetup
+
+    @page_setup_new GtkPageSetup*? {
+        @return gtk_page_setup_new()
+    }
+
+    @page_setup_copy(GtkPageSetup* other) GtkPageSetup*? {
+        @return gtk_page_setup_copy(other)
+    }
+
+    @page_setup_get_orientation(GtkPageSetup* setup) GtkPageOrientation? {
+        @return gtk_page_setup_get_orientation(setup)
+    }
+
+    @page_setup_set_orientation(GtkPageSetup* setup, GtkPageOrientation orientation) void {
+        @gtk_page_setup_set_orientation(setup, orientation)
+    }
+
+    @page_setup_get_paper_size(GtkPageSetup* setup) GtkPaperSize*? {
+        @return gtk_page_setup_get_paper_size(setup)
+    }
+
+    @page_setup_set_paper_size(GtkPageSetup* setup, GtkPaperSize* size) void {
+        @gtk_page_setup_set_paper_size(setup, size)
+    }
+
+    @page_setup_get_top_margin(GtkPageSetup* setup, GtkUnit unit) gdouble? {
+        @return gtk_page_setup_get_top_margin(setup, unit)
+    }
+
+    @page_setup_set_top_margin(GtkPageSetup* setup, gdouble margin, GtkUnit unit) void {
+        @gtk_page_setup_set_top_margin(setup,margin, unit)
+    }
+
+    @page_setup_get_bottom_margin(GtkPageSetup* setup, GtkUnit unit) gdouble? {
+        @return gtk_page_setup_get_bottom_margin(setup, unit)
+    }
+
+    @page_setup_set_bottom_margin(GtkPageSetup* setup, gdouble margin, GtkUnit unit) void {
+        @gtk_page_setup_set_bottom_margin(setup,margin, unit)
+    }
+
+    @page_setup_get_left_margin(GtkPageSetup* setup, GtkUnit unit) gdouble? {
+        @return gtk_page_setup_get_left_margin(setup, unit)
+    }
+
+    @page_setup_set_left_margin(GtkPageSetup* setup, gdouble margin, GtkUnit unit) void {
+        @gtk_page_setup_set_left_margin(setup,margin, unit)
+    }
+
+    @page_setup_get_right_margin(GtkPageSetup* setup, GtkUnit unit) gdouble? {
+        @return gtk_page_setup_get_right_margin(setup, unit)
+    }
+
+    @page_setup_set_right_margin(GtkPageSetup* setup, gdouble margin, GtkUnit unit) void {
+        @gtk_page_setup_set_right_margin(setup,margin, unit)
+    }
+
+    @page_setup_set_paper_size_and_default_margins(GtkPageSetup* setup, GtkPaperSize* size) void {
+        @gtk_page_setup_set_paper_size_and_default_margins(setup, size)
+    }
+
+    @page_setup_get_paper_width(GtkPageSetup* setup, GtkUnit unit) gdouble? {
+        @return gtk_page_setup_get_paper_width(setup, unit)
+    }
+
+    @page_setup_get_paper_height(GtkPageSetup* setup, GtkUnit unit) gdouble? {
+        @return gtk_page_setup_get_paper_height(setup, unit)
+    }
+
+    @page_setup_get_page_width(GtkPageSetup* setup, GtkUnit unit) gdouble? {
+        @return gtk_page_setup_get_page_width(setup, unit)
+    }
+
+    @page_setup_get_page_height(GtkPageSetup* setup, GtkUnit unit) gdouble? {
+        @return gtk_page_setup_get_page_height(setup, unit)
+    }
+
+    @page_setup_new_from_file(const gchar* file_name, GError** error) GtkPageSetup*? {
+        @return gtk_page_setup_new_from_file(file_name, error)
+    }
+
+    @page_setup_new_from_key_file(GKeyFile* key_file, const gchar* group_name, GError** error) GtkPageSetup*? {
+        @return gtk_page_setup_new_from_key_file(key_file,group_name, error)
+    }
+
+    @page_setup_new_from_gvariant(GVariant* variant) GtkPageSetup*? {
+        @return gtk_page_setup_new_from_gvariant(variant)
+    }
+
+    @page_setup_load_file(GtkPageSetup* setup, const char* file_name, GError** error) gboolean? {
+        @return gtk_page_setup_load_file(setup,file_name, error)
+    }
+
+    @page_setup_load_key_file(GtkPageSetup* setup, GKeyFile* key_file, const gchar* group_name, GError** error) gboolean? {
+        @return gtk_page_setup_load_key_file(setup,key_file,group_name, error)
+    }
+
+    @page_setup_to_file(GtkPageSetup* setup, const char* file_name, GError** error) gboolean? {
+        @return gtk_page_setup_to_file(setup,file_name, error)
+    }
+
+    @page_setup_to_key_file(GtkPageSetup* setup, GKeyFile* key_file, const gchar* group_name) void {
+        @gtk_page_setup_to_key_file(setup,key_file, group_name)
+    }
+
+    @page_setup_to_gvariant(GtkPageSetup* setup) GVariant*? {
+        @return gtk_page_setup_to_gvariant(setup)
+    }
+
+    // ---
+    // End of GtkPageSetup
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
