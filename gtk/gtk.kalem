@@ -8457,6 +8457,155 @@
     // ---
     // End of GtkScrollable
 
+    // GtkPrintOperation
+
+    @print_operation_new GtkPrintOperation*? {
+        @return gtk_print_operation_new()
+    }
+
+    @print_operation_set_allow_async(GtkPrintOperation* op, gboolean allow_async) void {
+        @gtk_print_operation_set_allow_async(op, allow_async)
+    }
+
+    @print_operation_get_error(GtkPrintOperation* op, GError** error) void {
+        @gtk_print_operation_get_error(op, error)
+    }
+
+    @print_operation_set_default_page_setup(GtkPrintOperation* op, GtkPageSetup* default_page_setup) void {
+        @gtk_print_operation_set_default_page_setup(op, default_page_setup)
+    }
+
+    @print_operation_get_default_page_setup(GtkPrintOperation* op) GtkPageSetup*? {
+        @return gtk_print_operation_get_default_page_setup(op)
+    }
+
+    @print_operation_set_print_settings(GtkPrintOperation* op, GtkPrintSettings* print_settings) void {
+        @gtk_print_operation_set_print_settings(op, print_settings)
+    }
+
+    @print_operation_get_print_settings(GtkPrintOperation* op) GtkPrintSettings*? {
+        @return gtk_print_operation_get_print_settings(op)
+    }
+
+    @print_operation_set_job_name(GtkPrintOperation* op, const gchar* job_name) void {
+        @gtk_print_operation_set_job_name(op, job_name)
+    }
+
+    @print_operation_set_n_pages(GtkPrintOperation* op, gint n_pages) void {
+        @gtk_print_operation_set_n_pages(op, n_pages)
+    }
+
+    @print_operation_get_n_pages_to_print(GtkPrintOperation* op) gint? {
+        @return gtk_print_operation_get_n_pages_to_print(op)
+    }
+
+    @print_operation_set_current_page(GtkPrintOperation* op, gint current_page) void {
+        @gtk_print_operation_set_current_page(op, current_page)
+    }
+
+    @print_operation_set_use_full_page(GtkPrintOperation* op, gboolean full_page) void {
+        @gtk_print_operation_set_use_full_page(op, full_page)
+    }
+
+    @print_operation_set_unit(GtkPrintOperation* op, GtkUnit unit) void {
+        @gtk_print_operation_set_unit(op, unit)
+    }
+
+    @print_operation_set_export_filename(GtkPrintOperation* op, const gchar* filename) void {
+        @gtk_print_operation_set_export_filename(op, filename)
+    }
+
+    @print_operation_set_show_progress(GtkPrintOperation* op, gboolean show_progress) void {
+        @gtk_print_operation_set_show_progress(op, show_progress)
+    }
+
+    @print_operation_set_track_print_status(GtkPrintOperation* op, gboolean track_status) void {
+        @gtk_print_operation_set_track_print_status(op, track_status)
+    }
+
+    @print_operation_set_custom_tab_label(GtkPrintOperation* op, const gchar* label) void {
+        @gtk_print_operation_set_custom_tab_label(op, label)
+    }
+
+    @print_operation_run(GtkPrintOperation* op, GtkPrintOperationAction action, GtkWindow* parent, GError** error) GtkPrintOperationResult? {
+        @return gtk_print_operation_run(op,action,parent, error)
+    }
+
+    @print_operation_cancel(GtkPrintOperation* op) void {
+        @gtk_print_operation_cancel(op)
+    }
+
+    @print_operation_draw_page_finish(GtkPrintOperation* op) void {
+        @gtk_print_operation_draw_page_finish(op)
+    }
+
+    @print_operation_set_defer_drawing(GtkPrintOperation* op) void {
+        @gtk_print_operation_set_defer_drawing(op)
+    }
+
+    @print_operation_get_status(GtkPrintOperation* op) GtkPrintStatus? {
+        @return gtk_print_operation_get_status(op)
+    }
+
+    #const gchar* print_operation_get_status_string(GtkPrintOperation* op) {
+        @return gtk_print_operation_get_status_string(op)
+    }
+
+    @print_operation_is_finished(GtkPrintOperation* op) gboolean? {
+        @return gtk_print_operation_is_finished(op)
+    }
+
+    @print_operation_set_support_selection(GtkPrintOperation* op, gboolean support_selection) void {
+        @gtk_print_operation_set_support_selection(op, support_selection)
+    }
+
+    @print_operation_get_support_selection(GtkPrintOperation* op) gboolean? {
+        @return gtk_print_operation_get_support_selection(op)
+    }
+
+    @print_operation_set_has_selection(GtkPrintOperation* op, gboolean has_selection) void {
+        @gtk_print_operation_set_has_selection(op, has_selection)
+    }
+
+    @print_operation_get_has_selection(GtkPrintOperation* op) gboolean? {
+        @return gtk_print_operation_get_has_selection(op)
+    }
+
+    @print_operation_set_embed_page_setup(GtkPrintOperation* op, gboolean embed) void {
+        @gtk_print_operation_set_embed_page_setup(op, embed)
+    }
+
+    @print_operation_get_embed_page_setup(GtkPrintOperation* op) gboolean? {
+        @return gtk_print_operation_get_embed_page_setup(op)
+    }
+
+    @print_run_page_setup_dialog(GtkWindow* parent, GtkPageSetup* page_setup, GtkPrintSettings* settings) GtkPageSetup*? {
+        @return gtk_print_run_page_setup_dialog(parent,page_setup, settings)
+    }
+
+    // Unimplemented: void
+    //(*GtkPageSetupDoneFunc) (GtkPageSetup* page_setup,
+    //                         gpointer data)
+
+    @print_run_page_setup_dialog_async(GtkWindow* parent, GtkPageSetup* page_setup, GtkPrintSettings* settings, GtkPageSetupDoneFunc done_cb, gpointer data) void {
+        @gtk_print_run_page_setup_dialog_async(parent,page_setup,settings,done_cb, data)
+    }
+
+    @print_operation_preview_end_preview(GtkPrintOperationPreview* preview) void {
+        @gtk_print_operation_preview_end_preview(preview)
+    }
+
+    @print_operation_preview_is_selected(GtkPrintOperationPreview* preview, gint page_nr) gboolean? {
+        @return gtk_print_operation_preview_is_selected(preview, page_nr)
+    }
+
+    @print_operation_preview_render_page(GtkPrintOperationPreview* preview, gint page_nr) void {
+        @gtk_print_operation_preview_render_page(preview, page_nr)
+    }
+
+    // ---
+    // End of GtkPrintOperation
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
