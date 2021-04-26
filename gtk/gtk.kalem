@@ -10000,6 +10000,21 @@
     // ---
     // End of GtkViewport
 
+    // GtkAccessible
+
+    // Deprecated: @accessible_connect_widget_destroyed(GtkAccessible* accessible)
+
+    @accessible_get_widget(GtkAccessible* accessible) GtkWidget*? {
+        @return gtk_accessible_get_widget(accessible)
+    }
+
+    @accessible_set_widget(GtkAccessible* accessible, GtkWidget* widget) void {
+        @gtk_accessible_set_widget(accessible, widget)
+    }
+
+    // ---
+    // End of GtkAccessible
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
