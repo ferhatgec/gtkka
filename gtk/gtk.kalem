@@ -9546,6 +9546,31 @@
 
         // ---
         // End of GtkPrintUnixDialog
+
+        // GtkPageSetupUnixDialog
+
+        @page_setup_unix_dialog_new(const gchar* title, GtkWindow* parent) GtkWidget*? {
+            @return gtk_page_setup_unix_dialog_new(title, parent)
+        }
+
+        @page_setup_unix_dialog_set_page_setup(GtkPageSetupUnixDialog* dialog, GtkPageSetup* page_setup) void {
+            @gtk_page_setup_unix_dialog_set_page_setup(dialog, page_setup)
+        }
+
+        @page_setup_unix_dialog_get_page_setup(GtkPageSetupUnixDialog* dialog) GtkPageSetup*? {
+            @return gtk_page_setup_unix_dialog_get_page_setup(dialog)
+        }
+
+        @page_setup_unix_dialog_set_print_settings(GtkPageSetupUnixDialog* dialog, GtkPrintSettings* print_settings) void {
+            @gtk_page_setup_unix_dialog_set_print_settings(dialog, print_settings)
+        }
+
+        @page_setup_unix_dialog_get_print_settings(GtkPageSetupUnixDialog* dialog) GtkPrintSettings*? {
+            @return gtk_page_setup_unix_dialog_get_print_settings(dialog)
+        }
+
+        // ---
+        // End of GtkPageSetupUnixDialog
     ##endif // defined(GTKKA_PRINT_DIALOG)
 
     // GtkWidget
