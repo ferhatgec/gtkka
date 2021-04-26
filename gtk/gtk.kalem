@@ -68,6 +68,15 @@
 
     PRINT_SETTINGS_WIN32_DRIVER_EXTRA "win32-driver-extra"
     PRINT_SETTINGS_WIN32_DRIVER_VERSION "win32-driver-version"
+
+    PAPER_NAME_A3 "iso_a3"
+    PAPER_NAME_A4 "iso_a4"
+    PAPER_NAME_A5 "iso_a5"
+    PAPER_NAME_B5 "iso_b5"
+
+    PAPER_NAME_LETTER "na_letter"
+    PAPER_NAME_EXECUTIVE "na_executive"
+    PAPER_NAME_LEGAL "na_legal"
 }
 
 @gtk namespace {
@@ -9115,6 +9124,111 @@
 
     // ---
     // End of GtkPageSetup
+
+    // GtkPaperSize
+
+    @paper_size_new(const gchar* name) GtkPaperSize*? {
+        @return gtk_paper_size_new(name)
+    }
+
+    @paper_size_new_from_ppd(const gchar* ppd_name, const gchar* ppd_display_name, gdouble width, gdouble height) GtkPaperSize*? {
+        @return gtk_paper_size_new_from_ppd(ppd_name,ppd_display_name,width, height)
+    }
+
+    @paper_size_new_from_ipp(const gchar* ipp_name, gdouble width, gdouble height) GtkPaperSize*? {
+        @return gtk_paper_size_new_from_ipp(ipp_name,width, height)
+    }
+
+    @paper_size_new_custom(const gchar* name, const gchar* display_name, gdouble width, gdouble height, GtkUnit unit) GtkPaperSize*? {
+        @return gtk_paper_size_new_custom(name,display_name,width,height, unit)
+    }
+
+    @paper_size_copy(GtkPaperSize* other) GtkPaperSize*? {
+        @return gtk_paper_size_copy(other)
+    }
+
+    @paper_size_free(GtkPaperSize* size) void {
+        @gtk_paper_size_free(size)
+    }
+
+    @paper_size_is_equal(GtkPaperSize* size1, GtkPaperSize* size2) gboolean? {
+        @return gtk_paper_size_is_equal(size1, size2)
+    }
+
+    @paper_size_get_paper_sizes(gboolean include_custom) GList*? {
+        @return gtk_paper_size_get_paper_sizes(include_custom)
+    }
+
+    #const gchar* paper_size_get_name(GtkPaperSize* size) {
+        @return gtk_paper_size_get_name(size)
+    }
+
+    #const gchar* paper_size_get_display_name(GtkPaperSize* size) {
+        @return gtk_paper_size_get_display_name(size)
+    }
+
+    #const gchar* paper_size_get_ppd_name(GtkPaperSize* size) {
+        @return gtk_paper_size_get_ppd_name(size)
+    }
+
+    @paper_size_get_width(GtkPaperSize* size, GtkUnit unit) gdouble? {
+        @return gtk_paper_size_get_width(size, unit)
+    }
+
+    @paper_size_get_height(GtkPaperSize* size, GtkUnit unit) gdouble? {
+        @return gtk_paper_size_get_height(size, unit)
+    }
+
+    @paper_size_is_ipp(GtkPaperSize* size) gboolean? {
+        @return gtk_paper_size_is_ipp(size)
+    }
+
+    @paper_size_is_custom(GtkPaperSize* size) gboolean? {
+        @return gtk_paper_size_is_custom(size)
+    }
+
+    @paper_size_set_size(GtkPaperSize* size, gdouble width, gdouble height, GtkUnit unit) void {
+        @gtk_paper_size_set_size(size,width,height, unit)
+    }
+
+    @paper_size_get_default_top_margin(GtkPaperSize* size, GtkUnit unit) gdouble? {
+        @return gtk_paper_size_get_default_top_margin(size, unit)
+    }
+
+    @paper_size_get_default_bottom_margin(GtkPaperSize* size, GtkUnit unit) gdouble? {
+        @return gtk_paper_size_get_default_bottom_margin(size, unit)
+    }
+
+    @paper_size_get_default_left_margin(GtkPaperSize* size, GtkUnit unit) gdouble? {
+        @return gtk_paper_size_get_default_left_margin(size, unit)
+    }
+
+    @paper_size_get_default_right_margin(GtkPaperSize* size, GtkUnit unit) gdouble? {
+        @return gtk_paper_size_get_default_right_margin(size, unit)
+    }
+
+    #const gchar* paper_size_get_default() {
+        @return gtk_paper_size_get_default()
+    }
+
+    @paper_size_new_from_key_file(GKeyFile* key_file, const gchar* group_name, GError** error) GtkPaperSize*? {
+        @return gtk_paper_size_new_from_key_file(key_file,group_name, error)    
+    }
+
+    @paper_size_new_from_gvariant(GVariant* variant) GtkPaperSize*? {
+        @return gtk_paper_size_new_from_gvariant(variant)
+    }
+
+    @paper_size_to_key_file(GtkPaperSize* size, GKeyFile* key_file, const gchar* group_name) void {
+        @gtk_paper_size_to_key_file(size,key_file, group_name)
+    }
+
+    @paper_size_to_gvariant(GtkPaperSize* paper_size) GVariant*? {
+        @return gtk_paper_size_to_gvariant(paper_size)
+    }
+
+    // ---
+    // End of GtkPaperSize
 
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
