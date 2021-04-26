@@ -9573,6 +9573,79 @@
         // End of GtkPageSetupUnixDialog
     ##endif // defined(GTKKA_PRINT_DIALOG)
 
+    // GtkAdjustment
+
+    @adjustment_new(gdouble value, gdouble lower, gdouble upper, gdouble step_increment, gdouble page_increment, gdouble page_size) GtkAdjustment*? {
+        @return gtk_adjustment_new(value,lower,upper,step_increment,page_increment, page_size)
+    }
+
+    @adjustment_get_value(GtkAdjustment* adjustment) gdouble? {
+        @return gtk_adjustment_get_value(adjustment)
+    }
+
+    @adjustment_set_value(GtkAdjustment* adjustment, gdouble value) void {
+        @gtk_adjustment_set_value(adjustment, value)
+    }
+
+    @adjustment_clamp_page(GtkAdjustment* adjustment, gdouble lower, gdouble upper) void {
+        @gtk_adjustment_clamp_page(adjustment,lower, upper)
+    }
+
+    // Deprecated: @adjustment_changed(GtkAdjustment* adjustment)
+
+    // Deprecated: @adjustment_value_changed(GtkAdjustment* adjustment)
+
+    @adjustment_configure(GtkAdjustment* adjustment, gdouble value, gdouble lower, gdouble upper, gdouble step_increment, gdouble page_increment, gdouble page_size) void {
+        @gtk_adjustment_configure(adjustment,value,lower,upper,step_increment,page_increment, page_size)
+    }
+
+    @adjustment_get_lower(GtkAdjustment* adjustment) gdouble? {
+        @return gtk_adjustment_get_lower(adjustment)
+    }
+
+    @adjustment_get_page_increment(GtkAdjustment* adjustment) gdouble? {
+        @return gtk_adjustment_get_page_increment(adjustment)
+    }
+
+    @adjustment_get_page_size(GtkAdjustment* adjustment) gdouble? {
+        @return gtk_adjustment_get_page_size(adjustment)
+    }
+
+    @adjustment_get_step_increment(GtkAdjustment* adjustment) gdouble? {
+        @return gtk_adjustment_get_step_increment(adjustment)
+    }
+
+    @adjustment_get_minimum_increment(GtkAdjustment* adjustment) gdouble? {
+        @return gtk_adjustment_get_minimum_increment(adjustment)
+    }
+
+    @adjustment_get_upper(GtkAdjustment* adjustment) gdouble? {
+        @return gtk_adjustment_get_upper(adjustment)
+    }
+
+    @adjustment_set_lower(GtkAdjustment* adjustment, gdouble lower) void {
+        @gtk_adjustment_set_lower(adjustment, lower)
+    }
+
+    @adjustment_set_page_increment(GtkAdjustment* adjustment, gdouble page_increment) void {
+        @gtk_adjustment_set_page_increment(adjustment, page_increment)
+    }
+
+    @adjustment_set_page_size(GtkAdjustment* adjustment, gdouble page_size) void {
+        @gtk_adjustment_set_page_size(adjustment, page_size)
+    }
+
+    @adjustment_set_step_increment(GtkAdjustment* adjustment, gdouble step_increment) void {
+        @gtk_adjustment_set_step_increment(adjustment, step_increment)
+    }
+
+    @adjustment_set_upper(GtkAdjustment* adjustment, gdouble upper) void {
+        @gtk_adjustment_set_upper(adjustment, upper)
+    }
+
+    // ---
+    // End of GtkAdjustment 
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
