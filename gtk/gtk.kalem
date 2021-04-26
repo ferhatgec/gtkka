@@ -9870,6 +9870,26 @@
     // ---
     // End of GtkIMContextSimple
 
+    // GtkIMMulticontext
+
+    @im_multicontext_new GtkIMContext*? {
+        @return gtk_im_multicontext_new()
+    }
+
+    // Deprecated: @im_multicontext_append_menuitems(GtkIMMulticontext* context,
+    //                                  GtkMenuShell* menushell)
+
+    #const char* im_multicontext_get_context_id(GtkIMMulticontext* context) {
+        @return gtk_im_multicontext_get_context_id(context)
+    }
+
+    @im_multicontext_set_context_id(GtkIMMulticontext* context, const char* context_id) void {
+        @gtk_im_multicontext_set_context_id(context, context_id)
+    }
+
+    // ---
+    // End of GtkIMMulticontext
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
