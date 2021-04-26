@@ -9833,6 +9833,30 @@
     // ---
     // End of GtkEventBox
 
+    // GtkHandleBox
+
+    // Deprecated: @handle_box_new
+
+    // Deprecated: @handle_box_set_shadow_type(GtkHandleBox* handle_box,
+    //                            GtkShadowType type)
+
+    // Deprecated: @handle_box_set_handle_position(GtkHandleBox* handle_box,
+    //                                GtkPositionType position)
+
+    // Deprecated: @handle_box_set_snap_edge(GtkHandleBox* handle_box,
+    //                          GtkPositionType edge)
+
+    // Deprecated: @handle_box_get_handle_position(GtkHandleBox* handle_box)
+
+    // Deprecated: @handle_box_get_shadow_type(GtkHandleBox* handle_box)
+
+    // Deprecated: @handle_box_get_snap_edge(GtkHandleBox* handle_box)
+
+    // Deprecated: @handle_box_get_child_detached(GtkHandleBox* handle_box)
+
+    // ---
+    // End of GtkHandleBox
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
