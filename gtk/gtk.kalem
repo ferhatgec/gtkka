@@ -9857,6 +9857,19 @@
     // ---
     // End of GtkHandleBox
 
+    // GtkIMContextSimple
+
+    @im_context_simple_new GtkIMContext*? {
+        @return gtk_im_context_simple_new()
+    }
+
+    @im_context_simple_add_table(GtkIMContextSimple* context_simple, guint16* data, gint max_seq_len, gint n_seqs) void {
+        @gtk_im_context_simple_add_table(context_simple,data,max_seq_len, n_seqs)
+    }
+
+    // ---
+    // End of GtkIMContextSimple
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
