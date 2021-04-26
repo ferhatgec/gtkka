@@ -9230,6 +9230,109 @@
     // ---
     // End of GtkPaperSize
 
+    ##if defined(GTKKA_PRINTER_ENABLED)
+        // GtkPrinter
+
+        @printer_new(const gchar* name, GtkPrintBackend* backend, gboolean virtual_) GtkPrinter*? {
+            @return gtk_printer_new(name,backend, virtual_)
+        }
+
+        @printer_get_backend(GtkPrinter* printer) GtkPrintBackend*? {
+            @return gtk_printer_get_backend(printer)
+        }
+
+        #const gchar* printer_get_name(GtkPrinter* printer) {
+            @return gtk_printer_get_name(printer)
+        }
+
+        #const gchar* printer_get_state_message(GtkPrinter* printer) {
+            @return gtk_printer_get_state_message(printer)
+        }
+
+        #const gchar* printer_get_description(GtkPrinter* printer) {
+            @return gtk_printer_get_description(printer)
+        }
+
+        #const gchar* printer_get_location(GtkPrinter* printer) {
+            @return gtk_printer_get_location(printer)
+        }
+
+        #const gchar* printer_get_icon_name(GtkPrinter* printer) {
+            @return gtk_printer_get_icon_name(printer)
+        }
+
+        @printer_get_job_count(GtkPrinter* printer) gint? {
+            @return gtk_printer_get_job_count(printer)
+        }
+
+        @printer_is_active(GtkPrinter* printer) gboolean? {
+            @return gtk_printer_is_active(printer)
+        }
+
+        @printer_is_paused(GtkPrinter* printer) gboolean? {
+            @return gtk_printer_is_paused(printer)
+        }
+
+        @printer_is_accepting_jobs(GtkPrinter* printer) gboolean? {
+            @return gtk_printer_is_accepting_jobs(printer)
+        }
+
+        @printer_is_virtual(GtkPrinter* printer) gboolean? {
+            @return gtk_printer_is_virtual(printer)
+        }
+
+        @printer_is_default(GtkPrinter* printer) gboolean? {
+            @return gtk_printer_is_default(printer)
+        }
+
+        @printer_accepts_ps(GtkPrinter* printer) gboolean? {
+            @return gtk_printer_accepts_ps(printer)
+        }
+
+        @printer_accepts_pdf(GtkPrinter* printer) gboolean? {
+            @return gtk_printer_accepts_pdf(printer)
+        }
+
+        @printer_list_papers(GtkPrinter* printer) GList*? {
+            @return gtk_printer_list_papers(printer)
+        }
+
+        @printer_compare(GtkPrinter* a, GtkPrinter* b) gint? {
+            @return gtk_printer_compare(a, b)
+        }
+
+        @printer_has_details(GtkPrinter* printer) gboolean? {
+            @return gtk_printer_has_details(printer)
+        }
+
+        @printer_request_details(GtkPrinter* printer) void {
+            @gtk_printer_request_details(printer)
+        }
+
+        @printer_get_capabilities(GtkPrinter* printer) GtkPrintCapabilities? {
+            @return gtk_printer_get_capabilities(printer)
+        }
+
+        @printer_get_default_page_size(GtkPrinter* printer) GtkPageSetup*? {
+            @return gtk_printer_get_default_page_size(printer)
+        }
+
+        @printer_get_hard_margins(GtkPrinter* printer, gdouble* top, gdouble* bottom, gdouble* left, gdouble* right) gboolean? {
+            @return gtk_printer_get_hard_margins(printer,top,bottom,left, right)
+        }
+
+        // Unimplemented: gboolean
+        // (*GtkPrinterFunc) (GtkPrinter *printer,
+        //                    gpointer data);
+
+        @enumerate_printers(GtkPrinterFunc func, gpointer data, GDestroyNotify destroy, gboolean wait) void {
+            @gtk_enumerate_printers(func,data,destroy, wait)
+        }
+
+        // ---
+        // End of GtkPrinter 
+    ##endif // defined(GTKKA_PRINTER_ENABLED)
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
