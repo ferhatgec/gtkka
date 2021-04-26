@@ -9726,6 +9726,87 @@
 
     // ---
     // End of GtkDrawingArea
+    
+    // GtkGLArea
+
+    @gl_area_new GtkWidget*? {
+        @return gtk_gl_area_new()
+    }
+
+    @gl_area_get_context(GtkGLArea* area) GdkGLContext*? {
+        @return gtk_gl_area_get_context(area)
+    }
+
+    @gl_area_make_current(GtkGLArea* area) void {
+        @gtk_gl_area_make_current(area)
+    }
+
+    @gl_area_queue_render(GtkGLArea* area) void {
+        @gtk_gl_area_queue_render(area)
+    }
+
+    @gl_area_attach_buffers(GtkGLArea* area) void {
+        @gtk_gl_area_attach_buffers(area)
+    }
+
+    @gl_area_set_error(GtkGLArea* area, const GError* error) void {
+        @gtk_gl_area_set_error(area, error)
+    }
+
+    @gl_area_get_error(GtkGLArea* area) GError*? {
+        @return gtk_gl_area_get_error(area)
+    }
+
+    @gl_area_set_has_alpha(GtkGLArea* area, gboolean has_alpha) void {
+        @gtk_gl_area_set_has_alpha(area, has_alpha)
+    }
+
+    @gl_area_get_has_alpha(GtkGLArea* area) gboolean? {
+        @return gtk_gl_area_get_has_alpha(area)
+    }
+
+    @gl_area_set_has_depth_buffer(GtkGLArea* area, gboolean has_depth_buffer) void {
+        @gtk_gl_area_set_has_depth_buffer(area, has_depth_buffer)
+    }
+
+    @gl_area_get_has_depth_buffer(GtkGLArea* area) gboolean? {
+        @return gtk_gl_area_get_has_depth_buffer(area)
+    }
+
+    @gl_area_set_has_stencil_buffer(GtkGLArea* area, gboolean has_stencil_buffer) void {
+        @gtk_gl_area_set_has_stencil_buffer(area, has_stencil_buffer)
+    }
+
+    @gl_area_get_has_stencil_buffer(GtkGLArea* area) gboolean? {
+        @return gtk_gl_area_get_has_stencil_buffer(area)
+    }
+
+    @gl_area_set_auto_render(GtkGLArea* area, gboolean auto_render) void {
+        @gtk_gl_area_set_auto_render(area, auto_render)
+    }
+
+    @gl_area_get_auto_render(GtkGLArea* area) gboolean? {
+        @return gtk_gl_area_get_auto_render(area)
+    }
+
+    @gl_area_get_required_version(GtkGLArea* area, gint* major, gint* minor) void {
+        @gtk_gl_area_get_required_version(area,major, minor)
+    }
+
+    @gl_area_set_required_version(GtkGLArea* area, gint major, gint minor) void {
+        @gtk_gl_area_set_required_version(area,major, minor)
+    }
+
+    @gl_area_set_use_es(GtkGLArea* area, gboolean use_es) void {
+        @gtk_gl_area_set_use_es(area, use_es)
+    }
+
+    @gl_area_get_use_es(GtkGLArea* area) gboolean? {
+        @return gtk_gl_area_get_use_es(area)
+    }
+
+    // ---
+    // End of GtkGLArea
 
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
