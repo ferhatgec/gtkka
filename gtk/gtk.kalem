@@ -9718,6 +9718,15 @@
     // ---
     // End of GtkCalendar
 
+    // GtkDrawingArea
+
+    @drawing_area_new GtkWidget*? {
+        @return gtk_drawing_area_new()
+    }
+
+    // ---
+    // End of GtkDrawingArea
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
