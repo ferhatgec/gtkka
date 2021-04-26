@@ -9808,6 +9808,31 @@
     // ---
     // End of GtkGLArea
 
+    // GtkEventBox
+
+    @event_box_new GtkWidget*? {
+        @return gtk_event_box_new()
+    }
+
+    @event_box_set_above_child(GtkEventBox* event_box, gboolean above_child) void {
+        @gtk_event_box_set_above_child(event_box, above_child)
+    }
+
+    @event_box_get_above_child(GtkEventBox* event_box) gboolean? {
+        @return gtk_event_box_get_above_child(event_box)
+    }
+
+    @event_box_set_visible_window(GtkEventBox* event_box, gboolean visible_window) void {
+        @gtk_event_box_set_visible_window(event_box, visible_window)
+    }
+
+    @event_box_get_visible_window(GtkEventBox* event_box) gboolean? {
+        @return gtk_event_box_get_visible_window(event_box)
+    }
+
+    // ---
+    // End of GtkEventBox
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
