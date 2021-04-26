@@ -9965,6 +9965,41 @@
     // ---
     // End of GtkTooltip
 
+    // GtkViewport
+
+    @viewport_new(GtkAdjustment* hadjustment, GtkAdjustment* vadjustment) GtkWidget*? {
+        @return gtk_viewport_new(hadjustment, vadjustment)
+    }
+
+    // Deprecated: @viewport_get_hadjustment(GtkViewport* viewport)
+
+    // Deprecated: @viewport_get_vadjustment(GtkViewport* viewport)
+
+    // Deprecated: @viewport_set_hadjustment(GtkViewport* viewport,
+    //                          GtkAdjustment* adjustment)
+
+    // Deprecated: @viewport_set_vadjustment(GtkViewport* viewport,
+    //                          GtkAdjustment* adjustment)
+
+    @viewport_set_shadow_type(GtkViewport* viewport, GtkShadowType type) void {
+        @gtk_viewport_set_shadow_type(viewport, type)
+    }
+
+    @viewport_get_shadow_type(GtkViewport* viewport) GtkShadowType? {
+        @return gtk_viewport_get_shadow_type(viewport)
+    }
+
+    @viewport_get_bin_window(GtkViewport* viewport) GdkWindow*? {
+        @return gtk_viewport_get_bin_window(viewport)
+    }
+
+    @viewport_get_view_window(GtkViewport* viewport) GdkWindow*? {
+        @return gtk_viewport_get_view_window(viewport)
+    }
+
+    // ---
+    // End of GtkViewport
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
