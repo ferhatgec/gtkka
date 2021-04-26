@@ -9333,6 +9333,142 @@
         // End of GtkPrinter 
     ##endif // defined(GTKKA_PRINTER_ENABLED)
 
+    ##if defined(GTKKA_PRINT_JOB_ENABLED)
+        // GtkPrintJob
+
+        // Unimplemented: void
+        // (*GtkPrintJobCompleteFunc) (GtkPrintJob *print_job,
+        //                        gpointer user_data,
+        //                        const GError *error);
+
+        @print_job_new(const gchar* title, GtkPrinter* printer, GtkPrintSettings* settings, GtkPageSetup* page_setup) GtkPrintJob*? {
+            @return gtk_print_job_new(title,printer,settings, page_setup)
+        }
+
+        @print_job_get_settings(GtkPrintJob* job) GtkPrintSettings*? {
+            @return gtk_print_job_get_settings(job)
+        }
+
+        @print_job_get_printer(GtkPrintJob* job) GtkPrint*? {
+            @return gtk_print_job_get_printer(job)
+        }
+
+        #const gchar* print_job_get_title(GtkPrintJob* job) {
+            @return gtk_print_job_get_title(job)
+        }
+
+        @print_job_get_status(GtkPrintJob* job) GtkPrintStatus? {
+            @return gtk_print_job_get_status(job)
+        }
+
+        @print_job_set_source_fd(GtkPrintJob* job, int fd, GError** error) gboolean? {
+            @return gtk_print_job_set_source_fd(job,fd, error)
+        }
+
+        @print_job_set_source_file(GtkPrintJob* job, const gchar* filename, GError** error) gboolean? {
+            @return gtk_print_job_set_source_file(job,filename, error)
+        }
+
+        @print_job_get_surface(GtkPrintJob* job, GError** error) cairo_surface_t*? {
+            @return gtk_print_job_get_surface(job, error)
+        }
+
+        @print_job_send(GtkPrintJob* job, GtkPrintJobCompleteFunc callback, gpointer user_data, GDestroyNotify dnotify) void {
+            @gtk_print_job_send(job,callback,user_data, dnotify)
+        }
+
+        @print_job_set_track_print_status(GtkPrintJob* job, gboolean track_status) void {
+            @gtk_print_job_set_track_print_status(job, track_status)
+        }
+
+        @print_job_get_track_print_status(GtkPrintJob* job) gboolean? {
+            @return gtk_print_job_get_track_print_status(job)
+        }
+
+        @print_job_get_pages(GtkPrintJob* job) GtkPrintPages? {
+            @return gtk_print_job_get_pages(job)
+        }
+
+        @print_job_set_pages(GtkPrintJob* job, GtkPrintPages pages) void {
+            @gtk_print_job_set_pages(job, pages)
+        }
+
+        @print_job_get_page_ranges(GtkPrintJob* job, gint* n_ranges) GtkPageRange*? {
+            @return gtk_print_job_get_page_ranges(job, n_ranges)
+        }
+
+        @print_job_set_page_ranges(GtkPrintJob* job, GtkPageRange* ranges, gint n_ranges) void {
+            @gtk_print_job_set_page_ranges(job,ranges, n_ranges)
+        }
+
+        @print_job_get_page_set(GtkPrintJob* job) GtkPageSet? {
+            @return gtk_print_job_get_page_set(job)
+        }
+
+        @print_job_set_page_set(GtkPrintJob* job, GtkPageSet page_set) void {
+            @gtk_print_job_set_page_set(job, page_set)
+        }
+
+        @print_job_get_num_copies(GtkPrintJob* job) gint? {
+            @return gtk_print_job_get_num_copies(job)
+        }
+
+        @print_job_set_num_copies(GtkPrintJob* job, gint num_copies) void {
+            @gtk_print_job_set_num_copies(job, num_copies)
+        }
+
+        @print_job_get_scale(GtkPrintJob* job) gdouble? {
+            @return gtk_print_job_get_scale(job)
+        }
+
+        @print_job_set_scale(GtkPrintJob* job, gdouble scale) void {
+            @gtk_print_job_set_scale(job, scale)
+        }
+
+        @print_job_get_n_up(GtkPrintJob* job) guint? {
+            @return gtk_print_job_get_n_up(job)
+        }
+
+        @print_job_set_n_up(GtkPrintJob* job, guint n_up) void {
+            @gtk_print_job_set_n_up(job, n_up)
+        }
+
+        @print_job_get_n_up_layout(GtkPrintJob* job) GtkNumberUpLayout? {
+            @return gtk_print_job_get_n_up_layout(job)
+        }
+
+        @print_job_set_n_up_layout(GtkPrintJob* job, GtkNumberUpLayout layout) void {
+            @gtk_print_job_set_n_up_layout(job, layout)
+        }
+
+        @print_job_get_rotate(GtkPrintJob* job) gboolean? {
+            @return gtk_print_job_get_rotate(job)
+        }
+
+        @print_job_set_rotate(GtkPrintJob* job, gboolean rotate) void {
+            @gtk_print_job_set_rotate(job, rotate)
+        }
+
+        @print_job_get_collate(GtkPrintJob* job) gboolean? {
+            @return gtk_print_job_get_collate(job)
+        }
+
+        @print_job_set_collate(GtkPrintJob* job, gboolean collate) void {
+            @gtk_print_job_set_collate(job, collate)
+        }
+
+        @print_job_get_reverse(GtkPrintJob* job) gboolean? {
+            @return gtk_print_job_get_reverse(job)
+        }
+
+        @print_job_set_reverse(GtkPrintJob* job, gboolean reverse) void {
+            @gtk_print_job_set_reverse(job, reverse)
+        }
+
+        // ---
+        // End of GtkPrintJob 
+    ##endif // defined(GTKKA_PRINT_JOB_ENABLED)
+
     // GtkWidget
     @widget_show_all(GtkWidget* widget) void {
         @gtk_widget_show_all(widget)
