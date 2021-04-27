@@ -11360,4 +11360,53 @@
 
     // ---
     // End of GtkRange
+
+    // GtkIMContext
+
+    @im_context_set_client_window(GtkIMContext* context, GdkWindow* window) void {
+        @gtk_im_context_set_client_window(context, window)
+    }
+
+    @im_context_get_preedit_string(GtkIMContext* context, gchar** str, PangoAttrList** attrs, gint* cursor_pos) void {
+        @gtk_im_context_get_preedit_string(context,str,attrs, cursor_pos)
+    }
+
+    @im_context_filter_keypress(GtkIMContext* context, GdkEventKey* event) gboolean? {
+        @return gtk_im_context_filter_keypress(context, event)
+    }
+
+    @im_context_focus_in(GtkIMContext* context) void {
+        @gtk_im_context_focus_in(context)
+    }
+
+    @im_context_focus_out(GtkIMContext* context) void {
+        @gtk_im_context_focus_out(context)
+    }
+
+    @im_context_reset(GtkIMContext* context) void {
+        @gtk_im_context_reset(context)
+    }
+
+    @im_context_set_cursor_location(GtkIMContext* context, const GdkRectangle* area) void {
+        @gtk_im_context_set_cursor_location(context, area)
+    }
+
+    @im_context_set_use_preedit(GtkIMContext* context, gboolean use_preedit) void {
+        @gtk_im_context_set_use_preedit(context, use_preedit)
+    }
+
+    @im_context_set_surrounding(GtkIMContext* context, const gchar* text, gint len, gint cursor_index) void {
+        @gtk_im_context_set_surrounding(context,text,len, cursor_index)
+    }
+
+    @im_context_get_surrounding(GtkIMContext* context, gchar** text, gint* cursor_index) gboolean? {
+        @return gtk_im_context_get_surrounding(context,text, cursor_index)
+    }
+
+    @im_context_delete_surrounding(GtkIMContext* context, gint offset, gint n_chars) gboolean? {
+        @return gtk_im_context_delete_surrounding(context,offset, n_chars)
+    }
+
+    // ---
+    // End of GtkIMContext
 }
