@@ -11832,4 +11832,17 @@
 
     // ---
     // End of GtkRecentChooserMenu
+
+    // GtkRecentChooserWidget
+
+    @recent_chooser_widget_new GtkWidget*? {
+        @return gtk_recent_chooser_widget_new()
+    }
+
+    @recent_chooser_widget_new_for_manager(GtkRecentManager* manager) GtkWidget*? {
+        @return gtk_recent_chooser_widget_new_for_manager(manager)
+    }
+
+    // ---
+    // End of GtkRecentChooserWidget
 }
