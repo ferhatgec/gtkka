@@ -11493,4 +11493,28 @@
         // ---
         // End of GtkPlug
     ##endif // defined(GTKKA_PLUG_ENABLED)
+
+
+    ##if defined(GTKKA_SOCKET_ENABLED)
+        // GtkSocket
+
+        @socket_new GtkWidget*? {
+            @return gtk_socket_new()
+        }
+
+        @socket_add_id(GtkSocket* socket_, Window window) void {
+            @gtk_socket_add_id(socked_, window)
+        }
+
+        @socket_get_id(GtkSocket* socket_) Window? {
+            @return gtk_socket_get_id(socket_)
+        }
+
+        @socket_get_plug_window(GtkSocket* socket_) GdkWindow*? {
+            @return gtk_socket_get_plug_window(socket_)
+        }
+
+        // ---
+        // End of GtkSocket
+    ##endif // defined(GTKKA_SOCKET_ENABLED)
 }
