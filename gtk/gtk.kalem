@@ -11964,4 +11964,29 @@
 
     // ---
     // End of GtkAppChooserButton
+
+    // GtkAppChooserDialog
+
+    @app_chooser_dialog_new(GtkWindow* parent, GtkDialogFlags flags, GFile* file) GtkWidget*? {
+        @return gtk_app_chooser_dialog_new(parent,flags, file)
+    }
+
+    @app_chooser_dialog_new_for_content_type(GtkWindow* parent, GtkDialogFlags flags, const gchar* content_type) GtkWidget*? {
+        @return gtk_app_chooser_dialog_new_for_content_type(parent,flags, content_type)
+    }
+
+    @app_chooser_dialog_get_widget(GtkAppChooserDialog* self) GtkWidget*? {
+        @return gtk_app_chooser_dialog_get_widget(self)
+    }
+
+    @app_chooser_dialog_set_heading(GtkAppChooserDialog* self, const gchar* heading) void {
+        @gtk_app_chooser_dialog_set_heading(self, heading)
+    }
+
+    #const gchar* app_chooser_dialog_get_heading(GtkAppChooserDialog* self) {
+        @return gtk_app_chooser_dialog_get_heading(self)
+    }
+
+    // ---
+    // End of GtkAppChooserDialog
 }
