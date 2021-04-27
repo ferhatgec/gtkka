@@ -11458,4 +11458,39 @@
 
     // ---
     // End of GtkNativeDialog
+
+    ##if defined(GTKKA_PLUG_ENABLED)
+        // GtkPlug
+
+        @plug_construct(GtkPlug* plug, Window socket_id) void {
+            @gtk_plug_construct(plug, socked_id)
+        }
+
+        @plug_construct_for_display(GtkPlug* plug, GdkDisplay* display, Window socket_id) void {
+            @gtk_plug_construct_for_display(plug,display, socket_id)
+        }
+
+        @plug_new(Window socket_id) GtkWidget*? {
+            @return gtk_plug_new(socked_id)
+        }
+
+        @plug_new_for_display(GdkDisplay* display, Window socket_id) GtkWidget*? {
+            @return gtk_plug_new_for_display(display, socket_id)
+        }
+
+        @plug_get_id(GtkPlug* plug) Window? {
+            @return gtk_plug_get_id(plug)
+        }
+
+        @plug_get_embedded(GtkPlug* plug) gboolean? {
+            @return gtk_plug_get_embedded(plug)
+        }
+
+        @plug_get_socket_window(GtkPlug* plug) GdkWindow*? {
+            @return gtk_plug_get_socket_window(plug)
+        }
+
+        // ---
+        // End of GtkPlug
+    ##endif // defined(GTKKA_PLUG_ENABLED)
 }
