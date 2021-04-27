@@ -11246,4 +11246,118 @@
 
     // ---
     // End of GtkMenuShell
+
+    // GtkRange
+
+    @range_get_fill_level(GtkRange* range) gdouble? {
+        @return gtk_range_get_fill_level(range)
+    }
+
+    @range_get_restrict_to_fill_level(GtkRange* range) gboolean? {
+        @return gtk_range_get_restrict_to_fill_level(range)
+    }
+
+    @range_get_show_fill_level(GtkRange* range) gboolean? {
+        @return gtk_range_get_show_fill_level(range)
+    }
+
+    @range_set_fill_level(GtkRange* range, gdouble fill_level) void {
+        @gtk_range_set_fill_level(range, fill_level)
+    }
+
+    @range_set_restrict_to_fill_level(GtkRange* range, gboolean restrict_to_fill_level) void {
+        @gtk_range_set_restrict_to_fill_level(range, restrict_to_fill_level)
+    }
+
+    @range_set_show_fill_level(GtkRange* range, gboolean show_fill_level) void {
+        @gtk_range_set_show_fill_level(range, show_fill_level)
+    }
+
+    @range_get_adjustment(GtkRange* range) GtkAdjustment*? {
+        @return gtk_range_get_adjustment(range)
+    }
+
+    @range_set_adjustment(GtkRange* range, GtkAdjustment* adjustment) void {
+        @gtk_range_set_adjustment(range, adjustment)
+    }
+
+    @range_get_inverted(GtkRange* range) gboolean? {
+        @return gtk_range_get_inverted(range)
+    }
+
+    @range_set_inverted(GtkRange* range, gboolean setting) void {
+        @gtk_range_set_inverted(range, setting)
+    }
+
+    @range_get_value(GtkRange* range) gdouble? {
+        @return gtk_range_get_value(range)
+    }
+
+    @range_set_value(GtkRange* range, gdouble value) void {
+        @gtk_range_set_value(range, value)
+    }
+
+    @range_set_increments(GtkRange* range, gdouble step, gdouble page) void {
+        @gtk_range_set_increments(range,step, page)
+    }
+
+    @range_set_range(GtkRange* range, gdouble min, gdouble max) void {
+        @gtk_range_set_range(range,min, max)
+    }
+
+    @range_get_round_digits(GtkRange* range) gint? {
+        @return gtk_range_get_round_digits(range)
+    }
+
+    @range_set_round_digits(GtkRange* range, gint round_digits) void {
+        @gtk_range_set_round_digits(range, round_digits)
+    }
+
+    @range_set_lower_stepper_sensitivity(GtkRange* range, GtkSensitivityType sensitivity) void {
+        @gtk_range_set_lower_stepper_sensitivity(range, sensitivity)
+    }
+
+    @range_get_lower_stepper_sensitivity(GtkRange* range) GtkSensitivityType? {
+        @return gtk_range_get_lower_stepper_sensitivity(range)
+    }
+
+    @range_set_upper_stepper_sensitivity(GtkRange* range, GtkSensitivityType sensitivity) void {
+        @gtk_range_set_upper_stepper_sensitivity(range, sensitivity)
+    }
+
+    @range_get_upper_stepper_sensitivity(GtkRange* range) GtkSensitivityType? {
+        @return gtk_range_get_upper_stepper_sensitivity(range)
+    }
+
+    @range_get_flippable(GtkRange* range) gboolean? {
+        @return gtk_range_get_flippable(range)
+    }
+
+    @range_set_flippable(GtkRange* range, gboolean flippable) void {
+        @gtk_range_set_flippable(range, flippable)
+    }
+
+    // Deprecated: @range_get_min_slider_size(GtkRange* range)
+
+    @range_get_range_rect(GtkRange* range, GdkRectangle* range_rect) void {
+        @gtk_range_get_range_rect(range, range_rect)
+    }
+
+    @range_get_slider_range(GtkRange* range, gint* slider_start, gint* slider_end) void {
+        @gtk_range_get_slider_range(range,slider_start, slider_end)
+    }
+
+    @range_get_slider_size_fixed(GtkRange* range) gboolean? {
+        @return gtk_range_get_slider_size_fixed(range)
+    }
+
+    // Deprecated: @range_set_min_slider_size(GtkRange* range,
+    //                           gint min_size)
+
+    @range_set_slider_size_fixed(GtkRange* range, gboolean size_fixed) void {
+        @gtk_range_set_slider_size_fixed(range, size_fixed)
+    }
+
+    // ---
+    // End of GtkRange
 }
