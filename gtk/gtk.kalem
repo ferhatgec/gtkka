@@ -11185,4 +11185,65 @@
 
     // ---
     // End of GtkBin
+
+    // GtkMenuShell
+
+    @menu_shell_append(GtkMenuShell* menu_shell, GtkWidget* child) void {
+        @gtk_menu_shell_append(menu_shell, child)
+    }
+
+    @menu_shell_prepend(GtkMenuShell* menu_shell, GtkWidget* child) void {
+        @gtk_menu_shell_prepend(menu_shell, child)
+    }
+
+    @menu_shell_insert(GtkMenuShell* menu_shell, GtkWidget* child, gint position) void {
+        @gtk_menu_shell_insert(menu_shell,child, position)
+    }
+
+    @menu_shell_deactivate(GtkMenuShell* menu_shell) void {
+        @gtk_menu_shell_deactivate(menu_shell)
+    }
+
+    @menu_shell_select_item(GtkMenuShell* menu_shell, GtkWidget* menu_item) void {
+        @gtk_menu_shell_select_item(menu_shell, menu_item)
+    }
+
+    @menu_shell_select_first(GtkMenuShell* menu_shell, gboolean search_sensitive) void {
+        @gtk_menu_shell_select_first(menu_shell, search_sensitive)
+    }
+
+    @menu_shell_deselect(GtkMenuShell* menu_shell) void {
+        @gtk_menu_shell_deselect(menu_shell)
+    }
+
+    @menu_shell_activate_item(GtkMenuShell* menu_shell, GtkWidget* menu_item, gboolean force_deactivate) void {
+        @gtk_menu_shell_activate_item(menu_shell,menu_item, force_deactivate)
+    }
+
+    @menu_shell_cancel(GtkMenuShell* menu_shell) void {
+        @gtk_menu_shell_cancel(menu_shell)
+    }
+
+    @menu_shell_set_take_focus(GtkMenuShell* menu_shell, gboolean take_focus) void {
+        @gtk_menu_shell_set_take_focus(menu_shell, take_focus)
+    }
+
+    @menu_shell_get_take_focus(GtkMenuShell* menu_shell) gboolean? {
+        @return gtk_menu_shell_get_take_focus(menu_shell)
+    }
+
+    @menu_shell_get_selected_item(GtkMenuShell* menu_shell) GtkWidget*? {
+        @return gtk_menu_shell_get_selected_item(menu_shell)
+    }
+
+    @menu_shell_get_parent_shell(GtkMenuShell* menu_shell) GtkWidget*? {
+        @return gtk_menu_shell_get_parent_shell(menu_shell)
+    }
+
+    @menu_shell_bind_model(GtkMenuShell* menu_shell, GMenuModel* model, const gchar* action_namespace, gboolean with_separators) void {
+        @gtk_menu_shell_bind_model(menu_shell,model,action_namespace, with_separators)
+    }
+
+    // ---
+    // End of GtkMenuShell
 }
