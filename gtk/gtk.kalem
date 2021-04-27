@@ -11662,4 +11662,138 @@
 
     // ---
     // End of GtkRecentManager
+
+    // GtkRecentChooser
+
+    @recent_chooser_set_show_private(GtkRecentChooser* chooser, gboolean show_private) void {
+        @gtk_recent_chooser_set_show_private(chooser, show_private)
+    }
+
+    @recent_chooser_get_show_private(GtkRecentChooser* chooser) gboolean? {
+        @return gtk_recent_chooser_get_show_private(chooser)
+    }
+
+    @recent_chooser_set_show_not_found(GtkRecentChooser* chooser, gboolean show_not_found) void {
+        @gtk_recent_chooser_set_show_not_found(chooser, show_not_found)
+    }
+
+    @recent_chooser_get_show_not_found(GtkRecentChooser* chooser) gboolean? {
+        @return gtk_recent_chooser_get_show_not_found(chooser)
+    }
+
+    @recent_chooser_set_show_icons(GtkRecentChooser* chooser, gboolean show_icons) void {
+        @gtk_recent_chooser_set_show_icons(chooser, show_icons)
+    }
+
+    @recent_chooser_get_show_icons(GtkRecentChooser* chooser) gboolean? {
+        @return gtk_recent_chooser_get_show_icons(chooser)
+    }
+
+    @recent_chooser_set_select_multiple(GtkRecentChooser* chooser, gboolean select_multiple) void {
+        @gtk_recent_chooser_set_select_multiple(chooser, select_multiple)
+    }
+
+    @recent_chooser_get_select_multiple(GtkRecentChooser* chooser) gboolean? {
+        @return gtk_recent_chooser_get_select_multiple(chooser)
+    }
+
+    @recent_chooser_set_local_only(GtkRecentChooser* chooser, gboolean local_only) void {
+        @gtk_recent_chooser_set_local_only(chooser, local_only)
+    }
+
+    @recent_chooser_get_local_only(GtkRecentChooser* chooser) gboolean? {
+        @return gtk_recent_chooser_get_local_only(chooser)
+    }
+
+    @recent_chooser_set_limit(GtkRecentChooser* chooser, gint limit) void {
+        @gtk_recent_chooser_set_limit(chooser, limit)
+    }
+
+    @recent_chooser_get_limit(GtkRecentChooser* chooser) gint? {
+        @return gtk_recent_chooser_get_limit(chooser)
+    }
+
+    @recent_chooser_set_show_tips(GtkRecentChooser* chooser, gboolean show_tips) void {
+        @gtk_recent_chooser_set_show_tips(chooser, show_tips)
+    }
+
+    @recent_chooser_get_show_tips(GtkRecentChooser* chooser) gboolean? {
+        @return gtk_recent_chooser_get_show_tips(chooser)
+    }
+
+    @recent_chooser_set_sort_type(GtkRecentChooser* chooser, GtkRecentSortType sort_type) void {
+        @gtk_recent_chooser_set_sort_type(chooser, sort_type)
+    }
+
+    @recent_chooser_get_sort_type(GtkRecentChooser* chooser) GtkRecentSortType? {
+        @return gtk_recent_chooser_get_sort_type(chooser)
+    }
+
+    // Unimplemented: gint
+    // (*GtkRecentSortFunc) (GtkRecentInfo *a,
+    //                  GtkRecentInfo *b,
+    //                  gpointer user_data);
+
+    @recent_chooser_set_sort_func(GtkRecentChooser* chooser, GtkRecentSortFunc sort_func, gpointer sort_data, GDestroyNotify data_destroy) void {
+        @gtk_recent_chooser_set_sort_func(chooser,sort_func,sort_data, data_destroy)
+    }
+
+    @recent_chooser_set_current_uri(GtkRecentChooser* chooser, const gchar* uri, GError** error) gboolean? {
+        @return gtk_recent_chooser_set_current_uri(chooser,uri, error)
+    }
+
+    @recent_chooser_get_current_uri(GtkRecentChooser* chooser) gchar*? {
+        @return gtk_recent_chooser_get_current_uri(chooser)
+    }
+
+    @recent_chooser_get_current_item(GtkRecentChooser* chooser) GtkRecentInfo*? {
+        @return gtk_recent_chooser_get_current_item(chooser)
+    }
+
+    @recent_chooser_select_uri(GtkRecentChooser* chooser, const gchar* uri, GError** error) gboolean? {
+        @return gtk_recent_chooser_select_uri(chooser,uri, error)
+    }
+
+    @recent_chooser_unselect_uri(GtkRecentChooser* chooser, const gchar* uri) void {
+        @gtk_recent_chooser_unselect_uri(chooser, uri)
+    }
+
+    @recent_chooser_select_all(GtkRecentChooser* chooser) void {
+        @gtk_recent_chooser_select_all(chooser)
+    }
+
+    @recent_chooser_unselect_all(GtkRecentChooser* chooser) void {
+        @gtk_recent_chooser_unselect_all(chooser)
+    }
+
+    @recent_chooser_get_items(GtkRecentChooser* chooser) GList*? {
+        @return gtk_recent_chooser_get_items(chooser)
+    }
+
+    @recent_chooser_get_uris(GtkRecentChooser* chooser, gsize* length) gchar**? {
+        @return gtk_recent_chooser_get_uris(chooser, length)
+    }
+
+    @recent_chooser_add_filter(GtkRecentChooser* chooser, GtkRecentFilter* filter) void {
+        @gtk_recent_chooser_add_filter(chooser, filter)
+    }
+
+    @recent_chooser_remove_filter(GtkRecentChooser* chooser, GtkRecentFilter* filter) void {
+        @gtk_recent_chooser_remove_filter(chooser, filter)
+    }
+
+    @recent_chooser_list_filters(GtkRecentChooser* chooser) GSList*? {
+        @return gtk_recent_chooser_list_filters(chooser)
+    }
+
+    @recent_chooser_set_filter(GtkRecentChooser* chooser, GtkRecentFilter* filter) void {
+        @gtk_recent_chooser_set_filter(chooser, filter)
+    }
+
+    @recent_chooser_get_filter(GtkRecentChooser* chooser) GtkRecentFilter*? {
+        @return gtk_recent_chooser_get_filter(chooser)
+    }
+
+    // ---
+    // End of GtkRecentChooser
 }
