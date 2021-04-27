@@ -11409,4 +11409,53 @@
 
     // ---
     // End of GtkIMContext
+
+    // GtkNativeDialog
+
+    @native_dialog_show(GtkNativeDialog* self) void {
+        @gtk_native_dialog_show(self)
+    }
+
+    @native_dialog_hide(GtkNativeDialog* self) void {
+        @gtk_native_dialog_hide(self)
+    }
+
+    @native_dialog_destroy(GtkNativeDialog* self) void {
+        @gtk_native_dialog_destroy(self)
+    }
+
+    @native_dialog_get_visible(GtkNativeDialog* self) gboolean? {
+        @return gtk_native_dialog_get_visible(self)
+    }
+
+    @native_dialog_set_modal(GtkNativeDialog* self, gboolean modal) void {
+        @gtk_native_dialog_set_modal(self, modal)
+    }
+
+    @native_dialog_get_modal(GtkNativeDialog* self) gboolean? {
+        @return gtk_native_dialog_get_modal(self)
+    }
+
+    @native_dialog_set_title(GtkNativeDialog* self, const char* title) void {
+        @gtk_native_dialog_set_title(self, title)
+    }
+
+    #const gchar* native_dialog_get_title(GtkNativeDialog* self) {
+        @return gtk_native_dialog_get_title(self)
+    }
+
+    @native_dialog_set_transient_for(GtkNativeDialog* self, GtkWindow* parent) void {
+        @gtk_native_dialog_set_transient_for(self, parent)
+    }
+
+    @native_dialog_get_transient_for(GtkNativeDialog* self) GtkWindow*? {
+        @return gtk_native_dialog_get_transient_for(self)
+    }
+
+    @native_dialog_run(GtkNativeDialog* self) gint? {
+        @return gtk_native_dialog_run(self)
+    }
+
+    // ---
+    // End of GtkNativeDialog
 }
