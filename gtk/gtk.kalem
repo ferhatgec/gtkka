@@ -11796,4 +11796,19 @@
 
     // ---
     // End of GtkRecentChooser
+
+    // GtkRecentChooserDialog
+    
+    #template <typename... ID>
+    @recent_chooser_dialog_new(const gchar* title, GtkWindow* parent, const gchar* first_button_text, ID... response_id) GtkWidget*? {
+        @return (gtk_recent_chooser_dialog_new(title,parent,first_button_text,response_id), ...)
+    }
+
+    #template <typename... ID>
+    @recent_chooser_dialog_new_for_manager(const gchar* title, GtkWindow* parent, GtkRecentManager* manager, const gchar* first_button_text, ID... response_id) GtkWidget*? {
+        @return (gtk_recent_chooser_dialog_new_for_manager(title,parent,manager,first_button_text,response_id), ...)
+    }
+
+    // ---
+    // End of GtkRecentChooserDialog
 }
