@@ -11919,4 +11919,49 @@
 
     // ---
     // End of GtkAppChooser
+
+    // GtkAppChooserButton
+
+    @app_chooser_button_new(const gchar* content_type) GtkWidget*? {
+        @return gtk_app_chooser_button_new(content_type)
+    }
+
+    @app_chooser_button_append_custom_item(GtkAppChooserButton* self, const gchar* name, const gchar* label, GIcon* icon) void {
+        @gtk_app_chooser_button_append_custom_item(self,name,label, icon)
+    }
+
+    @app_chooser_button_append_separator(GtkAppChooserButton* self) void {
+        @gtk_app_chooser_button_append_separator(self)
+    }
+
+    @app_chooser_button_set_active_custom_item(GtkAppChooserButton* self, const gchar* name) void {
+        @gtk_app_chooser_button_set_active_custom_item(self, name)
+    }
+
+    @app_chooser_button_get_show_default_item(GtkAppChooserButton* self) gboolean? {
+        @return gtk_app_chooser_button_get_show_default_item(self)
+    }
+
+    @app_chooser_button_set_show_default_item(GtkAppChooserButton* self, gboolean setting) void {
+        @gtk_app_chooser_button_set_show_default_item(self, setting)
+    }
+
+    @app_chooser_button_get_show_dialog_item(GtkAppChooserButton* self) gboolean? {
+        @return gtk_app_chooser_button_get_show_dialog_item(self)
+    }
+
+    @app_chooser_button_set_show_dialog_item(GtkAppChooserButton* self, gboolean setting) void {
+        @gtk_app_chooser_button_set_show_dialog_item(self, setting)
+    }
+
+    #const gchar* app_chooser_button_get_heading(GtkAppChooserButton* self) {
+        @return gtk_app_chooser_button_get_heading(self)
+    }
+
+    @app_chooser_button_set_heading(GtkAppChooserButton* self, const gchar* heading) void {
+        @gtk_app_chooser_button_set_heading(self, heading)
+    }
+
+    // ---
+    // End of GtkAppChooserButton
 }
