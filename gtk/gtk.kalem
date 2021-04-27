@@ -11845,4 +11845,61 @@
 
     // ---
     // End of GtkRecentChooserWidget
+
+    // GtkRecentFilter
+
+    // Unimplemented: gboolean
+    // (*GtkRecentFilterFunc) (const GtkRecentFilterInfo *filter_info,
+    //                   gpointer user_data);
+
+    @recent_filter_new GtkRecentFilter*? {
+        @return gtk_recent_filter_new()
+    }
+
+    #const gchar* recent_filter_get_name(GtkRecentFilter* filter) {
+        @return gtk_recent_filter_get_name(filter)
+    }
+
+    @recent_filter_set_name(GtkRecentFilter* filter, const gchar* name) void {
+        @gtk_recent_filter_set_name(filter, name)
+    }
+
+    @recent_filter_add_mime_type(GtkRecentFilter* filter, const gchar* mime_type) void {
+        @gtk_recent_filter_add_mime_type(filter, mime_type)
+    }
+
+    @recent_filter_add_pattern(GtkRecentFilter* filter, const gchar* pattern) void {
+        @gtk_recent_filter_add_pattern(filter, pattern)
+    }
+
+    @recent_filter_add_pixbuf_formats(GtkRecentFilter* filter) void {
+        @gtk_recent_filter_add_pixbuf_formats(filter)
+    }
+
+    @recent_filter_add_application(GtkRecentFilter* filter, const gchar* application) void {
+        @gtk_recent_filter_add_application(filter, application)
+    }
+
+    @recent_filter_add_group(GtkRecentFilter* filter, const gchar* group) void {
+        @gtk_recent_filter_add_group(filter, group)
+    }
+
+    @recent_filter_add_age(GtkRecentFilter* filter, gint days) void {
+        @gtk_recent_filter_add_age(filter, days)
+    }
+
+    @recent_filter_add_custom(GtkRecentFilter* filter, GtkRecentFilterFlags needed, GtkRecentFilterFunc func, gpointer data, GDestroyNotify data_destroy) void {
+        @gtk_recent_filter_add_custom(filter,needed,func,data, data_destroy)
+    }
+
+    @recent_filter_get_needed(GtkRecentFilter* filter) GtkRecentFilterFlags? {
+        @return gtk_recent_filter_get_needed(filter)
+    }
+
+    @recent_filter_filter(GtkRecentFilter* filter, const GtkRecentFilterInfo* filter_info) gboolean? {
+        @return gtk_recent_filter_filter(filter, filter_info)
+    }
+
+    // ---
+    // End of GtkRecentFilter
 }
