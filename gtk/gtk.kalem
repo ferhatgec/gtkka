@@ -84,6 +84,9 @@
     widget_class_bind_template_child_internal_private(widget_class,TypeName,member_name) gtk_widget_class_bind_template_child_internal_private(widget_class,TypeName,member_name)
     
     widget_class_bind_template_callback(widget_class,callback) gtk_widget_class_bind_template_callback(widget_class,callback)
+
+    IS_RESIZE_CONTAINER(widget) GTK_IS_RESIZE_CONTAINER(widget)
+    CONTAINER_WARN_INVALID_CHILD_PROPERTY_ID(object,property_id,pspec) GTK_CONTAINER_WARN_INVALID_CHILD_PROPERTY_ID(object,property_id,pspec)
 }
 
 @gtk namespace {
@@ -11023,4 +11026,154 @@
 
     // ---
     // End of GtkWidget
+
+    // GtkContainer
+
+    @container_add(GtkContainer* container, GtkWidget* widget) void {
+        @gtk_container_add(container, widget)
+    }
+
+    @container_remove(GtkContainer* container, GtkWidget* widget) void {
+        @gtk_container_remove(container, widget)
+    }
+
+    #template <typename... Property>
+    @container_add_with_properties(GtkContainer* container, GtkWidget* widget, const gchar* first_prop_name, Property... values) void {
+        (gtk_container_add_with_properties(container,widget,first_prop_name,value), ...)
+    }
+
+    // Deprecated: @container_get_resize_mode(GtkContainer* container)
+
+    // Deprecated: @container_set_resize_mode(GtkContainer* container,
+    //                           GtkResizeMode resize_mode)
+
+    @container_check_resize(GtkContainer* container) void {
+        @gtk_container_check_resize(container)
+    }
+
+    @container_foreach(GtkContainer* container, GtkCallback callback, gpointer callback_data) void {
+        @gtk_container_foreach(container,callback, callback_data)
+    }
+
+    @container_get_children(GtkContainer* container) GList*? {
+        @return gtk_container_get_children(container)
+    }
+
+    @container_get_path_for_child(GtkContainer* container, GtkWidget* child) GtkWidgetPath*? {
+        @return gtk_container_get_path_for_child(container, child)
+    }
+
+    // Deprecated: @container_set_reallocate_redraws(GtkContainer* container,
+    //                                  gboolean needs_redraws)
+
+    @container_get_focus_child(GtkContainer* container) GtkWidget*? {
+        @return gtk_container_get_focus_child(container)
+    }
+
+    @container_set_focus_child(GtkContainer* container, GtkWidget* child) void {
+        @gtk_container_set_focus_child(container, child)
+    }
+
+    @container_get_focus_vadjustment(GtkContainer* container) GtkAdjustment*? {
+        @return gtk_container_get_focus_vadjustment(container)
+    }
+
+    @container_set_focus_vadjustment(GtkContainer* container, GtkAdjustment* adjustment) void {
+        @gtk_container_set_focus_vadjustment(container, adjustment)
+    }
+
+    @container_get_focus_hadjustment(GtkContainer* container) GtkAdjustment*? {
+        @return gtk_container_get_focus_hadjustment(container)
+    }
+
+    @container_set_focus_hadjustment(GtkContainer* container, GtkAdjustment* adjustment) void {
+        @gtk_container_set_focus_hadjustment(container, adjustment)
+    }
+
+    // Deprecated: @container_resize_children(GtkContainer* container)
+
+    @container_child_type(GtkContainer* container) GType? {
+        @return gtk_container_child_type(container)
+    }
+
+    #template <typename... Location>
+    @container_child_get(GtkContainer* container, GtkWidget* child, const gchar* first_prop_name, Location... property) void {
+        @(gtk_container_child_get(container,child,first_prop_name,property), ...)
+    }
+
+    #template <typename... Property>
+    @container_child_set(GtkContainer* container, GtkWidget* child, const gchar* first_prop_name, Property... list) void {
+        @(gtk_container_child_set(container,child,first_prop_name,list), ...)
+    }
+
+    @container_child_get_property(GtkContainer* container, GtkWidget* child, const gchar* property_name, GValue* value) void {
+        @gtk_container_child_get_property(container,child,property_name, value)
+    }
+
+    @container_child_set_property(GtkContainer* container, GtkWidget* child, const gchar* property_name, const GValue* value) void {
+        @gtk_container_child_set_property(container,child,property_name, value)
+    }
+
+    @container_child_get_valist(GtkContainer* container, GtkWidget* child, const gchar* first_property_name, va_list var_args) void {
+        @gtk_container_child_get_valist(container,child,first_property_name, var_args)
+    }
+
+    @container_child_set_valist(GtkContainer* container, GtkWidget* child, const gchar* first_property_name, va_list var_args) void {
+        @gtk_container_child_set_valist(container,child,first_property_name, var_args)
+    }
+
+    @container_child_notify(GtkContainer* container, GtkWidget* child, const gchar* child_property) void {
+        @gtk_container_child_notify(container,child, child_property)
+    }
+
+    @container_child_notify_by_pspec(GtkContainer* container, GtkWidget* child, GParamSpec* pspec) void {
+        @gtk_container_child_notify_by_pspec(container,child, pspec)
+    }
+
+    @container_forall(GtkContainer* container, GtkCallback callback, gpointer callback_data) void {
+        @gtk_container_forall(container,callback, callback_data)
+    }
+
+    @container_get_border_width(GtkContainer* container) guint? {
+        @return gtk_container_get_border_width(container)
+    }
+
+    @container_set_border_width(GtkContainer* container, guint border_width) void {
+        @gtk_container_set_border_width(container, border_width)
+    }
+
+    @container_propagate_draw(GtkContainer* container, GtkWidget* child, cairo_t* cr) void {
+        @gtk_container_propagate_draw(container,child, cr)
+    }
+
+    // Deprecated: @container_get_focus_chain(GtkContainer* container,
+    //                           GList** focusable_widgets)
+
+    // Deprecated: @container_set_focus_chain(GtkContainer* container,
+    //                           GList* focusable_widgets)
+
+    // Deprecated: @container_unset_focus_chain(GtkContainer* container)
+
+    @container_class_find_child_property(GObjectClass* cclass, const gchar* property_name) GParamSpec*? {
+        @return gtk_container_class_find_child_property(cclass, property_name)
+    }
+
+    @container_class_install_child_property(GtkContainerClass* cclass, guint property_id, GParamSpec* pspec) void {
+        @gtk_container_class_install_child_property(cclass,property_id, pspec)
+    }
+
+    @container_class_install_child_properties(GtkContainerClass* cclass, guint n_pspecs, GParamSpec** pspecs) void {
+        @gtk_container_class_install_child_properties(cclass,n_pspecs, pspecs)
+    }
+
+    @container_class_list_child_properties(GObjectClass* cclass, guint* n_properties) GParamSpec**? {
+        @return gtk_container_class_list_child_properties(cclass, n_properties)
+    }
+
+    @container_class_handle_border_width(GtkContainerClass* klass) void {
+        @gtk_container_class_handle_border_width(klass)
+    }
+
+    // ---
+    // End of GtkContainer
 }
