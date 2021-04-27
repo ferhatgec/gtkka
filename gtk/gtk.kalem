@@ -11517,4 +11517,149 @@
         // ---
         // End of GtkSocket
     ##endif // defined(GTKKA_SOCKET_ENABLED)
+
+    // GtkRecentManager
+
+    @recent_manager_new GtkRecentManager*? {
+        @return gtk_recent_manager_new()
+    }
+
+    @recent_manager_get_default GtkRecentManager*? {
+        @return gtk_recent_manager_get_default()
+    }
+
+    @recent_manager_add_item(GtkRecentManager* manager, const gchar* uri) gboolean? {
+        @return gtk_recent_manager_add_item(manager, uri)
+    }
+
+    @recent_manager_add_full(GtkRecentManager* manager, const gchar* uri, const GtkRecentData* recent_data) gboolean? {
+        @return gtk_recent_manager_add_full(manager,uri, recent_data)
+    }
+
+    @recent_manager_remove_item(GtkRecentManager* manager, const gchar* uri, GError** error) gboolean? {
+        @return gtk_recent_manager_remove_item(manager,uri, error)
+    }
+
+    @recent_manager_lookup_item(GtkRecentManager* manager, const gchar* uri, GError** error) GtkRecentInfo*? {
+        @return gtk_recent_manager_lookup_item(manager,uri, error)
+    }
+
+    @recent_manager_has_item(GtkRecentManager* manager, const gchar* uri) gboolean? {
+        @return gtk_recent_manager_has_item(manager, uri)
+    }
+
+    @recent_manager_move_item(GtkRecentManager* manager, const gchar* uri, const gchar* new_uri, GError** error) gboolean? {
+        @return gtk_recent_manager_move_item(manager,uri,new_uri, error)
+    }
+
+    @recent_manager_get_items(GtkRecentManager* manager) GList*? {
+        @return gtk_recent_manager_get_items(manager)
+    }
+
+    @recent_manager_purge_items(GtkRecentManager* manager, GError** error) gint? {
+        @return gtk_recent_manager_purge_items(manager, error)
+    }
+
+    @recent_info_ref(GtkRecentInfo* info) GtkRecentInfo*? {
+        @return gtk_recent_info_ref(info)
+    }
+
+    @recent_info_unref(GtkRecentInfo* info) void {
+        @gtk_recent_info_unref(info)
+    }
+
+    #const gchar* recent_info_get_uri(GtkRecentInfo* info) {
+        @return gtk_recent_info_get_uri(info)
+    }
+
+    #const gchar* recent_info_get_display_name(GtkRecentInfo* info) {
+        @return gtk_recent_info_get_display_name(info)
+    }
+
+    #const gchar* recent_info_get_description(GtkRecentInfo* info) {
+        @return gtk_recent_info_get_description(info)
+    }
+
+    #const gchar* recent_info_get_mime_type(GtkRecentInfo* info) {
+        @return gtk_recent_info_get_mime_type(info)
+    }
+
+    @recent_info_get_added(GtkRecentInfo* info) time_t? {
+        @return gtk_recent_info_get_added(info)
+    }
+
+    @recent_info_get_modified(GtkRecentInfo* info) time_t? {
+        @return gtk_recent_info_get_modified(info)
+    }
+
+    @recent_info_get_visited(GtkRecentInfo* info) time_t? {
+        @return gtk_recent_info_get_visited(info)
+    }
+
+    @recent_info_get_private_hint(GtkRecentInfo* info) gboolean? {
+        @return gtk_recent_info_get_private_hint(info)
+    }
+
+    @recent_info_get_application_info(GtkRecentInfo* info, const gchar* app_name, const gchar** app_exec, guint* count, time_t* time_) gboolean? {
+        @return gtk_recent_info_get_application_info(info,app_name,app_exec,count, time_)
+    }
+
+    @recent_info_get_applications(GtkRecentInfo* info, gsize* length) gchar**? {
+        @return gtk_recent_info_get_applications(info, length)
+    }
+
+    @recent_info_last_application(GtkRecentInfo* info) gchar*? {
+        @return gtk_recent_info_last_application(info)
+    }
+
+    @recent_info_has_application(GtkRecentInfo* info, const gchar* app_name) gboolean? {
+        @return gtk_recent_info_has_application(info, app_name)
+    }
+
+    @recent_info_create_app_info(GtkRecentInfo* info, const gchar* app_name, GError** error) GAppInfo*? {
+        @return gtk_recent_info_create_app_info(info,app_name, error)
+    }
+
+    @recent_info_get_groups(GtkRecentInfo* info, gsize* length) gchar**? {
+        @return gtk_recent_info_get_groups(info, length)
+    }
+
+    @recent_info_has_group(GtkRecentInfo* info, const gchar* group_name) gboolean? {
+        @return gtk_recent_info_has_group(info, group_name)
+    }
+
+    @recent_info_get_icon(GtkRecentInfo* info, gint size) GdkPixbuf*? {
+        @return gtk_recent_info_get_icon(info, size)
+    }
+
+    @recent_info_get_gicon(GtkRecentInfo* info) GIcon*? {
+        @return gtk_recent_info_get_gicon(info)
+    }
+
+    @recent_info_get_short_name(GtkRecentInfo* info) gchar*? {
+        @return gtk_recent_info_get_short_name(info)
+    }
+
+    @recent_info_get_uri_display(GtkRecentInfo* info) gchar*? {
+        @return gtk_recent_info_get_uri_display(info)
+    }
+
+    @recent_info_get_age(GtkRecentInfo* info) gint? {
+        @return gtk_recent_info_get_age(info)
+    }
+
+    @recent_info_is_local(GtkRecentInfo* info) gboolean? {
+        @return gtk_recent_info_is_local(info)
+    }
+
+    @recent_info_exists(GtkRecentInfo* info) gboolean? {
+        @return gtk_recent_info_exists(info)
+    }
+
+    @recent_info_match(GtkRecentInfo* info_a, GtkRecentInfo* info_b) gboolean? {
+        @return gtk_recent_info_match(info_a, info_b)
+    }
+
+    // ---
+    // End of GtkRecentManager
 }
