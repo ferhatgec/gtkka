@@ -11989,4 +11989,61 @@
 
     // ---
     // End of GtkAppChooserDialog
+
+    // GtkAppChooserWidget
+
+    @app_chooser_widget_new(const gchar* content_type) GtkWidget*? {
+        @return gtk_app_chooser_widget_new(content_type)
+    }
+
+    @app_chooser_widget_set_show_default(GtkAppChooserWidget* self, gboolean setting) void {
+        @gtk_app_chooser_widget_set_show_default(self, setting)
+    }
+
+    @app_chooser_widget_get_show_default(GtkAppChooserWidget* self) gboolean? {
+        @return gtk_app_chooser_widget_get_show_default(self)
+    }
+
+    @app_chooser_widget_set_show_recommended(GtkAppChooserWidget* self, gboolean setting) void {
+        @gtk_app_chooser_widget_set_show_recommended(self, setting)
+    }
+
+    @app_chooser_widget_get_show_recommended(GtkAppChooserWidget* self) gboolean? {
+        @return gtk_app_chooser_widget_get_show_recommended(self)
+    }
+
+    @app_chooser_widget_set_show_fallback(GtkAppChooserWidget* self, gboolean setting) void {
+        @gtk_app_chooser_widget_set_show_fallback(self, setting)
+    }
+
+    @app_chooser_widget_get_show_fallback(GtkAppChooserWidget* self) gboolean? {
+        @return gtk_app_chooser_widget_get_show_fallback(self)
+    }
+
+    @app_chooser_widget_set_show_other(GtkAppChooserWidget* self, gboolean setting) void {
+        @gtk_app_chooser_widget_set_show_other(self, setting)
+    }
+
+    @app_chooser_widget_get_show_other(GtkAppChooserWidget* self) gboolean? {
+        @return gtk_app_chooser_widget_get_show_other(self)
+    }
+
+    @app_chooser_widget_set_show_all(GtkAppChooserWidget* self, gboolean setting) void {
+        @gtk_app_chooser_widget_set_show_all(self, setting)
+    }
+
+    @app_chooser_widget_get_show_all(GtkAppChooserWidget* self) gboolean? {
+        @return gtk_app_chooser_widget_get_show_all(self)
+    }
+
+    @app_chooser_widget_set_default_text(GtkAppChooserWidget* self, const gchar* text) void {
+        @gtk_app_chooser_widget_set_default_text(self, text)
+    }
+
+    #const gchar* app_chooser_widget_get_default_text(GtkAppChooserWidget* self) {
+        @return gtk_app_chooser_widget_get_default_text(self)
+    }
+
+    // ---
+    // End of GtkAppChooserWidget
 }
