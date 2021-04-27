@@ -11176,4 +11176,13 @@
 
     // ---
     // End of GtkContainer
+
+    // GtkBin
+    
+    @bin_get_child(GtkBin* bin) GtkWidget*? {
+        @return gtk_bin_get_child(bin)
+    }
+
+    // ---
+    // End of GtkBin
 }
