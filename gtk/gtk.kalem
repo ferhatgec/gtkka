@@ -4507,6 +4507,328 @@
     // ---
     // End of GtkTextMark
 
+    // GtkTextBuffer
+
+    @text_buffer_new(GtkTextTagTable* table) GtkTextBuffer*? {
+        @return gtk_text_buffer_new(table)
+    }
+
+    @text_buffer_get_line_count(GtkTextBuffer* buffer) gint? {
+        @return gtk_text_buffer_get_line_count(buffer)
+    }
+
+    @text_buffer_get_char_count(GtkTextBuffer* buffer) gint? {
+        @return gtk_text_buffer_get_char_count(buffer)
+    }
+
+    @text_buffer_get_tag_table(GtkTextBuffer* buffer) GtkTextTagTable*? {
+        @return gtk_text_buffer_get_tag_table(buffer)
+    }
+
+    @text_buffer_insert(GtkTextBuffer* buffer, GtkTextIter* iter, const gchar* text, gint len) void {
+        @gtk_text_buffer_insert(buffer,iter,text, len)
+    }
+
+    @text_buffer_insert_at_cursor(GtkTextBuffer* buffer, const gchar* text, gint len) void {
+        @gtk_text_buffer_insert_at_cursor(buffer,text, len)
+    }
+
+    @text_buffer_insert_interactive(GtkTextBuffer* buffer, GtkTextIter* iter, const gchar* text, gint len, gboolean default_editable) gboolean? {
+        @return gtk_text_buffer_insert_interactive(buffer,iter,text,len, default_editable)
+    }
+
+    @text_buffer_insert_interactive_at_cursor(GtkTextBuffer* buffer, const gchar* text, gint len, gboolean default_editable) gboolean? {
+        @return gtk_text_buffer_insert_interactive_at_cursor(buffer,text,len, default_editable)
+    }
+
+    @text_buffer_insert_range(GtkTextBuffer* buffer, GtkTextIter* iter, const GtkTextIter* start, const GtkTextIter* end) void {
+        @gtk_text_buffer_insert_range(buffer,iter,start, end)
+    }
+
+    @text_buffer_insert_range_interactive(GtkTextBuffer* buffer, GtkTextIter* iter, const GtkTextIter* start, const GtkTextIter* end, gboolean default_editable) gboolean? {
+        @return gtk_text_buffer_insert_range_interactive(buffer,iter,start,end, default_editable)
+    }
+
+    #template <typename... Tags>
+    @text_buffer_insert_with_tags(GtkTextBuffer* buffer, GtkTextIter* iter, const gchar* text, gint len, GtkTextTag* first_tag, Tags... list) void {
+        @(gtk_text_buffer_insert_with_tags(buffer,iter,text,len,first_tag,list), ...)
+    }
+
+    #template <typename... Tags>
+    @text_buffer_insert_with_tags_by_name(GtkTextBuffer* buffer, GtkTextIter *iter, const gchar* text, gint len, const gchar* first_tag_name, Tags... names) void {
+        @(gtk_text_buffer_insert_with_tags_by_name(buffer,iter,text,len,first_tag_name,names), ...)
+    }
+
+    @text_buffer_insert_markup(GtkTextBuffer* buffer, GtkTextIter* iter, const gchar* markup, gint len) void {
+        @gtk_text_buffer_insert_markup(buffer,iter,markup, len)
+    }
+
+    @text_buffer_delete(GtkTextBuffer* buffer, GtkTextIter* start, GtkTextIter* end) void {
+        @gtk_text_buffer_delete(buffer,start, end)
+    }
+
+    @text_buffer_delete_interactive(GtkTextBuffer* buffer, GtkTextIter* start_iter, GtkTextIter* end_iter, gboolean default_editable) gboolean? {
+        @return gtk_text_buffer_delete_interactive(buffer,start_iter,end_iter, default_editable)
+    }
+
+    @text_buffer_backspace(GtkTextBuffer* buffer, GtkTextIter* iter, gboolean interactive, gboolean default_editable) gboolean? {
+        @return gtk_text_buffer_backspace(buffer,iter,interactive, default_editable)
+    }
+
+    @text_buffer_set_text(GtkTextBuffer* buffer, const gchar* text, gint len) void {
+        @gtk_text_buffer_set_text(buffer,text, len)
+    }
+
+    @text_buffer_get_text(GtkTextBuffer* buffer, const GtkTextIter* start, const GtkTextIter* end, gboolean include_hidden_chars) gchar*? {
+        @return gtk_text_buffer_get_text(buffer,start,end, include_hidden_chars)
+    }
+
+    @text_buffer_get_slice(GtkTextBuffer* buffer, const GtkTextIter* start, const GtkTextIter* end, gboolean include_hidden_chars) gchar*? {
+        @return gtk_text_buffer_get_slice(buffer,start,end, include_hidden_chars)
+    }
+
+    @text_buffer_insert_pixbuf(GtkTextBuffer* buffer, GtkTextIter* iter, GdkPixbuf* pixbuf) void {
+        @gtk_text_buffer_insert_pixbuf(buffer,iter, pixbuf)
+    }
+
+    @text_buffer_insert_child_anchor(GtkTextBuffer* buffer, GtkTextIter* iter, GtkTextChildAnchor* anchor) void {
+        @gtk_text_buffer_insert_child_anchor(buffer,iter, anchor)
+    }
+
+    @text_buffer_create_child_anchor(GtkTextBuffer* buffer, GtkTextIter* iter) GtkTextChildAnchor*? {
+        @return gtk_text_buffer_create_child_anchor(buffer, iter)
+    }
+
+    @text_buffer_create_mark(GtkTextBuffer* buffer, const gchar* mark_name, const GtkTextIter* where, gboolean left_gravity) GtkTextMark*? {
+        @return gtk_text_buffer_create_mark(buffer,mark_name,where, left_gravity)
+    }
+
+    @text_buffer_move_mark(GtkTextBuffer* buffer, GtkTextMark* mark, const GtkTextIter* where) void {
+        @gtk_text_buffer_move_mark(buffer,mark, where)
+    }
+
+    @text_buffer_move_mark_by_name(GtkTextBuffer* buffer, const gchar* name, const GtkTextIter* where) void {
+        @gtk_text_buffer_move_mark_by_name(buffer,name, where)
+    }
+
+    @text_buffer_add_mark(GtkTextBuffer* buffer, GtkTextMark* mark, const GtkTextIter* where) void {
+        @gtk_text_buffer_add_mark(buffer,mark, where)
+    }
+
+    @text_buffer_delete_mark(GtkTextBuffer* buffer, GtkTextMark* mark) void {
+        @gtk_text_buffer_delete_mark(buffer, mark)
+    }
+
+    @text_buffer_delete_mark_by_name(GtkTextBuffer* buffer, const gchar* name) void {
+        @gtk_text_buffer_delete_mark_by_name(buffer, name)
+    }
+
+    @text_buffer_get_mark(GtkTextBuffer* buffer, const gchar* name) GtkTextMark*? {
+        @return gtk_text_buffer_get_mark(buffer, name)
+    }
+
+    @text_buffer_get_insert(GtkTextBuffer* buffer) GtkTextMark*? {
+        @return gtk_text_buffer_get_insert(buffer)
+    }
+
+    @text_buffer_get_selection_bound(GtkTextBuffer* buffer) GtkTextMark*? {
+        @return gtk_text_buffer_get_selection_bound(buffer)
+    }
+
+    @text_buffer_get_has_selection(GtkTextBuffer* buffer) gboolean? {
+        @return gtk_text_buffer_get_has_selection(buffer)
+    }
+
+    @text_buffer_place_cursor(GtkTextBuffer* buffer, const GtkTextIter* where) void {
+        @gtk_text_buffer_place_cursor(buffer, where)
+    }
+
+    @text_buffer_select_range(GtkTextBuffer* buffer, const GtkTextIter* ins, const GtkTextIter* bound) void {
+        @gtk_text_buffer_select_range(buffer,ins, bound)
+    }
+
+    @text_buffer_apply_tag(GtkTextBuffer* buffer, GtkTextTag* tag, const GtkTextIter* start, const GtkTextIter* end) void {
+        @gtk_text_buffer_apply_tag(buffer,tag,start, end)
+    }
+
+    @text_buffer_remove_tag(GtkTextBuffer* buffer, GtkTextTag* tag, const GtkTextIter* start, const GtkTextIter* end) void {
+        @gtk_text_buffer_remove_tag(buffer,tag,start, end)
+    }
+
+    @text_buffer_apply_tag_by_name(GtkTextBuffer* buffer, const gchar* name, const GtkTextIter* start, const GtkTextIter* end) void {
+        @gtk_text_buffer_apply_tag_by_name(buffer,name,start, end)
+    }
+
+    @text_buffer_remove_tag_by_name(GtkTextBuffer* buffer, const gchar* name, const GtkTextIter* start, const GtkTextIter* end) void {
+        @gtk_text_buffer_remove_tag_by_name(buffer,name,start, end)
+    }
+
+    @text_buffer_remove_all_tags(GtkTextBuffer* buffer, const GtkTextIter* start, const GtkTextIter* end) void {
+        @gtk_text_buffer_remove_all_tags(buffer,start, end)
+    }
+
+    #template <typename... Values>
+    @text_buffer_create_tag(GtkTextBuffer* buffer, const gchar* tag_name, const gchar* first_property_name, Values... list) GtkTextTag*? {
+        @return (gtk_text_buffer_create_tag(buffer,tag_name,first_property_name,list), ...)
+    }
+
+    @text_buffer_get_iter_at_line_offset(GtkTextBuffer* buffer, GtkTextIter* iter, gint line_number, gint char_offset) void {
+        @gtk_text_buffer_get_iter_at_line_offset(buffer,iter,line_number, char_offset)
+    }
+
+    @text_buffer_get_iter_at_offset(GtkTextBuffer* buffer, GtkTextIter* iter, gint char_offset) void {
+        @gtk_text_buffer_get_iter_at_offset(buffer,iter, char_offset)
+    }
+
+    @text_buffer_get_iter_at_line(GtkTextBuffer* buffer, GtkTextIter* iter, gint line_number) void {
+        @gtk_text_buffer_get_iter_at_line(buffer,iter, line_number)
+    }
+
+    @text_buffer_get_iter_at_line_index(GtkTextBuffer* buffer, GtkTextIter* iter, gint line_number, gint byte_index) void {
+        @gtk_text_buffer_get_iter_at_line_index(buffer,iter,line_number, byte_index)
+    }
+
+    @text_buffer_get_iter_at_mark(GtkTextBuffer* buffer, GtkTextIter* iter, GtkTextMark* mark) void {
+        @gtk_text_buffer_get_iter_at_mark(buffer,iter, mark)
+    }
+
+    @text_buffer_get_iter_at_child_anchor(GtkTextBuffer* buffer, GtkTextIter* iter, GtkTextChildAnchor* anchor) void {
+        @gtk_text_buffer_get_iter_at_child_anchor(buffer,iter, anchor)
+    }
+
+    @text_buffer_get_start_iter(GtkTextBuffer* buffer, GtkTextIter* iter) void {
+        @gtk_text_buffer_get_start_iter(buffer, iter)
+    }
+
+    @text_buffer_get_end_iter(GtkTextBuffer* buffer, GtkTextIter* iter) void {
+        @gtk_text_buffer_get_end_iter(buffer, iter)
+    }
+
+    @text_buffer_get_bounds(GtkTextBuffer* buffer, GtkTextIter* start, GtkTextIter* end) void {
+        @gtk_text_buffer_get_bounds(buffer,start, end)
+    }
+
+    @text_buffer_get_modified(GtkTextBuffer* buffer) gboolean? {
+        @return gtk_text_buffer_get_modified(buffer)
+    }
+
+    @text_buffer_set_modified(GtkTextBuffer* buffer, gboolean setting) void {
+        @gtk_text_buffer_set_modified(buffer, setting)
+    }
+
+    @text_buffer_delete_selection(GtkTextBuffer* buffer, gboolean interactive, gboolean default_editable) gboolean? {
+        @return gtk_text_buffer_delete_selection(buffer,interactive, default_editable)
+    }
+
+    @text_buffer_paste_clipboard(GtkTextBuffer* buffer, GtkClipboard* clipboard, GtkTextIter* override_location, gboolean default_editable) void {
+        @gtk_text_buffer_paste_clipboard(buffer,clipboard,override_location, default_editable)
+    }
+
+    @text_buffer_copy_clipboard(GtkTextBuffer* buffer, GtkClipboard* clipboard) void {
+        @gtk_text_buffer_copy_clipboard(buffer, clipboard)
+    }
+
+    @text_buffer_cut_clipboard(GtkTextBuffer* buffer, GtkClipboard* clipboard, gboolean default_editable) void {
+        @gtk_text_buffer_cut_clipboard(buffer,clipboard, default_editable)
+    }
+
+    @text_buffer_get_selection_bounds(GtkTextBuffer* buffer, GtkTextIter* start, GtkTextIter* end) gboolean? {
+        @return gtk_text_buffer_get_selection_bounds(buffer,start, end)
+    }
+
+    @text_buffer_begin_user_action(GtkTextBuffer* buffer) void {
+        @gtk_text_buffer_begin_user_action(buffer)
+    }
+
+    @text_buffer_end_user_action(GtkTextBuffer* buffer) void {
+        @gtk_text_buffer_end_user_action(buffer)
+    }
+
+    @text_buffer_add_selection_clipboard(GtkTextBuffer* buffer, GtkClipboard* clipboard) void {
+        @gtk_text_buffer_add_selection_clipboard(buffer, clipboard)
+    }
+
+    @text_buffer_remove_selection_clipboard(GtkTextBuffer* buffer, GtkClipboard* clipboard) void {
+        @gtk_text_buffer_remove_selection_clipboard(buffer, clipboard)
+    }
+
+    // gboolean
+    //(*GtkTextBufferDeserializeFunc) (GtkTextBuffer *register_buffer,
+    //                             GtkTextBuffer *content_buffer,
+    //                             GtkTextIter *iter,
+    //                             const guint8 *data,
+    //                             gsize length,
+    //                             gboolean create_tags,
+    //                             gpointer user_data,
+    //                             GError **error);
+
+    @text_buffer_deserialize(GtkTextBuffer* register_buffer, GtkTextBuffer* content_buffer, GdkAtom format, GtkTextIter* iter, const guint8* data, gsize length, GError** error) gboolean? {
+        @return gtk_text_buffer_deserialize(register_buffer,content_buffer,format,iter,data,length, error)
+    }
+
+    @text_buffer_deserialize_get_can_create_tags(GtkTextBuffer* buffer, GdkAtom format) gboolean? {
+        @return gtk_text_buffer_deserialize_get_can_create_tags(buffer, format)
+    }
+
+    @text_buffer_deserialize_set_can_create_tags(GtkTextBuffer* buffer, GdkAtom format, gboolean can_create_tags) void {
+        @gtk_text_buffer_deserialize_set_can_create_tags(buffer,format, can_create_tags)
+    }
+
+    @text_buffer_get_copy_target_list(GtkTextBuffer* buffer) GtkTargetList*? {
+        @return gtk_text_buffer_get_copy_target_list(buffer)
+    }
+
+    @text_buffer_get_deserialize_formats(GtkTextBuffer* buffer, gint* n_formats) GdkAtom*? {
+        @return gtk_text_buffer_get_deserialize_formats(buffer, n_formats)
+    }
+
+    @text_buffer_get_paste_target_list(GtkTextBuffer* buffer) GtkTargetList*? {
+        @return gtk_text_buffer_get_paste_target_list(buffer)
+    }
+
+    @text_buffer_get_serialize_formats(GtkTextBuffer* buffer, gint* n_formats) GdkAtom*? {
+        @return gtk_text_buffer_get_serialize_formats(buffer, n_formats)
+    }
+
+    @text_buffer_register_deserialize_format(GtkTextBuffer* buffer, const gchar* mime_type, GtkTextBufferDeserializeFunc function, gpointer user_data, GDestroyNotify user_data_destroy) GdkAtom? {
+        @return gtk_text_buffer_register_deserialize_format(buffer,mime_type,function,user_data, user_data_destroy)
+    }
+
+    @text_buffer_register_deserialize_tagset(GtkTextBuffer* buffer, const gchar* tagset_name) GdkAtom? {
+        @return gtk_text_buffer_register_deserialize_tagset(buffer, tagset_name)
+    }
+
+    @text_buffer_register_serialize_format(GtkTextBuffer* buffer, const gchar* mime_type, GtkTextBufferSerializeFunc function, gpointer user_data, GDestroyNotify user_data_destroy) GdkAtom? {
+        @return gtk_text_buffer_register_serialize_format(buffer,mime_type,function,user_data, user_data_destroy)
+    }
+
+    @text_buffer_register_serialize_tagset(GtkTextBuffer* buffer, const gchar* tagset_name) GdkAtom? {
+        @return gtk_text_buffer_register_serialize_tagset(buffer, tagset_name)
+    }
+
+    // Unimplemented: guint8 *
+    // (*GtkTextBufferSerializeFunc) (GtkTextBuffer *register_buffer,
+    //                           GtkTextBuffer *content_buffer,
+    //                           const GtkTextIter *start,
+    //                           const GtkTextIter *end,
+    //                           gsize *length,
+    //                           gpointer user_data);
+
+    @text_buffer_serialize(GtkTextBuffer* register_buffer, GtkTextBuffer* content_buffer, GdkAtom format, const GtkTextIter* start, const GtkTextIter* end, gsize* length) guint8*? {
+        @return gtk_text_buffer_serialize(register_buffer,content_buffer,format,start,end, length)
+    }
+
+    @text_buffer_unregister_deserialize_format(GtkTextBuffer* buffer, GdkAtom format) void {
+        @gtk_text_buffer_unregister_deserialize_format(buffer, format)
+    }
+
+    @text_buffer_unregister_serialize_format(GtkTextBuffer* buffer, GdkAtom format) void {
+        @gtk_text_buffer_unregister_serialize_format(buffer, format)
+    }
+
+    // ---
+    // End of GtkTextBuffer
+
     // GtkTreeModel
 
     // Unimplemented: gboolean
