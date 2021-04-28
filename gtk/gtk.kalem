@@ -12187,4 +12187,41 @@
 
     // ---
     // End of GtkGesture
+
+    // GtkGestureSingle
+
+    @gesture_single_get_exclusive(GtkGestureSingle* gesture) gboolean? {
+        @return gtk_gesture_single_get_exclusive(gesture)
+    }
+
+    @gesture_single_set_exclusive(GtkGestureSingle* gesture, gboolean exclusive) void {
+        @gtk_gesture_single_set_exclusive(gesture, exclusive)
+    }
+
+    @gesture_single_get_touch_only(GtkGestureSingle* gesture) gboolean? {
+        @return gtk_gesture_single_get_touch_only(gesture)
+    }
+
+    @gesture_single_set_touch_only(GtkGestureSingle* gesture, gboolean touch_only) void {
+        @gtk_gesture_single_set_touch_only(gesture, touch_only)
+    }
+
+    @gesture_single_get_button(GtkGestureSingle* gesture) guint? {
+        @return gtk_gesture_single_get_button(gesture)
+    }
+
+    @gesture_single_set_button(GtkGestureSingle* gesture, guint button) void {
+        @gtk_gesture_single_set_button(gesture, button)
+    }
+
+    @gesture_single_get_current_button(GtkGestureSingle* gesture) guint? {
+        @return gtk_gesture_single_get_current_button(gesture)
+    }
+
+    @gesture_single_get_current_sequence(GtkGestureSingle* gesture) GdkEventSequence*? {
+        @return gtk_gesture_single_get_current_sequence(gesture)
+    }
+
+    // ---
+    // End of GtkGestureSingle
 }
