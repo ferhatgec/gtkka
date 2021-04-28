@@ -4874,6 +4874,39 @@
     // ---
     // End of GtkTextTag
 
+    // GtkTextTagTable
+
+    // Unimplemented: void
+    // (*GtkTextTagTableForeach) (GtkTextTag *tag,
+    //                       gpointer data);
+
+    @text_tag_table_new GtkTextTagTable*? {
+        @return gtk_text_tag_table_new()
+    }
+
+    @text_tag_table_add(GtkTextTagTable* table, GtkTextTag* tag) gboolean? {
+        @return gtk_text_tag_table_add(table, tag)
+    }
+
+    @text_tag_table_remove(GtkTextTagTable* table, GtkTextTag* tag) void {
+        @gtk_text_tag_table_remove(table, tag)
+    }
+
+    @text_tag_table_lookup(GtkTextTagTable* table, const gchar* name) GtkTextTag*? {
+        @return gtk_text_tag_table_lookup(table, name)
+    }
+
+    @text_tag_table_foreach(GtkTextTagTable* table, GtkTextTagTableForeach func, gpointer data) void {
+        @gtk_text_tag_table_foreach(table,func, data)
+    }
+
+    @text_tag_table_get_size(GtkTextTagTable* table) gint? {
+        @return gtk_text_tag_table_get_size(table)
+    }
+
+    // ---
+    // End of GtkTextTagTable
+
     // GtkTreeModel
 
     // Unimplemented: gboolean
