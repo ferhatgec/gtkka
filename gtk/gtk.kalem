@@ -12097,4 +12097,13 @@
 
     // ---
     // End of GtkEventControllerScroll
+
+    // GtkEventControllerMotion
+
+    @event_controller_motion_new(GtkWidget* widget) GtkEventController*? {
+        @return gtk_event_controller_motion_new(widget)
+    }
+
+    // ---
+    // End of GtkEventControllerMotion
 }
