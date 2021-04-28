@@ -12224,4 +12224,21 @@
 
     // ---
     // End of GtkGestureSingle
+
+    // GtkGestureDrag
+
+    @gesture_drag_new(GtkWidget* widget) GtkGesture*? {
+        @return gtk_gesture_drag_new(widget)
+    }
+
+    @gesture_drag_get_start_point(GtkGestureDrag* gesture, gdouble* x, gdouble* y) gboolean? {
+        @return gtk_gesture_drag_get_start_point(gesture,x, y)
+    }
+
+    @gesture_drag_get_offset(GtkGestureDrag* gesture, gdouble* x, gdouble* y) gboolean? {
+        @return gtk_gesture_drag_get_offset(gesture,x, y)
+    }
+
+    // ---
+    // End of GtkGestureDrag
 }
