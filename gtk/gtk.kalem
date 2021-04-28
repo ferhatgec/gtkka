@@ -4474,6 +4474,39 @@
     // ---
     // End of GtkTextIter
 
+    // GtkTextMark
+
+    @text_mark_new(const gchar* name, gboolean left_gravity) GtkTextMark*? {
+        @return gtk_text_mark_new(name, left_gravity)
+    }
+
+    @text_mark_set_visible(GtkTextMark* mark, gboolean setting) void {
+        @gtk_text_mark_set_visible(mark, setting)
+    }
+
+    @text_mark_get_visible(GtkTextMark* mark) gboolean? {
+        @return gtk_text_mark_get_visible(mark)
+    }
+
+    @text_mark_get_deleted(GtkTextMark* mark) gboolean? {
+        @return gtk_text_mark_get_deleted(mark)
+    }
+
+    #const gchar* text_mark_get_name(GtkTextMark* mark) {
+        @return gtk_text_mark_get_name(mark)
+    }
+
+    @text_mark_get_buffer(GtkTextMark* mark) GtkTextBuffer*? {
+        @return gtk_text_mark_get_buffer(mark)
+    }
+
+    @text_mark_get_left_gravity(GtkTextMark* mark) gboolean? {
+        @return gtk_text_mark_get_left_gravity(mark)
+    }
+
+    // ---
+    // End of GtkTextMark
+
     // GtkTreeModel
 
     // Unimplemented: gboolean
