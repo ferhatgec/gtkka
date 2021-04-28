@@ -12071,4 +12071,13 @@
 
     // ---
     // End of GtkEventController
+
+    // GtkEventControllerKey
+
+    @event_controller_key_new(GtkWidget* widget) GtkEventController*? {
+        @return gtk_event_controller_key_new(widget)
+    }
+
+    // ---
+    // End of GtkEventControllerKey
 }
