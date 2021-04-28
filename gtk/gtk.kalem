@@ -4907,6 +4907,311 @@
     // ---
     // End of GtkTextTagTable
 
+    // GtkTextView
+
+    @text_view_new GtkWidget*? {
+        @return gtk_text_view_new()
+    }
+
+    @text_view_new_with_buffer(GtkTextBuffer* buffer) GtkWidget*? {
+        @return gtk_text_view_new_with_buffer(buffer)
+    }
+
+    @text_view_set_buffer(GtkTextView* text_view, GtkTextBuffer* buffer) void {
+        @gtk_text_view_set_buffer(text_view, buffer)
+    }
+
+    @text_view_get_buffer(GtkTextView* text_view) GtkTextBuffer*? {
+        @return gtk_text_view_get_buffer(text_view)
+    }
+
+    // Deprecated: @text_view_get_hadjustment(GtkTextView* text_view)
+    
+    // Deprecated: @text_view_get_vadjustment(GtkTextView* text_view)
+
+    @text_view_scroll_to_mark(GtkTextView* text_view, GtkTextMark* mark, gdouble within_margin, gboolean use_align, gdouble xalign, gdouble yalign) void {
+        @gtk_text_view_scroll_to_mark(text_view,mark,within_margin,use_align,xalign, yalign)
+    }
+
+    @text_view_scroll_to_iter(GtkTextView* text_view, GtkTextIter* iter, gdouble within_margin, gboolean use_align, gdouble xalign, gdouble yalign) gboolean? {
+        @return gtk_text_view_scroll_to_iter(text_view,iter,within_margin,use_align,xalign, yalign)
+    }
+
+    @text_view_scroll_mark_onscreen(GtkTextView* text_view, GtkTextMark* mark) void {
+        @gtk_text_view_scroll_mark_onscreen(text_view, mark)
+    }
+
+    @text_view_move_mark_onscreen(GtkTextView* text_view, GtkTextMark* mark) gboolean? {
+        @return gtk_text_view_move_mark_onscreen(text_view, mark)
+    }
+
+    @text_view_place_cursor_onscreen(GtkTextView* text_view) gboolean? {
+        @return gtk_text_view_place_cursor_onscreen(text_view)
+    }
+
+    @text_view_get_visible_rect(GtkTextView* text_view, GdkRectangle* visible_rect) void {
+        @gtk_text_view_get_visible_rect(text_view, visible_rect)
+    }
+
+    @text_view_get_iter_location(GtkTextView* text_view, const GtkTextIter* iter, GdkRectangle* location) void {
+        @gtk_text_view_get_iter_location(text_view,iter, location)
+    }
+
+    @text_view_get_cursor_locations(GtkTextView* text_view, const GtkTextIter* iter, GdkRectangle* strong, GdkRectangle* weak) void {
+        @gtk_text_view_get_cursor_locations(text_view,iter,strong, weak)
+    }
+
+    @text_view_get_line_at_y(GtkTextView* text_view, GtkTextIter* target_iter, gint y, gint* line_top) void {
+        @gtk_text_view_get_line_at_y(text_view,target_iter,y, line_top)
+    }
+
+    @text_view_get_line_yrange(GtkTextView* text_view, const GtkTextIter* iter, gint* y, gint* height) void {
+        @gtk_text_view_get_line_yrange(text_view,iter,y, height)
+    }
+
+    @text_view_get_iter_at_location(GtkTextView* text_view, GtkTextIter* iter, gint x, gint y) gboolean? {
+        @return gtk_text_view_get_iter_at_location(text_view,iter,x, y)
+    }
+
+    @text_view_get_iter_at_position(GtkTextView* text_view, GtkTextIter* iter, gint* trailing, gint x, gint y) gboolean? {
+        @return gtk_text_view_get_iter_at_position(text_view,iter,trailing,x, y)
+    }
+
+    @text_view_buffer_to_window_coords(GtkTextView* text_view, GtkTextWindowType win, gint buffer_x, gint buffer_y, gint* window_x, gint* window_y) void {
+        @gtk_text_view_buffer_to_window_coords(text_view,win,buffer_x,buffer_y,window_x, window_y)
+    }
+
+    @text_view_window_to_buffer_coords(GtkTextView* text_view, GtkTextWindowType win, gint window_x, gint window_y, gint* buffer_x, gint* buffer_y) void {
+        @gtk_text_view_window_to_buffer_coords(text_view,win,window_x,window_y,buffer_x, buffer_y)
+    }
+
+    @text_view_get_window(GtkTextView* text_view, GtkTextWindowType win) GdkWindow*? {
+        @return gtk_text_view_get_window(text_view, win)
+    }
+
+    @text_view_get_window_type(GtkTextView* text_view, GdkWindow* window) GtkTextWindowType? {
+        @return gtk_text_view_get_window_type(text_view, window)
+    }
+
+    @text_view_set_border_window_size(GtkTextView* text_view, GtkTextWindowType type, gint size) void {
+        @gtk_text_view_set_border_window_size(text_view,type, size)
+    }
+
+    @text_view_get_border_window_size(GtkTextView* text_view, GtkTextWindowType type) gint? {
+        @return gtk_text_view_get_border_window_size(text_view, type)
+    }
+
+    @text_view_forward_display_line(GtkTextView* text_view, GtkTextIter* iter) gboolean? {
+        @return gtk_text_view_forward_display_line(text_view, iter)
+    }
+
+    @text_view_backward_display_line(GtkTextView* text_view, GtkTextIter* iter) gboolean? {
+        @return gtk_text_view_backward_display_line(text_view, iter)
+    }
+
+    @text_view_forward_display_line_end(GtkTextView* text_view, GtkTextIter* iter) gboolean? {
+        @return gtk_text_view_forward_display_line_end(text_view, iter)
+    }
+
+    @text_view_backward_display_line_start(GtkTextView* text_view, GtkTextIter* iter) gboolean? {
+        @return gtk_text_view_backward_display_line_start(text_view, iter)
+    }
+
+    @text_view_starts_display_line(GtkTextView* text_view, const GtkTextIter* iter) gboolean? {
+        @return gtk_text_view_starts_display_line(text_view, iter)
+    }
+
+    @text_view_move_visually(GtkTextView* text_view, GtkTextIter* iter, gint count) gboolean? {
+        @return gtk_text_view_move_visually(text_view,iter, count)
+    }
+
+    @text_view_add_child_at_anchor(GtkTextView* text_view, GtkWidget* child, GtkTextChildAnchor* anchor) void {
+        @gtk_text_view_add_child_at_anchor(text_view,child, anchor)
+    }
+
+    @text_child_anchor_new GtkTextChildAnchor*? {
+        @return gtk_text_child_anchor_new()
+    }
+
+    @text_child_anchor_get_widgets(GtkTextChildAnchor* anchor) GList*? {
+        @return gtk_text_child_anchor_get_widgets(anchor)
+    }
+
+    @text_child_anchor_get_deleted(GtkTextChildAnchor* anchor) gboolean? {
+        @return gtk_text_child_anchor_get_deleted(anchor)
+    }
+
+    @text_view_add_child_in_window(GtkTextView* text_view, GtkWidget* child, GtkTextWindowType which_window, gint xpos, gint ypos) void {
+        @gtk_text_view_add_child_in_window(text_view,child,which_window,xpos, ypos)
+    }
+
+    @text_view_move_child(GtkTextView* text_view, GtkWidget* child, gint xpos, gint ypos) void {
+        @gtk_text_view_move_child(text_view,child,xpos, ypos)
+    }
+
+    @text_view_set_wrap_mode(GtkTextView* text_view, GtkWrapMode wrap_mode) void {
+        @gtk_text_view_set_wrap_mode(text_view, wrap_mode)
+    }
+
+    @text_view_get_wrap_mode(GtkTextView* text_view) GtkWrapMode? {
+        @return gtk_text_view_get_wrap_mode(text_view)
+    }
+
+    @text_view_set_editable(GtkTextView* text_view, gboolean setting) void {
+        @gtk_text_view_set_editable(text_view, setting)
+    }
+
+    @text_view_get_editable(GtkTextView* text_view) gboolean? {
+        @return gtk_text_view_get_editable(text_view)
+    }
+
+    @text_view_set_cursor_visible(GtkTextView* text_view, gboolean setting) void {
+        @gtk_text_view_set_cursor_visible(text_view, setting)
+    }
+
+    @text_view_get_cursor_visible(GtkTextView* text_view) gboolean? {
+        @return gtk_text_view_get_cursor_visible(text_view)
+    }
+
+    @text_view_reset_cursor_blink(GtkTextView* text_view) void {
+        @gtk_text_view_reset_cursor_blink(text_view)
+    }
+
+    @text_view_set_overwrite(GtkTextView* text_view, gboolean overwrite) void {
+        @gtk_text_view_set_overwrite(text_view, overwrite)
+    }
+
+    @text_view_get_overwrite(GtkTextView* text_view) gboolean? {
+        @return gtk_text_view_get_overwrite(text_view)
+    }
+
+    @text_view_set_pixels_above_lines(GtkTextView* text_view, gint pixels_above_lines) void {
+        @gtk_text_view_set_pixels_above_lines(text_view, pixels_above_lines)
+    }
+
+    @text_view_get_pixels_above_lines(GtkTextView* text_view) gint? {
+        @return gtk_text_view_get_pixels_above_lines(text_view)
+    }
+
+    @text_view_set_pixels_below_lines(GtkTextView* text_view, gint pixels_below_lines) void {
+        @gtk_text_view_set_pixels_below_lines(text_view, pixels_below_lines)
+    }
+
+    @text_view_get_pixels_below_lines(GtkTextView* text_view) gint? {
+        @return gtk_text_view_get_pixels_below_lines(text_view)
+    }
+
+    @text_view_set_pixels_inside_wrap(GtkTextView* text_view, gint pixels_inside_wrap) void {
+        @gtk_text_view_set_pixels_inside_wrap(text_view, pixels_inside_wrap)
+    }
+
+    @text_view_get_pixels_inside_wrap(GtkTextView* text_view) gint? {
+        @return gtk_text_view_get_pixels_inside_wrap(text_view)
+    }
+
+    @text_view_set_justification(GtkTextView* text_view, GtkJustification justification) void {
+        @gtk_text_view_set_justification(text_view, justification)
+    }
+
+    @text_view_get_justification(GtkTextView* text_view) GtkJustification? {
+        @return gtk_text_view_get_justification(text_view)
+    }
+
+    @text_view_set_left_margin(GtkTextView* text_view, gint left_margin) void {
+        @gtk_text_view_set_left_margin(text_view, left_margin)
+    }
+
+    @text_view_get_left_margin(GtkTextView* text_view) gint? {
+        @return gtk_text_view_get_left_margin(text_view)
+    }
+
+    @text_view_set_right_margin(GtkTextView* text_view, gint right_margin) void {
+        @gtk_text_view_set_right_margin(text_view, right_margin)
+    }
+
+    @text_view_get_right_margin(GtkTextView* text_view) gint? {
+        @return gtk_text_view_get_right_margin(text_view)
+    }
+
+    @text_view_set_top_margin(GtkTextView* text_view, gint top_margin) void {
+        @gtk_text_view_set_top_margin(text_view, top_margin)
+    }
+
+    @text_view_get_top_margin(GtkTextView* text_view) gint? {
+        @return gtk_text_view_get_top_margin(text_view)
+    }
+
+    @text_view_set_bottom_margin(GtkTextView* text_view, gint bottom_margin) void {
+        @gtk_text_view_set_bottom_margin(text_view, bottom_margin)
+    }
+
+    @text_view_get_bottom_margin(GtkTextView* text_view) gint? {
+        @return gtk_text_view_get_bottom_margin(text_view)
+    }
+
+    @text_view_set_indent(GtkTextView* text_view, gint indent) void {
+        @gtk_text_view_set_indent(text_view, indent)
+    }
+
+    @text_view_get_indent(GtkTextView* text_view) gint? {
+        @return gtk_text_view_get_indent(text_view)
+    }
+
+    @text_view_set_tabs(GtkTextView* text_view, PangoTabArray* tabs) void {
+        @gtk_text_view_set_tabs(text_view, tabs)
+    }
+
+    @text_view_get_tabs(GtkTextView* text_view) PangoTabArray*? {
+        @return gtk_text_view_get_tabs(text_view)
+    }
+
+    @text_view_set_accepts_tab(GtkTextView* text_view, gboolean accepts_tab) void {
+        @gtk_text_view_set_accepts_tab(text_view, accepts_tab)
+    }
+
+    @text_view_get_accepts_tab(GtkTextView* text_view) gboolean? {
+        @return gtk_text_view_get_accepts_tab(text_view)
+    }
+
+    @text_view_get_default_attributes(GtkTextView* text_view) GtkTextAttributes*? {
+        @return gtk_text_view_get_default_attributes(text_view)
+    }
+
+    @text_view_im_context_filter_keypress(GtkTextView* text_view, GdkEventKey* event) gboolean? {
+        @return gtk_text_view_im_context_filter_keypress(text_view, event)
+    }
+
+    @text_view_reset_im_context(GtkTextView* text_view) void {
+        @gtk_text_view_reset_im_context(text_view)
+    }
+
+    @text_view_set_input_purpose(GtkTextView* text_view, GtkInputPurpose purpose) void {
+        @gtk_text_view_set_input_purpose(text_view, purpose)
+    }
+
+    @text_view_get_input_purpose(GtkTextView* text_view) GtkInputPurpose? {
+        @return gtk_text_view_get_input_purpose(text_view)
+    }
+
+    @text_view_set_input_hints(GtkTextView* text_view, GtkInputHints hints) void {
+        @gtk_text_view_set_input_hints(text_view, hints)
+    }
+
+    @text_view_get_input_hints(GtkTextView* text_view) GtkInputHints? {
+        @return gtk_text_view_get_input_hints(text_view)
+    }
+
+    @text_view_set_monospace(GtkTextView* text_view, gboolean monospace) void {
+        @gtk_text_view_set_monospace(text_view, monospace)
+    }
+
+    @text_view_get_monospace(GtkTextView* text_view) gboolean? {
+        @return gtk_text_view_get_monospace(text_view)
+    }
+
+    // ---
+    // End of GtkTextView
+
     // GtkTreeModel
 
     // Unimplemented: gboolean
