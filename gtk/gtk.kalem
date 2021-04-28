@@ -12250,4 +12250,21 @@
 
     // ---
     // End of GtkGestureLongPress
+
+    // GtkGestureMultiPress
+
+    @gesture_multi_press_new(GtkWidget* widget) GtkGesture*? {
+        @return gtk_gesture_multi_press_new(widget)
+    }
+
+    @gesture_multi_press_set_area(GtkGestureMultiPress* gesture, const GdkRectangle* rect) void {
+        @gtk_gesture_multi_press_set_area(gesture, rect)
+    }
+
+    @gesture_multi_press_get_area(GtkGestureMultiPress* gesture, GdkRectangle* rect) gboolean? {
+        @return gtk_gesture_multi_press_get_area(gesture, rect)
+    }
+
+    // ---
+    // End of GtkGestureMultiPress
 }
