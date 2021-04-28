@@ -12046,4 +12046,29 @@
 
     // ---
     // End of GtkAppChooserWidget
+
+    // GtkEventController
+
+    @event_controller_get_propagation_phase(GtkEventController* controller) GtkPropagationPhase? {
+        @return gtk_event_controller_get_propagation_phase(controller)
+    }
+
+    @event_controller_set_propagation_phase(GtkEventController* controller, GtkPropagationPhase phase) void {
+        @gtk_event_controller_set_propagation_phase(controller, phase)
+    }
+
+    @event_controller_handle_event(GtkEventController* controller, const GdkEvent* event) gboolean? {
+        @return gtk_event_controller_handle_event(controller, event)
+    }
+
+    @event_controller_get_widget(GtkEventController* controller) GtkWidget*? {
+        @return gtk_event_controller_get_widget(controller)
+    }
+
+    @event_controller_reset(GtkEventController* controller) void {
+        @gtk_event_controller_reset(controller)
+    }
+
+    // ---
+    // End of GtkEventController
 }
