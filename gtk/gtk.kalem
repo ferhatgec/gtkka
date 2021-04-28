@@ -12267,4 +12267,21 @@
 
     // ---
     // End of GtkGestureMultiPress
+
+    // GtkGesturePan
+
+    @gesture_pan_new(GtkWidget* widget, GtkOrientation orientation) GtkGesture*? {
+        @return gtk_gesture_pan_new(widget, orientation)
+    }
+
+    @gesture_pan_get_orientation(GtkGesturePan* gesture) GtkOrientation? {
+        @return gtk_gesture_pan_get_orientation(gesture)
+    }
+
+    @gesture_pan_set_orientation(GtkGesturePan* gesture, GtkOrientation orientation) void {
+        @gtk_gesture_pan_set_orientation(gesture, orientation)
+    }
+
+    // ---
+    // End of GtkGesturePan
 }
