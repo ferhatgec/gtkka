@@ -12344,4 +12344,21 @@
 
     // ---
     // End of GtkGestureStylus
+
+    // GtkPadController
+
+    @pad_controller_new(GtkWindow* window, GActionGroup* group, GdkDevice* pad) GtkPadController*? {
+        @return gtk_pad_controller_new(window,group, pad)
+    }
+
+    @pad_controller_set_action_entries(GtkPadController* controller, const GtkPadActionEntry* entries, gint n_entries) void {
+        @gtk_pad_controller_set_action_entries(controller,entries, n_entries)
+    }
+
+    @pad_controller_set_action(GtkPadController* controller, GtkPadActionType type, gint index, gint mode, const gchar* label, const gchar* action_name) void {
+        @gtk_pad_controller_set_action(controller,type,index,mode,label, action_name)
+    }
+
+    // ---
+    // End of GtkPadController
 }
