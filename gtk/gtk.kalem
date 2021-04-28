@@ -12284,4 +12284,17 @@
 
     // ---
     // End of GtkGesturePan
+
+    // GtkGestureSwipe
+
+    @gesture_swipe_new(GtkWidget* widget) GtkGesture*? {
+        @return gtk_gesture_swipe_new(widget)
+    }
+
+    @gesture_swipe_get_velocity(GtkGestureSwipe* gesture, gdouble* velocity_x, gdouble* velocity_y) gboolean? {
+        @return gtk_gesture_swipe_get_velocity(gesture,velocity_x, velocity_y)
+    }
+
+    // ---
+    // End of GtkGestureSwipe
 }
