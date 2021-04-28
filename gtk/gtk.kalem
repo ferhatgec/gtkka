@@ -12297,4 +12297,17 @@
 
     // ---
     // End of GtkGestureSwipe
+
+    // GtkGestureRotate
+
+    @gesture_rotate_new(GtkWidget* widget) GtkGesture*? {
+        @return gtk_gesture_rotate_new(widget)
+    }
+
+    @gesture_rotate_get_angle_delta(GtkGestureRotate* gesture) gdouble? {
+        @return gtk_gesture_rotate_get_angle_delta(gesture)
+    }
+
+    // ---
+    // End of GtkGestureRotate
 }
